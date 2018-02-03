@@ -1,0 +1,7 @@
+# 這個分數是我要的嗎？單一樣本的信賴區間 {#ci}
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Example two

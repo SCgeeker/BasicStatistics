@@ -1,0 +1,9 @@
+book_filename: "stat_in_my_heart_bookdown"
+language:
+  label:
+    fig: '圖 '
+    tab: '表 '
+  ui:
+    chapter_name: ["第", "單元"]
+output_dir: "docs"
+delete_merged_file: true
