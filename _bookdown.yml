@@ -1,9 +1,11 @@
-book_filename: "stat_in_my_heart_bookdown"
+book_filename: "Basic-Statistics-Psychological-Science"
 language:
   label:
     fig: '圖 '
     tab: '表 '
+    app: '程式 '
   ui:
+    edit: "編輯"
     chapter_name: ["第", "單元"]
 output_dir: "docs"
 delete_merged_file: true

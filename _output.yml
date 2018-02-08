@@ -8,12 +8,19 @@ bookdown::epub_book: default
 bookdown::gitbook:
   css: style.css
   config:
-    sharing:
-      facebook: yes
-      twitter: yes
     toc:
+      collapse: section
+      scroll_highlight: yes
       before: |
         <li><a href="./">心理科學基礎統計</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
+    toolbar:
+      position: fixed
     download: null
+    search: yes
+    fontfamily: Microsoft JhengHei
+    sharing:
+      facebook: yes
+      twitter: yes
+

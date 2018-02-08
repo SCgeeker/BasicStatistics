@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>心理科學基礎統計</title>
+  <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="心理科學基礎統計" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  <meta name="github-repo" content="SCgeeker/BasicStatistics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="心理科學基礎統計" />
+  
+  <meta name="twitter:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  
+
+<meta name="author" content="陳紹慶 Sau-Chin Chen">
+
+
+<meta name="date" content="2018-02-08">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="twoway-anova.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">心理科學基礎統計</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 統計思考開門</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#emily-rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#jaspjamovi"><i class="fa fa-check"></i><b>1.2</b> 如何檢驗測試結果：認識JASP與jamovi的界面</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 分析測試結果的實體：尺度與變項</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 資料的生命：自變項與依變項</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#section-1.5"><i class="fa fa-check"></i><b>1.5</b> 資料的起源：母群與樣本</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 描述統計：認識基礎統計量數</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 名義尺度的集中趨勢：眾數</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
+<li class="chapter" data-level="1.6.3" data-path="intro.html"><a href="intro.html#section-1.6.3"><i class="fa fa-check"></i><b>1.6.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="randomization.html"><a href="randomization.html"><i class="fa fa-check"></i><b>2</b> 隨機方法是什麼？</a><ul>
+<li class="chapter" data-level="2.1" data-path="randomization.html"><a href="randomization.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 隨機變數與簡單抽樣</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="randomization.html"><a href="randomization.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 認識隨機抽樣</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="randomization.html"><a href="randomization.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 間斷與連續隨機變數</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="randomization.html"><a href="randomization.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 機率模型動畫頁面說明</a></li>
+<li class="chapter" data-level="2.2.2" data-path="randomization.html"><a href="randomization.html#section-2.2.2"><i class="fa fa-check"></i><b>2.2.2</b> 伯努力分佈：一次一枚硬幣的試驗</a></li>
+<li class="chapter" data-level="2.2.3" data-path="randomization.html"><a href="randomization.html#section-2.2.3"><i class="fa fa-check"></i><b>2.2.3</b> 二項分佈：一次多枚硬幣的試驗</a></li>
+<li class="chapter" data-level="2.2.4" data-path="randomization.html"><a href="randomization.html#section-2.2.4"><i class="fa fa-check"></i><b>2.2.4</b> 均等分佈：任何結果皆可能發生</a></li>
+<li class="chapter" data-level="2.2.5" data-path="randomization.html"><a href="randomization.html#section-2.2.5"><i class="fa fa-check"></i><b>2.2.5</b> 常態分佈：中間是最可能發生的結果</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="randomization.html"><a href="randomization.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 打造抽樣分佈的隱形之手：中央極限定理</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="randomization.html"><a href="randomization.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 均等分佈的樣本分析</a></li>
+<li class="chapter" data-level="2.3.2" data-path="randomization.html"><a href="randomization.html#section-2.3.2"><i class="fa fa-check"></i><b>2.3.2</b> 常態分佈的樣本分析</a></li>
+<li class="chapter" data-level="2.3.3" data-path="randomization.html"><a href="randomization.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 剖析中央極限定理</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="randomization.html"><a href="randomization.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 條件機率與抽樣</a></li>
+<li class="chapter" data-level="2.5" data-path="randomization.html"><a href="randomization.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 資料密度的視覺化與轉換</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="one-sample.html"><a href="one-sample.html"><i class="fa fa-check"></i><b>3</b> 這個分數是我要的嗎？單一樣本平均數假設檢定</a><ul>
+<li class="chapter" data-level="3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 為何行為科學不常見到完整的母群？</a></li>
+<li class="chapter" data-level="3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 母群變異數未知的抽樣分配</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="one-sample.html"><a href="one-sample.html#section-3.2.1"><i class="fa fa-check"></i><b>3.2.1</b> 點估計是隨機的</a></li>
+<li class="chapter" data-level="3.2.2" data-path="one-sample.html"><a href="one-sample.html#t"><i class="fa fa-check"></i><b>3.2.2</b> 認識t分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3"><i class="fa fa-check"></i><b>3.3</b> 單一樣本平均數的假設檢定</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.3.1"><i class="fa fa-check"></i><b>3.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="3.3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.3.2"><i class="fa fa-check"></i><b>3.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="3.3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3.3"><i class="fa fa-check"></i><b>3.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="3.3.4" data-path="one-sample.html"><a href="one-sample.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>3.4</b> p值是什麼？</a></li>
+<li class="chapter" data-level="3.5" data-path="one-sample.html"><a href="one-sample.html#section-3.5"><i class="fa fa-check"></i><b>3.5</b> 效果量與考驗力</a></li>
+<li class="chapter" data-level="3.6" data-path="one-sample.html"><a href="one-sample.html#section-3.6"><i class="fa fa-check"></i><b>3.6</b> 治療性撫慰師真有本事嗎？</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ci.html"><a href="ci.html"><i class="fa fa-check"></i><b>4</b> 這個分數是我要的嗎？單一樣本平均數的信賴區間</a><ul>
+<li class="chapter" data-level="4.1" data-path="ci.html"><a href="ci.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 信賴區間的計算與報告</a></li>
+<li class="chapter" data-level="4.2" data-path="ci.html"><a href="ci.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 信賴區間的機率本質</a></li>
+<li class="chapter" data-level="4.3" data-path="ci.html"><a href="ci.html#section-4.3"><i class="fa fa-check"></i><b>4.3</b> 信賴區間與研究結果可再現性</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="two-samples.html"><a href="two-samples.html"><i class="fa fa-check"></i><b>5</b> 我的分數比你的分數高嗎？相依樣本與獨立樣本</a><ul>
+<li class="chapter" data-level="5.1" data-path="two-samples.html"><a href="two-samples.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 型一錯誤與型二錯誤</a></li>
+<li class="chapter" data-level="5.2" data-path="two-samples.html"><a href="two-samples.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 示範資料說明</a></li>
+<li class="chapter" data-level="5.3" data-path="two-samples.html"><a href="two-samples.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 相依樣本與重覆量數</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.3.2" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.3.3" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.3.4" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="two-samples.html"><a href="two-samples.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 獨立樣本與組間比較</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.4.2" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.4.3" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.4.4" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>5.5</b> 效果量、p值與考驗力</a></li>
+<li class="chapter" data-level="5.6" data-path="two-samples.html"><a href="two-samples.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 獨立樣本的低再現性？</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>6</b> 我倆多有緣？相關與迴歸</a></li>
+<li class="chapter" data-level="7" data-path="non-para.html"><a href="non-para.html"><i class="fa fa-check"></i><b>7</b> 沒有母群如何比高低？無母數統計</a></li>
+<li class="chapter" data-level="8" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>8</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
+<li class="chapter" data-level="9" data-path="twoway-anova.html"><a href="twoway-anova.html"><i class="fa fa-check"></i><b>9</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
+<li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">心理科學基礎統計</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="e58f83e88083e69687e78dbb" class="section level1 unnumbered">
+<h1>參考文獻</h1>
+
+<div id="refs" class="references">
+<div>
+<p>American Psychological Association, ed. 2010. <em>Publication Manual of the American Psychological Association</em>. 6th ed. Washington, DC: American Psychological Association.</p>
+</div>
+<div>
+<p>Carlson, Kieth A., and Jennifer R. Winquist. 2018. <em>An Introduction to Statistics: An Active Learning Approach</em>. Second edition. Los Angeles: SAGE.</p>
+</div>
+<div>
+<p>Cumming, Geoff, and Sue Finch. 2005. “Inference by Eye: Confidence Intervals and How to Read Pictures of Data.” <em>American Psychologist</em> 60 (2): 170–80. doi:<a href="https://doi.org/10.1037/0003-066X.60.2.170">10.1037/0003-066X.60.2.170</a>.</p>
+</div>
+<div>
+<p>Cumming, Geoff, and Robert Maillardet. 2006. “Confidence Intervals and Replication: Where Will the Next Mean Fall?” <em>Psychological Methods</em> 11 (3): 217–27. doi:<a href="https://doi.org/10.1037/1082-989X.11.3.217">10.1037/1082-989X.11.3.217</a>.</p>
+</div>
+<div>
+<p>Ellis, Paul D. 2010. <em>The Essential Guide to Effect Sizes: Statistical Power, Meta-Analysis, and the Interpretation of Research Results</em>. Cambridge: Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9780511761676">10.1017/CBO9780511761676</a>.</p>
+</div>
+<div>
+<p>Greenland, Sander, Stephen J. Senn, Kenneth J. Rothman, John B. Carlin, Charles Poole, Steven N. Goodman, and Douglas G. Altman. 2016. “Statistical Tests, <span class="math inline">\(&lt;\)</span>Emphasis Type=‘Italic’<span class="math inline">\(&gt;\)</span>P<span class="math inline">\(&lt;\)</span>/Emphasis<span class="math inline">\(&gt;\)</span> Values, Confidence Intervals, and Power: A Guide to Misinterpretations.” <em>European Journal of Epidemiology</em> 31 (4): 337–50. doi:<a href="https://doi.org/10.1007/s10654-016-0149-3">10.1007/s10654-016-0149-3</a>.</p>
+</div>
+<div>
+<p>jamovi project. 2017. “Jamovi (Version 0.8) [Computer Software].”</p>
+</div>
+<div>
+<p>JASP Team. 2018. “JASP (Version 0.8.5)[Computer Software].”</p>
+</div>
+<div>
+<p>Kunin, Daniel. 2016. “Seeing Theory.” http://students.brown.edu/seeing-theory/.</p>
+</div>
+<div>
+<p>Lakens, Daniel. 2017. “Understanding Common Misconceptions About P-Values.”</p>
+</div>
+<div>
+<p>Lindsay, Stephen, Daniel Simons, and Scott Lilienfeld. 2016. “Research Preregistration 101.” <em>Observer</em> 29 (10): 14–16.</p>
+</div>
+<div>
+<p>Nelson, Nanette, Robert Rosenthal, and Ralph L. Rosnow. 1986. “Interpretation of Significance Levels and Effect Sizes by Psychological Researchers.” <em>American Psychologist</em> 41: 1299–1301.</p>
+</div>
+<div>
+<p>Ngandu, Tiia, Jenni Lehtisalo, Alina Solomon, Esko Levälahti, Satu Ahtiluoto, Riitta Antikainen, Lars Bäckman, et al. 2015. “A 2 Year Multidomain Intervention of Diet, Exercise, Cognitive Training, and Vascular Risk Monitoring Versus Control to Prevent Cognitive Decline in at-Risk Elderly People (FINGER): A Randomised Controlled Trial.” <em>The Lancet</em> 385 (9984): 2255–63. doi:<a href="https://doi.org/10.1016/S0140-6736(15)60461-5">10.1016/S0140-6736(15)60461-5</a>.</p>
+</div>
+<div>
+<p>Reichardt, C. S., and H. F. Gollob. 1997. “When Confidence Intervals Should Be Used Instead of Statistical Tests, and Vice Versa.” In <em>What If There Were No Significance Tests?</em>, edited by L. L. Harlow, S. A. Mulaik, and J. H. Steiger, 259–84. Mahwah, New Jersey, USA: Lawrence Erlbaum Associates.</p>
+</div>
+<div>
+<p>Renner, Michael J., and R. Scott Mackin. 1998. “A Life Stress Instrument for Classroom Use.” <em>Teaching of Psychology</em> 25 (1): 46–48. doi:<a href="https://doi.org/10.1207/s15328023top2501_15">10.1207/s15328023top2501_15</a>.</p>
+</div>
+<div>
+<p>Rosa, Linda, Emily Rosa, Larry Sarner, and Stephen Barrett. 1998. “A Close Look at Therapeutic Touch.” <em>JAMA</em> 279 (13): 1005. doi:<a href="https://doi.org/10.1001/jama.279.13.1005">10.1001/jama.279.13.1005</a>.</p>
+</div>
+<div>
+<p>Smith, Tom W., Peter V. Marsden, Michael Hout, and Jibum Kim. n.d. “General Social Surveys, 1972-2016.”</p>
+</div>
+<div>
+<p>Stevens, S. S. 1946. “On the Theory of Scales of Measurement.” <em>Science</em> 103 (2684): 677–80. doi:<a href="https://doi.org/10.1126/science.103.2684.677">10.1126/science.103.2684.677</a>.</p>
+</div>
+<div>
+<p>Zhang, Zhiyong, and Ke-Hai Yuan. 2015. “WebPower: Statistical Power Analysis Online.” Granger, IN: ISDSA Press.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="twoway-anova.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true,
+"fontfamily": "Microsoft JhengHei"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

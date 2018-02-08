@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>心理科學基礎統計</title>
+  <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="心理科學基礎統計" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  <meta name="github-repo" content="SCgeeker/BasicStatistics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="心理科學基礎統計" />
+  
+  <meta name="twitter:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  
+
+<meta name="author" content="陳紹慶 Sau-Chin Chen">
+
+
+<meta name="date" content="2018-02-08">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="ci.html">
+<link rel="next" href="corr.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">心理科學基礎統計</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 統計思考開門</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#emily-rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#jaspjamovi"><i class="fa fa-check"></i><b>1.2</b> 如何檢驗測試結果：認識JASP與jamovi的界面</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 分析測試結果的實體：尺度與變項</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 資料的生命：自變項與依變項</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#section-1.5"><i class="fa fa-check"></i><b>1.5</b> 資料的起源：母群與樣本</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 描述統計：認識基礎統計量數</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 名義尺度的集中趨勢：眾數</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
+<li class="chapter" data-level="1.6.3" data-path="intro.html"><a href="intro.html#section-1.6.3"><i class="fa fa-check"></i><b>1.6.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="randomization.html"><a href="randomization.html"><i class="fa fa-check"></i><b>2</b> 隨機方法是什麼？</a><ul>
+<li class="chapter" data-level="2.1" data-path="randomization.html"><a href="randomization.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 隨機變數與簡單抽樣</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="randomization.html"><a href="randomization.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 認識隨機抽樣</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="randomization.html"><a href="randomization.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 間斷與連續隨機變數</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="randomization.html"><a href="randomization.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 機率模型動畫頁面說明</a></li>
+<li class="chapter" data-level="2.2.2" data-path="randomization.html"><a href="randomization.html#section-2.2.2"><i class="fa fa-check"></i><b>2.2.2</b> 伯努力分佈：一次一枚硬幣的試驗</a></li>
+<li class="chapter" data-level="2.2.3" data-path="randomization.html"><a href="randomization.html#section-2.2.3"><i class="fa fa-check"></i><b>2.2.3</b> 二項分佈：一次多枚硬幣的試驗</a></li>
+<li class="chapter" data-level="2.2.4" data-path="randomization.html"><a href="randomization.html#section-2.2.4"><i class="fa fa-check"></i><b>2.2.4</b> 均等分佈：任何結果皆可能發生</a></li>
+<li class="chapter" data-level="2.2.5" data-path="randomization.html"><a href="randomization.html#section-2.2.5"><i class="fa fa-check"></i><b>2.2.5</b> 常態分佈：中間是最可能發生的結果</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="randomization.html"><a href="randomization.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 打造抽樣分佈的隱形之手：中央極限定理</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="randomization.html"><a href="randomization.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 均等分佈的樣本分析</a></li>
+<li class="chapter" data-level="2.3.2" data-path="randomization.html"><a href="randomization.html#section-2.3.2"><i class="fa fa-check"></i><b>2.3.2</b> 常態分佈的樣本分析</a></li>
+<li class="chapter" data-level="2.3.3" data-path="randomization.html"><a href="randomization.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 剖析中央極限定理</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="randomization.html"><a href="randomization.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 條件機率與抽樣</a></li>
+<li class="chapter" data-level="2.5" data-path="randomization.html"><a href="randomization.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 資料密度的視覺化與轉換</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="one-sample.html"><a href="one-sample.html"><i class="fa fa-check"></i><b>3</b> 這個分數是我要的嗎？單一樣本平均數假設檢定</a><ul>
+<li class="chapter" data-level="3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 為何行為科學不常見到完整的母群？</a></li>
+<li class="chapter" data-level="3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 母群變異數未知的抽樣分配</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="one-sample.html"><a href="one-sample.html#section-3.2.1"><i class="fa fa-check"></i><b>3.2.1</b> 點估計是隨機的</a></li>
+<li class="chapter" data-level="3.2.2" data-path="one-sample.html"><a href="one-sample.html#t"><i class="fa fa-check"></i><b>3.2.2</b> 認識t分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3"><i class="fa fa-check"></i><b>3.3</b> 單一樣本平均數的假設檢定</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.3.1"><i class="fa fa-check"></i><b>3.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="3.3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.3.2"><i class="fa fa-check"></i><b>3.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="3.3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3.3"><i class="fa fa-check"></i><b>3.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="3.3.4" data-path="one-sample.html"><a href="one-sample.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>3.4</b> p值是什麼？</a></li>
+<li class="chapter" data-level="3.5" data-path="one-sample.html"><a href="one-sample.html#section-3.5"><i class="fa fa-check"></i><b>3.5</b> 效果量與考驗力</a></li>
+<li class="chapter" data-level="3.6" data-path="one-sample.html"><a href="one-sample.html#section-3.6"><i class="fa fa-check"></i><b>3.6</b> 治療性撫慰師真有本事嗎？</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ci.html"><a href="ci.html"><i class="fa fa-check"></i><b>4</b> 這個分數是我要的嗎？單一樣本平均數的信賴區間</a><ul>
+<li class="chapter" data-level="4.1" data-path="ci.html"><a href="ci.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 信賴區間的計算與報告</a></li>
+<li class="chapter" data-level="4.2" data-path="ci.html"><a href="ci.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 信賴區間的機率本質</a></li>
+<li class="chapter" data-level="4.3" data-path="ci.html"><a href="ci.html#section-4.3"><i class="fa fa-check"></i><b>4.3</b> 信賴區間與研究結果可再現性</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="two-samples.html"><a href="two-samples.html"><i class="fa fa-check"></i><b>5</b> 我的分數比你的分數高嗎？相依樣本與獨立樣本</a><ul>
+<li class="chapter" data-level="5.1" data-path="two-samples.html"><a href="two-samples.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 型一錯誤與型二錯誤</a></li>
+<li class="chapter" data-level="5.2" data-path="two-samples.html"><a href="two-samples.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 示範資料說明</a></li>
+<li class="chapter" data-level="5.3" data-path="two-samples.html"><a href="two-samples.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 相依樣本與重覆量數</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.3.2" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.3.3" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.3.4" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="two-samples.html"><a href="two-samples.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 獨立樣本與組間比較</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.4.2" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.4.3" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.4.4" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>5.5</b> 效果量、p值與考驗力</a></li>
+<li class="chapter" data-level="5.6" data-path="two-samples.html"><a href="two-samples.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 獨立樣本的低再現性？</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>6</b> 我倆多有緣？相關與迴歸</a></li>
+<li class="chapter" data-level="7" data-path="non-para.html"><a href="non-para.html"><i class="fa fa-check"></i><b>7</b> 沒有母群如何比高低？無母數統計</a></li>
+<li class="chapter" data-level="8" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>8</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
+<li class="chapter" data-level="9" data-path="twoway-anova.html"><a href="twoway-anova.html"><i class="fa fa-check"></i><b>9</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
+<li class="chapter" data-level="10" data-path="placeholder.html"><a href="placeholder.html"><i class="fa fa-check"></i><b>10</b> Placeholder</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">心理科學基礎統計</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="two-samples" class="section level1">
+<h1><span class="header-section-number">第5單元</span> 我的分數比你的分數高嗎？相依樣本與獨立樣本</h1>
+<p>經過第<a href="one-sample.html#one-sample">3</a>與第<a href="ci.html#ci">4</a>單元，我們已經有一個心理科學的統計實務印象：我們能相信某個研究結果，是建立在多次隨機程序的調查與實驗。傳統統計書很少說明這點，介紹假設檢定的同時通常會一併介紹<strong>型一錯誤(Type 1 error)</strong>與<strong>型二錯誤(Type 2 error)</strong>。由於許多時候預估的型一錯誤等於預先宣告的顯著水準，許多初學者會以為<em>p</em>值就是這項研究的型一錯誤，甚至許多資深學者，包括可能是曾經教過你統計的老師也誤以為如此<span class="citation">(Greenland et al. <a href="#ref-GreenlandStatisticaltestsvalues2016">2016</a>,<span class="citation">Lakens (<a href="#ref-LakensUnderstandingcommonmisconceptions2017">2017</a>)</span>,<span class="citation">Nelson, Rosenthal, and Rosnow (<a href="#ref-NelsonInterpretationSignificanceLevels1986">1986</a>)</span>)</span>。</p>
+<p>心理科學最常處理的統計實務是兩個平均數的比較，所以我們在這個單元裡好好討論什麼是型一錯誤與型二錯誤，還有該如何正確地分析及推論。</p>
+<div id="section-5.1" class="section level2">
+<h2><span class="header-section-number">5.1</span> 型一錯誤與型二錯誤</h2>
+<p>不管你對隨機樣本的認識程度是好是壞，看到圖<a href="two-samples.html#fig:type-1-type-2">5.1</a>就能大致理解什麼是型一錯誤與型二錯誤<span class="citation">(Ellis <a href="#ref-EllisEssentialGuideEffect2010">2010</a>)</span>。用圖中的醫師誤診進一步說明：型一錯誤是病人沒病，但是醫師診斷為有病，又稱為偽陽性結論(False Positive)；型二錯誤是病人有病，但是醫師診斷為沒有病，又稱為偽陰性結論(False Negative)。我們把醫師換成研究者，病人換成資料，就可以描述心理科學研究結論出錯的狀況。</p>
+<div class="figure" style="text-align: center"><span id="fig:type-1-type-2"></span>
+<img src="images/type-i-and-type-ii-errors.jpg" alt="型一錯誤(偽陽性結論，false positive)與型二錯誤(偽陰性結論，false negative)。" width="80%" />
+<p class="caption">
+圖 5.1: 型一錯誤(偽陽性結論，false positive)與型二錯誤(偽陰性結論，false negative)。
+</p>
+</div>
+<p><strong>次數主義統計學(Frequentism Statistics)</strong>用第<a href="randomization.html#randomization">2</a>單元示範的重覆抽樣概念，看待型一錯誤與型二錯誤。一項研究結論有顯著結果，或者說陽性結果，經過數次再現，會累積數次顯著與不顯著的結果，不顯著結果的比例是<strong>型一錯誤率</strong>。相對地，另一項沒有顯著結果的研究結論，或者說陰性結果，經過數次再現，也會累積數次顯著與不顯著的結果，顯著結果的比例是<strong>型二錯誤率</strong>。</p>
+<p>因為隨機變數的數學原理加上資料模擬方法，現代統計學只要根據一次研究結果，就可以估計這一項研究的型一錯誤率與型二錯誤率。我們用第<a href="one-sample.html#one-sample">3</a>單元的示範資料，配合圖<a href="two-samples.html#fig:type-1-type-2-app">5.2</a>的互動說明，可以幫助你理解型一錯誤率與型二錯誤率，和樣本數目、事先設定的顯著水準，以及考驗力的關係。</p>
+<p>根據第<a href="one-sample.html#one-sample">3</a>單元的資訊，我們知道那12位大學生的壓力感受分數，以.05的顯著水準評估，單尾與雙尾檢定都顯示與原始報告有顯著差異，估計效果量是-0.696。現在請你把圖<a href="randomization.html#randomization">2</a>裡的<code>Power</code>勾起來，接著把<code>Significance level</code>、<code>Sample Size</code>、<code>Effect Size</code>調整為0.05、12、0.7。這些設定比照示範案例的分析結果，請輪流點擊<code>one-tailed</code>與<code>two-tailed</code>，看看圖下面呈現的<code>Power</code>與第<a href="one-sample.html#one-sample">3</a>單元預估的差異。</p>
+<div class="figure"><span id="fig:type-1-type-2-app"></span>
+<iframe src="http://rpsychologist.com/d3/NHST/" width="672" height="1500px">
+</iframe>
+<p class="caption">
+圖 5.2: 。
+</p>
+</div>
+<p>因為圖<a href="two-samples.html#fig:type-1-type-2-app">5.2</a>的<code>H_0_</code>與<code>H_a_</code>是常態分佈，所以得到的考驗力估計值與我們用<a href="https://webpower.psychstat.org/qanda/">WebPower</a>的估計有些差異，不過依然是單尾檢定的考驗力大於雙尾檢定的考驗力。請你仔細看圖下方的<strong>型一錯誤率</strong>數值，是不是與顯著水準一致？<strong>型二錯誤率</strong>與考驗力加起來是不是100%？</p>
+<p>現在你可以知道<strong>型二錯誤率</strong>與考驗力來源相同，都是對立假設抽樣分配的累積機率函數輸出結果。型二錯誤率又稱為偽陰率，而考驗力又稱為正陽率。因此一項理想的研究不只有顯著結果，考驗力也要越高越好。</p>
+<p>那麼<strong>型一錯誤率</strong>等於顯著水準該怎麼解釋？現在我們設定之後的再現研究維持同樣的樣本數與考驗力，只是每次得到的效果量都不同，實際的顯著水準會不會改變？請你改勾選圖<a href="two-samples.html#fig:type-1-type-2-app">5.2</a>的<code>alpha</code>，調整<code>effecti size</code>，觀察型一錯誤率如何變化？</p>
+<p>你會發現效果量越小，型一錯誤率越高。反之，效果量越大，型一錯誤率越低。還記得第<a href="ci.html#ci">4</a>單元曾經介紹的<strong>捕獲百分比</strong>是個浮動的數值，型一錯誤率、乃至型二錯誤率與考驗力也是如此。因為就算真的存在母群平均值，抽樣分配會因為樣本數導致變異趨勢的變化，進而改變所有累積機率函數的輸出值。面對這些事實，我們就能理解心理科學研究要開放資料提供眾人核實的重要性。</p>
+</div>
+<div id="section-5.2" class="section level2">
+<h2><span class="header-section-number">5.2</span> 示範資料說明</h2>
+<p>在此使用兩項研究的公開資料，學習相依樣本與獨立樣本t檢定分析的程序，這兩筆資料都是預先註冊實驗的成果<span class="citation">(Wagenmakers et al. <a href="#ref-WagenmakersBayesianinferencepsychology2017">2017</a>,<span class="citation">Zwaan et al. (<a href="#ref-ZwaanParticipantNonnaivetereproducibility2017">2017</a>)</span>)</span>。</p>
+<p>Zwaan等人(2017)挑選九個知名的認知心理學實驗，透過網路邀請參與者相隔幾天，進行同一項實驗兩次。所有實驗都是<strong>參與者內設計</strong>，是實驗操作的兩種情況，每位參與者在實驗過程中都會經歷。稍後要示範分析的<strong>語義促發效應</strong>，是一種詞彙判斷作業的反應時間測量結果。詞彙判斷作業是請參與者判斷現在呈現的目標詞是真詞還是假詞，例如hand是真詞，hamq是假詞。每個目標詞之前會隨機呈現一個與目標詞有關聯的詞或一個無關聯的詞，例如與hand有關聯的foot。過去許多研究發現先呈現有關聯的詞，參與者判斷真詞的反應會比先呈現無關聯的詞快，有無關聯之間的反應時間差異就是<strong>語義促發效應</strong>。我們將使用<a href="https://osf.io/atfcj/">公開資料</a>示範相依樣本t檢定分析程序。</p>
+<p>JASP開發團隊執行長Wagenmakers與同事們嘗試再現德國社會心理學者Topolinski與Sparenberg的體現認知實驗<span class="citation">(Topolinski and Sparenberg <a href="#ref-TopolinskiTurningHandsTime2012">2012</a>, <span class="citation">Wagenmakers et al. (<a href="#ref-WagenmakersBayesianinferencepsychology2017">2017</a>)</span>)</span>，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」，以五點量表表達自己對題目內容的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖<a href="two-samples.html#fig:roll-setting">5.3</a>，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。</p>
+<div class="figure" style="text-align: center"><span id="fig:roll-setting"></span>
+<img src="images/Wagenmakers-exp-setting.jpeg" alt="Wagenmakers等人(2017)再現Topolinski與Sparenberg(2012)體現認知實驗的現場設置。" width="60%" />
+<p class="caption">
+圖 5.3: Wagenmakers等人(2017)再現Topolinski與Sparenberg(2012)體現認知實驗的現場設置。
+</p>
+</div>
+<p>Topolinski與Sparenberg的假設是大多數可轉動的工具開啟方向都是順時針，順時針捲動衛生紙卷的參與者，回答開放態度量表的問題，給的評分應該比逆時針捲動的參與者高。原始研究確實發現顯著較高分的結果，再現研究結果則存放於JASP的示範資料集<code>Kitchen Rolls</code>。在獨立樣本t檢定的示範分析，我們將知道原始研究結果有沒有成功再現。</p>
+</div>
+<div id="section-5.3" class="section level2">
+<h2><span class="header-section-number">5.3</span> 相依樣本與重覆量數</h2>
+<p>我們以jamovi示範相依樣本t檢定，示範檔案<a href="https://osf.io/j5xpa/">由此下載</a>。其中會用於分析的資料欄位是<code>session1_related</code>，<code>session1_unrelated</code>，<code>session2_related</code>，<code>session2_unrelated</code>，都是同一位參與者在每個實驗情況的平均反應時間。</p>
+<p>心理學與許多行為科學有兩種研究設計會用相依樣本t檢定分析：一種是前後測量，常見於教育與醫學研究，這種設計讓參與者在研究者想測試的教學方法或醫療處置前後，測量預期會有改變的指標。另一種是<strong>重覆量數</strong>，如同即將示範的語義促發效應，有兩種不同條件的測量狀況，在一系列題目之間隨機呈現。雖然分析方法沒有太大差異，設計背後想探討的問題本質並不一樣。一個關鍵差異是前後測量的問題類以單樣本平均數，會有一個非零的數值(前測結果）做為虛無假設抽樣分配的平均值。另一方面，使用重覆量數設計的問題，都是非有即無的預測，所以通常設定平均數為零的虛無假設分佈。</p>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> 分析前的宣告</h3>
+<p>因為語義促發效果已經累積許多研究結果，我們可以預測無關聯性的反應時間顯著慢於有關聯性的反應時間。Zwaan等人不同於前人之處是讓參與者做了兩次程序一樣的實驗，所以我們要分別分析第一次與第二次的資料，宣告假設檢定與信賴區間的可能結果：</p>
+<blockquote>
+<p>如果第一次與第二次實驗確實顯示語義促發效應，反應時間差異的單尾t檢定應該出現小於.01的<em>p</em>值，而且99%信賴區間不會包括0。</p>
+</blockquote>
+<p>此外，重覆量數的假設檢定是以平均數為0的t分佈做為抽樣分配，我們在第<a href="one-sample.html#one-sample">3</a>認識t分佈時，已經透過互動操作知道樣本數目超過30，t分佈整體接近常態分佈。所以這筆超過一百位參與者的資料，可以假設接近常態分佈，這讓我們可以使用已經內建於統計軟體的檢驗功能，了解這筆資料符合常態分佈的程度。如果有常態分佈的檢驗資訊，根據主要宣言做出的結論會更有說服力。<strong>預先註冊</strong>也鼓勵研究者事先說明想探索與主要目的無直接相關的問題，所以我們可以再加一則宣告，做為檢驗資料是否符合<strong>常態分佈假設</strong>的但書：</p>
+<blockquote>
+<p>如果第一次與第二次實驗資料都符合<strong>常態分佈假設</strong>，Shapiro-Wilk檢驗的<em>p</em>值不會小於.05。如果出現小於.05的<em>p</em>值，必須在報告中討論。</p>
+</blockquote>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> 示範檔案操作說明</h3>
+<p>開啟<a href="https://osf.io/j5xpa/">jamovi示範檔</a>，報表標題指示這是以<code>T-Tests</code>模組的<code>Paired Samples T-Test</code>製作。圖<a href="two-samples.html#fig:jamovi-paired-t-operation">5.4</a>是根據分析前宣告，勾選與調整的信賴水準。</p>
+<div class="figure" style="text-align: center"><span id="fig:jamovi-paired-t-operation"></span>
+<img src="images/jamovi-paired-t-operation.jpg" alt="jamovi相依樣本單尾t檢定分析操作設定示範。" width="80%" />
+<p class="caption">
+圖 5.4: jamovi相依樣本單尾t檢定分析操作設定示範。
+</p>
+</div>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> 示範檔案報表解讀</h3>
+<div class="figure" style="text-align: center"><span id="fig:jamovi-paired-t-result"></span>
+<img src="images/jamovi-paired-t-result.jpg" alt="jamovi相依樣本單尾t檢定報表示範。" width="80%" />
+<p class="caption">
+圖 5.5: jamovi相依樣本單尾t檢定報表示範。
+</p>
+</div>
+<p>我們從圖<a href="two-samples.html#fig:jamovi-paired-t-result">5.5</a>來看如何從報表擷取要報告的資訊。最上面的表格有兩次結果的t檢定與信賴區間資料，可比照單一樣本平均數的報表擷取符合報告格式的資訊，以分析前宣告的標準，這項研究兩次實驗都有發現顯著的語義促發效果。中間是<strong>常態分佈假設</strong>的檢定結果，根據分析前宣告的標準，第一次實驗資料並不符合常態分佈，我們可以在報告統計資訊之後，討論造成兩次實驗差異原因，以及對實驗結果的影響。最後的描述統計表格，都是在報告中與t檢定統計資訊放置於文字呈現。</p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> 分析後報告</h3>
+<p>因為有兩次實驗，我建議分別報告讓人更容易閱讀：</p>
+<p>第一次實驗的語義促發效果有26.62毫秒(有關聯：M = 528.36, SD = 69.97；無關聯：M = 555.98, SD = 72.17， 99% CI [20.503 32.741])，達到事先宣告的統計顯著水準，<em>t</em>(159) = 10.22, <em>p</em> &lt; .001, <em>d</em> = 0.81。</p>
+<p>第二次實驗的語義促發效果有22.85毫秒(有關聯：M = 520.60, SD = 65.83；無關聯：M = 543.45, SD = 66.33， 99% CI [18.347 27.345])，達到事先宣告的統計顯著水準，<em>t</em>(159) = 11.93, <em>p</em> &lt; .001, <em>d</em> = 0.94。</p>
+<p>由次分析前宣告已聲明如果有違反常態分佈假設的結果，就要在報告統計資訊後討論，這裡建議兩個方向，一個是從語義促發效果的文獻資訊來談，但是這個方向已經超出基礎統計的範圍。另一個方向是比對第一次實驗與第二次實驗的估計標準誤(SE)，你也許有注意到第二次的估計標準誤比第一次的小，或許讓參與者再做一次，反應時間的變異會變小，讓資料分配接近常態分佈。至次為何會變小的原因，就看你認為值不值得當成一個新的研究主題。</p>
+</div>
+</div>
+<div id="section-5.4" class="section level2">
+<h2><span class="header-section-number">5.4</span> 獨立樣本與組間比較</h2>
+<p>我們以JASP示範獨立樣本t檢定，示範檔案<a href="https://osf.io/kw6vy/">由此下載</a>。其中會用於分析的資料欄位是<code>mean_NEO</code>與<code>Rotation</code>。<code>mean_NEO</code>是每位參與者的所有答題平均評分，<code>Rotation</code>是依捲動衛生紙捲方向的分組標記。</p>
+<p>獨立組比較研究通常希望收集的資料各組樣本數目相同，但是通常不能盡如人意。就像這則示範案例，Wagenmakers計畫收集兩組各50人，最後因為一些無法避免的意外與必須遵守事先約定的隨機原則，最後可分析的順時針與逆時針的參與者人數各為48與54。幸好獨立組t檢定有樣本數不相等的版本，而且現在的統計軟體都能自動判斷該用那種版本。因為樣本數不相等的t檢定自由度計算公式複雜，使用軟體分析資料勢在必行。而研究者的責任是確保收集到的資料能歸納出有效的結論，了解研究設計與分析程序的侷限，像是兩組資料變異是否相等(equalityo of variance)，在各組樣本數目不同的狀況是值得注意的細節。</p>
+<div id="-2" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> 分析前的宣告</h3>
+<p>Wagenmakers決定執行研究之前，只有Topolinski與Sparenberg發表的結果，無法確定這次結果會不會一樣，因此適合以母群平均數尚待確認的立場，設定宣告條件。兩組平均數經過假設檢定與信賴區間的分析，可能結果會是：</p>
+<blockquote>
+<p>如果捲動衛生紙捲的方向會影響參與者的開放態度，兩組平均數的差異雙尾t檢定應該出現小於.05的<em>p</em>值，而且95%信賴區間不會包括0。</p>
+</blockquote>
+<p>至於兩組變異數，我們當然期望是一致的。獨立組設計也預先假設兩組資料彼此獨立，抽樣分配都符合常態分佈。所以我們可以另外宣告<strong>變異等量假設</strong>與<strong>常態分佈假設</strong>的分析標準：</p>
+<blockquote>
+<p>(1)如果兩組資料符合<strong>變異等量假設</strong>，Levene檢驗的<em>p</em>值應該大於.05。(2)如果兩組資料符合<strong>常態分佈假設</strong>，Shapiro-Wilk檢驗的<em>p</em>值應該大於.05。如果任何一項出現小於.05的<em>p</em>值，必須在報告中討論。</p>
+</blockquote>
+</div>
+<div id="-2" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> 示範檔案操作說明</h3>
+<p>開啟<a href="https://osf.io/kw6vy/">JASP示範檔案</a>，點擊報表你會看到<code>T-Tests</code>的<code>Independent Samples T-Test</code>功能選單。圖<a href="two-samples.html#fig:JASP-independent-t-operation">5.6</a>是根據分析前宣告，勾選與調整的信賴水準。</p>
+<div class="figure" style="text-align: center"><span id="fig:JASP-independent-t-operation"></span>
+<img src="images/JASP-independent-t-operation.jpg" alt="JASP獨立樣本雙尾t檢定分析操作設定示範。" width="80%" />
+<p class="caption">
+圖 5.6: JASP獨立樣本雙尾t檢定分析操作設定示範。
+</p>
+</div>
+</div>
+<div id="-2" class="section level3">
+<h3><span class="header-section-number">5.4.3</span> 示範檔案報表解讀</h3>
+<div class="figure" style="text-align: center"><span id="fig:JASP-independent-t-result"></span>
+<img src="images/JASP-independent-t-result.jpg" alt="JASP獨立樣本雙尾t檢定報表示範。" width="80%" />
+<p class="caption">
+圖 5.7: JASP獨立樣本雙尾t檢定報表示範。
+</p>
+</div>
+<p>我們從圖<a href="two-samples.html#fig:JASP-independent-t-result">5.7</a>來看如何從報表擷取要報告的資訊。最上面表格裡的t檢定與信賴區間資料，可比照前面的案例擷取符合報告格式的資訊，以分析前宣告的標準，這項研究並沒有發現顯著差異。中間是<strong>變異等量假設</strong>與<strong>常態分佈假設</strong>的檢定結果，根據分析前宣告的標準，兩者都符合假設。最後的描述統計表格，都是在報告中與t檢定統計資訊放置於文字呈現。</p>
+</div>
+<div id="-2" class="section level3">
+<h3><span class="header-section-number">5.4.4</span> 分析後報告</h3>
+<p>這次實驗沒有發現顯著差異，如果是傳統的教學或研究習慣，會簡略報告。但是因為有預先宣告，報告約定要呈現的資訊，才是負責的研究態度。報告寫作範例如下：</p>
+<p>順時針捲動的平均評分比逆時針捲動的平均評分高0.072分(順時針：M = 0.641, SD = 0.496；無關聯：M = 0.713, SD = 0.473， 95% CI [-0.118 0.263])，並未達到事先宣告的統計顯著水準，<em>t</em>(100) = 0.754, <em>p</em> = .453, <em>d</em> = 0.149。</p>
+<p>因為事前宣告已言明如果通過檢驗標準，就沒有違反<strong>變異等量假設</strong>與<strong>常態分佈假設</strong>的問題，在報告中就沒有討論的必要。</p>
+</div>
+</div>
+<div id="p" class="section level2">
+<h2><span class="header-section-number">5.5</span> 效果量、p值與考驗力</h2>
+<p>Wagenmakers等人的再現研究雖然沒有發現顯著結果，但是給我們一個深入探討效果量只有0.15左右的研究，要如何改進，才能確保能發現顯著差異，又有起碼80%的考驗力。圖<a href="two-samples.html#fig:shiny-distributions">5.8</a>是改良自Daniel Lakens釋出的Shiny app，用於解釋獨立組設計並以雙尾t檢定分析的研究，如何考慮樣本數目、效果量、p值、與考驗力。詳細請見圖中文字說明。</p>
+<p>因為預設的樣本數是各組50人，顯著水準也是.05，所以你只要調整效果量到接近實驗結果的0.15，會看到考驗力只有11.52%。圖中說明也指出如果再做一次兩組都是50人的實驗，也只有11.52%的機率得到.05以下的<em>p</em>值。</p>
+<p>至此你應該明白提高考驗力的重要性，大約10%的考驗力就是說除非你有資源執行各組50人的實驗大約十次，才有可能發現一次<em>p</em>值小於.05的結果。除非今天這個研究的效果量大於0.6，我們才有至少80%的考驗力。</p>
+<p>如果無法提高效果量，另一個方法就是增加各組人數，請你親自試試看要增加到多少人，才能保障<em>p</em>值小於.05的實驗結果有至少80%的考驗力？</p>
+<div class="figure"><span id="fig:shiny-distributions"></span>
+<iframe src="https://scchen.shinyapps.io/p_distribution_in_stat_book/?showcase=0" width="672" height="2200px">
+</iframe>
+<p class="caption">
+圖 5.8: 探索獨立組設計雙尾檢定的各項統計資訊關係。
+</p>
+</div>
+</div>
+<div id="section-5.6" class="section level2">
+<h2><span class="header-section-number">5.6</span> 獨立樣本的低再現性？</h2>
+<p>前一段的互動展示帶來一個值得探討的問題：低效果量的獨立組研究是不是很難得到顯著結果？有顯著的結果是不是不太容易成功再現？如果你能想到這樣的問題，你已經有邁向進階課程的條件。</p>
+<p>結束這個單元之前，我使用心理科學家常用的考驗力分析軟體G*Power<span class="citation">(Faul et al. <a href="#ref-FaulStatisticalpoweranalyses2009">2009</a>)</span>，根據Wagenmakers等人的再現研究分析結果製造樣本數與考驗力對應值資料。這筆資料如同圖<a href="two-samples.html#fig:shiny-distributions">5.8</a>的左下角曲線圖，但是同時呈現獨立組設計與重覆量數設計的考驗力。</p>
+<p>對應值的設定條件是兩種設計的效果量皆為0.149，且起始考驗力維持於11%，起始樣本數是獨立組設計各組50，重覆量數設計總數50。G*Power根據起始條件會算出獨立組設計的型一錯誤率剛好小於.05，重覆量數設計的型一錯誤率約為獨立組設計的一半。</p>
+<p>製作的資料橫跨樣本數50到3000，你可以<a href="https://osf.io/dhmzk/">由此下載</a>對應值資料，圖<a href="two-samples.html#fig:power-curve">5.9</a>呈現兩種設計的樣本數與考驗力對應曲線，請想想看如果你有一個研究問題，能用獨立組設計，也可以用重覆量數設計收集資料，那種設計會比較理想？</p>
+<div class="figure"><span id="fig:power-curve"></span>
+<img src="Basic-Statistics-Psychological-Science_files/figure-html/power-curve-1.png" alt="效果量是0.149，獨立組設計與重覆量數設計雙尾檢定的考驗力與樣本數對應曲線。" width="80%" />
+<p class="caption">
+圖 5.9: 效果量是0.149，獨立組設計與重覆量數設計雙尾檢定的考驗力與樣本數對應曲線。
+</p>
+</div>
+
+</div>
+</div>
+<h3> Placeholder</h3>
+<div id="refs" class="references">
+<div id="ref-GreenlandStatisticaltestsvalues2016">
+<p>Greenland, Sander, Stephen J. Senn, Kenneth J. Rothman, John B. Carlin, Charles Poole, Steven N. Goodman, and Douglas G. Altman. 2016. “Statistical Tests, P Values, Confidence Intervals, and Power: A Guide to Misinterpretations.” <em>European Journal of Epidemiology</em> 31 (4): 337–50. doi:<a href="https://doi.org/10.1007/s10654-016-0149-3">10.1007/s10654-016-0149-3</a>.</p>
+</div>
+<div id="ref-LakensUnderstandingcommonmisconceptions2017">
+<p>Lakens, Daniel. 2017. “Understanding Common Misconceptions About P-Values.”</p>
+</div>
+<div id="ref-NelsonInterpretationSignificanceLevels1986">
+<p>Nelson, Nanette, Robert Rosenthal, and Ralph L. Rosnow. 1986. “Interpretation of Significance Levels and Effect Sizes by Psychological Researchers.” <em>American Psychologist</em> 41: 1299–1301.</p>
+</div>
+<div id="ref-EllisEssentialGuideEffect2010">
+<p>Ellis, Paul D. 2010. <em>The Essential Guide to Effect Sizes: Statistical Power, Meta-Analysis, and the Interpretation of Research Results</em>. Cambridge: Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9780511761676">10.1017/CBO9780511761676</a>.</p>
+</div>
+<div id="ref-WagenmakersBayesianinferencepsychology2017">
+<p>Wagenmakers, Eric-Jan, Jonathon Love, Maarten Marsman, Tahira Jamil, Alexander Ly, Josine Verhagen, Ravi Selker, et al. 2017. “Bayesian Inference for Psychology. Part II: Example Applications with JASP.” <em>Psychonomic Bulletin &amp; Review</em>, July. doi:<a href="https://doi.org/10.3758/s13423-017-1323-7">10.3758/s13423-017-1323-7</a>.</p>
+</div>
+<div id="ref-ZwaanParticipantNonnaivetereproducibility2017">
+<p>Zwaan, Rolf A., Diane Pecher, Gabriele Paolacci, Samantha Bouwmeester, Peter Verkoeijen, Katinka Dijkstra, and René Zeelenberg. 2017. “Participant Nonnaiveté and the Reproducibility of Cognitive Psychology.” <em>Psychonomic Bulletin &amp; Review</em>, July, 1–5. doi:<a href="https://doi.org/10.3758/s13423-017-1348-y">10.3758/s13423-017-1348-y</a>.</p>
+</div>
+<div id="ref-TopolinskiTurningHandsTime2012">
+<p>Topolinski, Sascha, and Peggy Sparenberg. 2012. “Turning the Hands of Time: Clockwise Movements Increase Preference for Novelty.” <em>Social Psychological and Personality Science</em> 3 (3): 308–14. doi:<a href="https://doi.org/10.1177/1948550611419266">10.1177/1948550611419266</a>.</p>
+</div>
+<div id="ref-FaulStatisticalpoweranalyses2009">
+<p>Faul, F., E. Erdfelder, A. Buchner, and A. G. Lang. 2009. “Statistical Power Analyses Using G*Power 3.1: Tests for Correlation and Regression Analyses.” <em>Behavior Research Methods</em> 41 (November): 1149–60. doi:<a href="https://doi.org/10.3758/BRM.41.4.1149">10.3758/BRM.41.4.1149</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ci.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="corr.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true,
+"fontfamily": "Microsoft JhengHei"
+});
+});
+</script>
+
+</body>
+
+</html>

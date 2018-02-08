@@ -1,0 +1,13 @@
+name: p_distribution_in_stat_book
+title: p_distribution_in_stat_book
+username:
+account: scchen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 273689
+bundleId: 1209623
+url: https://scchen.shinyapps.io/p_distribution_in_stat_book/
+when: 1517907109.63406
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _bookdown.yml|_output.yml|01-intro.Rmd|02-randomization.Rmd|03-one-sample.Rmd|04-confidence-interval.Rmd|05-two-samples.Rmd|06-correlation.Rmd|07-non-parameter.Rmd|08-onewayANOVA.Rmd|09-twowayANOVA.Rmd|10-reference.Rmd|index.Rmd|one-sample-CI-capture.R|preamble.tex|README.md|Stat.bib|style.css|_bookdown_files/Basic-Statistics-Psychological-Science_files/figure-html/one-tail-pvalue-1.png|_bookdown_files/Basic-Statistics-Psychological-Science_files/figure-html/Rosa1998Fig2-1.png|_bookdown_files/Basic-Statistics-Psychological-Science_files/figure-html/two-tail-pvalue-1.png|_bookdown_files/Basic-Statistics-Psychological-Science_files/figure-html/two-tail-pvalue-recap-1.png|docs|images

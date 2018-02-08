@@ -3,12 +3,12 @@ title: "心理科學基礎統計"
 author: "陳紹慶 Sau-Chin Chen"
 date: "`r Sys.Date()`"
 kint: "bookdown::render_book"
-documentclass: book
 site: bookdown::bookdown_site
 bibliography: [Stat.bib]
 biblio-style: apalike
 link-citations: yes
-description: "TBA"
+description: "以開放科學為理念，為初學者編寫的統計教科書。"
+github-repo: SCgeeker/BasicStatistics
 ---
 
 # 前言 {-}
@@ -23,7 +23,7 @@ description: "TBA"
 
 本書取用的示範與習題案例，都是可檢索論文全文與原始資料的研究，初始版本的案例主要來自Carlson與Winquist合著的教科書"An Introduction to Statistics: an Active Learning Approach"[@Carlsonintroductionstatisticsactive2018]，以及收集推特與臉書社團[Psychological Methods Discussion Group](https://www.facebook.com/groups/853552931365745/)，可以啟發初學者的案例。習題也是使用有公開資料的研究。編寫這本書時候，我正在研發一套習題模板，方便管理與擴充各單元的資源。我更希望有意充實這套教材的朋友與同學們，可以提供您認為值得學習的材料。
 
-所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。這
+所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。
 
 這本書初版使用[趙鵬博士](http://www.pzhao.org/zh/)改良的R套件[bookdownplus](https://github.com/pzhaonet/bookdownplus)編寫，目前使用[謝益輝博士](https://yihui.name/)開發的[bookdown](https://bookdown.org/yihui/bookdown/)編寫及更新。如果學習者有興趣，歡迎自行取用本書的[源始碼](https://github.com/SCgeeker/BasicStatistics)，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：
 
