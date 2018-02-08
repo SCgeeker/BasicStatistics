@@ -18,7 +18,7 @@ knitr::include_graphics("images/type-i-and-type-ii-errors.jpg")
 
 根據第\@ref(one-sample)單元的資訊，我們知道那12位大學生的壓力感受分數，以.05的顯著水準評估，單尾與雙尾檢定都顯示與原始報告有顯著差異，估計效果量是-0.696。現在請你把圖\@ref(randomization)裡的`Power`勾起來，接著把`Significance level`、`Sample Size`、`Effect Size`調整為0.05、12、0.7。這些設定比照示範案例的分析結果，請輪流點擊`one-tailed`與`two-tailed`，看看圖下面呈現的`Power`與第\@ref(one-sample)單元預估的差異。
 
-```{r type-1-type-2-app, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE, fig.cap="。"}
+```{r type-1-type-2-app, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE, fig.cap="型一與型二錯誤率互動解析。如果無法顯示，請關閉瀏覽器封鎖不安全網頁功能。"}
 knitr::include_url("http://rpsychologist.com/d3/NHST/", 
   height = "1500px")
 ```
@@ -154,8 +154,9 @@ knitr::include_app("https://scchen.shinyapps.io/p_distribution_in_stat_book/",
 
 ```{r power-curve, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE,out.width='80%',fig.cap="效果量是0.149，獨立組設計與重覆量數設計雙尾檢定的考驗力與樣本數對應曲線。"}
 PowerCurve <- read.csv(file = "power_curve.csv")
+levels(PowerCurve$Design) <- c("獨立組設計","重覆量數設計")
 require(dplyr)
 require(ggplot2)
-PowerCurve %>% ggplot(aes(x=樣本數, y=考驗力)) + geom_point(aes(color=設計))
+PowerCurve %>% ggplot(aes(x=Size, y=Power)) + geom_point(aes(color=Design)) + labs(x="樣本數", y="考驗力")+ scale_color_discrete(name="設計") 
 ```
 
