@@ -1,6 +1,6 @@
 # 我的分數比你的分數高嗎？相依樣本與獨立樣本 {#two-samples}
 
-經過第\@ref(one-sample)與第\@ref(ci)單元，我們已經有一個心理科學的統計實務印象：我們能相信某個研究結果，是建立在多次隨機程序的調查與實驗。傳統統計書很少說明這點，介紹假設檢定的同時通常會一併介紹**型一錯誤(Type 1 error)**與**型二錯誤(Type 2 error)**。由於許多時候預估的型一錯誤等於預先宣告的顯著水準，許多初學者會以為*p*值就是這項研究的型一錯誤，甚至許多資深學者，包括可能是曾經教過你統計的老師也誤以為如此[@GreenlandStatisticaltestsvalues2016,@LakensUnderstandingcommonmisconceptions2017,@NelsonInterpretationSignificanceLevels1986]。
+經過第\@ref(one-sample)與第\@ref(ci)單元，我們已經建立一個心理科學的統計實務印象：我們能相信某個研究結果，是建立在多次隨機程序的調查與實驗。傳統統計書很少說明這點，因為介紹假設檢定的同時通常會一併介紹**型一錯誤(Type 1 error)**與**型二錯誤(Type 2 error)**。由於許多時候預估的型一錯誤等於預先宣告的顯著水準，許多初學者會以為*p*值就是這項研究的型一錯誤，甚至許多資深學者，包括可能是曾經教過你統計的老師也誤以為如此[@GreenlandStatisticaltestsvalues2016; @LakensUnderstandingcommonmisconceptions2017; @NelsonInterpretationSignificanceLevels1986]。
 
 心理科學最常處理的統計實務是兩個平均數的比較，所以我們在這個單元裡好好討論什麼是型一錯誤與型二錯誤，還有該如何正確地分析及推論。
 
@@ -12,9 +12,9 @@
 knitr::include_graphics("images/type-i-and-type-ii-errors.jpg")
 ```
 
-**次數主義統計學(Frequentism Statistics)**用第\@ref(randomization)單元示範的重覆抽樣概念，看待型一錯誤與型二錯誤。一項研究結論有顯著結果，或者說陽性結果，經過數次再現，會累積數次顯著與不顯著的結果，不顯著結果的比例是**型一錯誤率**。相對地，另一項沒有顯著結果的研究結論，或者說陰性結果，經過數次再現，也會累積數次顯著與不顯著的結果，顯著結果的比例是**型二錯誤率**。
+**次數主義統計學(Frequentism Statistics)**運用第\@ref(randomization)單元示範的重覆抽樣概念，看待型一錯誤與型二錯誤。一項研究結論有顯著結果，或者說陽性結果，經過數次再現，會累積數次顯著與不顯著的結果，不顯著結果的比例是**型一錯誤率**。相對地，另一項沒有顯著結果的研究結論，或者說陰性結果，經過數次再現，也會累積數次顯著與不顯著的結果，顯著結果的比例是**型二錯誤率**。
 
-因為隨機變數的數學原理加上資料模擬方法，現代統計學只要根據一次研究結果，就可以估計這一項研究的型一錯誤率與型二錯誤率。我們用第\@ref(one-sample)單元的示範資料，配合圖\@ref(fig:type-1-type-2-app)的互動說明，可以幫助你理解型一錯誤率與型二錯誤率，和樣本數目、事先設定的顯著水準，以及考驗力的關係。
+因為隨機變數的數學原理加上資料模擬方法，多數統計實務只要根據一次研究結果，就可以估計這一項研究的型一錯誤率與型二錯誤率。我們用第\@ref(one-sample)單元的示範資料，配合圖\@ref(fig:type-1-type-2-app)的互動說明，可以幫助你理解型一錯誤率與型二錯誤率，和樣本數目、事先設定的顯著水準，以及考驗力的關係。
 
 根據第\@ref(one-sample)單元的資訊，我們知道那12位大學生的壓力感受分數，以.05的顯著水準評估，單尾與雙尾檢定都顯示與原始報告有顯著差異，估計效果量是-0.696。現在請你把圖\@ref(randomization)裡的`Power`勾起來，接著把`Significance level`、`Sample Size`、`Effect Size`調整為0.05、12、0.7。這些設定比照示範案例的分析結果，請輪流點擊`one-tailed`與`two-tailed`，看看圖下面呈現的`Power`與第\@ref(one-sample)單元預估的差異。
 
@@ -33,11 +33,11 @@ knitr::include_url("http://rpsychologist.com/d3/NHST/",
 
 ## 示範資料說明
 
-在此使用兩項研究的公開資料，學習相依樣本與獨立樣本t檢定分析的程序，這兩筆資料都是預先註冊實驗的成果[@WagenmakersBayesianinferencepsychology2017,@ZwaanParticipantNonnaivetereproducibility2017]。
+在此使用兩項研究的公開資料，學習相依樣本與獨立樣本t檢定分析的程序，這兩筆資料都是預先註冊實驗的成果[@WagenmakersBayesianinferencepsychology2017; @ZwaanParticipantNonnaivetereproducibility2017]。
 
-Zwaan等人(2017)挑選九個知名的認知心理學實驗，透過網路邀請參與者相隔幾天，進行同一項實驗兩次。所有實驗都是**參與者內設計**，是實驗操作的兩種情況，每位參與者在實驗過程中都會經歷。稍後要示範分析的**語義促發效應**，是一種詞彙判斷作業的反應時間測量結果。詞彙判斷作業是請參與者判斷現在呈現的目標詞是真詞還是假詞，例如hand是真詞，hamq是假詞。每個目標詞之前會隨機呈現一個與目標詞有關聯的詞或一個無關聯的詞，例如與hand有關聯的foot。過去許多研究發現先呈現有關聯的詞，參與者判斷真詞的反應會比先呈現無關聯的詞快，有無關聯之間的反應時間差異就是**語義促發效應**。我們將使用[公開資料](https://osf.io/atfcj/)示範相依樣本t檢定分析程序。
+Zwaan等人[-@ZwaanParticipantNonnaivetereproducibility2017]挑選九個知名的認知心理學實驗，透過網路邀請參與者相隔幾天，進行同一項實驗兩次。所有實驗都是**參與者內設計**，是實驗操作的兩種情況，每位參與者在實驗過程中都會經歷。稍後要示範分析的**語義促發效應**，是一種詞彙判斷作業的反應時間測量結果。詞彙判斷作業是請參與者判斷現在呈現的目標詞是真詞還是假詞，例如hand是真詞，hamq是假詞。每個目標詞之前會隨機呈現一個與目標詞有關聯的詞或一個無關聯的詞，例如與hand有關聯的foot。過去許多研究發現先呈現有關聯的詞，參與者判斷真詞的反應會比先呈現無關聯的詞快，有無關聯之間的反應時間差異就是**語義促發效應**。我們將使用[公開資料](https://osf.io/atfcj/)示範相依樣本t檢定分析程序。
 
-JASP開發團隊執行長Wagenmakers與同事們嘗試再現德國社會心理學者Topolinski與Sparenberg的體現認知實驗[@TopolinskiTurningHandsTime2012, @WagenmakersBayesianinferencepsychology2017]，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」，以五點量表表達自己對題目內容的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖\@ref(fig:roll-setting)，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。
+JASP開發團隊執行長Wagenmakers與同事們[-@WagenmakersBayesianinferencepsychology2017]嘗試再現德國社會心理學者Topolinski與Sparenberg[-@TopolinskiTurningHandsTime2012]的體現認知實驗，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」，以五點量表表達自己對題目內容的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖\@ref(fig:roll-setting)，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。
 
 ```{r roll-setting, out.width='60%', fig.cap="Wagenmakers等人(2017)再現Topolinski與Sparenberg(2012)體現認知實驗的現場設置。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/Wagenmakers-exp-setting.jpeg")
@@ -142,17 +142,15 @@ knitr::include_app("https://scchen.shinyapps.io/p_distribution_in_stat_book/",
   height = "2200px")
 ```
 
-## 獨立樣本的低再現性？
+## 如何提高實驗結果的再現性？
 
 前一段的互動展示帶來一個值得探討的問題：低效果量的獨立組研究是不是很難得到顯著結果？有顯著的結果是不是不太容易成功再現？如果你能想到這樣的問題，你已經有邁向進階課程的條件。
 
-結束這個單元之前，我使用心理科學家常用的考驗力分析軟體G\*Power[@FaulStatisticalpoweranalyses2009]，根據Wagenmakers等人的再現研究分析結果製造樣本數與考驗力對應值資料。這筆資料如同圖\@ref(fig:shiny-distributions)的左下角曲線圖，但是同時呈現獨立組設計與重覆量數設計的考驗力。
+結束這個單元之前，我要使用心理科學家常用的考驗力分析軟體G\*Power[@FaulStatisticalpoweranalyses2009]，根據Wagenmakers等人的再現研究設定的顯著水準與獲得的效果量，製造樣本數與考驗力對應值資料。這筆資料的視覺化如同圖\@ref(fig:shiny-distributions)的左下角曲線圖，但是同時呈現獨立組設計與重覆量數設計的考驗力。
 
-對應值的設定條件是兩種設計的效果量皆為0.149，且起始考驗力維持於11%，起始樣本數是獨立組設計各組50，重覆量數設計總數50。G\*Power根據起始條件會算出獨立組設計的型一錯誤率剛好小於.05，重覆量數設計的型一錯誤率約為獨立組設計的一半。
+兩種設計的共同設定條件是效果量皆為0.149，起始樣本數是獨立組設計各組50，重覆量數設計總數50。G\*Power會根據共同條件估計橫跨樣本數50到3000的考驗力，你可以[由此下載](https://osf.io/dhmzk/)樣本數與考驗力的對應資料，圖\@ref(fig:power-curve)呈現兩種設計的樣本數與考驗力對應曲線，請想想看如果你有一個研究問題，能用獨立組設計，也可以用重覆量數設計收集資料，如果預期發現的效果量大約是0.149，那種設計會比較理想？
 
-製作的資料橫跨樣本數50到3000，你可以[由此下載](https://osf.io/dhmzk/)對應值資料，圖\@ref(fig:power-curve)呈現兩種設計的樣本數與考驗力對應曲線，請想想看如果你有一個研究問題，能用獨立組設計，也可以用重覆量數設計收集資料，那種設計會比較理想？
-
-```{r power-curve, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE,out.width='80%',fig.cap="效果量是0.149，獨立組設計與重覆量數設計雙尾檢定的考驗力與樣本數對應曲線。"}
+```{r power-curve, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE,out.width='100%',fig.cap="效果量是0.149，獨立組設計與重覆量數設計雙尾檢定的考驗力與樣本數對應曲線。"}
 PowerCurve <- read.csv(file = "power_curve.csv")
 levels(PowerCurve$Design) <- c("獨立組設計","重覆量數設計")
 require(dplyr)
@@ -160,3 +158,7 @@ require(ggplot2)
 PowerCurve %>% ggplot(aes(x=Size, y=Power)) + geom_point(aes(color=Design)) + labs(x="樣本數", y="考驗力")+ scale_color_discrete(name="設計") 
 ```
 
+
+## 習題
+
+開發中。

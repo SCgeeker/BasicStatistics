@@ -9,3 +9,4 @@ language:
     chapter_name: ["第", "單元"]
 output_dir: "docs"
 delete_merged_file: true
+before_chapter_script: "before-chapter.R"

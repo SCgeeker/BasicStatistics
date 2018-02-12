@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>心理科學基礎統計</title>
   <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
 
   <meta property="og:title" content="心理科學基礎統計" />
   <meta property="og:type" content="book" />
@@ -25,14 +25,14 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-02-08">
+<meta name="date" content="2018-02-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="non-para.html">
+<link rel="prev" href="corr.html">
 <link rel="next" href="twoway-anova.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,43 +49,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -115,6 +78,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
 <li class="chapter" data-level="1.6.3" data-path="intro.html"><a href="intro.html#section-1.6.3"><i class="fa fa-check"></i><b>1.6.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
 </ul></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="randomization.html"><a href="randomization.html"><i class="fa fa-check"></i><b>2</b> 隨機方法是什麼？</a><ul>
 <li class="chapter" data-level="2.1" data-path="randomization.html"><a href="randomization.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 隨機變數與簡單抽樣</a><ul>
@@ -134,6 +98,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="randomization.html"><a href="randomization.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 條件機率與抽樣</a></li>
 <li class="chapter" data-level="2.5" data-path="randomization.html"><a href="randomization.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 資料密度的視覺化與轉換</a></li>
+<li class="chapter" data-level="2.6" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>2.6</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="one-sample.html"><a href="one-sample.html"><i class="fa fa-check"></i><b>3</b> 這個分數是我要的嗎？單一樣本平均數假設檢定</a><ul>
 <li class="chapter" data-level="3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 為何行為科學不常見到完整的母群？</a></li>
@@ -149,35 +114,93 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>3.4</b> p值是什麼？</a></li>
 <li class="chapter" data-level="3.5" data-path="one-sample.html"><a href="one-sample.html#section-3.5"><i class="fa fa-check"></i><b>3.5</b> 效果量與考驗力</a></li>
-<li class="chapter" data-level="3.6" data-path="one-sample.html"><a href="one-sample.html#section-3.6"><i class="fa fa-check"></i><b>3.6</b> 治療性撫慰師真有本事嗎？</a></li>
+<li class="chapter" data-level="3.6" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>3.6</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="ci.html"><a href="ci.html"><i class="fa fa-check"></i><b>4</b> 這個分數是我要的嗎？單一樣本平均數的信賴區間</a><ul>
 <li class="chapter" data-level="4.1" data-path="ci.html"><a href="ci.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 信賴區間的計算與報告</a></li>
 <li class="chapter" data-level="4.2" data-path="ci.html"><a href="ci.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 信賴區間的機率本質</a></li>
 <li class="chapter" data-level="4.3" data-path="ci.html"><a href="ci.html#section-4.3"><i class="fa fa-check"></i><b>4.3</b> 信賴區間與研究結果可再現性</a></li>
+<li class="chapter" data-level="4.4" data-path="ci.html"><a href="ci.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 治療性撫慰師真有本事嗎？</a></li>
+<li class="chapter" data-level="4.5" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>4.5</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="two-samples.html"><a href="two-samples.html"><i class="fa fa-check"></i><b>5</b> 我的分數比你的分數高嗎？相依樣本與獨立樣本</a><ul>
 <li class="chapter" data-level="5.1" data-path="two-samples.html"><a href="two-samples.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 型一錯誤與型二錯誤</a></li>
 <li class="chapter" data-level="5.2" data-path="two-samples.html"><a href="two-samples.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 示範資料說明</a></li>
 <li class="chapter" data-level="5.3" data-path="two-samples.html"><a href="two-samples.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 相依樣本與重覆量數</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="5.3.2" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="5.3.3" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="5.3.4" data-path="two-samples.html"><a href="two-samples.html#-1"><i class="fa fa-check"></i><b>5.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="5.3.1" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.3.2" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.3.3" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.3.4" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.4</b> 分析後報告</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="two-samples.html"><a href="two-samples.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 獨立樣本與組間比較</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="5.4.2" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="5.4.3" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="5.4.4" data-path="two-samples.html"><a href="two-samples.html#-2"><i class="fa fa-check"></i><b>5.4.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="5.4.1" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="5.4.2" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="5.4.3" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="5.4.4" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.4</b> 分析後報告</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>5.5</b> 效果量、p值與考驗力</a></li>
-<li class="chapter" data-level="5.6" data-path="two-samples.html"><a href="two-samples.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 獨立樣本的低再現性？</a></li>
+<li class="chapter" data-level="5.6" data-path="two-samples.html"><a href="two-samples.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 如何提高實驗結果的再現性？</a></li>
+<li class="chapter" data-level="5.7" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>5.7</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>6</b> 我倆多有緣？相關與迴歸</a></li>
-<li class="chapter" data-level="7" data-path="non-para.html"><a href="non-para.html"><i class="fa fa-check"></i><b>7</b> 沒有母群如何比高低？無母數統計</a></li>
-<li class="chapter" data-level="8" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>8</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
-<li class="chapter" data-level="9" data-path="twoway-anova.html"><a href="twoway-anova.html"><i class="fa fa-check"></i><b>9</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a></li>
+<li class="chapter" data-level="6" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>6</b> 我倆多有緣？相關與迴歸</a><ul>
+<li class="chapter" data-level="6.1" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.1</b> Iris資料介紹</a></li>
+<li class="chapter" data-level="6.2" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.2</b> Iris相關分析</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="6.2.2" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="6.2.3" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="6.2.4" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="corr.html"><a href="corr.html#section-6.3"><i class="fa fa-check"></i><b>6.3</b> 均值迴歸</a></li>
+<li class="chapter" data-level="6.4" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.4</b> Iris迴歸分析</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="6.4.2" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="6.4.3" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="6.4.4" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>6.5</b> 習題</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="corr.html"><a href="corr.html#big-5"><i class="fa fa-check"></i><b>6.5.1</b> Big 5人格量表分析</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>7</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a><ul>
+<li class="chapter" data-level="7.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 比較多組平均數有何不同？</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample.html"><a href="one-sample.html#t"><i class="fa fa-check"></i><b>7.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
+<li class="chapter" data-level="7.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 效果量家族</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.2"><i class="fa fa-check"></i><b>7.2</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="7.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.3"><i class="fa fa-check"></i><b>7.3</b> 獨立樣本變異數分析示範</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="7.3.2" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="7.3.3" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="7.3.4" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.4"><i class="fa fa-check"></i><b>7.4</b> 變異數分析的考驗力</a></li>
+<li class="chapter" data-level="7.5" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>7.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="twoway-anova.html"><a href="twoway-anova.html"><i class="fa fa-check"></i><b>8</b> 如何比較各班同學的分數？獨立樣本二因子變異數分析</a><ul>
+<li class="chapter" data-level="8.1" data-path="twoway-anova.html"><a href="twoway-anova.html#c"><i class="fa fa-check"></i><b>8.1</b> 示範案例：有效攝取維他命C的方式</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="8.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="8.1.3" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="8.1.4" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="twoway-anova.html"><a href="twoway-anova.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 獨變項是不是隨機的？</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="twoway-anova.html"><a href="twoway-anova.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 交互作用的考驗力</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="twoway-anova.html"><a href="twoway-anova.html#-7"><i class="fa fa-check"></i><b>8.3</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="non-para.html"><a href="non-para.html"><i class="fa fa-check"></i><b>9</b> 沒有母群如何比高低？無母數統計</a><ul>
+<li class="chapter" data-level="9.1" data-path="non-para.html"><a href="non-para.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 母數統計的基本條件</a></li>
+<li class="chapter" data-level="9.2" data-path="non-para.html"><a href="non-para.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 獨立樣本的無母數統計：卡方檢定</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="intro.html"><a href="intro.html#emily-rosa"><i class="fa fa-check"></i><b>9.2.1</b> 適合度考驗：重新檢視Emily Rosa的資料</a></li>
+<li class="chapter" data-level="9.2.2" data-path="non-para.html"><a href="non-para.html#rogersmilkman2016"><i class="fa fa-check"></i><b>9.2.2</b> 獨立性考驗：重製Rogers與Milkman(2016)的分析</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="non-para.html"><a href="non-para.html#section-9.3"><i class="fa fa-check"></i><b>9.3</b> 其他基礎無母數統計</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="non-para.html"><a href="non-para.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 獨立樣本與相依樣本的無母數統計</a></li>
+<li class="chapter" data-level="9.3.2" data-path="non-para.html"><a href="non-para.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 變異數分析的無母數統計</a></li>
+<li class="chapter" data-level="9.3.3" data-path="non-para.html"><a href="non-para.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 相關分析的無母數統計</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="non-para.html"><a href="non-para.html#-8"><i class="fa fa-check"></i><b>9.4</b> 習題</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
@@ -200,15 +223,269 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="oneway-anova" class="section level1">
-<h1><span class="header-section-number">第8單元</span> 如何比較同班同學的分數？獨立樣本單因子變異數分析</h1>
+<h1><span class="header-section-number">第7單元</span> 如何比較同班同學的分數？獨立樣本單因子變異數分析</h1>
+<p>在第<a href="two-samples.html#two-samples">5</a>單元我們學到如何分析兩組平均數差異的統計方法，但是心理科學經常遇到一次收集三組以上的研究。面對這類研究，難道要做三組t檢定？如果是更多組的研究，該怎麼辦？好在有變異數分析，不管獨變項有幾組，都可以分析資料。也因此我們必須了解<strong>預先註冊</strong>要如何規劃，才能有效運用這套方法。</p>
+<div id="section-7.1" class="section level2">
+<h2><span class="header-section-number">7.1</span> 比較多組平均數有何不同？</h2>
+<p>有三組以上的平均數要分析，事先宣告要說清楚的還是一樣。只是平均數之間的差異組合變多了，像是你假設其中一組分數比另位兩組高，或者只想確認三組之間有沒有差異。這些狀況的分析程序要怎麼設定，才能讓結果有效驗證我們的統計思考。首先說明兩個與t檢定分析不同的重點：低估的型一錯誤率與計算效果量。</p>
+<div id="t" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> 為何t檢定會低估型一錯誤率</h3>
+<p>至此我們已經知道根據平均數抽樣分配原理產生的資料，都是在相同條件進行上千次研究的其中一種結果。我們事先宣告的顯著水準，只是評估這次結論最後被證實是偽陽性結果的最大可能機率。然而實際的型一錯誤率有多少，沒有更多研究資料之前，沒有人會知道或者有信心宣稱一個數字。</p>
+<p>那麼三組以上的平均數為何不適合用三組t檢定分析？要討論這個問題，我們要設定一種狀況：有三個獨立抽樣分配來源，彼此平均數沒有差異，標準差都是5，每個來源都隨機收集相同數量的樣本並計算平均數。說到這你應該想到大多數的研究結果，三個平均數應該沒有相差多少，如果真的有差異也是<strong>極少數</strong>。</p>
+<p>然而這個<strong>極少數</strong>是多少？幸好<strong>次數主義統計學</strong>的一切都是以累積次數構成的。如果我們能收集大量的研究結果，比如說1000次結果，計算其中有差異的次數，就可以估計在這樣的研究條件，會產生<em>偽陽性結果</em>的比例，也就是第<a href="two-samples.html#two-samples">5</a>單元提到的<strong>型一錯誤率</strong>。</p>
+<p>如果我們用t檢定分析這樣的資料，會發生多高的型一錯誤率？其實可以用排列組合計算，假定每次研究結果要做三組t檢定，每一組t檢定的顯著水準都是設為.05，只要至少有一組t檢定顯示顯著差異，該次研究結果就是偽陽性結果。所以我們可以設定有1000次研究結果，每次結果的三組t檢定結論組合，就會像以下表格解析，大約有14.2%的研究結果是偽陽性：</p>
+<style type="text/css">
 
+.tg {border-collapse:collapse;border-spacing:0;}
+
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+
+.tg .tg-yw4l{vertical-align:top}
+
+</style>
+<table class="tg">
+<tr>
+<th class="tg-031e">
+第一組t檢定結果
+</th>
+<th class="tg-031e">
+第二組t檢定結果
+</th>
+<th class="tg-031e">
+第三組t檢定結果
+</th>
+<th class="tg-031e">
+累積檢定結果
+</th>
+</tr>
+<tr>
+<td class="tg-031e" rowspan="4">
+50 次偽陽性結果
+</td>
+<td class="tg-031e" rowspan="2">
+2.5 次偽陽性結果
+</td>
+<td class="tg-031e">
+0.125 次偽陽性結果
+</td>
+<td class="tg-031e" rowspan="8">
+142.626 次偽陽性結果<br><br>857.375 次真陰性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e">
+2.375 次真陰性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e" rowspan="2">
+47.5 次真陰性結果
+</td>
+<td class="tg-031e">
+2.375 次偽陽性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e">
+45.125 次真陰性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e" rowspan="4">
+950 次真陰性結果
+</td>
+<td class="tg-031e" rowspan="2">
+47.5 次偽陽性結果
+</td>
+<td class="tg-031e">
+2.375 次偽陽性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e">
+45.125 次真陰性結果
+</td>
+</tr>
+<tr>
+<td class="tg-031e" rowspan="2">
+902.5 次真陰性結果
+</td>
+<td class="tg-031e">
+45.125 次偽陽性結果
+</td>
+</tr>
+<tr>
+<td class="tg-yw4l">
+857.375 次真陰性結果
+</td>
+</tr>
+</table>
+<p>此外，我們也可以自已用類似seeing theory範例的模擬方法，生產符合以上條件的1000筆資料，總計有多少筆偽陰性結果。雖然我沒有特別製作一套shiny app，但是我想能到達這個單元的讀者，已經對寫R程式碼有些興趣。你如果開始學習R或準備要學習，可以下載<a href="https://osf.io/jtbmr/">模擬程式碼</a>自行修改測試。這個程式碼以前面抽樣分配設定，模擬每組有30筆隨機資料的1000次研究結果。圖<a href="oneway-anova.html#fig:type-1-error-f-t">7.1</a>並列t檢定與F檢定的模擬結果。因為模擬隨機程序的關係，t檢定的型一錯誤率不等於上面表格的14.2%，你還是可以注意到t檢定在多組平均數分析的實際型一錯誤率，比我們事先宣告的顯著水準還高：</p>
+<div class="figure" style="text-align: center"><span id="fig:type-1-error-f-t"></span>
+<img src="images/type-1-error-f-t.png" alt="模擬以t檢定與F檢定分析三組平均數，產生的型一錯誤率。" width="80%" />
+<p class="caption">
+圖 7.1: 模擬以t檢定與F檢定分析三組平均數，產生的型一錯誤率。
+</p>
+</div>
+</div>
+<div id="section-7.1.2" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> 效果量家族</h3>
+<p>至這個單元之前，我們已經認識兩種效果量：<code>Cohen's d</code>與<code>r</code>。其實這兩種效果量分別代表統計學的兩種效果量家族：<strong>差異家族(Difference family)</strong>與<strong>相關家族(Correlation family)</strong>，到本書的最後第<a href="non-para.html#non-para">9</a>單元，我們還會認識最一種家族：<strong>類別家族(Category family)</strong>。你只要知道每種效果量的計算原理，就能曉得適合自已手上研究問題的統計方法，應該是那一類。</p>
+<p>計算差異家族效果量的基礎是平均數，而計算相關家族效果量的基礎是變異數或共變數。那麼從名稱來看，我們可以知道變異數分析的效果量是相關家族的成員。這位成員是<span class="math inline">\(\eta^2\)</span>，不過稍後會知道更適合做變異數分析效果量的是<span class="math inline">\(\eta^2\)</span>的表親<span class="math inline">\(\eta^2_p\)</span>。</p>
+</div>
+</div>
+<div id="section-7.2" class="section level2">
+<h2><span class="header-section-number">7.2</span> 分解變異數來源</h2>
+<p>我們用一個簡單的例子配合Kristoffer Magnusson製作的<a href="http://rpsychologist.com/d3-one-way-anova">互動網頁</a>， 說明如何分解三組以上資料的變異數，達成分析三組平均數差異的功能。這個例子的資料很簡單，就是把正整數1到12分成三組，如表<a href="oneway-anova.html#tab:SS-data">7.1</a>。</p>
+<table>
+<caption><span id="tab:SS-data">表 7.1: </span>圖解變異數分析示範資料。</caption>
+<thead>
+<tr class="header">
+<th align="right">Group1</th>
+<th align="right">Group2</th>
+<th align="right">Group3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">6</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">7</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">8</td>
+<td align="right">12</td>
+</tr>
+</tbody>
+</table>
+<p>樣本變異數的計算是將資料的離均差平方和(Sum of Squares, 簡稱SS)除以自由度，分解的主體正是離均差平方和。如果表<a href="oneway-anova.html#tab:SS-data">7.1</a>的資料不做分組，就像分析單一樣本平均數，變異數是用所有資料與總平均數6.5的SS除以自由度(12 - 1)。在以變異數分析評估三組平均差異的狀況裡，就等於總變異數，分子就是總均差平方和(Total SS)，如圖<a href="oneway-anova.html#fig:total-SS">7.2</a>所示。</p>
+<div class="figure" style="text-align: center"><span id="fig:total-SS"></span>
+<iframe src="http://rpsychologist.com/d3/one-way-ANOVA/total_ss.html" width="100%" height="550px">
+</iframe>
+<p class="caption">
+圖 7.2: 分解總離均差平方和的數值來源。請將游標移動到圓餅圖上了解各組資料如何構成總離均差平方和。如果無法顯示，請關閉瀏覽器封鎖不安全網頁功能。
+</p>
+</div>
+<p>因為分成三組，各組都有平均數與變異數，將計算各組變異數的離均差平方和加總，就是組內離均差平方和(Within group SS)。看圖<a href="oneway-anova.html#fig:within-SS">7.3</a>，你會發現佔總均差平方和一小部分。</p>
+<div class="figure" style="text-align: center"><span id="fig:within-SS"></span>
+<iframe src="http://rpsychologist.com/d3/one-way-ANOVA/within_ss.html" width="100%" height="550px">
+</iframe>
+<p class="caption">
+圖 7.3: 分解總組內均差平方和的數值來源。請將游標移動到圓餅圖上了解各組資料如何構成組內離均差平方和。如果無法顯示，請關閉瀏覽器封鎖不安全網頁功能。
+</p>
+</div>
+<p>總離均差平方和的一大部分是三組平均數與總平均數的離均差平方和，也就是組間離均差平方和(Between grouop SS)。請見圖<a href="oneway-anova.html#fig:between-SS">7.4</a>。</p>
+<div class="figure" style="text-align: center"><span id="fig:between-SS"></span>
+<iframe src="http://rpsychologist.com/d3/one-way-ANOVA/between_ss.html" width="100%" height="550px">
+</iframe>
+<p class="caption">
+圖 7.4: 分解總組間均差平方和的數值來源。請將游標移動到圓餅圖上了解各組資料如何構成組間離均差平方和。如果無法顯示，請關閉瀏覽器封鎖不安全網頁功能。
+</p>
+</div>
+<p>就像比較獨立樣本平均數一樣，我們也會想知道這三個平均數之間的差異有沒有達到宣告的標準。這裡就是看組間變異數佔總變異數的比例，有沒有明顯超過組內變異數的比例。這是我們要使用F檢定，而非t檢定的主要理由。</p>
+<p>如果你想看三組隨機變數生成的資料，三種離均差平方和與F檢定的模擬狀況，可以參考這個<a href="https://gallery.shinyapps.io/anova_shiny_rstudio/">Shiny app</a>。</p>
+</div>
+<div id="section-7.3" class="section level2">
+<h2><span class="header-section-number">7.3</span> 獨立樣本變異數分析示範</h2>
+<p>我們以JASP示範如何分析iris資料的三種鳶尾花花瓣長度，因為每個品種的資料都是隨機取樣，而且第<a href="corr.html#corr">6</a>單元已知三個品種的花瓣長度有明顯差異，適合展示變異數分析與事後考驗(post hoc)的建議程序。</p>
+<p>統計學家已經開發出許多事後考驗方法，功能是在多組平均數之間，使用與變異數分析相同的顯著水準檢驗任兩組平均數，而不會導致型一錯誤率的膨脹。本次示範使用的Tukey檢定，就是針對獨立組之間的比較而設計。</p>
+<div id="-5" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> 分析前的宣告</h3>
+<p>首先使用JASP畫出三個品種鳶尾花的花瓣長度箱形圖及小提琴圖(見圖<a href="oneway-anova.html#fig:iris-petal-length-plots">7.5</a>)，可以看出青龍鳶尾花瓣最長，山鳶尾花瓣最短，不過長度差異能否做為辨別品種的特徵？這是可以運用單因子獨立樣本變異數分析確認的問題，而且不只確認三個品種的花瓣長度有明顯差異，還要確認品種之間的花瓣長短順序如圖<a href="oneway-anova.html#fig:iris-petal-length-plots">7.5</a>所示。</p>
+<div class="figure" style="text-align: center"><span id="fig:iris-petal-length-plots"></span>
+<img src="images/iris-petal-length-plots.png" alt="三種鳶尾花的花瓣長度資料視覺化。" width="80%" />
+<p class="caption">
+圖 7.5: 三種鳶尾花的花瓣長度資料視覺化。
+</p>
+</div>
+<p>變異數分析的功能是確認有差異的存在，差異的樣態則是事後檢驗的任務。所以這份分析前宣告有以下內容：</p>
+<blockquote>
+<p>(1)如果三個品種鳶尾花花瓣長度確實有明顯著異，單因子變異數分析應該出現小於.01的<em>p</em>值，否則<em>p</em>值大於或等於.01。(2)如果單因子變異數分析結果是顯著的，應該用Tukey檢定確認山鳶尾花瓣長度比變色鳶尾短，且變色鳶尾花瓣長度比青龍鳶尾。(3)如果任兩個品種的花瓣長度有顯著差異，Tukey檢定應該出現小於.01的<em>p</em>值，否則<em>p</em>值大於或等於.01。</p>
+</blockquote>
+</div>
+<div id="-5" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> 示範檔案操作說明</h3>
+<p>只要所有分組都是獨立樣本，不管獨變項有多少，JASP與jamovi都是選擇<code>ANOVA</code>模組的<code>ANOVA</code>執行分析程序。JASP與jamovi的<code>ANOVA</code>模組提供的功能有些許差異，在兩個以上獨變項的變異數分析才會清楚，所以我們在第<a href="twoway-anova.html#twoway-anova">8</a>單元介紹。</p>
+<p>你可以下載<a href="https://osf.io/h5stz/">示範檔案</a>，依照事前宣告，需要勾選的選項已在圖<a href="#fig:"><strong>??</strong></a>顯示。請留意<code>ANOVA</code>操作選單的部分選項必須取消，才按照宣告完成分析。</p>
+<div class="figure" style="text-align: center"><span id="fig:oneway-ANOVA-operation"></span>
+<img src="images/JASP-oneway-ANOVA-operation.jpg" alt="一因子獨立樣本變異數分析操作設定示範。顯示的截圖是需要設定的次級選單。" width="100%" />
+<p class="caption">
+圖 7.6: 一因子獨立樣本變異數分析操作設定示範。顯示的截圖是需要設定的次級選單。
+</p>
+</div>
+</div>
+<div id="-5" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> 示範檔案報表解讀</h3>
+<div class="figure" style="text-align: center"><span id="fig:oneway-ANOVA-result"></span>
+<img src="images/JASP-oneway-ANOVA-result.jpg" alt="一因子獨立樣本變異數分析結果報表。" width="80%" />
+<p class="caption">
+圖 7.7: 一因子獨立樣本變異數分析結果報表。
+</p>
+</div>
+<p>圖<a href="oneway-anova.html#fig:oneway-ANOVA-result">7.7</a>是JASP輸出的統計資訊，APA格式規範也是建議用這些資訊輔助文字說明。最上面的ANOVA表內資訊，只有Sum of Squaries與殘差項目(Residual)的Mean Sqaure不必呈現，因為這些數值都可以由自由度、F統計數與主要效果Species的Mean Square還原。JASP預設呈現的效果量是<span class="math inline">\(\eta^2\)</span>，但是近幾年的統計數都是建議使用<span class="math inline">\(\eta^2_p\)</span>，理由是<span class="math inline">\(\eta^2\)</span>只適用估計這筆資料的效果，要計算相同條件的多次研究會達到的考驗力，就要使用<span class="math inline">\(\eta^2_p\)</span><span class="citation">(Lakens, <a href="#ref-lakens_calculating_2013">2013</a>)</span>。</p>
+<p>由於分析前宣告已經提出如果變異數分析顯示顯著差異，就要進行三組之間任兩個平均數的Tukey檢定，不過為了限制型一錯誤率，無法評估特定兩組的效果量。JASP報表中的效果量是以獨立樣本t檢定估計Cohen’s d。</p>
+</div>
+<div id="-5" class="section level3">
+<h3><span class="header-section-number">7.3.4</span> 分析後報告</h3>
+<p>符合分析前宣告的報告內容如下：</p>
+<p>單因子獨立樣本變異數分析顯示，三個品種的鳶尾花花瓣長度有顯著差異，<em>F</em>(2,147) = 1180.161，<em>p</em> &lt; .001，<em>MSE</em> = 218.551，<span class="math inline">\(\eta^2_p\)</span> = 0.941。</p>
+<p>報告格式與獨立樣本t檢定分析相同，除了無法報告效果量，還有使用符合的差別：</p>
+<p>Tukey檢定顯示，青龍鳶尾的花瓣長度(M = 5.552, SD = 0.552)顯著長過變色鳶尾的花瓣長度(M = 4.260, SD = 0.470)，qT = 15.012，<em>p</em> &lt; .001；變色鳶尾的花瓣長度也顯著長過山鳶尾的花瓣長度(M = 1.462, SD = 0.174)，qT = 35.510，<em>p</em> &lt; .001。</p>
+</div>
+</div>
+<div id="section-7.4" class="section level2">
+<h2><span class="header-section-number">7.4</span> 變異數分析的考驗力</h2>
+<p>iris資料的效果量是難得一見的「超級」效果量。身為相關家族的成員，我們可以預想這家族的效果量數值超過1或-1的例子不多，所以0.941相當罕見，考驗力更是無可估算的巨量數值。因此我們在這個單元的最後，透過iris資料的設計，討論單因子變異數的型一錯誤率與考驗力之間關係。</p>
+<p>Cohen<span class="citation">(<a href="#ref-CohenStatisticalpoweranalysis1988">1988</a>)</span>建議計算變異數分析考驗力的效果量，是相關家族的另一個成員Cohen’s <em>f</em>。考驗力分析軟體G*Power<span class="citation">(Faul, Erdfelder, Buchner, &amp; Lang, <a href="#ref-FaulStatisticalpoweranalyses2009">2009</a>)</span>是根據<em>f</em>、總樣本數與實驗分組數量估計考驗力與型一錯誤率。最新版本提供將<span class="math inline">\(\eta^2_p\)</span>轉換為<em>f</em>的功能，所以我們可以把JASP與jamovi輸出的<span class="math inline">\(\eta^2_p\)</span>放進去轉換，估計實驗結果的考驗力與型一錯誤率。</p>
+<p>心理科學研究者常用的統計軟體如SPSS也可以輸出<span class="math inline">\(\eta^2_p\)</span>，但是Daniel Lakens<span class="citation">(<a href="#ref-lakens_calculating_2013">2013</a>)</span>提醒SPSS計算<span class="math inline">\(\eta^2_p\)</span>的演算法，並沒有區分獨立組與相依樣本的差異。雖然本書沒有介紹重覆量數變異數分析，你應該在第<a href="two-samples.html#two-samples">5</a>單元注意到兩種設計的變異數估計方式不同。如果你有用SPSS分析獨立樣本的資料，建議使用JASP或jamovi再做一次，才能用G*Power得到合理的考驗力估計值。</p>
+<p>其實Cohen’s <em>f</em>與<span class="math inline">\(\eta^2_p\)</span>的轉換關係很單純，正如以下公式：</p>
+<p><span class="math display">\[ f = \sqrt(\eta^2_p/(1 - \eta^2_p)) \]</span></p>
+<p>因此我們可以把G*Power產生的Cohen’s <em>f</em>轉換為<span class="math inline">\(\eta^2_p\)</span>，根據三個獨立分組，總樣本數150的條件，計算預設顯著水準為.01，.02，.03，.04，.05所獲得的<span class="math inline">\(\eta^2_p\)</span>，與對應的考驗力估計值。從圖<a href="oneway-anova.html#fig:anova-power">7.8</a>，我們可看到Cohen建議的中量<span class="math inline">\(\eta^2_p\)</span> = 0.09在所有顯著水準都接近或超過80%的考驗力，<span class="math inline">\(\eta^2_p\)</span>超過0.15後，考驗力已達百分之百。</p>
+<p>但是十年前心理科學研究很少達到如此理想的情況，因為獨立分組且總樣本數達到150的研究不多。直到最近幾年網路施測的軟硬體條件成熟，如此規模的研究才逐漸增加。解讀這類研究結果，你更要注意報告裡的效果量與<em>p</em>值，因為如果<span class="math inline">\(\eta^2_p\)</span>是0.05左右，研究結果的考驗力也是約50%左右。</p>
+<div class="figure"><span id="fig:anova-power"></span>
+<img src="Basic-Statistics-Psychological-Science_files/figure-html/anova-power-1.png" alt="三個獨立組，總樣本數150的單因子變異數分析之效果量與考驗力對應曲線。" width="100%" />
+<p class="caption">
+圖 7.8: 三個獨立組，總樣本數150的單因子變異數分析之效果量與考驗力對應曲線。
+</p>
+</div>
+</div>
+<div id="-6" class="section level2">
+<h2><span class="header-section-number">7.5</span> 習題</h2>
+<p>開發中。</p>
+
+</div>
+</div>
+<h3>參考文獻</h3>
+<div id="refs" class="references">
+<div id="ref-lakens_calculating_2013">
+<p>Lakens, D. (2013). Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and ANOVAs. <em>Frontiers in Psychology</em>, <em>4</em>. doi:<a href="https://doi.org/10.3389/fpsyg.2013.00863">10.3389/fpsyg.2013.00863</a></p>
+</div>
+<div id="ref-CohenStatisticalpoweranalysis1988">
+<p>Cohen, J. (1988). <em>Statistical power analysis for the behavioral sciences</em> (2nd ed.). Hillsdale, NJ: Erlbaum.</p>
+</div>
+<div id="ref-FaulStatisticalpoweranalyses2009">
+<p>Faul, F., Erdfelder, E., Buchner, A., &amp; Lang, A. G. (2009). Statistical power analyses using G*Power 3.1: Tests for correlation and regression analyses. <em>Behavior Research Methods</em>, <em>41</em>, 1149–1160. doi:<a href="https://doi.org/10.3758/BRM.41.4.1149">10.3758/BRM.41.4.1149</a></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="non-para.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="corr.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="twoway-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -260,9 +537,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

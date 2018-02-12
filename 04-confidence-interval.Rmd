@@ -12,7 +12,7 @@ APA格式規範已有明確的信賴區間報告格式，只是多數學期期�
 
 ## 信賴區間的計算與報告
 
-繼續第\@ref(one-sample)單元的示範案例，我們先看如何使用統計軟體計算信賴區間。請再次開啟或下載單一樣本平均數t檢定的[JASP示範檔](https://osf.io/yk7he/)與[jamovi示範檔](https://osf.io/em46z/)，只要重新開啟操作選單，像圖\@ref(fig:one-sample-t-ci-operation)一樣勾選`Confidence Interval`，就可以看到圖\@ref(fig:one-sample-t-ci-result)的結果。你也可以看到同時能更改旁邊的百分比數值，這個數值是**信賴水準**，代表這次研究結果的信賴區間，有多少百分比的機率包括真正的母群平均數。從假設檢定被心理科學廣泛使用後，一直有學者主張信賴區間是實現統計思考更佳方法[@ReichardtWhenconfidenceintervals1997,@CummingInferenceEyeConfidence2005]。
+繼續第\@ref(one-sample)單元的示範案例，我們先看如何使用統計軟體計算信賴區間。請再次開啟或下載單一樣本平均數t檢定的[JASP示範檔](https://osf.io/yk7he/)與[jamovi示範檔](https://osf.io/em46z/)，只要重新開啟操作選單，像圖\@ref(fig:one-sample-t-ci-operation)一樣勾選`Confidence Interval`，就可以看到圖\@ref(fig:one-sample-t-ci-result)的結果。你也可以看到同時能更改旁邊的百分比數值，這個數值是**信賴水準**，代表這次研究結果的信賴區間，有多少百分比的機率包括真正的母群平均數。從假設檢定被心理科學廣泛使用後，一直有學者主張信賴區間是實現統計思考更佳方法[@ReichardtWhenconfidenceintervals1997; @CummingInferenceEyeConfidence2005]。
 
 ```{r one-sample-t-ci-operation, out.width='80%', fig.cap="單一平均數信賴區間操作設定示範。圖左是JASP，圖右是jamovi。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/one-sample-t-ci-operation.jpg")
@@ -51,7 +51,7 @@ knitr::include_graphics("images/one-sample-t-ci-result.jpg")
 
 ## 信賴區間與研究結果可再現性
 
-那麼第一次研究結果的信賴區間，能不能包括之後條件一致的再現研究的平均數？Cumming與Maillardet提出**捕獲百分比(capture percentag)**的概念。他們提出一種模擬程序，實作之後發現各種條件的研究結果，第一次95%信賴區間只能捕獲之後約84%的研究結果平均數[@CummingConfidenceintervalsreplication2006]。所以信賴水準與捕獲百分比是不一樣的事，但是現在許多有經驗的研究者還不夠了解。
+那麼第一次研究結果的信賴區間，能不能包括之後條件一致的再現研究的平均數？Cumming與Maillardet[-@CummingConfidenceintervalsreplication2006]提出**捕獲百分比(capture percentag)**的概念。他們提出一種模擬程序，實作之後發現各種條件的研究結果，第一次95%信賴區間只能捕獲之後約84%的研究結果平均數。所以信賴水準與捕獲百分比是不一樣的事，但是現在許多有經驗的研究者還不夠了解。
 
 Daniel Laken在[個人部落格](https://daniellakens.blogspot.tw/2016/03/the-difference-between-confidence.html)提供一個R程式碼，讓會用R的研究者能親自動手模擬，觀察捕獲百分比與信賴區間的不同。我了解本書讀者尚未正式接觸R，所以我先將Daniel Laken的程式碼改寫成以下內容，請你拷貝整段程式碼，貼到圖\@ref(fig:online-r)的線上執行視窗，接著按一下視窗下方的`Run it`，等待幾秒鐘，看看模擬結果訊息是什麼？
 
@@ -93,6 +93,24 @@ knitr::include_url("http://rextester.com/l/r_online_compiler",
 
 你可以多執行幾次，看看模擬結果報告有多少百分比的模擬結果信賴區間，包含預設平均數？第一次之後的模擬結果平均數，有多少百分比落入第一次的信賴區間？
 
-前者你應該會發現幾乎都是95%左右，就像seeing theory的模擬動畫。後者你可能發現連續好幾次是84%左右，或者很多次超過90%，加上很多次低於60%。因此捕獲百分比是個浮動的數值，不過會遵守統計學知名的**均值迴歸(regression to mean)**，累積多次模擬會趨近84%。未來你接觸R，了解程式碼編寫規範後，可以再來試試更改各種條件，重新測試看看。
+前者你應該會發現幾乎都是95%左右，就像seeing theory的模擬動畫。後者你可能發現連續好幾次是84%左右，或者很多次超過90%，加上很多次低於60%。因此捕獲百分比是個浮動的數值，不過會遵守統計學知名的**均值迴歸(regression toward the mean)**，累積多次模擬會趨近84%。未來你接觸R，了解程式碼編寫規範後，可以再來試試更改各種條件，重新測試看看。
 
 更重要的問題：如果有一批條件一致的研究結果要你分析，你認為信賴區間是好的指標嗎？我不會在這本書說明我的想法，因為這是你進階之後，才要面對的課題。
+
+## 治療性撫慰師真有本事嗎？
+
+第\@ref(intro)單元我們已經談過Emily Rosa測試治療性撫慰師的研究，他們分析資料的主要方法是單樣本平均數的信賴區間，我們可由圖\@ref(fig:Rosa1998-fig2)看到他們呈現的分析結果。
+
+```{r Rosa1998-fig2, out.width='80%', fig.cap="Emily Rosa的前後測試分析結果", fig.align='center', echo=FALSE}
+knitr::include_graphics("images/joc71352t2.png")
+```
+
+因為論文裡提到Emily Rosa在前後相隔半年多的時間，邀請21位撫慰師參與測試，不過其中7位前後兩次都有參與，所以兩次測試人數加起來達到28位。第二次測試則是第一次測試的**再現研究**，所以兩次測試結果分別分析。根據圖\@ref(fig:Rosa1998-fig2)的資訊，我們可以了解Emily Rosa計算每次測試的所有撫慰師平均正確次數，分析平均正確次數的誤差範圍，有沒有包括他們認為的**撫慰師真有本事的平均正確次數**，也就是圖中最後兩列提示的6.67次與7.5次。兩次測試的信賴區間沒有一次包含這兩個平均數，所以Emily Rosa做出質疑撫慰師能力的結論。
+
+如果換個立場，假想你是有修過統計與研究方法的撫慰師，如何批評Emily Rosa的實驗結果。從研究方法來說，Emily Rosa前後兩次只有7位重覆參與，就可以質疑這7位的表現被其他只參與一次，不熟悉測試程序的撫慰師表現沖淡。還有Emily Rosa招募的撫慰師執業經驗差距很大，從1年到25年的都有。從統計來說，也可以批評Emily Rosa設定的6.67次與7.5次太過主觀，不是合理的分析標準。這些問題無法在這本書完全解答，提出來是要啟發你的科學思考及統計思考能力，你可以試試看能不能提出一個比Emily Rosa更好的測試設計，並付諸實現。
+
+至於Emily Rosa的資料有沒有比較不會被批評的分析方法，在最後的第\@ref(non-para)單元，你將見到無母數統計的示範。
+
+## 習題
+
+開發中。

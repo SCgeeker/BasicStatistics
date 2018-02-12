@@ -1,8 +1,8 @@
 # 這個分數是我要的嗎？單一樣本平均數假設檢定 {#one-sample}
 
-這個單元是學習推論統計的第一關，我們先認識一個有論文出版的案例，這個案例也是第\@ref(ci)單元的解說案例。兩位服務於美國賓州West Chester University心理學系的學者，改良一份大學生壓力感受量表，目的是讓大學生認識校園生活裡的壓力因素。收集了239位大學生的資料，分析後得到這群學生的平均壓力感受分數是1247，然後發表這項調查結果[@RennerLifeStressInstrument1998]。
+這個單元是學習推論統計的第一關，我們先認識一個有論文出版的案例，這個案例也是第\@ref(ci)單元的解說案例。兩位服務於美國賓州West Chester University心理學系的學者[@RennerLifeStressInstrument1998]，改良一份大學生壓力感受量表，目的是讓大學生認識校園生活裡的壓力因素。收集了239位大學生的資料，分析後得到這群學生的平均壓力感受分數是1247，然後發表這項調查結果。
 
-Carlson與Winquist的教科書[@Carlsonintroductionstatisticsactive2018]設定有位大學生使用這份量表，收集十二位學生的壓力感受分數，想知道與原始論文的結果有沒有不同。分數列於表\@ref(tab:one-sample-data)，我們使用這筆資料解說單一樣本平均數的統計分析。
+Carlson與Winquist[-@Carlsonintroductionstatisticsactive2018]的教科書設定有位大學生使用這份量表，收集十二位學生的壓力感受分數，想知道與原始論文的結果有沒有不同。分數列於表\@ref(tab:one-sample-data)，我們使用這筆資料解說單一樣本平均數的統計分析。
 
 ```{r one-sample-data, out.width='80%', fig.align='center', echo=FALSE}
 knitr::kable(
@@ -65,7 +65,7 @@ knitr::include_app("https://gallery.shinyapps.io/tdist/", height = "1200px")
 
 如果你是示範案例的這位大學生，可以留下這樣的宣告：
 
-> (1)如果12位同學的壓力感受平均數(`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`)與原始論文的報告(1247)不一樣，平均數的雙尾t檢定應該出現小於.05的*p*值，否則*p*值大於或等於.05。(2)如果12位同學的壓力感受平均數(`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`)小於原始論文的報告(1247)，平均數的單尾t檢定應該出現小於.05的*p*值，否則*p*值大於或等於.05
+> (1)如果12位同學的壓力感受平均數(`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`)與原始論文的報告(1247)不一樣，平均數的雙尾t檢定應該出現小於.05的*p*值，否則*p*值大於或等於.05。(2)如果12位同學的壓力感受平均數(`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`)小於原始論文的報告(1247)，平均數的單尾t檢定應該出現小於.05的*p*值，否則*p*值大於或等於.05。
 
 在統計實務，通常只做一種宣告，不過為了學習目的，在此列出兩種宣告，分析後報告也會呈現兩種分析結果。兩個宣告都只有三句話，先來看第一句是什麼意思。這句話將這位大學生的問題，轉化為以數值表示，可用t檢定檢驗的假設。不過這個問題可以從兩個角度檢驗，一種是12位同學的平均數不等於原始報告，另一種是12位同學的平均數小於原始報告。使用同一套壓力感受量表測得到的資料，應該都會形成同一個平均數抽樣分配。兩個角度呈現的假設都包含所有可能的分析結果：12位同學的平均數是原始報告抽樣分配的一部分，或者不是。選擇那一個角度與分析者採取的立場有關，如果這位同學對於自己收集的資料比原始報告高或低沒有預期，第一個角度能表現這樣的立場。如果認為收集的資料小於始報告，採取第二個角度比較適當。就此你也可以學習一種科學研究態度，對於研究結果有事前立場並不是壞事，只要忠實呈現出來，按照宣言完成分析工作，就是可信的成果。
 
@@ -135,7 +135,7 @@ visualize::visualize.t(-2.412,11,section = "lower")
 
 ## 效果量與考驗力
 
-最後簡單談談為什麼現在報告統計結果都要呈現效果量，並介紹一套線上軟體，驗證JASP與jamovi的計算結果。[WebPower](https://webpower.psychstat.org/qanda/)是聖母大學兩位華裔學者Ke-Hai Yuan與Zhiyong Zhang合作開發的網頁程式[@ZhangWebPowerStatisticalpower2015]。圖\@ref(fig:one-sample-t-ez)是計算t檢定效果量的網頁，你只要捲動到**Effect size for one-sample t test**，在下面三個欄位輸入指定數值：`Mean for H0`就是給JASP與jamovi的`Test value`：1247；`Mean for H1`與`Standard deivation`分別是12位大學生的壓力感受分數平均數`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`與標準差`r sd(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`。按下`Calculate`，網頁最下方會跳出效果量計算結果，請檢查是否與JASP和jamovi報表一致。
+最後簡單談談為什麼現在報告統計結果都要呈現效果量，並介紹一套線上軟體，驗證JASP與jamovi的計算結果。[WebPower](https://webpower.psychstat.org/qanda/)是聖母大學兩位華裔學者Ke-Hai Yuan與Zhiyong Zhang[-@ZhangWebPowerStatisticalpower2015]合作開發的網頁程式。圖\@ref(fig:one-sample-t-ez)是計算t檢定效果量的網頁，你只要捲動到**Effect size for one-sample t test**，在下面三個欄位輸入指定數值：`Mean for H0`就是給JASP與jamovi的`Test value`：1247；`Mean for H1`與`Standard deivation`分別是12位大學生的壓力感受分數平均數`r mean(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`與標準差`r sd(c(200,900,740,850,500,400,2300,650,700,1300,950,1000))`。按下`Calculate`，網頁最下方會跳出效果量計算結果，請檢查是否與JASP和jamovi報表一致。
 
 ```{r one-sample-t-ez, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE, fig.cap="計算t檢定效果量的WebPower頁面。請向下捲動至可手動輸入處。"}
 knitr::include_url("https://webpower.psychstat.org/models/means01/effectsize.php", 
@@ -153,4 +153,7 @@ knitr::include_url("https://webpower.psychstat.org/models/means01/",
 
 但是考驗力要多高比較好？我可以先說建議是80%。至於為什麼？在第\@ref(two-samples)單元有更進一步的討論。
 
-## 治療性撫慰師真有本事嗎？
+
+## 習題
+
+開發中。

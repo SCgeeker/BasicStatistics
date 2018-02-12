@@ -5,7 +5,8 @@ date: "`r Sys.Date()`"
 kint: "bookdown::render_book"
 site: bookdown::bookdown_site
 bibliography: [Stat.bib]
-biblio-style: apalike
+csl: apa-old-doi-prefix.csl
+#biblio-style: apalike
 link-citations: yes
 description: "以開放科學為理念，為初學者編寫的統計教科書。"
 github-repo: SCgeeker/BasicStatistics
@@ -25,7 +26,7 @@ github-repo: SCgeeker/BasicStatistics
 
 所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。
 
-這本書初版使用[趙鵬博士](http://www.pzhao.org/zh/)改良的R套件[bookdownplus](https://github.com/pzhaonet/bookdownplus)編寫，目前使用[謝益輝博士](https://yihui.name/)開發的[bookdown](https://bookdown.org/yihui/bookdown/)編寫及更新。如果學習者有興趣，歡迎自行取用本書的[源始碼](https://github.com/SCgeeker/BasicStatistics)，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：
+這本書初版使用[趙鵬博士](http://www.pzhao.org/zh/)改良的R套件[bookdownplus](https://github.com/pzhaonet/bookdownplus)編寫，目前使用[謝益輝博士](https://yihui.name/)開發的[bookdown](https://bookdown.org/yihui/bookdown/)編寫及更新。歡迎到[個人部落格](http://scchen.com/zh/post/basic-statistics/)或[Github](https://github.com/SCgeeker/BasicStatistics/issues)留言，給予本書批評與建議。如果學習者有興趣，歡迎自行取用本書的[源始碼](https://github.com/SCgeeker/BasicStatistics)，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：
 
 ```{r}
 sessionInfo()
