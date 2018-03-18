@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>心理科學基礎統計</title>
   <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
-  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="心理科學基礎統計" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-03-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -413,11 +413,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>最後介紹各種統計實務必定會處理的統計量數，同時示範JASP描述統計模組的基本操作。jamovi的描述統計模組介面設計與操作，和JASP大同小異，所以本章不做另外示範。最常遇到的統計量數有<strong>集中趨勢(Central Tendency)</strong>與<strong>變異趨勢(Dispersion)</strong>兩類，在操作示範畫面<a href="intro.html#fig:nominate-demo">1.12</a>、<a href="intro.html#fig:median-demo">1.13</a>與<a href="intro.html#fig:interval-demo">1.14</a>，可以看到模組的功能選單標記這兩類統計量數。這兩種統計量數如何幫助我們解讀資料，請看以下說明。</p>
 <div id="section-1.6.1" class="section level3">
 <h3><span class="header-section-number">1.6.1</span> 名義尺度的集中趨勢：眾數</h3>
-<p>因為前面示範的GSS2010沒有精確的名義尺度資料，請從研究中心網站下載<a href="http://gss.norc.org/Documents/spss/2010_spss.zip">原始GSS2010的SPSS存檔</a>，取其中的性別(sex)變項，配合這段示範演練。圖<a href="intro.html#fig:nominate-demo">1.12</a>是JASP操作與輸出畫面，顯示性別變項只有兩個數值：MALE與FEMALE。兩個數值都是文字，不過JASP與jamovi都可以指派數字給文字資料，讓程式能計算<strong>眾數(Mode)</strong>：這筆資料裡累積次數最多的數值。圖<a href="intro.html#fig:nominate-demo">1.12</a>最右邊的輸出畫面顯示，2010年調查的受訪者超過一半是女性。</p>
+<blockquote>
+<p>20180318更新</p>
+</blockquote>
+<p>因為前面示範的GSS2010沒有精確的名義尺度資料，我們從研究中心網站下載<a href="http://gss.norc.org/Documents/spss/2010_spss.zip">原始GSS2010的SPSS存檔</a>，取其中的性別(sex)變項，配合這段示範演練。這個變項資料只有兩種數值：1與2，分別代表男性與女性。從圖<a href="intro.html#fig:nominate-demo">1.12</a>的JASP操作與輸出畫面，你可以注意到變項圖示是<img src="images/icon/jasp-variable-nominal.png" style="width:10.0%" />，表示以數字代表性別，因此<strong>報表裡的眾數是2</strong>，表示2010年調查的受訪者超過一半是女性。</p>
+<p>不過畫成長條圖，用數字表示會讓讀者不易理解。JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象。</p>
 <div class="figure" style="text-align: center"><span id="fig:nominate-demo"></span>
-<img src="images/nominate-demo.jpg" alt="TBA" width="75%" />
+<img src="images/nominate-demo.jpg" alt="使用JASP計算名義尺度變項的眾數與繪製長條圖。" width="75%" />
 <p class="caption">
-圖 1.12: TBA
+圖 1.12: 使用JASP計算名義尺度變項的眾數與繪製長條圖。
 </p>
 </div>
 <p>這個範例的性別變項與投擲硬幣試驗一樣，內容是兩個機率事件，能以累加次數比例代表機率。由於兩個數值之間沒有其他數值，必須以長條圖顯示所有樣本的機率事件。在這裡我們可以學到，資料裡有兩種以上機率事件的集合，比例總和是100%，這樣的集合就是<strong>樣本的機率分配</strong>。</p>
@@ -427,9 +431,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">1.6.2</span> 序列尺度的集中趨勢：百分位數與中位數</h3>
 <p>序列尺度資料的可排序性，構成機率事件可以累加，也可以累積事件的百分比。這種特性讓我們能在實務面計算資料的<strong>百分位數(percentile)</strong>與<strong>中位數(median)</strong>，而<strong>中位數</strong>是<strong>集中趨勢</strong>的一種。這裡使用gss2010受訪者的受教年數資料做示範，圖<a href="intro.html#fig:median-demo">1.13</a>示範如何讓JASP輸出三個百分位數(25%,50%,75%)與中位數，以及<strong>次數表(frequency table)</strong>。</p>
 <div class="figure" style="text-align: center"><span id="fig:median-demo"></span>
-<img src="images/median-demo.jpg" alt="TBA" width="75%" />
+<img src="images/median-demo.jpg" alt="使用JASP計算序列尺度變項的中位數、百分位數與繪製長條圖。" width="75%" />
 <p class="caption">
-圖 1.13: TBA
+圖 1.13: 使用JASP計算序列尺度變項的中位數、百分位數與繪製長條圖。
 </p>
 </div>
 <p>你會發現中位數與50%的百分位數是同一個，對照次數表的資訊，你還能發現為何是如此：留意靠著次數表右邊的三個欄位<code>Percent</code>、<code>Valid Percent</code>、<code>Cumulative Percent</code>，<code>Percent</code>、<code>Valid Percent</code>都是指示這個數值在這筆資料所佔的百分比，差異是<code>Percent</code>有計算沒有資料的遺漏值(missing value)所佔百分比，<code>Valid Percent</code>是排除遺漏值的計算結果。至於JASP的<code>Cumulative Percent</code>是依數值次序，累加<code>Valid Percent</code>。檢視<code>Cumulative Percent</code>的資訊，你會發現25%百分位數(12)的累進百分比(44.3%)超過前一個數值的累積百分比(17%)，但未到達到50%。50%與75%百分位數的累進百分比同樣如此，而且累進到50%，表示若隨機挑出其中的資料，約50%是小於或等於13的數值，其餘是大於13。所以50%又稱為中位數。</p>
@@ -437,11 +441,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="section-1.6.3" class="section level3">
 <h3><span class="header-section-number">1.6.3</span> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</h3>
-<p>我們用gss2010最沒有爭議的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖<a href="intro.html#fig:interval-demo">1.14</a>示範除了輸出統計量數應勾選的選項，還有展示<strong>直方圖(histogram)</strong>，只要勾選<code>distribution plot</code>。但是如果你夠細心的話，會發現前面示範性別(sex)(見圖<a href="intro.html#fig:nominate-demo">1.12</a>)也是勾選<code>distribution plot</code>，怎麼繪製出來的是<strong>長條圖</strong>？這兩個示範的差異顯示間斷尺度與連續尺度的不同，源自機率事件的處置方法。<strong>直方圖</strong>與<strong>長條圖</strong>都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。</p>
+<blockquote>
+<p>20180318更新</p>
+</blockquote>
+<p>我們用gss2010最沒有爭議的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖<a href="intro.html#fig:interval-demo">1.14</a>示範除了輸出統計量數應勾選的選項，還有展示<strong>直方圖(histogram)</strong>，只要勾選<code>distribution plot</code>。但是如果你夠細心的話，會發現前面示範性別(sex)(見圖<a href="intro.html#fig:nominate-demo">1.12</a>)也是勾選<code>distribution plot</code>，怎麼繪製出來的是<strong>長條圖</strong>？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。<strong>所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作</strong>。<strong>直方圖</strong>與<strong>長條圖</strong>都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在下一個單位，我們會更詳細地認識其中的原理。</p>
 <div class="figure" style="text-align: center"><span id="fig:interval-demo"></span>
-<img src="images/interval-demo.jpg" alt="TBA" width="75%" />
+<img src="images/interval-demo.jpg" alt="使用JASP計算連續尺度變項的平均數、變異數、標準差與繪製直方圖。" width="75%" />
 <p class="caption">
-圖 1.14: TBA
+圖 1.14: 使用JASP計算連續尺度變項的平均數、變異數、標準差與繪製直方圖。
 </p>
 </div>
 <p><strong>長條圖</strong>裡有一條粗線，粗線之下的面積與長條的面積總合相等，劃出這條粗線是根據JASP內建程式碼計算出來的<strong>機率密度函數(probability density function)</strong>，函數之內的方程式就是平均數與標準差數學公式，統計實務都用機率密度函數表現連續尺度資料的<strong>偏態</strong>，而且這道函數呈現<strong>正偏態</strong>：越高的數值密度低，所以平均數是三種集中趨勢量數的最大值。而中位數是三種量數的中間值，也是這筆資料沒有偏態時，位於中心的集中量數。</p>
@@ -494,10 +501,11 @@ gitbook.start({
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",

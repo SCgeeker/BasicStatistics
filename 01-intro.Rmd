@@ -170,9 +170,13 @@ knitr::include_graphics("images/one-dollor-trials.jpg")
 
 ### 名義尺度的集中趨勢：眾數
 
-因為前面示範的GSS2010沒有精確的名義尺度資料，請從研究中心網站下載[原始GSS2010的SPSS存檔](http://gss.norc.org/Documents/spss/2010_spss.zip)，取其中的性別(sex)變項，配合這段示範演練。圖\@ref(fig:nominate-demo)是JASP操作與輸出畫面，顯示性別變項只有兩個數值：MALE與FEMALE。兩個數值都是文字，不過JASP與jamovi都可以指派數字給文字資料，讓程式能計算**眾數(Mode)**：這筆資料裡累積次數最多的數值。圖\@ref(fig:nominate-demo)最右邊的輸出畫面顯示，2010年調查的受訪者超過一半是女性。
+> 20180318更新
 
-```{r nominate-demo, out.width='75%', fig.cap="TBA", fig.align='center', echo=FALSE}
+因為前面示範的GSS2010沒有精確的名義尺度資料，我們從研究中心網站下載[原始GSS2010的SPSS存檔](http://gss.norc.org/Documents/spss/2010_spss.zip)，取其中的性別(sex)變項，配合這段示範演練。這個變項資料只有兩種數值：1與2，分別代表男性與女性。從圖\@ref(fig:nominate-demo)的JASP操作與輸出畫面，你可以注意到變項圖示是![](images/icon/jasp-variable-nominal.png){width=10%}，表示以數字代表性別，因此**報表裡的眾數是2**，表示2010年調查的受訪者超過一半是女性。
+
+不過畫成長條圖，用數字表示會讓讀者不易理解。JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象。
+
+```{r nominate-demo, out.width='75%', fig.cap="使用JASP計算名義尺度變項的眾數與繪製長條圖。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/nominate-demo.jpg")
 ```
 
@@ -184,7 +188,7 @@ knitr::include_graphics("images/nominate-demo.jpg")
 
 序列尺度資料的可排序性，構成機率事件可以累加，也可以累積事件的百分比。這種特性讓我們能在實務面計算資料的**百分位數(percentile)**與**中位數(median)**，而**中位數**是**集中趨勢**的一種。這裡使用gss2010受訪者的受教年數資料做示範，圖\@ref(fig:median-demo)示範如何讓JASP輸出三個百分位數(25%,50%,75%)與中位數，以及**次數表(frequency table)**。
 
-```{r median-demo, out.width='75%', fig.cap="TBA", fig.align='center', echo=FALSE}
+```{r median-demo, out.width='75%', fig.cap="使用JASP計算序列尺度變項的中位數、百分位數與繪製長條圖。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/median-demo.jpg")
 ```
 
@@ -194,9 +198,11 @@ knitr::include_graphics("images/median-demo.jpg")
 
 ### 連續尺度的集中與變異趨勢：平均數、變異數與標準差
 
-我們用gss2010最沒有爭議的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖\@ref(fig:interval-demo)示範除了輸出統計量數應勾選的選項，還有展示**直方圖(histogram)**，只要勾選`distribution plot`。但是如果你夠細心的話，會發現前面示範性別(sex)(見圖\@ref(fig:nominate-demo))也是勾選`distribution plot`，怎麼繪製出來的是**長條圖**？這兩個示範的差異顯示間斷尺度與連續尺度的不同，源自機率事件的處置方法。**直方圖**與**長條圖**都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。
+> 20180318更新
 
-```{r interval-demo, out.width='75%', fig.cap="TBA", fig.align='center', echo=FALSE}
+我們用gss2010最沒有爭議的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖\@ref(fig:interval-demo)示範除了輸出統計量數應勾選的選項，還有展示**直方圖(histogram)**，只要勾選`distribution plot`。但是如果你夠細心的話，會發現前面示範性別(sex)(見圖\@ref(fig:nominate-demo))也是勾選`distribution plot`，怎麼繪製出來的是**長條圖**？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。**所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作**。**直方圖**與**長條圖**都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在下一個單位，我們會更詳細地認識其中的原理。
+
+```{r interval-demo, out.width='75%', fig.cap="使用JASP計算連續尺度變項的平均數、變異數、標準差與繪製直方圖。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/interval-demo.jpg")
 ```
 

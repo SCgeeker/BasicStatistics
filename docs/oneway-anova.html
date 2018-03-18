@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>心理科學基礎統計</title>
   <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
-  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="心理科學基礎統計" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-03-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,6 +49,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -435,7 +472,7 @@
 圖 7.7: 一因子獨立樣本變異數分析結果報表。
 </p>
 </div>
-<p>圖<a href="oneway-anova.html#fig:oneway-ANOVA-result">7.7</a>是JASP輸出的統計資訊，APA格式規範也是建議用這些資訊輔助文字說明。最上面的ANOVA表內資訊，只有Sum of Squaries與殘差項目(Residual)的Mean Sqaure不必呈現，因為這些數值都可以由自由度、F統計數與主要效果Species的Mean Square還原。JASP預設呈現的效果量是<span class="math inline">\(\eta^2\)</span>，但是近幾年的統計數都是建議使用<span class="math inline">\(\eta^2_p\)</span>，理由是<span class="math inline">\(\eta^2\)</span>只適用估計這筆資料的效果，要計算相同條件的多次研究會達到的考驗力，就要使用<span class="math inline">\(\eta^2_p\)</span><span class="citation">(Lakens, <a href="#ref-lakens_calculating_2013">2013</a>)</span>。</p>
+<p>圖<a href="oneway-anova.html#fig:oneway-ANOVA-result">7.7</a>是JASP輸出的統計資訊，APA格式規範也是建議用這些資訊輔助文字說明。最上面的ANOVA表內資訊，只有Sum of Squaries與殘差項目(Residual)的Mean Sqaure不必呈現，因為這些數值都可以由自由度、F統計數與主要效果Species的Mean Square還原。JASP預設呈現的效果量是<span class="math inline">\(\eta^2\)</span>，但是近幾年的統計數都是建議使用<span class="math inline">\(\eta^2_p\)</span>，理由是<span class="math inline">\(\eta^2\)</span>只適用估計這筆資料的效果，要計算相同條件的多次研究會達到的考驗力，就要使用<span class="math inline">\(\eta^2_p\)</span><span class="citation">(Daniël Lakens, <a href="#ref-lakens_calculating_2013">2013</a>)</span>。</p>
 <p>由於分析前宣告已經提出如果變異數分析顯示顯著差異，就要進行三組之間任兩個平均數的Tukey檢定，不過為了限制型一錯誤率，無法評估特定兩組的效果量。JASP報表中的效果量是以獨立樣本t檢定估計Cohen’s d。</p>
 </div>
 <div id="-5" class="section level3">
@@ -449,7 +486,7 @@
 <div id="section-7.4" class="section level2">
 <h2><span class="header-section-number">7.4</span> 變異數分析的考驗力</h2>
 <p>iris資料的效果量是難得一見的「超級」效果量。身為相關家族的成員，我們可以預想這家族的效果量數值超過1或-1的例子不多，所以0.941相當罕見，考驗力更是無可估算的巨量數值。因此我們在這個單元的最後，透過iris資料的設計，討論單因子變異數的型一錯誤率與考驗力之間關係。</p>
-<p>Cohen<span class="citation">(<a href="#ref-CohenStatisticalpoweranalysis1988">1988</a>)</span>建議計算變異數分析考驗力的效果量，是相關家族的另一個成員Cohen’s <em>f</em>。考驗力分析軟體G*Power<span class="citation">(Faul, Erdfelder, Buchner, &amp; Lang, <a href="#ref-FaulStatisticalpoweranalyses2009">2009</a>)</span>是根據<em>f</em>、總樣本數與實驗分組數量估計考驗力與型一錯誤率。最新版本提供將<span class="math inline">\(\eta^2_p\)</span>轉換為<em>f</em>的功能，所以我們可以把JASP與jamovi輸出的<span class="math inline">\(\eta^2_p\)</span>放進去轉換，估計實驗結果的考驗力與型一錯誤率。</p>
+<p>Cohen<span class="citation">(<a href="#ref-CohenStatisticalpoweranalysis1988">1988</a>)</span>建議計算變異數分析考驗力的效果量，是相關家族的另一個成員Cohen’s <em>f</em>。考驗力分析軟體G*Power<span class="citation">(Faul et al., <a href="#ref-FaulStatisticalpoweranalyses2009">2009</a>)</span>是根據<em>f</em>、總樣本數與實驗分組數量估計考驗力與型一錯誤率。最新版本提供將<span class="math inline">\(\eta^2_p\)</span>轉換為<em>f</em>的功能，所以我們可以把JASP與jamovi輸出的<span class="math inline">\(\eta^2_p\)</span>放進去轉換，估計實驗結果的考驗力與型一錯誤率。</p>
 <p>心理科學研究者常用的統計軟體如SPSS也可以輸出<span class="math inline">\(\eta^2_p\)</span>，但是Daniel Lakens<span class="citation">(<a href="#ref-lakens_calculating_2013">2013</a>)</span>提醒SPSS計算<span class="math inline">\(\eta^2_p\)</span>的演算法，並沒有區分獨立組與相依樣本的差異。雖然本書沒有介紹重覆量數變異數分析，你應該在第<a href="two-samples.html#two-samples">5</a>單元注意到兩種設計的變異數估計方式不同。如果你有用SPSS分析獨立樣本的資料，建議使用JASP或jamovi再做一次，才能用G*Power得到合理的考驗力估計值。</p>
 <p>其實Cohen’s <em>f</em>與<span class="math inline">\(\eta^2_p\)</span>的轉換關係很單純，正如以下公式：</p>
 <p><span class="math display">\[ f = \sqrt(\eta^2_p/(1 - \eta^2_p)) \]</span></p>
@@ -504,10 +541,11 @@ gitbook.start({
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",

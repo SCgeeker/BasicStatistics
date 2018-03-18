@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>心理科學基礎統計</title>
   <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
-  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="心理科學基礎統計" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-03-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -262,7 +262,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">心理科學基礎統計</h1>
 <h4 class="author"><em>陳紹慶 Sau-Chin Chen</em></h4>
-<h4 class="date"><em>2018-02-12</em></h4>
+<h4 class="date"><em>2018-03-18</em></h4>
 </div>
 <div id="e5898de8a880" class="section level1 unnumbered">
 <h1>前言</h1>
@@ -274,7 +274,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。</p>
 <p>這本書初版使用<a href="http://www.pzhao.org/zh/">趙鵬博士</a>改良的R套件<a href="https://github.com/pzhaonet/bookdownplus">bookdownplus</a>編寫，目前使用<a href="https://yihui.name/">謝益輝博士</a>開發的<a href="https://bookdown.org/yihui/bookdown/">bookdown</a>編寫及更新。歡迎到<a href="http://scchen.com/zh/post/basic-statistics/">個人部落格</a>或<a href="https://github.com/SCgeeker/BasicStatistics/issues">Github</a>留言，給予本書批評與建議。如果學習者有興趣，歡迎自行取用本書的<a href="https://github.com/SCgeeker/BasicStatistics">源始碼</a>，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
-<pre><code>## R version 3.4.3 (2017-11-30)
+<pre><code>## R version 3.4.4 (2018-03-15)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows &gt;= 8 x64 (build 9200)
 ## 
@@ -291,10 +291,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.3   backports_1.1.2  bookdown_0.6     magrittr_1.5    
-##  [5] rprojroot_1.3-2  htmltools_0.3.6  tools_3.4.3      rstudioapi_0.7  
-##  [9] yaml_2.1.16      Rcpp_0.12.14     stringi_1.1.6    rmarkdown_1.8.10
-## [13] knitr_1.19       xfun_0.1         stringr_1.2.0    digest_0.6.13   
+##  [1] compiler_3.4.4  backports_1.1.2 bookdown_0.7    magrittr_1.5   
+##  [5] rprojroot_1.3-2 htmltools_0.3.6 tools_3.4.4     rstudioapi_0.7 
+##  [9] yaml_2.1.18     Rcpp_0.12.16    stringi_1.1.7   rmarkdown_1.9  
+## [13] knitr_1.20      xfun_0.1        stringr_1.3.0   digest_0.6.15  
 ## [17] evaluate_0.10.1</code></pre>
 
 </div>
@@ -328,10 +328,11 @@ gitbook.start({
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
