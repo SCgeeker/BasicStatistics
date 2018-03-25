@@ -143,7 +143,7 @@ knitr::include_graphics("images/one-dollor.jpg")
 <iframe 
 	src="https://students.brown.edu/seeing-theory/basic-probability/index.html#section1" 
 	width="100%" 
-	height="500px" 
+	height="800px" 
 	scrolling="no"
 	style="margin-top: 15px;margin-bottom: 15px;"
 	frameborder="0">

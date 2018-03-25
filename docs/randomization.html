@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-03-18">
+<meta name="date" content="2018-03-25">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -263,7 +263,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">第2單元</span> 隨機方法是什麼？</h1>
 <p>在第<a href="intro.html#intro">1</a>單元，我們示範分析2010年美國一般社會調查的部分資料<span class="citation">(Smith et al., n.d.)</span>。這種資料是用<strong>隨機方法從母群抽取樣本</strong>的分析結果，我們能用統計方法分析其中資訊，並以此以宣稱調查結果顯示2010年美國社會的狀況。調查者能在報告寫出他們認為可靠的結論，是靠著數學家與統計學家發現的<strong>機率模型</strong>，讓我們能轉化問題為統計思考的命題，並檢驗結論的可靠性。</p>
 <p>這個單元使用視覺化範例，介紹隨機方法的重要原理。我們會取用史丹福大學研究生Daniel Kunin<span class="citation">(<a href="#ref-KuninSeeingTheory2016">2016</a>)</span>創作的網站seeing thoery，說明重要的觀念與原理。因為有視覺化材料，如果你是對數學沒有信心的初學者，不必先了解機率模型的數學公式，也能了解面對什麼問題要使用那種機率模型。<strong>但是請注意，未來有需要進階時，還是要認識機率模型的數學原理，這個單元只是機率學的基本入門。</strong></p>
-<p>這個單元多數示範分析是jamovi，因為jamovi的<code>計算變項</code>有資料函數功能，搭配視覺化範例的模擬資料分析，與真實資料分析，能讓你更了解第@(intro)單元所提的統計量數應用原則。</p>
+<p>這個單元多數示範分析是jamovi，因為jamovi的<code>計算變項</code>有資料函數功能，搭配視覺化範例的模擬資料分析，與真實資料分析，能讓你更了解第<a href="intro.html#intro">1</a>單元所提的統計量數應用原則。</p>
 <div id="section-2.1" class="section level2">
 <h2><span class="header-section-number">2.1</span> 隨機變數與簡單抽樣</h2>
 <div id="section-2.1.1" class="section level3">
@@ -310,7 +310,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Emily Rosa設計的治療性撫慰師能力測驗，預設的結果也可以用二項分佈表示。每位接受測試的治療師有十次嘗試機會，如果每次嘗試是亂猜，參數<em>p</em>就是0.5，參數<em>n</em>設定為10，就包含十次嘗試的所有可能結果。你可以把參數<em>n</em>改為10，再把座標圖縮放到適當尺寸，就會看到猜中5次的機率最高。</p>
 <p>拉動橘色按鈕，你會看到<em>累積分佈函數</em>從數值1開始疊加到最後一個數值。疊加的幅度與數值的出現機率成正比，所以你會看到數值5之前的幅度較大。如果你改變參數<em>p</em>，像是認為治療師真有本事，p應該到少等於0.8。調整完你會看到除了數值8的出現機率最高，<em>累積分佈函數</em>的疊加幅度也是到數值8為最高。</p>
 <p>在這裡我們可以解釋左方頁面的<strong>平均數</strong>與<strong>變異數</strong>的意義。請先重新調整二項分佈的參數：n等於10，p等於.5，你會注意到這個設定的平均數是5，也就是兩個參數的乘積，累積機率也是0.5。所以<strong>平均數</strong>是這個設定的試驗裡，最有可能得到的數值第一位，因此又有一個名字：<strong>期望值</strong>。在談論母群或機率模型的場合，通常用希臘字母<span class="math inline">\(\mu\)</span>表示。</p>
-<p><strong>變異數</strong>與第<a href="intro.html#intro">1</a>單元提到的柴比雪夫不等式有關，這個不等式指出所有機率模型期望值前後相差k個標準差以外範圍的數值，發生機率總和不超過1/k<sup>2</sup>。如果k等於2，就是總和不超過.25。以n=10，p=0.5的二項分配來說，平均數是5，變異數是2.5，標準差是1.58，所以超過期望值兩個標準差以外的數值有0,1,9,10四個。我們可以運用<strong>累積份佈函數</strong>計算這四個數值的發生機率總和，算法是到數值1的累積機率，加上總機率減去到數值8的累積機率。兩部分的累積機率總和是’r round(1 - pbinom(8,10,.5) + pbinom(1,10,.5), 2)’，確實小於0.25。</p>
+<p><strong>變異數</strong>與第<a href="intro.html#intro">1</a>單元提到的柴比雪夫不等式有關，這個不等式指出所有機率模型期望值前後相差k個標準差以外範圍的數值，發生機率總和不超過1/k<sup>2</sup>。如果k等於2，就是總和不超過.25。以n=10，p=0.5的二項分配來說，平均數是5，變異數是2.5，標準差是1.58，所以超過期望值兩個標準差以外的數值有0,1,9,10四個。我們可以運用<strong>累積份佈函數</strong>計算這四個數值的發生機率總和，算法是到數值1的累積機率，加上總機率減去到數值8的累積機率。兩部分的累積機率總和是0.02，確實小於0.25。</p>
 <p>再來看n=10，p=0.8的二項分配，有沒有符合柴比雪夫不等式。這個分佈的平均數是8，變異數是1.6，標準差是1.26，所以超過期望值兩個標準差以外的數值有0,1,2,3,4,5六個，計算到數值5的累積機率就能確認。<strong>累積分佈函數</strong>輸出的累積機率是0.03，也是小於0.25。</p>
 <p>在討論母群或機率模型的變異數或標準差時，通常使用希臘字母<span class="math inline">\(\sigma^2\)</span>與<span class="math inline">\(\sigma\)</span>表示。此外，傳統統計書會教你查表去找對應數值的累積機率，但是經歷幾個單元的演練，我希望你能學會使用程式去計算，詳情請參閱這個單元的源始碼。</p>
 </div>
