@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>心理科學基礎統計</title>
   <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="心理科學基礎統計" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2018-09-06">
+<meta name="date" content="2019-02-17">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -49,43 +50,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -100,141 +64,143 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">心理科學基礎統計</a></li>
+<li>心理科學基礎統計</li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 統計思考開門</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#emily-rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#jaspjamovi"><i class="fa fa-check"></i><b>1.2</b> 如何檢驗測試結果：認識JASP與jamovi的界面</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 分析測試結果的實體：尺度與變項</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 資料的生命：自變項與依變項</a></li>
-<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#section-1.5"><i class="fa fa-check"></i><b>1.5</b> 資料的起源：母群與樣本</a></li>
-<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 描述統計：認識基礎統計量數</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 名義尺度的集中趨勢：眾數</a></li>
-<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
-<li class="chapter" data-level="1.6.3" data-path="intro.html"><a href="intro.html#section-1.6.3"><i class="fa fa-check"></i><b>1.6.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#intro_Rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#intro_stat"><i class="fa fa-check"></i><b>1.2</b> 統計思考養成途徑</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#intro_table"><i class="fa fa-check"></i><b>1.3</b> 統計方法運用指南</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#intro_summary"><i class="fa fa-check"></i><b>1.4</b> 總結</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#intro_practice"><i class="fa fa-check"></i><b>1.5</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 習題</a></li>
+<li class="chapter" data-level="2" data-path="describe.html"><a href="describe.html"><i class="fa fa-check"></i><b>2</b> 描述統計</a><ul>
+<li class="chapter" data-level="2.1" data-path="describe.html"><a href="describe.html#describe_scale"><i class="fa fa-check"></i><b>2.1</b> 認識資料尺度</a></li>
+<li class="chapter" data-level="2.2" data-path="describe.html"><a href="describe.html#describe_workvariable"><i class="fa fa-check"></i><b>2.2</b> 變項的種類</a></li>
+<li class="chapter" data-level="2.3" data-path="describe.html"><a href="describe.html#discribe-quantity"><i class="fa fa-check"></i><b>2.3</b> 統計量數</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="describe.html"><a href="describe.html#describe-mode"><i class="fa fa-check"></i><b>2.3.1</b> 名義尺度的集中趨勢：眾數</a></li>
+<li class="chapter" data-level="2.3.2" data-path="describe.html"><a href="describe.html#describe-median"><i class="fa fa-check"></i><b>2.3.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
+<li class="chapter" data-level="2.3.3" data-path="describe.html"><a href="describe.html#describe-mean"><i class="fa fa-check"></i><b>2.3.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="randomization.html"><a href="randomization.html"><i class="fa fa-check"></i><b>2</b> 機率與隨機方法</a><ul>
-<li class="chapter" data-level="2.1" data-path="randomization.html"><a href="randomization.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 從案例學習機率的計算與模擬</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="randomization.html"><a href="randomization.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 機率模型動畫頁面說明</a></li>
-<li class="chapter" data-level="2.1.2" data-path="randomization.html"><a href="randomization.html#tt"><i class="fa fa-check"></i><b>2.1.2</b> 伯努力分佈：一位TT進行一次測試的成功率</a></li>
-<li class="chapter" data-level="2.1.3" data-path="randomization.html"><a href="randomization.html#nttx"><i class="fa fa-check"></i><b>2.1.3</b> 二項分佈：n位TT進行x次測試的成功率</a></li>
-<li class="chapter" data-level="2.1.4" data-path="randomization.html"><a href="randomization.html#emily"><i class="fa fa-check"></i><b>2.1.4</b> 均等分佈：Emily的事前預測</a></li>
-<li class="chapter" data-level="2.1.5" data-path="randomization.html"><a href="randomization.html#section-2.1.5"><i class="fa fa-check"></i><b>2.1.5</b> 事後機率分配：估計第一次測試的成功率</a></li>
+<li class="chapter" data-level="2.4" data-path="describe.html"><a href="describe.html#describe-plots"><i class="fa fa-check"></i><b>2.4</b> 統計圖表使用指南</a></li>
+<li class="chapter" data-level="2.5" data-path="describe.html"><a href="describe.html#describe_summary"><i class="fa fa-check"></i><b>2.5</b> 總結</a></li>
+<li class="chapter" data-level="2.6" data-path="describe.html"><a href="describe.html#describe-practice"><i class="fa fa-check"></i><b>2.6</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="randomization.html"><a href="randomization.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 條件機率的計算與模擬</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="randomization.html"><a href="randomization.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 從蒙提霍爾問題理解貝氏定理</a></li>
-<li class="chapter" data-level="2.2.2" data-path="randomization.html"><a href="randomization.html#tt"><i class="fa fa-check"></i><b>2.2.2</b> 使用事後機率推測TT的能力</a></li>
+<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> 計算的機率分佈：統計方法的數學基礎</a><ul>
+<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#probability-calculation"><i class="fa fa-check"></i><b>3.1</b> 機率事件計算原理</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="probability.html"><a href="probability.html#probability-set"><i class="fa fa-check"></i><b>3.1.1</b> 集合論</a></li>
+<li class="chapter" data-level="3.1.2" data-path="probability.html"><a href="probability.html#probability-permutation"><i class="fa fa-check"></i><b>3.1.2</b> 機率事件的排列組合</a></li>
+<li class="chapter" data-level="3.1.3" data-path="probability.html"><a href="probability.html#probability-space"><i class="fa fa-check"></i><b>3.1.3</b> 樣本空間</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="randomization.html"><a href="randomization.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 統計學兩大流派</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="randomization.html"><a href="randomization.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 次數主義統計</a></li>
-<li class="chapter" data-level="2.3.2" data-path="randomization.html"><a href="randomization.html#section-2.3.2"><i class="fa fa-check"></i><b>2.3.2</b> 貝氏統計</a></li>
+<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#probability-conditional"><i class="fa fa-check"></i><b>3.2</b> 條件機率的計算</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="probability.html"><a href="probability.html#probability-mh"><i class="fa fa-check"></i><b>3.2.1</b> 蒙提霍爾問題</a></li>
+<li class="chapter" data-level="3.2.2" data-path="probability.html"><a href="probability.html#probability-Bayes"><i class="fa fa-check"></i><b>3.2.2</b> 貝氏定理</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>2.4</b> 習題</a></li>
+<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#probability-functions"><i class="fa fa-check"></i><b>3.3</b> 機率分佈</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="probability.html"><a href="probability.html#probability-binomial"><i class="fa fa-check"></i><b>3.3.1</b> 二項分佈</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability.html"><a href="probability.html#probability-normal"><i class="fa fa-check"></i><b>3.3.2</b> 標準化常態分佈</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="one-sample.html"><a href="one-sample.html"><i class="fa fa-check"></i><b>3</b> 這個分數是我要的嗎？單一樣本平均數假設檢定</a><ul>
-<li class="chapter" data-level="3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 為何行為科學不常見到完整的母群？</a></li>
-<li class="chapter" data-level="3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 母群變異數未知的抽樣分配</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="one-sample.html"><a href="one-sample.html#section-3.2.1"><i class="fa fa-check"></i><b>3.2.1</b> 點估計是隨機的</a></li>
-<li class="chapter" data-level="3.2.2" data-path="one-sample.html"><a href="one-sample.html#t"><i class="fa fa-check"></i><b>3.2.2</b> 認識t分佈</a></li>
+<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#probability-summary"><i class="fa fa-check"></i><b>3.4</b> 總結</a></li>
+<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#probability-practice"><i class="fa fa-check"></i><b>3.5</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3"><i class="fa fa-check"></i><b>3.3</b> 單一樣本平均數的假設檢定</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="one-sample.html"><a href="one-sample.html#section-3.3.1"><i class="fa fa-check"></i><b>3.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="3.3.2" data-path="one-sample.html"><a href="one-sample.html#section-3.3.2"><i class="fa fa-check"></i><b>3.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="3.3.3" data-path="one-sample.html"><a href="one-sample.html#section-3.3.3"><i class="fa fa-check"></i><b>3.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="3.3.4" data-path="one-sample.html"><a href="one-sample.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="4" data-path="distribution.html"><a href="distribution.html"><i class="fa fa-check"></i><b>4</b> 模擬的機率分佈：統計方法的實證作用</a><ul>
+<li class="chapter" data-level="4.1" data-path="distribution.html"><a href="distribution.html#distribution-Rj"><i class="fa fa-check"></i><b>4.1</b> 執行模擬腳本</a></li>
+<li class="chapter" data-level="4.2" data-path="distribution.html"><a href="distribution.html#distribution-conditioning"><i class="fa fa-check"></i><b>4.2</b> 條件機率之模擬</a></li>
+<li class="chapter" data-level="4.3" data-path="distribution.html"><a href="distribution.html#distribution-sample"><i class="fa fa-check"></i><b>4.3</b> 母群體與樣本</a></li>
+<li class="chapter" data-level="4.4" data-path="distribution.html"><a href="distribution.html#distribution-binomial"><i class="fa fa-check"></i><b>4.4</b> 二項分佈之模擬</a></li>
+<li class="chapter" data-level="4.5" data-path="distribution.html"><a href="distribution.html#distribution-normal"><i class="fa fa-check"></i><b>4.5</b> 常態分佈之模擬</a></li>
+<li class="chapter" data-level="4.6" data-path="distribution.html"><a href="distribution.html#distribution-approaches"><i class="fa fa-check"></i><b>4.6</b> 統計學兩大流派</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="distribution.html"><a href="distribution.html#distribution-frequentist"><i class="fa fa-check"></i><b>4.6.1</b> 次數主義統計</a></li>
+<li class="chapter" data-level="4.6.2" data-path="distribution.html"><a href="distribution.html#distribution-Bayesian"><i class="fa fa-check"></i><b>4.6.2</b> 貝氏統計</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>3.4</b> p值是什麼？</a></li>
-<li class="chapter" data-level="3.5" data-path="one-sample.html"><a href="one-sample.html#section-3.5"><i class="fa fa-check"></i><b>3.5</b> 效果量與考驗力</a></li>
-<li class="chapter" data-level="3.6" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>3.6</b> 習題</a></li>
+<li class="chapter" data-level="4.7" data-path="distribution.html"><a href="distribution.html#distribution-summary"><i class="fa fa-check"></i><b>4.7</b> 總結</a></li>
+<li class="chapter" data-level="4.8" data-path="distribution.html"><a href="distribution.html#distribution-practice"><i class="fa fa-check"></i><b>4.8</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ci.html"><a href="ci.html"><i class="fa fa-check"></i><b>4</b> 這個分數是我要的嗎？單一樣本平均數的信賴區間</a><ul>
-<li class="chapter" data-level="4.1" data-path="ci.html"><a href="ci.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 信賴區間的計算與報告</a></li>
-<li class="chapter" data-level="4.2" data-path="ci.html"><a href="ci.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 信賴區間的機率本質</a></li>
-<li class="chapter" data-level="4.3" data-path="ci.html"><a href="ci.html#section-4.3"><i class="fa fa-check"></i><b>4.3</b> 信賴區間與研究結果可再現性</a></li>
-<li class="chapter" data-level="4.4" data-path="ci.html"><a href="ci.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 治療性撫慰師真有本事嗎？</a></li>
-<li class="chapter" data-level="4.5" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>4.5</b> 習題</a></li>
+<li class="chapter" data-level="5" data-path="onesample.html"><a href="onesample.html"><i class="fa fa-check"></i><b>5</b> 單一樣本的推論統計</a><ul>
+<li class="chapter" data-level="5.1" data-path="onesample.html"><a href="onesample.html#onesample-preregistration"><i class="fa fa-check"></i><b>5.1</b> 預先註冊</a></li>
+<li class="chapter" data-level="5.2" data-path="onesample.html"><a href="onesample.html#onesample-test"><i class="fa fa-check"></i><b>5.2</b> 虛無假設顯著性檢定</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="onesample.html"><a href="onesample.html#onesample-hypothesis"><i class="fa fa-check"></i><b>5.2.1</b> 虛無假設與對立假設</a></li>
+<li class="chapter" data-level="5.2.2" data-path="onesample.html"><a href="onesample.html#onesample-errors"><i class="fa fa-check"></i><b>5.2.2</b> 型一與型二錯誤率</a></li>
+<li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="two-samples.html"><a href="two-samples.html"><i class="fa fa-check"></i><b>5</b> 我的分數比你的分數高嗎？相依樣本與獨立樣本</a><ul>
-<li class="chapter" data-level="5.1" data-path="two-samples.html"><a href="two-samples.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 型一錯誤與型二錯誤</a></li>
-<li class="chapter" data-level="5.2" data-path="two-samples.html"><a href="two-samples.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 示範資料說明</a></li>
-<li class="chapter" data-level="5.3" data-path="two-samples.html"><a href="two-samples.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 相依樣本與重覆量數</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="5.3.2" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="5.3.3" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="5.3.4" data-path="randomization.html"><a href="randomization.html#-1"><i class="fa fa-check"></i><b>5.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="two-samples.html"><a href="two-samples.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 獨立樣本與組間比較</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="5.4.2" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="5.4.3" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="5.4.4" data-path="one-sample.html"><a href="one-sample.html#-2"><i class="fa fa-check"></i><b>5.4.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="one-sample.html"><a href="one-sample.html#p"><i class="fa fa-check"></i><b>5.5</b> 效果量、p值與考驗力</a></li>
-<li class="chapter" data-level="5.6" data-path="two-samples.html"><a href="two-samples.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 如何提高實驗結果的再現性？</a></li>
-<li class="chapter" data-level="5.7" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>5.7</b> 習題</a></li>
+<li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
+<li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>6</b> 我倆多有緣？相關與迴歸</a><ul>
-<li class="chapter" data-level="6.1" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.1</b> Iris資料介紹</a></li>
-<li class="chapter" data-level="6.2" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.2</b> Iris相關分析</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="6.2.2" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="6.2.3" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="6.2.4" data-path="ci.html"><a href="ci.html#-3"><i class="fa fa-check"></i><b>6.2.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="6" data-path="paired.html"><a href="paired.html"><i class="fa fa-check"></i><b>6</b> 相依樣本的推論統計</a><ul>
+<li class="chapter" data-level="6.1" data-path="paired.html"><a href="paired.html#paired-categorical"><i class="fa fa-check"></i><b>6.1</b> 類別變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="paired.html"><a href="paired.html#paired-categorical-case"><i class="fa fa-check"></i><b>6.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.1.2" data-path="paired.html"><a href="paired.html#paired-categorical-McNemar"><i class="fa fa-check"></i><b>6.1.2</b> McNemar氏檢定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="paired.html"><a href="paired.html#paired-categorical-chisquare"><i class="fa fa-check"></i><b>6.1.3</b> McNemar氏檢定的抽樣分佈</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="corr.html"><a href="corr.html#section-6.3"><i class="fa fa-check"></i><b>6.3</b> 均值迴歸</a></li>
-<li class="chapter" data-level="6.4" data-path="corr.html"><a href="corr.html#iris"><i class="fa fa-check"></i><b>6.4</b> Iris迴歸分析</a><ul>
-<li class="chapter" data-level="6.4.1" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="6.4.2" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="6.4.3" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="6.4.4" data-path="two-samples.html"><a href="two-samples.html#-4"><i class="fa fa-check"></i><b>6.4.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="6.2" data-path="paired.html"><a href="paired.html#paired-continuous"><i class="fa fa-check"></i><b>6.2</b> 連續變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="paired.html"><a href="paired.html#paired-continuous-case"><i class="fa fa-check"></i><b>6.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.2.2" data-path="paired.html"><a href="paired.html#paired-continuous-distribution"><i class="fa fa-check"></i><b>6.2.2</b> 樣本平均數的抽樣分佈與t分佈</a></li>
+<li class="chapter" data-level="6.2.3" data-path="paired.html"><a href="paired.html#paired-continuous-t"><i class="fa fa-check"></i><b>6.2.3</b> 相依樣本t檢定</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>6.5</b> 習題</a><ul>
-<li class="chapter" data-level="6.5.1" data-path="corr.html"><a href="corr.html#big-5"><i class="fa fa-check"></i><b>6.5.1</b> Big 5人格量表分析</a></li>
+<li class="chapter" data-level="6.3" data-path="paired.html"><a href="paired.html#paired-power"><i class="fa fa-check"></i><b>6.3</b> 效果量、樣本數與考驗力</a></li>
+<li class="chapter" data-level="6.4" data-path="paired.html"><a href="paired.html#paired-summary"><i class="fa fa-check"></i><b>6.4</b> 總結</a></li>
+<li class="chapter" data-level="6.5" data-path="paired.html"><a href="paired.html#paired-practice"><i class="fa fa-check"></i><b>6.5</b> 習題</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="independent.html"><a href="independent.html"><i class="fa fa-check"></i><b>7</b> 獨立樣本的推論統計</a><ul>
+<li class="chapter" data-level="7.1" data-path="independent.html"><a href="independent.html#independent-chisquare"><i class="fa fa-check"></i><b>7.1</b> 無母數：獨立性檢定</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="independent.html"><a href="independent.html#independent-chisquare-case"><i class="fa fa-check"></i><b>7.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.1.2" data-path="independent.html"><a href="independent.html#independent-chisquare-test"><i class="fa fa-check"></i><b>7.1.2</b> 獨立性檢定示範</a></li>
+<li class="chapter" data-level="7.1.3" data-path="independent.html"><a href="independent.html#independent-chisquare-sampling"><i class="fa fa-check"></i><b>7.1.3</b> 獨立性檢定的抽樣分佈</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>7</b> 如何比較同班同學的分數？獨立樣本單因子變異數分析</a><ul>
-<li class="chapter" data-level="7.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 比較多組平均數有何不同？</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="one-sample.html"><a href="one-sample.html#t"><i class="fa fa-check"></i><b>7.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
-<li class="chapter" data-level="7.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 效果量家族</a></li>
+<li class="chapter" data-level="7.2" data-path="independent.html"><a href="independent.html#independent-t"><i class="fa fa-check"></i><b>7.2</b> 獨立樣本t檢定</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="independent.html"><a href="independent.html#independent-t-case"><i class="fa fa-check"></i><b>7.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.2.2" data-path="independent.html"><a href="independent.html#independent-sample"><i class="fa fa-check"></i><b>7.2.2</b> 獨立樣本平均數的抽樣分佈</a></li>
+<li class="chapter" data-level="7.2.3" data-path="independent.html"><a href="independent.html#independent-t-example"><i class="fa fa-check"></i><b>7.2.3</b> 示範檔案操作與解讀</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.2"><i class="fa fa-check"></i><b>7.2</b> 分解變異數來源</a></li>
-<li class="chapter" data-level="7.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.3"><i class="fa fa-check"></i><b>7.3</b> 獨立樣本變異數分析示範</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="7.3.2" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="7.3.3" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="7.3.4" data-path="corr.html"><a href="corr.html#-5"><i class="fa fa-check"></i><b>7.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="7.3" data-path="independent.html"><a href="independent.html#independent-design"><i class="fa fa-check"></i><b>7.3</b> 研究設計與統計考驗力</a></li>
+<li class="chapter" data-level="7.4" data-path="independent.html"><a href="independent.html#independent-summary"><i class="fa fa-check"></i><b>7.4</b> 總結</a></li>
+<li class="chapter" data-level="7.5" data-path="independent.html"><a href="independent.html#independent-practice"><i class="fa fa-check"></i><b>7.5</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-7.4"><i class="fa fa-check"></i><b>7.4</b> 變異數分析的考驗力</a></li>
-<li class="chapter" data-level="7.5" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>7.5</b> 習題</a></li>
+<li class="chapter" data-level="8" data-path="corr-reg.html"><a href="corr-reg.html"><i class="fa fa-check"></i><b>8</b> 相關與迴歸</a><ul>
+<li class="chapter" data-level="8.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="8.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-person"><i class="fa fa-check"></i><b>8.2</b> 皮爾森相關</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-r-sampling"><i class="fa fa-check"></i><b>8.2.1</b> 相關係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.2.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-strength"><i class="fa fa-check"></i><b>8.2.2</b> 相關係數的強度</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="twoway-anova.html"><a href="twoway-anova.html"><i class="fa fa-check"></i><b>8</b> 如何比較各班同學的分數？獨立樣本二因子變異數分析</a><ul>
-<li class="chapter" data-level="8.1" data-path="twoway-anova.html"><a href="twoway-anova.html#c"><i class="fa fa-check"></i><b>8.1</b> 示範案例：有效攝取維他命C的方式</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="8.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="8.1.3" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="8.1.4" data-path="oneway-anova.html"><a href="oneway-anova.html#-6"><i class="fa fa-check"></i><b>8.1.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="8.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-simple"><i class="fa fa-check"></i><b>8.3</b> 簡單迴歸</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.1"><i class="fa fa-check"></i><b>8.3.1</b> 範例分析示範</a></li>
+<li class="chapter" data-level="8.3.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-coff-sampling"><i class="fa fa-check"></i><b>8.3.2</b> 迴歸係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.3.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-least"><i class="fa fa-check"></i><b>8.3.3</b> 最小平方法</a></li>
+<li class="chapter" data-level="8.3.4" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.4"><i class="fa fa-check"></i><b>8.3.4</b> 簡單迴歸的信賴區間</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="twoway-anova.html"><a href="twoway-anova.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 獨變項是不是隨機的？</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="twoway-anova.html"><a href="twoway-anova.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 交互作用的考驗力</a></li>
+<li class="chapter" data-level="8.4" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-summary"><i class="fa fa-check"></i><b>8.4</b> 總結</a></li>
+<li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="twoway-anova.html"><a href="twoway-anova.html#-7"><i class="fa fa-check"></i><b>8.3</b> 習題</a></li>
+<li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="non-para.html"><a href="non-para.html"><i class="fa fa-check"></i><b>9</b> 沒有母群如何比高低？無母數統計</a><ul>
-<li class="chapter" data-level="9.1" data-path="non-para.html"><a href="non-para.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 母數統計的基本條件</a></li>
-<li class="chapter" data-level="9.2" data-path="non-para.html"><a href="non-para.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 獨立樣本的無母數統計：卡方檢定</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="intro.html"><a href="intro.html#emily-rosa"><i class="fa fa-check"></i><b>9.2.1</b> 適合度考驗：重新檢視Emily Rosa的資料</a></li>
-<li class="chapter" data-level="9.2.2" data-path="non-para.html"><a href="non-para.html#rogersmilkman2016"><i class="fa fa-check"></i><b>9.2.2</b> 獨立性考驗：重製Rogers與Milkman(2016)的分析</a></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="non-para.html"><a href="non-para.html#section-9.3"><i class="fa fa-check"></i><b>9.3</b> 其他基礎無母數統計</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="non-para.html"><a href="non-para.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 獨立樣本與相依樣本的無母數統計</a></li>
-<li class="chapter" data-level="9.3.2" data-path="non-para.html"><a href="non-para.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 變異數分析的無母數統計</a></li>
-<li class="chapter" data-level="9.3.3" data-path="non-para.html"><a href="non-para.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 相關分析的無母數統計</a></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
+<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
+<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="non-para.html"><a href="non-para.html#-8"><i class="fa fa-check"></i><b>9.4</b> 習題</a></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.7" data-path="index.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -259,41 +225,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">心理科學基礎統計</h1>
-<h4 class="author"><em>陳紹慶 Sau-Chin Chen</em></h4>
-<h4 class="date"><em>2018-09-06</em></h4>
+<p class="author"><em>陳紹慶 Sau-Chin Chen</em></p>
+<p class="date"><em>2019-02-17</em></p>
 </div>
 <div id="e5898de8a880" class="section level1 unnumbered">
 <h1>前言</h1>
+<ul>
+<li>第一版前言(2018.2.1)</li>
+</ul>
 <p>開始寫這本書有很多緣由，就從遠中近三個時間點的感想來說吧。遠因從我還是大學生小毛頭時開始，那時真正體悟學習統計的要訣，是去聽了幾位老師的授課，自行整理筆記得到收穫。當時讀過的幾本中英文教科書，最後成為案頭書的只有Roger Kirk的<a href="https://us.sagepub.com/en-us/nam/experimental-design/book233742">Experimental Design</a>。到今天要我推薦初學者值得參考的中文書，我完全無法舉出理想的教材，除非學生有興趣透過學習資料科學入門，才有值得推薦的中文線上教材。</p>
 <p>中程因素是2016年翻譯了Daniel Lakens的線上課程<a href="https://www.coursera.org/learn/statistical-inferences">提昇你的統計推論功力(Improving your statistical inferences)</a>，我體會可以從培養學習者的思考實際問題能力，激發學習統計方法的動機，並且掌握正確的資訊。Daniel 使用的教材是近幾年引發心理學再現危機的指標研究，都有公開資料讓人取用。曉得這些研究背後故事，有助如何正確使用統計方法。</p>
 <p>但是對於統計的初學者，甚至是心理學的初學者，這些故事還無法引起這些學習者的共鳴。如何激起初級學習者的學習興趣，並指引他們走上正確的學習道路，就是寫這本書的近因。這個任務有幾個要挑戰的目標：首先是使用能引發初學者興趣的案例，每一個世代的入門學習者特有特殊的共同記憶，形成不同的大眾興趣。這也帶來第二個挑戰，如何保持編寫教材的中心思想，又能時俱進引用有吸引力的案例？引導初學者認識開放科學理念與操作方法，是累積高品質研究的基礎。所以我編輯這套入門統計教材，希望協助初學者找到適合自已的學習門徑，能在幾個月之後有能力學習<a href="https://www.coursera.org/learn/statistical-inferences">提昇你的統計推論功力</a>等進階課程。</p>
 <p>所幸已經出現許多公開資源，讓我有面對這些挑戰的機會。編輯這本電子書R套件的<a href="https://bookdown.org/yihui/bookdown/">bookdwon</a>，能整合各種有助學習的互動式材料於多種平台。新世代資料科學家提供的自由整合資源，降低學習者掌握統計觀念的門檻。特別感激年輕的史丹福大學研究生<a href="http://daniel-kunin.com/">Daniel Kunin</a>，與朋友一起花時間開發，又無私分享的<a href="https://students.brown.edu/seeing-theory/index.html">seeing theory</a>，讓這本書能嘗試傳統教科書做不到的互動學習。開源又潛力無窮的統計軟體<a href="https://jasp-stats.org/">JASP</a>與<a href="https://www.jamovi.org/">jamovi</a>，學習者容易上手，又是資料分析工作的實用工具。兩套開源軟體與科學研究開放平台<a href="https://osf.io/">Open Science Framework</a>密切整合，能彈性管理延伸學習材料。這本書的示範檔案，以及各單元習題，都發佈於<a href="https://osf.io/kdtjq/">心理科學基礎統計OSF專案</a>，任何人有需要，不必註冊，可直接取用專案中的學習材料。</p>
 <p>本書取用的示範與習題案例，都是可檢索論文全文與原始資料的研究，初始版本的案例主要來自Carlson與Winquist合著的教科書“An Introduction to Statistics: an Active Learning Approach”<span class="citation">(Carlson &amp; Winquist, <a href="#ref-Carlsonintroductionstatisticsactive2018">2018</a>)</span>，以及收集推特與臉書社團<a href="https://www.facebook.com/groups/853552931365745/">Psychological Methods Discussion Group</a>，可以啟發初學者的案例。習題也是使用有公開資料的研究。編寫這本書時候，我正在研發一套習題模板，方便管理與擴充各單元的資源。我更希望有意充實這套教材的朋友與同學們，可以提供您認為值得學習的材料。</p>
 <p>所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。</p>
-<p>這本書初版使用<a href="http://www.pzhao.org/zh/">趙鵬博士</a>改良的R套件<a href="https://github.com/pzhaonet/bookdownplus">bookdownplus</a>編寫，目前使用<a href="https://yihui.name/">謝益輝博士</a>開發的<a href="https://bookdown.org/yihui/bookdown/">bookdown</a>編寫及更新。歡迎到<a href="http://scchen.com/zh/post/basic-statistics/">個人部落格</a>或<a href="https://github.com/SCgeeker/BasicStatistics/issues">Github</a>留言，給予本書批評與建議。如果學習者有興趣，歡迎自行取用本書的<a href="https://github.com/SCgeeker/BasicStatistics">源始碼</a>，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
-<pre><code>## R version 3.5.1 (2018-07-02)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows &gt;= 8 x64 (build 9200)
-## 
-## Matrix products: default
-## 
-## locale:
-## [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 
-## [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   
-## [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950
-## [4] LC_NUMERIC=C                                
-## [5] LC_TIME=Chinese (Traditional)_Taiwan.950    
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] compiler_3.5.1  backports_1.1.2 bookdown_0.7    magrittr_1.5   
-##  [5] rprojroot_1.3-2 htmltools_0.3.6 tools_3.5.1     rstudioapi_0.7 
-##  [9] yaml_2.2.0      Rcpp_0.12.17    stringi_1.1.7   rmarkdown_1.10 
-## [13] knitr_1.20      xfun_0.3        stringr_1.3.1   digest_0.6.15  
-## [17] evaluate_0.11</code></pre>
+<ul>
+<li>第二版前言(2019.1.3)</li>
+</ul>
+<p>完成第一版之後的一年之間，更新版的JASP與jamovi除了增加資料處理與統計方法模組，還有整合各種開放學習資源。我曾於<a href="http://scchen.com/zh/post/jasp-jamovi/">個人網誌</a>整理可運用的資源，2018年最後一次的更新，JSAP與jamovi的資料收藏(Data Library)都大幅擴充，教學有更多範例可以使用。這段期間jamovi套件<a href="https://www.jamovi.org/library.html"><code>Statkat</code></a>發佈，提供使用者即時統計方法諮詢。循此我得和套件開發者Rivka. M. de Vries先行建置的網站[<a href="https://statkat.com/" class="uri">https://statkat.com/</a>]，內容與架構符合我心目中的統計教學應具備的樣子。jamovi首席開發者Jonathon Love釋出的<code>Rj</code>，讓使用者能在jamovi裡操作基本的R程式碼，這個套件能更完整呈現與演練機率的計算與模擬。這些更新讓這一版電子書使用更明確的範例，解說統計方法的機率原理，以及運用間斷–連續變項的對比，介紹適用相對狀況的初級推論統計方法。
+這一版與前一版保持每個範例與習題都有JASP與jamovi兩種版本。感謝jamovi可執行R程式碼，前一版以嵌入式互動網頁解說機率原理的部分，儘可能以本人自編的jamovi範例檔取代，讓學習者能運用在個人練習與實務。</p>
 
 </div>
 <h3>參考文獻</h3>
@@ -328,7 +278,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -341,6 +291,10 @@ gitbook.start({
 "link": null,
 "text": null
 },
+"history": {
+"link": null,
+"text": null
+},
 "download": null,
 "toc": {
 "collapse": "section",
@@ -349,8 +303,7 @@ gitbook.start({
 "toolbar": {
 "position": "fixed"
 },
-"search": true,
-"fontfamily": "Microsoft JhengHei"
+"search": true
 });
 });
 </script>
@@ -360,8 +313,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

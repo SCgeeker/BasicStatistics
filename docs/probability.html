@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>第3單元 計算的機率分佈：統計方法的數學基礎 | 心理科學基礎統計</title>
+  <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="第3單元 計算的機率分佈：統計方法的數學基礎 | 心理科學基礎統計" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  <meta name="github-repo" content="SCgeeker/BasicStatistics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第3單元 計算的機率分佈：統計方法的數學基礎 | 心理科學基礎統計" />
+  
+  <meta name="twitter:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  
+
+<meta name="author" content="陳紹慶 Sau-Chin Chen">
+
+
+<meta name="date" content="2019-02-17">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="describe.html">
+<link rel="next" href="distribution.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li>心理科學基礎統計</li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 統計思考開門</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#intro_Rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#intro_stat"><i class="fa fa-check"></i><b>1.2</b> 統計思考養成途徑</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#intro_table"><i class="fa fa-check"></i><b>1.3</b> 統計方法運用指南</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#intro_summary"><i class="fa fa-check"></i><b>1.4</b> 總結</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#intro_practice"><i class="fa fa-check"></i><b>1.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="describe.html"><a href="describe.html"><i class="fa fa-check"></i><b>2</b> 描述統計</a><ul>
+<li class="chapter" data-level="2.1" data-path="describe.html"><a href="describe.html#describe_scale"><i class="fa fa-check"></i><b>2.1</b> 認識資料尺度</a></li>
+<li class="chapter" data-level="2.2" data-path="describe.html"><a href="describe.html#describe_workvariable"><i class="fa fa-check"></i><b>2.2</b> 變項的種類</a></li>
+<li class="chapter" data-level="2.3" data-path="describe.html"><a href="describe.html#discribe-quantity"><i class="fa fa-check"></i><b>2.3</b> 統計量數</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="describe.html"><a href="describe.html#describe-mode"><i class="fa fa-check"></i><b>2.3.1</b> 名義尺度的集中趨勢：眾數</a></li>
+<li class="chapter" data-level="2.3.2" data-path="describe.html"><a href="describe.html#describe-median"><i class="fa fa-check"></i><b>2.3.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
+<li class="chapter" data-level="2.3.3" data-path="describe.html"><a href="describe.html#describe-mean"><i class="fa fa-check"></i><b>2.3.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="describe.html"><a href="describe.html#describe-plots"><i class="fa fa-check"></i><b>2.4</b> 統計圖表使用指南</a></li>
+<li class="chapter" data-level="2.5" data-path="describe.html"><a href="describe.html#describe_summary"><i class="fa fa-check"></i><b>2.5</b> 總結</a></li>
+<li class="chapter" data-level="2.6" data-path="describe.html"><a href="describe.html#describe-practice"><i class="fa fa-check"></i><b>2.6</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> 計算的機率分佈：統計方法的數學基礎</a><ul>
+<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#probability-calculation"><i class="fa fa-check"></i><b>3.1</b> 機率事件計算原理</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="probability.html"><a href="probability.html#probability-set"><i class="fa fa-check"></i><b>3.1.1</b> 集合論</a></li>
+<li class="chapter" data-level="3.1.2" data-path="probability.html"><a href="probability.html#probability-permutation"><i class="fa fa-check"></i><b>3.1.2</b> 機率事件的排列組合</a></li>
+<li class="chapter" data-level="3.1.3" data-path="probability.html"><a href="probability.html#probability-space"><i class="fa fa-check"></i><b>3.1.3</b> 樣本空間</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#probability-conditional"><i class="fa fa-check"></i><b>3.2</b> 條件機率的計算</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="probability.html"><a href="probability.html#probability-mh"><i class="fa fa-check"></i><b>3.2.1</b> 蒙提霍爾問題</a></li>
+<li class="chapter" data-level="3.2.2" data-path="probability.html"><a href="probability.html#probability-Bayes"><i class="fa fa-check"></i><b>3.2.2</b> 貝氏定理</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#probability-functions"><i class="fa fa-check"></i><b>3.3</b> 機率分佈</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="probability.html"><a href="probability.html#probability-binomial"><i class="fa fa-check"></i><b>3.3.1</b> 二項分佈</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability.html"><a href="probability.html#probability-normal"><i class="fa fa-check"></i><b>3.3.2</b> 標準化常態分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#probability-summary"><i class="fa fa-check"></i><b>3.4</b> 總結</a></li>
+<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#probability-practice"><i class="fa fa-check"></i><b>3.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="distribution.html"><a href="distribution.html"><i class="fa fa-check"></i><b>4</b> 模擬的機率分佈：統計方法的實證作用</a><ul>
+<li class="chapter" data-level="4.1" data-path="distribution.html"><a href="distribution.html#distribution-Rj"><i class="fa fa-check"></i><b>4.1</b> 執行模擬腳本</a></li>
+<li class="chapter" data-level="4.2" data-path="distribution.html"><a href="distribution.html#distribution-conditioning"><i class="fa fa-check"></i><b>4.2</b> 條件機率之模擬</a></li>
+<li class="chapter" data-level="4.3" data-path="distribution.html"><a href="distribution.html#distribution-sample"><i class="fa fa-check"></i><b>4.3</b> 母群體與樣本</a></li>
+<li class="chapter" data-level="4.4" data-path="distribution.html"><a href="distribution.html#distribution-binomial"><i class="fa fa-check"></i><b>4.4</b> 二項分佈之模擬</a></li>
+<li class="chapter" data-level="4.5" data-path="distribution.html"><a href="distribution.html#distribution-normal"><i class="fa fa-check"></i><b>4.5</b> 常態分佈之模擬</a></li>
+<li class="chapter" data-level="4.6" data-path="distribution.html"><a href="distribution.html#distribution-approaches"><i class="fa fa-check"></i><b>4.6</b> 統計學兩大流派</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="distribution.html"><a href="distribution.html#distribution-frequentist"><i class="fa fa-check"></i><b>4.6.1</b> 次數主義統計</a></li>
+<li class="chapter" data-level="4.6.2" data-path="distribution.html"><a href="distribution.html#distribution-Bayesian"><i class="fa fa-check"></i><b>4.6.2</b> 貝氏統計</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="distribution.html"><a href="distribution.html#distribution-summary"><i class="fa fa-check"></i><b>4.7</b> 總結</a></li>
+<li class="chapter" data-level="4.8" data-path="distribution.html"><a href="distribution.html#distribution-practice"><i class="fa fa-check"></i><b>4.8</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="onesample.html"><a href="onesample.html"><i class="fa fa-check"></i><b>5</b> 單一樣本的推論統計</a><ul>
+<li class="chapter" data-level="5.1" data-path="onesample.html"><a href="onesample.html#onesample-preregistration"><i class="fa fa-check"></i><b>5.1</b> 預先註冊</a></li>
+<li class="chapter" data-level="5.2" data-path="onesample.html"><a href="onesample.html#onesample-test"><i class="fa fa-check"></i><b>5.2</b> 虛無假設顯著性檢定</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="onesample.html"><a href="onesample.html#onesample-hypothesis"><i class="fa fa-check"></i><b>5.2.1</b> 虛無假設與對立假設</a></li>
+<li class="chapter" data-level="5.2.2" data-path="onesample.html"><a href="onesample.html#onesample-errors"><i class="fa fa-check"></i><b>5.2.2</b> 型一與型二錯誤率</a></li>
+<li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
+<li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="paired.html"><a href="paired.html"><i class="fa fa-check"></i><b>6</b> 相依樣本的推論統計</a><ul>
+<li class="chapter" data-level="6.1" data-path="paired.html"><a href="paired.html#paired-categorical"><i class="fa fa-check"></i><b>6.1</b> 類別變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="paired.html"><a href="paired.html#paired-categorical-case"><i class="fa fa-check"></i><b>6.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.1.2" data-path="paired.html"><a href="paired.html#paired-categorical-McNemar"><i class="fa fa-check"></i><b>6.1.2</b> McNemar氏檢定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="paired.html"><a href="paired.html#paired-categorical-chisquare"><i class="fa fa-check"></i><b>6.1.3</b> McNemar氏檢定的抽樣分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="paired.html"><a href="paired.html#paired-continuous"><i class="fa fa-check"></i><b>6.2</b> 連續變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="paired.html"><a href="paired.html#paired-continuous-case"><i class="fa fa-check"></i><b>6.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.2.2" data-path="paired.html"><a href="paired.html#paired-continuous-distribution"><i class="fa fa-check"></i><b>6.2.2</b> 樣本平均數的抽樣分佈與t分佈</a></li>
+<li class="chapter" data-level="6.2.3" data-path="paired.html"><a href="paired.html#paired-continuous-t"><i class="fa fa-check"></i><b>6.2.3</b> 相依樣本t檢定</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="paired.html"><a href="paired.html#paired-power"><i class="fa fa-check"></i><b>6.3</b> 效果量、樣本數與考驗力</a></li>
+<li class="chapter" data-level="6.4" data-path="paired.html"><a href="paired.html#paired-summary"><i class="fa fa-check"></i><b>6.4</b> 總結</a></li>
+<li class="chapter" data-level="6.5" data-path="paired.html"><a href="paired.html#paired-practice"><i class="fa fa-check"></i><b>6.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="independent.html"><a href="independent.html"><i class="fa fa-check"></i><b>7</b> 獨立樣本的推論統計</a><ul>
+<li class="chapter" data-level="7.1" data-path="independent.html"><a href="independent.html#independent-chisquare"><i class="fa fa-check"></i><b>7.1</b> 無母數：獨立性檢定</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="independent.html"><a href="independent.html#independent-chisquare-case"><i class="fa fa-check"></i><b>7.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.1.2" data-path="independent.html"><a href="independent.html#independent-chisquare-test"><i class="fa fa-check"></i><b>7.1.2</b> 獨立性檢定示範</a></li>
+<li class="chapter" data-level="7.1.3" data-path="independent.html"><a href="independent.html#independent-chisquare-sampling"><i class="fa fa-check"></i><b>7.1.3</b> 獨立性檢定的抽樣分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="independent.html"><a href="independent.html#independent-t"><i class="fa fa-check"></i><b>7.2</b> 獨立樣本t檢定</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="independent.html"><a href="independent.html#independent-t-case"><i class="fa fa-check"></i><b>7.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.2.2" data-path="independent.html"><a href="independent.html#independent-sample"><i class="fa fa-check"></i><b>7.2.2</b> 獨立樣本平均數的抽樣分佈</a></li>
+<li class="chapter" data-level="7.2.3" data-path="independent.html"><a href="independent.html#independent-t-example"><i class="fa fa-check"></i><b>7.2.3</b> 示範檔案操作與解讀</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="independent.html"><a href="independent.html#independent-design"><i class="fa fa-check"></i><b>7.3</b> 研究設計與統計考驗力</a></li>
+<li class="chapter" data-level="7.4" data-path="independent.html"><a href="independent.html#independent-summary"><i class="fa fa-check"></i><b>7.4</b> 總結</a></li>
+<li class="chapter" data-level="7.5" data-path="independent.html"><a href="independent.html#independent-practice"><i class="fa fa-check"></i><b>7.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="corr-reg.html"><a href="corr-reg.html"><i class="fa fa-check"></i><b>8</b> 相關與迴歸</a><ul>
+<li class="chapter" data-level="8.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="8.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-person"><i class="fa fa-check"></i><b>8.2</b> 皮爾森相關</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-r-sampling"><i class="fa fa-check"></i><b>8.2.1</b> 相關係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.2.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-strength"><i class="fa fa-check"></i><b>8.2.2</b> 相關係數的強度</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-simple"><i class="fa fa-check"></i><b>8.3</b> 簡單迴歸</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.1"><i class="fa fa-check"></i><b>8.3.1</b> 範例分析示範</a></li>
+<li class="chapter" data-level="8.3.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-coff-sampling"><i class="fa fa-check"></i><b>8.3.2</b> 迴歸係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.3.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-least"><i class="fa fa-check"></i><b>8.3.3</b> 最小平方法</a></li>
+<li class="chapter" data-level="8.3.4" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.4"><i class="fa fa-check"></i><b>8.3.4</b> 簡單迴歸的信賴區間</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-summary"><i class="fa fa-check"></i><b>8.4</b> 總結</a></li>
+<li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
+<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
+<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.7" data-path="03-probability.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">心理科學基礎統計</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability" class="section level1">
+<h1><span class="header-section-number">第3單元</span> 計算的機率分佈：統計方法的數學基礎</h1>
+<p>在這個單元與第<a href="distribution.html#distribution">4</a>單元，我們將學習到什麼是<strong>計算的機率</strong>與<strong>模擬的機率</strong>。<strong>計算的機率</strong>來自數學領域的機率論，使用數學公式演繹這個世界的隨機現象。從這個單元起介紹的五種機率分佈函數，被統計學家用來開發本書陳列的統計方法。要理解如何運用這些機率分佈函數，需要重新整理機率事件 以及條件機率的計算。只要讀者有一定的數學知識，可運用本單元提供的範例與習題，熟練計算的機率。</p>
+<div id="probability-calculation" class="section level2">
+<h2><span class="header-section-number">3.1</span> 機率事件計算原理</h2>
+<div id="probability-set" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> 集合論</h3>
+<p>任何能計算機率的事物，必先能定義為<strong>集合</strong>。例如從一副無鬼牌的撲克牌抽出指定花色及點數的牌組之機率；投擲十枚硬幣，其中五枚正面朝上的機率。這些範例都能列舉集合之內的<strong>元素</strong>，例如每副撲克牌的花色與點數一共有52種配對；十枚硬幣正面朝上的次數。以十枚硬幣的例子來說，集合之內有十種可能結果，一種結果代表十枚之中正面朝上的硬幣數目。這個集合以大寫字母<span class="math inline">\(C\)</span>代表，其中有11項表列如下：</p>
+<p><span class="math inline">\(c_1\)</span>: (正、正、正、正、正、正、正、正、正、正)<br />
+<span class="math inline">\(c_2\)</span>: (正、正、正、正、正、正、正、正、正、反)<br />
+<span class="math inline">\(c_3\)</span>: (正、正、正、正、正、正、正、正、反、反)<br />
+<span class="math inline">\(c_4\)</span>: (正、正、正、正、正、正、正、反、反、反)<br />
+<span class="math inline">\(c_5\)</span>: (正、正、正、正、正、正、反、反、反、反)<br />
+<span class="math inline">\(c_6\)</span>: (正、正、正、正、正、反、反、反、反、反)<br />
+<span class="math inline">\(c_7\)</span>: (正、正、正、正、反、反、反、反、反、反)<br />
+<span class="math inline">\(c_8\)</span>: (正、正、正、反、反、反、反、反、反、反)<br />
+<span class="math inline">\(c_9\)</span>: (正、正、反、反、反、反、反、反、反、反)<br />
+<span class="math inline">\(c_{10}\)</span>: (正、反、反、反、反、反、反、反、反、反)<br />
+<span class="math inline">\(c_{11}\)</span>: (反、反、反、反、反、反、反、反、反、反)</p>
+<p>我們可以設定符合某些條件的結果，構成<strong>子集合</strong>。像是設定至少有五次正面的結果為子集合<span class="math inline">\(A\)</span>，其中有<span class="math inline">\(c_1, c_2, c_3, c_4, c_5, c_6\)</span>，設定正面出現最多次數只有達到5次的結果為子集合<span class="math inline">\(B\)</span>，其中有<span class="math inline">\(c_6, c_7, c_8, c_9, c_10, c_11\)</span>。子集合<span class="math inline">\(A\)</span>與<span class="math inline">\(B\)</span>涵括集合<span class="math inline">\(C\)</span>的所有結果，所以我們可以稱子集合<span class="math inline">\(A\)</span>與<span class="math inline">\(B\)</span>的<strong>聯集</strong>，<span class="math inline">\(A \cup B\)</span>，等於集合<span class="math inline">\(C\)</span>。子集合<span class="math inline">\(A\)</span>與<span class="math inline">\(B\)</span>都有包含的結果種類是<span class="math inline">\(c_6\)</span>，我們可以稱子集合<span class="math inline">\(A\)</span>與<span class="math inline">\(B\)</span>的<strong>交集</strong>，<span class="math inline">\(A \cap B\)</span>，代表十枚硬幣的其中五枚正面朝上之結果。更進一步，我們可以只計集合<span class="math inline">\(C\)</span>裡不屬於子集合<span class="math inline">\(A\)</span>的結果，屬於<strong>補集</strong><span class="math inline">\(\bar{A}\)</span>；當然也可以稱呼集合<span class="math inline">\(C\)</span>裡不屬於子集合<span class="math inline">\(B\)</span>的結果，屬於<strong>補集</strong><span class="math inline">\(\bar{B}\)</span>。由此可知，兩個補集的聯集，<span class="math inline">\(\bar{A} \cup \bar{B}\)</span>，涵括的結果沒有<span class="math inline">\(c_6\)</span>，不等於集合<span class="math inline">\(C\)</span>。</p>
+</div>
+<div id="probability-permutation" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> 機率事件的排列組合</h3>
+<p>考慮十枚硬幣逐次投擲，紀錄硬幣正面的出現位序，除了全是正面與全是反面的狀況，其他結果有至少十種排列組合。依此可計算<span class="math inline">\(c_1\)</span>到<span class="math inline">\(c_{11}\)</span>，符合每種結果條件的事件數目，各結果事件數目表列如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">結果代號</th>
+<th align="center">計算公式</th>
+<th align="center">事件數目</th>
+<th align="center">發生機率(<span class="math inline">\(P(c_i)\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_1\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{10}\)</span></td>
+<td align="center">1</td>
+<td align="center">0.001</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c_2\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{9}\)</span></td>
+<td align="center">10</td>
+<td align="center">0.01</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_3\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{8}\)</span></td>
+<td align="center">45</td>
+<td align="center">0.044</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c_4\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{7}\)</span></td>
+<td align="center">120</td>
+<td align="center">0.117</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_5\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{6}\)</span></td>
+<td align="center">210</td>
+<td align="center">0.205</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c_6\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{5}\)</span></td>
+<td align="center">252</td>
+<td align="center">0.246</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_7\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{4}\)</span></td>
+<td align="center">210</td>
+<td align="center">0.205</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c_8\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{3}\)</span></td>
+<td align="center">120</td>
+<td align="center">0.117</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_9\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{2}\)</span></td>
+<td align="center">45</td>
+<td align="center">0.044</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c_{10}\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{1}\)</span></td>
+<td align="center">10</td>
+<td align="center">0.01</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c_{11}\)</span></td>
+<td align="center"><span class="math inline">\(C^{10}_{0}\)</span></td>
+<td align="center">1</td>
+<td align="center">0.001</td>
+</tr>
+</tbody>
+</table>
+<p>如果硬幣都是依規定鑄造，不會每次投擲都是正面或都是反面，前表所列的每個事件發生機率都是相等的。所以某個結果的事件數目所佔的比例，就是該結果的發生機率，如前表所示。在機率論裡，如同投擲硬幣的案例稱為<strong>等機率結果</strong>：只要知道如何計算全部與特定結果的事件數目，就能計算特定結果的發生機率。</p>
+</div>
+<div id="probability-space" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> 樣本空間</h3>
+<p>只要能明確定義一個集合的每個事件，這樣的集合就是<strong>樣本空間</strong>。所以投擲十枚硬幣，紀錄正面朝上次數的樣本空間是1024種事件。實際實驗的任何一次結果，都會符合其中一種事件。但是讀者要區辨<strong>事件</strong>是計算機率的元素，實驗結果則是我們對現實世界的理解，各有適合討論的場域。</p>
+<p>知道各種結果的發生機率，為了方便計算，我們可以將某種結果寫成<span class="math inline">\(P(c_i)\)</span>。稍早我的定義的子集合<span class="math inline">\(A\)</span>與子集合<span class="math inline">\(B\)</span>，發生機率分別可寫成以下的算式：</p>
+<p><span class="math display">\[P(A) = P(c_1) + P(c_2) + P(c_3) + P(c_4) + P(c_5) + P(c_6) = \sum_{i=1-6}P(c_i)\]</span></p>
+<p><span class="math display">\[P(B) = P(c_6) + P(c_7) + P(c_8) + P(c_9) + P(c_{10}) + P(c_{11}) = \sum_{i=6-11}P(c_i)\]</span></p>
+<p>了解<strong>樣本空間</strong>的事件排列組合規則，我們就能知道手上的資料符合，或者逼近什麼樣的機率分佈，如此就能決定正確的統計方法。然而現實的統計實務，資料是經過多種條件設定所取得的觀察結果，不似投擲硬幣只有硬幣是否公正而已。數學家很早就了解這種狀況無所不在，提出<strong>條件機率(Conditional Probability)</strong>的觀念。</p>
+</div>
+</div>
+<div id="probability-conditional" class="section level2">
+<h2><span class="header-section-number">3.2</span> 條件機率的計算</h2>
+<div id="probability-mh" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> 蒙提霍爾問題</h3>
+<p>我們透過一件統計學公案，認識條件機率的觀念與計算方法。二十世紀下半葉，美國統計學界提出著名公案：蒙提霍爾問題<span class="citation">(Steve, <a href="#ref-Steveproblemprobabilityletter1975">1975</a>)</span>。蒙提霍爾是二十世紀六十年代著名的美國猜謎節目主持人，這個節目有個知名橋段：主持人向觀眾展示三道門，其中一道門之後是豪華轎車，另外兩道門之後是山羊。每集節目邀請來賓選出正確的門，選到車子現場直接開回家。不過這個橋段有個製造緊張氣氛的安排：來賓先指出其中一道門，接著主持人打開另外兩道門的其中一道，這道門之後一定是山羊。最後就是橋段的高潮，主持人給來賓一次機會，選擇一開始指出的門？還是選擇沒被打開的另一道門？</p>
+<p>統計學者與數學家最關心的是這個節目的來賓：「選擇另一道門是車子的機率有沒有高於一開始選擇的門？」這種情況就是比較兩種選擇的<strong>條件機率</strong>：已知其中一道門之後是山羊(<span class="math inline">\(B\)</span>)，選擇一開始指的門是車子(<span class="math inline">\(A\)</span>)之機率；對比選擇另一道門是車子(<span class="math inline">\(\bar{A}\)</span>)之機率。為了方便計算，一般寫成<span class="math inline">\(P(A|B)\)</span>與<span class="math inline">\(P(\bar{A}|B)\)</span>。同樣的道理，<span class="math inline">\(P(\bar{A}|B)\)</span>代表已知其中一道門之後是山羊(<span class="math inline">\(B\)</span>)，另一道門是車子(<span class="math inline">\(\bar{A}\)</span>)之機率。雖然<span class="math inline">\(P(A|B)\)</span>與<span class="math inline">\(P(\bar{A}|B)\)</span>的總和是1，但是<span class="math inline">\(B\)</span>也是一種機率事件，因為到底那道門之後是山羊，每一集節目都不會一樣。下表列出所有車子與山羊的狀況：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">狀況</th>
+<th align="center">1號門</th>
+<th align="center">2號門</th>
+<th align="center">3號門</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+</tr>
+</tbody>
+</table>
+<p>節目主持人先讓來賓指出一道門，接著根據情況決定要打開那道門讓觀眾與來賓看山羊。例如車子在1號門之後的狀況，來賓先選擇1號門，接著主持人就隨機打開2號門或3號門；如果是車子不在1號門之後的狀況，來賓先選擇1號門，主持人接著就打開另一道是山羊的門。所以主持人要打開那道門讓觀眾看山羊，也是一種隨機事件。不過主持人打開那道門的機率，與來賓最後選那一道門中車子的機率無關。</p>
+</div>
+<div id="probability-Bayes" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> 貝氏定理</h3>
+<p>即使不能掌握P(B)，我們可以運用貝氏定理計算<span class="math inline">\(P(A|B)\)</span>與<span class="math inline">\(P(\bar{A}|B)\)</span>。讀者也許曾經學過貝氏定理的公式，本書談到貝氏定理的地方都是指以下公式：</p>
+<p><span class="math display">\[ P(\theta|D) = \frac{P(D|\theta) \times P(\theta)}{P(D)} \]</span></p>
+<p>以蒙提霍爾問題的情境來說，D代表主持人打開有山羊的門，<span class="math inline">\(\theta\)</span>代表來賓在節目開始的選擇。我們表列來賓先選其中一道門，後來決定不選另一道門的各種結果。節目設計讓來賓一開始只有三種選擇，第一種是先選1號門：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">狀況</th>
+<th align="center">*1號門</th>
+<th align="center">2號門</th>
+<th align="center">3號門</th>
+<th align="center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">得車</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">得羊</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">得羊</td>
+</tr>
+</tbody>
+</table>
+<p>第二種是先選2號門：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">狀況</th>
+<th align="center">1號門</th>
+<th align="center">*2號門</th>
+<th align="center">3號門</th>
+<th align="center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">得羊</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">得車</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">得羊</td>
+</tr>
+</tbody>
+</table>
+<p>第三種是先選3號門：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">狀況</th>
+<th align="center">1號門</th>
+<th align="center">2號門</th>
+<th align="center">*3號門</th>
+<th align="center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">得羊</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">羊</td>
+<td align="center">得羊</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">羊</td>
+<td align="center">羊</td>
+<td align="center">車</td>
+<td align="center">得車</td>
+</tr>
+</tbody>
+</table>
+<p>如果來賓是研究者，<span class="math inline">\(P(\theta)\)</span>就是來賓的理論預測成功的機率，以上列表顯示來賓一開始的選擇有三種，所以<span class="math inline">\(P(\theta)\)</span>是1/3。</p>
+<p>主持人打開後面是羊的門，就像研究者根據理論收集的資料。來賓預期如果一開始選的門是對的，其餘兩道門會被主持人打開的機率應該是相等的。以一開始選擇1號門且車子就在這道門來說，主持人接著打開2號門或3號門的機率是一樣的，所以<span class="math inline">\(P(D)\)</span>是1/2。因為是以來賓一開始的選擇決定主持人接著開門的樣本空間，一開始選擇的門真的有車，主持人接著開那一道門的機率都是1/2。</p>
+<p><span class="math inline">\(P(D|\theta)\)</span>代表來賓應該考慮不論自己的猜測是否正確，主持人向觀眾開啟這道門的機率。如果一開始猜車子在1號門，主持人打開2號門可能是其中兩種狀況：第一種是<strong>猜對了</strong>，車子真的在1號門，主持人接著可以打開的就是2號門或3號門；第二種是<strong>猜錯了</strong>，車子並不在1號門，主持人能打開的只有後面是羊的那道門。所以如果一開始選擇1號門，接著主持人接著打開有羊的門，是一開始猜測正確的狀況之一，因此機率是1/2。</p>
+<p>以上三種機率代入貝氏定理的公式，就能算出來賓得到車子是保持一開始選擇的機率是1/3。也就是說，如果這個節目每一集採用同樣的遊戲流程，決定換門的來賓們大約每三位有兩位能把車子開回家。以貝氏定理算出的事後機率<span class="math inline">\(P(\theta|D)\)</span>，可做為下次研究的事前機率<span class="math inline">\(P(\theta)\)</span>，但是很顯然參與蒙提霍爾節目的來賓，並不能靠過去的播出紀錄更新中獎機率<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。</p>
+<p>嚴謹的心理科學研究根據的假設，必定要提出<span class="math inline">\(P(\theta)\)</span>的預測，收集資料的分析結果，則是呈現根據此假設獲得手上資料的條件機率<span class="math inline">\(P(D|\theta)\)</span>。請讀者記住這點：本書各單元範例與習題，所展示的資料之抽樣來源，本質是某種<span class="math inline">\(P(D|\theta)\)</span>的機率分佈。</p>
+</div>
+</div>
+<div id="probability-functions" class="section level2">
+<h2><span class="header-section-number">3.3</span> 機率分佈</h2>
+<p>最後我們學習最典型的兩種機率分佈：二項分佈與常態分佈。首先從解析大樂透的中獎機率，了解機率分佈的構成要素。</p>
+<p>台灣彩卷大樂透至今已開賣超過十五年，每期玩家可投注01~49任意六個號碼，開獎時看對中多少開出的號碼，對中的號碼越多，獎金越高。根據2019年的遊玩規則，中獎號碼與獎項的對應如下表：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">中獎方式</th>
+<th align="center">獎項</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">六個獎號完全相同</td>
+<td align="center">頭獎</td>
+</tr>
+<tr class="even">
+<td align="left">任五個獎號＋特別號</td>
+<td align="center">貳獎</td>
+</tr>
+<tr class="odd">
+<td align="left">任五個獎號</td>
+<td align="center">參獎</td>
+</tr>
+<tr class="even">
+<td align="left">任四個獎號＋特別號</td>
+<td align="center">肆獎</td>
+</tr>
+<tr class="odd">
+<td align="left">任四個獎號</td>
+<td align="center">伍獎</td>
+</tr>
+<tr class="even">
+<td align="left">任三個獎號＋特別號</td>
+<td align="center">陸獎</td>
+</tr>
+<tr class="odd">
+<td align="left">任二個獎號＋特別號</td>
+<td align="center">柒獎</td>
+</tr>
+<tr class="even">
+<td align="left">任三個獎號</td>
+<td align="center">普獎</td>
+</tr>
+</tbody>
+</table>
+<p>除了頭獎到肆獎彩金是將當期盈餘依規定的百分比分配，伍獎以下都有固定的中獎金額。為了方便說明，此處先排除有特別號的獎項，計算投注一組能中無特別號獎項的機率。</p>
+<p>運用排列組合的計數方法，可知樣本空間的事件總數，也就是投注的號碼組合有<span class="math inline">\(C^{49}_6 =\)</span> 1.398381610^{7}種。六個獎號完全相同只是其中一個事件；中五個獎號的事件有<span class="math inline">\(C^{6}_5 \times C^{49-6}_{6-5} =\)</span> 258種；中四個獎號的事件有<span class="math inline">\(C^{6}_4 \times C^{49-6}_{6-4} =\)</span> 1.354510^{4}種；中三個獎號的事件有<span class="math inline">\(C^{6}_3 \times C^{49-6}_{6-3} =\)</span> 2.468210^{5}種。每個獎項的中獎機率可以用以下的函數公式表示，這道函數就是大樂透不計特別號的中獎機率分佈：</p>
+<p><span class="math display">\[ p(x) = \frac{C^{6}_x \times C^{49-6}_{6-x}}{C^{49}_6} \ \ \ \ \ \ x = \{ 3,4,5,6 \} \]</span></p>
+<p>公式中的x是<strong>隨機變數</strong>：x涵括的數字是根據大樂透規則，每期可得獎金的獎號數目，每一注會有多少號碼符合，則由機遇決定。統計學家也稱呼機率分佈是<strong>隨機變數可能結果的模型</strong>，能以圖像顯示，如圖 <a href="probability.html#fig:lotty-model">3.1</a>：</p>
+<div class="figure"><span id="fig:lotty-model"></span>
+<img src="Basic-Statistics_files/figure-html/lotty-model-1.png" alt="台灣大樂透中獎之機率分佈(不計特別號)" width="672" />
+<p class="caption">
+圖 3.1: 台灣大樂透中獎之機率分佈(不計特別號)
+</p>
+</div>
+<p>讀者可以運用jamovi，下載製造圖<a href="probability.html#fig:lotty-model">3.1</a>的<a href="https://osf.io/xerd9/">R程式碼</a>，配合單元習題進行修改，讓自已更了解機率分佈。現在我們可以正式認識二項分佈與常態分佈。</p>
+<div id="probability-binomial" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> 二項分佈</h3>
+<p>二項分佈的隨機變數是一種離散型隨機變數，本單元一開始示範的投擲十枚硬幣之正面朝上次數，就是最佳的例子。</p>
+<p>為了說明如何以二項分佈計算投擲十枚硬幣的各種結果之機率，我們先看投擲一枚硬幣所有結果的機率分佈，也就是<strong>伯努力分佈(Bernoulli probability distribution)</strong>。投擲一枚硬幣只有兩種結果：正面朝上或反面朝上，因此隨機變數值域只有兩個數值：<span class="math inline">\({0,1}\)</span>，分別代表兩種結果。伯努力分佈的機率函數可歸納如下：</p>
+<p><span class="math display">\[P_x(p,x) = p^x(1 - p)^{1-x}  \ \ \ x = 0, 1\]</span></p>
+<p>函數的參數<span class="math inline">\(p\)</span>可為0~1之間的任何實數，代表一次事件的出現機率，<span class="math inline">\(p = 0.5\)</span>表示我們認定現在投擲的這枚硬幣是公正硬幣。圖<a href="probability.html#fig:bernoulli">3.2</a>是使用jamovi的<code>Rj</code>製作一枚硬幣擲出正面與反面的機率相等，所有結果的發生機率。讀者可運用<a href="https://osf.io/t5rs3/">範例檔案</a>，調整投出正面的機率(p)，觀察所有結果的發生機率如何變化？</p>
+<div class="figure"><span id="fig:bernoulli"></span>
+<img src="images/unit03_bernoulli_001.png" alt="伯努力機率分佈函數(p = 0.5)" width="400" />
+<p class="caption">
+圖 3.2: 伯努力機率分佈函數(p = 0.5)
+</p>
+</div>
+<p>回到十枚硬幣的例子，我們已經知道一次投擲一枚硬幣有兩種結果，一次投擲十枚硬幣不計正反面出現位序，則有11種結果。前面我們已經知道計算數種結果的出現機率，是總計對結果的機率值。了解伯努力分佈能表示投擲一枚硬幣所有結果的出現機率，相同的原理，二項分佈能表示擴展為數枚硬幣，會出現的各種結果之機率。比起伯努力分佈，二項分佈多了一個參數<span class="math inline">\(n\)</span>表示所有的結果總數，隨機變數<span class="math inline">\(x\)</span>依然表示任何一次結果。</p>
+<p>根據數學計算公理，二項分佈是伯努力分佈的總和，可歸納為累積機率函數：</p>
+<p><span class="math display">\[P(n, p, x) = \sum^n_{x = 0 - n}p^x\times(1-p)^{n-x} \]</span></p>
+<p>根據<strong>總機率定理</strong>，累積機率函數的總和必為1。任何一個隨機變數<span class="math inline">\(X\)</span>的事件發生機率，就是二項分佈的機率函數：</p>
+<p><span class="math display">\[p(n, p, x) = C^n_xp^x\times(1-p)^{n-x} \ \ \ \ \  x \subset R_x\]</span></p>
+<p>圖<a href="probability.html#fig:binomial">3.3</a>是使用jamovi的<code>Rj</code>製作十枚硬幣的任何一枚，擲出正面與反面的機率相等，所有事件結果的發生機率。讀者同樣可以<a href="https://osf.io/t5rs3/">範例檔案</a>，調整投出正面的機率(p)，觀察所有結果的發生機率如何變化？</p>
+<div class="figure"><span id="fig:binomial"></span>
+<img src="images/unit03_binomial_001.png" alt="二項機率分佈函數(N = 10, p = 0.5)" width="400" />
+<p class="caption">
+圖 3.3: 二項機率分佈函數(N = 10, p = 0.5)
+</p>
+</div>
+</div>
+<div id="probability-normal" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> 標準化常態分佈</h3>
+<p>至此我們應該注意到，如果要用機率分佈表現資料的發生機率，類別變項資料就是運用離散型隨機變數與其機率函數。適合連續變項資料的，則是<strong>連續型隨機變數</strong>。心理科學有許多測量指標在在一開始被提出時，研究者會設定所有人類的測量結果符合<strong>常態分佈</strong>，例如智力商數。</p>
+<p>許多心理科學行為指標收集的資料不但是連續變數，可測量的值域範圍涵蓋負無限大到正無限大。不過實際的測得的資料，至少有75%會落在一個平均值前後兩個標準差之內的範圍，這個比例的估計是根據<strong>柴比雪夫不等式</strong>，沒有一種機率分佈會超過這個比例，因此只要找到能正確描述連續變項資料的連續型隨機變數，就能使用其機率分佈計算某個資料數值的發生機率。</p>
+<p>有很長一段時間，心理學者們認為智力商數符合常態分佈。如果這個假設符合事實，不論全部人類的智力商數平均值是多少，都能符合某個常態分佈。每個智力商數減去平均值(<span class="math inline">\(\mu\)</span>)，再除以標準差(<span class="math inline">\(\delta\)</span>)，就成為<strong>標準化分數</strong>。如此轉換不只帶來計算的方便性，也讓心理學者能運用平均值為0，標準差為1的<strong>標準化常態分佈</strong>，計算從一群人之中，找到在某個智力商數之上或之下的個體之機率。</p>
+<p>標準化分數是標準化常態分佈的唯一參數，也是一種連續型隨機變數。標準化分數通常以<span class="math inline">\(z\)</span>表示，將原始分數<span class="math inline">\(x\)</span>轉換為標準化分數的計算公式如下：</p>
+<p><span class="math display">\[z = \frac{x - \mu}{\delta} \ \ \ \ x \subset R_x\]</span></p>
+<p>由標準分數-1，累積到標準分數1的機率為0.68，可由標準化常態分佈的累積機率函數求出。這個函數的繪圖如圖<a href="probability.html#fig:normal-cdf">3.4</a>：</p>
+<div class="figure"><span id="fig:normal-cdf"></span>
+<img src="images/unit03_normal_001.png" alt="標準化常態分佈累積機率函數" width="400" />
+<p class="caption">
+圖 3.4: 標準化常態分佈累積機率函數
+</p>
+</div>
+<p>累積機率函數微分之後，就成為機率密度函數。也就是說-1到1之間的累積機率，以機率密度函數畫成的曲線來看，等於兩個分數之間的面積。也就是圖<a href="probability.html#fig:normal-pdf">3.5</a>塗成紅色的區域。</p>
+<div class="figure"><span id="fig:normal-pdf"></span>
+<img src="images/unit03_normal_002.png" alt="標準化常態分佈機率密度函數" width="400" />
+<p class="caption">
+圖 3.5: 標準化常態分佈機率密度函數
+</p>
+</div>
+<p>類似圖<a href="probability.html#fig:normal-pdf">3.5</a>的曲線圖，在之後的每個統計單元都會看到。請讀者使用<a href="https://osf.io/jzpmy/">示範檔案</a>，演練習題或自行設計題目，了解標準化分數與累積機率的對應。</p>
+</div>
+</div>
+<div id="probability-summary" class="section level2">
+<h2><span class="header-section-number">3.4</span> 總結</h2>
+<ul>
+<li>TBA</li>
+</ul>
+</div>
+<div id="probability-practice" class="section level2">
+<h2><span class="header-section-number">3.5</span> 習題</h2>
+<ol style="list-style-type: decimal">
+<li><p>根據投擲十枚硬幣的表列事件次數，計算子集合<span class="math inline">\(A\)</span>與子集合<span class="math inline">\(B\)</span>的聯集之發生機率：<span class="math inline">\(P(A \cup B)\)</span>；交集之發生機率：<span class="math inline">\(P(A \cap B)\)</span>；補集之發生機率：<span class="math inline">\(P(\bar{A} \cup \bar{B})\)</span>。</p></li>
+<li><p>一幅撲克牌有四種花色與13種點數，「同花順」指抽到相同花色且點數連號的五張牌。運用這個單元示範的機率事件計算方法，計算抽到同花順的機率。</p></li>
+<li><p>如果主持人蒙提霍爾在某集特別節目，增加為五道門，其餘規則不變。請根據貝氏定理計算選擇後不換門得到轎車，與選擇後換門得到轎車的機率。</p></li>
+<li><p>蒙提霍爾問題的設定與現實條件差異，體現機率的數學運算不同於現實世界觀察現象發生次數。試著說明你發現的差異關鍵。</p></li>
+<li><p>參考本單元解析大樂透中獎機率的示範，完成有特別號的各獎中獎機率之機率分佈。</p></li>
+</ol>
+<!---
+$$ P(x) = \frac{ (C^{6}_{x} \times C^{49-6}_{6-x} \times C^{43}_0  - C^6_2 \times C^{49-6}_{6-2} \times C^{43}_0 ) + (C^{6}_{x} \times C^{49-6}_{6-x} \times C^{43}_1 - C^6_6 }{C^{49}_6) } \\ x = \{ 2,3,4,5,6 \} $$
+--->
+<ol start="6" style="list-style-type: decimal">
+<li><p>在某個線上遊戲有個寶物抽獎機制，其中一件重要道具的每次抽獎中獎率，官方宣稱平均1000名玩家中，能第一次抽中的機率是<span class="math inline">\(1/100\)</span>。透過網路搜尋，你發現討論抽中這件道具的10000筆不同玩家的留言，有4筆表示第一次抽獎就抽中。請運用二項分佈的機率函數，分析官方的說法符不符合事實？</p></li>
+<li><p>(探索常態分佈)</p></li>
+</ol>
+
+</div>
+</div>
+<h3>參考文獻</h3>
+<div id="refs" class="references">
+<div id="ref-Steveproblemprobabilityletter1975">
+<p>Steve, S. (1975). A problem in probability (letter to the editor). <em>American Statistician</em>, <em>29</em>(1), 67.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>統計學以差異平方和決定那一種機率函數最符合資料的方法，稱為<strong>最小平方法</strong>。本書介紹的推論統計方法，都是以最小平方法的數學公式推導與資料模擬為基礎。<a href="probability.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="describe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

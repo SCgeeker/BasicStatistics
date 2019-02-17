@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>第6單元 相依樣本的推論統計 | 心理科學基礎統計</title>
+  <meta name="description" content="以開放科學為理念，為初學者編寫的統計教科書。">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="第6單元 相依樣本的推論統計 | 心理科學基礎統計" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  <meta name="github-repo" content="SCgeeker/BasicStatistics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第6單元 相依樣本的推論統計 | 心理科學基礎統計" />
+  
+  <meta name="twitter:description" content="以開放科學為理念，為初學者編寫的統計教科書。" />
+  
+
+<meta name="author" content="陳紹慶 Sau-Chin Chen">
+
+
+<meta name="date" content="2019-02-17">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="onesample.html">
+<link rel="next" href="independent.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li>心理科學基礎統計</li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 統計思考開門</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#intro_Rosa"><i class="fa fa-check"></i><b>1.1</b> 統計思考實例：Emily Rosa的專題研究</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#intro_stat"><i class="fa fa-check"></i><b>1.2</b> 統計思考養成途徑</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#intro_table"><i class="fa fa-check"></i><b>1.3</b> 統計方法運用指南</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#intro_summary"><i class="fa fa-check"></i><b>1.4</b> 總結</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#intro_practice"><i class="fa fa-check"></i><b>1.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="describe.html"><a href="describe.html"><i class="fa fa-check"></i><b>2</b> 描述統計</a><ul>
+<li class="chapter" data-level="2.1" data-path="describe.html"><a href="describe.html#describe_scale"><i class="fa fa-check"></i><b>2.1</b> 認識資料尺度</a></li>
+<li class="chapter" data-level="2.2" data-path="describe.html"><a href="describe.html#describe_workvariable"><i class="fa fa-check"></i><b>2.2</b> 變項的種類</a></li>
+<li class="chapter" data-level="2.3" data-path="describe.html"><a href="describe.html#discribe-quantity"><i class="fa fa-check"></i><b>2.3</b> 統計量數</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="describe.html"><a href="describe.html#describe-mode"><i class="fa fa-check"></i><b>2.3.1</b> 名義尺度的集中趨勢：眾數</a></li>
+<li class="chapter" data-level="2.3.2" data-path="describe.html"><a href="describe.html#describe-median"><i class="fa fa-check"></i><b>2.3.2</b> 序列尺度的集中趨勢：百分位數與中位數</a></li>
+<li class="chapter" data-level="2.3.3" data-path="describe.html"><a href="describe.html#describe-mean"><i class="fa fa-check"></i><b>2.3.3</b> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="describe.html"><a href="describe.html#describe-plots"><i class="fa fa-check"></i><b>2.4</b> 統計圖表使用指南</a></li>
+<li class="chapter" data-level="2.5" data-path="describe.html"><a href="describe.html#describe_summary"><i class="fa fa-check"></i><b>2.5</b> 總結</a></li>
+<li class="chapter" data-level="2.6" data-path="describe.html"><a href="describe.html#describe-practice"><i class="fa fa-check"></i><b>2.6</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> 計算的機率分佈：統計方法的數學基礎</a><ul>
+<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#probability-calculation"><i class="fa fa-check"></i><b>3.1</b> 機率事件計算原理</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="probability.html"><a href="probability.html#probability-set"><i class="fa fa-check"></i><b>3.1.1</b> 集合論</a></li>
+<li class="chapter" data-level="3.1.2" data-path="probability.html"><a href="probability.html#probability-permutation"><i class="fa fa-check"></i><b>3.1.2</b> 機率事件的排列組合</a></li>
+<li class="chapter" data-level="3.1.3" data-path="probability.html"><a href="probability.html#probability-space"><i class="fa fa-check"></i><b>3.1.3</b> 樣本空間</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#probability-conditional"><i class="fa fa-check"></i><b>3.2</b> 條件機率的計算</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="probability.html"><a href="probability.html#probability-mh"><i class="fa fa-check"></i><b>3.2.1</b> 蒙提霍爾問題</a></li>
+<li class="chapter" data-level="3.2.2" data-path="probability.html"><a href="probability.html#probability-Bayes"><i class="fa fa-check"></i><b>3.2.2</b> 貝氏定理</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#probability-functions"><i class="fa fa-check"></i><b>3.3</b> 機率分佈</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="probability.html"><a href="probability.html#probability-binomial"><i class="fa fa-check"></i><b>3.3.1</b> 二項分佈</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability.html"><a href="probability.html#probability-normal"><i class="fa fa-check"></i><b>3.3.2</b> 標準化常態分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#probability-summary"><i class="fa fa-check"></i><b>3.4</b> 總結</a></li>
+<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#probability-practice"><i class="fa fa-check"></i><b>3.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="distribution.html"><a href="distribution.html"><i class="fa fa-check"></i><b>4</b> 模擬的機率分佈：統計方法的實證作用</a><ul>
+<li class="chapter" data-level="4.1" data-path="distribution.html"><a href="distribution.html#distribution-Rj"><i class="fa fa-check"></i><b>4.1</b> 執行模擬腳本</a></li>
+<li class="chapter" data-level="4.2" data-path="distribution.html"><a href="distribution.html#distribution-conditioning"><i class="fa fa-check"></i><b>4.2</b> 條件機率之模擬</a></li>
+<li class="chapter" data-level="4.3" data-path="distribution.html"><a href="distribution.html#distribution-sample"><i class="fa fa-check"></i><b>4.3</b> 母群體與樣本</a></li>
+<li class="chapter" data-level="4.4" data-path="distribution.html"><a href="distribution.html#distribution-binomial"><i class="fa fa-check"></i><b>4.4</b> 二項分佈之模擬</a></li>
+<li class="chapter" data-level="4.5" data-path="distribution.html"><a href="distribution.html#distribution-normal"><i class="fa fa-check"></i><b>4.5</b> 常態分佈之模擬</a></li>
+<li class="chapter" data-level="4.6" data-path="distribution.html"><a href="distribution.html#distribution-approaches"><i class="fa fa-check"></i><b>4.6</b> 統計學兩大流派</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="distribution.html"><a href="distribution.html#distribution-frequentist"><i class="fa fa-check"></i><b>4.6.1</b> 次數主義統計</a></li>
+<li class="chapter" data-level="4.6.2" data-path="distribution.html"><a href="distribution.html#distribution-Bayesian"><i class="fa fa-check"></i><b>4.6.2</b> 貝氏統計</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="distribution.html"><a href="distribution.html#distribution-summary"><i class="fa fa-check"></i><b>4.7</b> 總結</a></li>
+<li class="chapter" data-level="4.8" data-path="distribution.html"><a href="distribution.html#distribution-practice"><i class="fa fa-check"></i><b>4.8</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="onesample.html"><a href="onesample.html"><i class="fa fa-check"></i><b>5</b> 單一樣本的推論統計</a><ul>
+<li class="chapter" data-level="5.1" data-path="onesample.html"><a href="onesample.html#onesample-preregistration"><i class="fa fa-check"></i><b>5.1</b> 預先註冊</a></li>
+<li class="chapter" data-level="5.2" data-path="onesample.html"><a href="onesample.html#onesample-test"><i class="fa fa-check"></i><b>5.2</b> 虛無假設顯著性檢定</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="onesample.html"><a href="onesample.html#onesample-hypothesis"><i class="fa fa-check"></i><b>5.2.1</b> 虛無假設與對立假設</a></li>
+<li class="chapter" data-level="5.2.2" data-path="onesample.html"><a href="onesample.html#onesample-errors"><i class="fa fa-check"></i><b>5.2.2</b> 型一與型二錯誤率</a></li>
+<li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
+<li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="paired.html"><a href="paired.html"><i class="fa fa-check"></i><b>6</b> 相依樣本的推論統計</a><ul>
+<li class="chapter" data-level="6.1" data-path="paired.html"><a href="paired.html#paired-categorical"><i class="fa fa-check"></i><b>6.1</b> 類別變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="paired.html"><a href="paired.html#paired-categorical-case"><i class="fa fa-check"></i><b>6.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.1.2" data-path="paired.html"><a href="paired.html#paired-categorical-McNemar"><i class="fa fa-check"></i><b>6.1.2</b> McNemar氏檢定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="paired.html"><a href="paired.html#paired-categorical-chisquare"><i class="fa fa-check"></i><b>6.1.3</b> McNemar氏檢定的抽樣分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="paired.html"><a href="paired.html#paired-continuous"><i class="fa fa-check"></i><b>6.2</b> 連續變項的相依樣本推論統計</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="paired.html"><a href="paired.html#paired-continuous-case"><i class="fa fa-check"></i><b>6.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="6.2.2" data-path="paired.html"><a href="paired.html#paired-continuous-distribution"><i class="fa fa-check"></i><b>6.2.2</b> 樣本平均數的抽樣分佈與t分佈</a></li>
+<li class="chapter" data-level="6.2.3" data-path="paired.html"><a href="paired.html#paired-continuous-t"><i class="fa fa-check"></i><b>6.2.3</b> 相依樣本t檢定</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="paired.html"><a href="paired.html#paired-power"><i class="fa fa-check"></i><b>6.3</b> 效果量、樣本數與考驗力</a></li>
+<li class="chapter" data-level="6.4" data-path="paired.html"><a href="paired.html#paired-summary"><i class="fa fa-check"></i><b>6.4</b> 總結</a></li>
+<li class="chapter" data-level="6.5" data-path="paired.html"><a href="paired.html#paired-practice"><i class="fa fa-check"></i><b>6.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="independent.html"><a href="independent.html"><i class="fa fa-check"></i><b>7</b> 獨立樣本的推論統計</a><ul>
+<li class="chapter" data-level="7.1" data-path="independent.html"><a href="independent.html#independent-chisquare"><i class="fa fa-check"></i><b>7.1</b> 無母數：獨立性檢定</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="independent.html"><a href="independent.html#independent-chisquare-case"><i class="fa fa-check"></i><b>7.1.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.1.2" data-path="independent.html"><a href="independent.html#independent-chisquare-test"><i class="fa fa-check"></i><b>7.1.2</b> 獨立性檢定示範</a></li>
+<li class="chapter" data-level="7.1.3" data-path="independent.html"><a href="independent.html#independent-chisquare-sampling"><i class="fa fa-check"></i><b>7.1.3</b> 獨立性檢定的抽樣分佈</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="independent.html"><a href="independent.html#independent-t"><i class="fa fa-check"></i><b>7.2</b> 獨立樣本t檢定</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="independent.html"><a href="independent.html#independent-t-case"><i class="fa fa-check"></i><b>7.2.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="7.2.2" data-path="independent.html"><a href="independent.html#independent-sample"><i class="fa fa-check"></i><b>7.2.2</b> 獨立樣本平均數的抽樣分佈</a></li>
+<li class="chapter" data-level="7.2.3" data-path="independent.html"><a href="independent.html#independent-t-example"><i class="fa fa-check"></i><b>7.2.3</b> 示範檔案操作與解讀</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="independent.html"><a href="independent.html#independent-design"><i class="fa fa-check"></i><b>7.3</b> 研究設計與統計考驗力</a></li>
+<li class="chapter" data-level="7.4" data-path="independent.html"><a href="independent.html#independent-summary"><i class="fa fa-check"></i><b>7.4</b> 總結</a></li>
+<li class="chapter" data-level="7.5" data-path="independent.html"><a href="independent.html#independent-practice"><i class="fa fa-check"></i><b>7.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="corr-reg.html"><a href="corr-reg.html"><i class="fa fa-check"></i><b>8</b> 相關與迴歸</a><ul>
+<li class="chapter" data-level="8.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 案例介紹</a></li>
+<li class="chapter" data-level="8.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-person"><i class="fa fa-check"></i><b>8.2</b> 皮爾森相關</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-r-sampling"><i class="fa fa-check"></i><b>8.2.1</b> 相關係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.2.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-strength"><i class="fa fa-check"></i><b>8.2.2</b> 相關係數的強度</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-simple"><i class="fa fa-check"></i><b>8.3</b> 簡單迴歸</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.1"><i class="fa fa-check"></i><b>8.3.1</b> 範例分析示範</a></li>
+<li class="chapter" data-level="8.3.2" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-coff-sampling"><i class="fa fa-check"></i><b>8.3.2</b> 迴歸係數的抽樣分佈</a></li>
+<li class="chapter" data-level="8.3.3" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-least"><i class="fa fa-check"></i><b>8.3.3</b> 最小平方法</a></li>
+<li class="chapter" data-level="8.3.4" data-path="corr-reg.html"><a href="corr-reg.html#section-8.3.4"><i class="fa fa-check"></i><b>8.3.4</b> 簡單迴歸的信賴區間</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-summary"><i class="fa fa-check"></i><b>8.4</b> 總結</a></li>
+<li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
+<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
+<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
+<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.7" data-path="06-paired.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">本書以bookdown編輯</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">心理科學基礎統計</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="paired" class="section level1">
+<h1><span class="header-section-number">第6單元</span> 相依樣本的推論統計</h1>
+<p>這個單元以相依樣本(paired measurement)或稱重覆量數(repeated measurement)的案例，介紹無母數統計檢定：McNemar氏檢定；與母數檢定：相依樣本t檢定。透過相依樣本t檢定的案例，我們將認識三個決定推論統計品質的要素：樣本數(N)，效果量(effect size)，與統計考驗力(statistical power)。</p>
+<div id="paired-categorical" class="section level2">
+<h2><span class="header-section-number">6.1</span> 類別變項的相依樣本推論統計</h2>
+<p>相依樣本是指觀察的個體在一段時間的開始與結束，接受某種處置所表現的行為，所以要處理的資料是一群個體在兩個時間點的表現差異。雖然同一位個體貢獻兩個觀察值，統計分析實驗是處理兩個觀察值的差異分數，所以實作程序與單一樣本推論統計幾乎相同。研究者必須在計畫與報告中，明確掌握樣本性質，才能正確使用相依樣本推論統計方法。</p>
+<div id="paired-categorical-case" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> 案例介紹</h3>
+<p>本書介紹的案例改編自 <span class="citation">Navarro &amp; Foxcroft (<a href="#ref-navarroLearningStatisticsJamovi2018">2018</a>)</span> 的示範教材：假想最近的某一次選舉活動，你協助某個剛成立的政黨設計形象廣告。為了測試這個廣告的宣傳效用，你找了100位合格選民，邀請他們試閱廣告給予回饋。其中一項調查是民眾觀看廣告前與看完廣告之後，他們是否認同該政黨的立場，調查結果如下表：</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">試閱前: 認同</th>
+<th align="center">試閱前: 不認同</th>
+<th align="center">小計</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>試閱後: 認同</td>
+<td align="center"><span class="math inline">\(^a5\)</span></td>
+<td align="center"><span class="math inline">\(^b5\)</span></td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td>試閱後: 不認同</td>
+<td align="center"><span class="math inline">\(^c25\)</span></td>
+<td align="center"><span class="math inline">\(^d65\)</span></td>
+<td align="center">90</td>
+</tr>
+<tr class="odd">
+<td>小計</td>
+<td align="center">30</td>
+<td align="center">70</td>
+<td align="center">100</td>
+</tr>
+</tbody>
+</table>
+<p>與廣告效用最有關係的調查結果，是試閱前後認同立場改變的人數。上表中看廣告之前不認同，看完之後認同的有5人；看廣告之前認同，看完之後不認同的有25人。人數之間的差距似乎顯示這則廣告效用不如預期，你為了說服廣告製作單元，需要使用統計分析，證實你的結論。</p>
+</div>
+<div id="paired-categorical-McNemar" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> McNemar氏檢定</h3>
+<p>心理學家Quinn McNemar為了分析如同上述案例的調查結果，開發了以他的姓氏命名的檢定方法<span class="citation">(McNemar, <a href="#ref-mcnemarNoteSamplingError1947">1947</a>)</span>。這種調查結果雖然從目標對象總計出四種數字，但是能直接回答研究問題的資料，是關鍵處置前後的變化的總計值，也就是上述表格標記b與c的細格。用以下公式計算兩種細格裡的數字，就運用合適的樣本機率分佈，換算為檢定兩個數字是否相等的p值。</p>
+<p><span class="math display">\[ 統計值 = \frac{(b - c)^2}{b + c} \]</span></p>
+<p>類別變項的相依樣本抽樣分佈不但沒有期望值，樣本機率函數隨總數而異。根據statkat的指南<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>，如果b與c的總和不超過20，這個樣本機率函數符合二項分佈；如果b與c的總和超過20，這個樣本機率函數符合<strong>自由度為1</strong>的卡方機率分佈，如圖<a href="paired.html#fig:mcnemar-sampling">6.1</a>。</p>
+<div class="figure"><span id="fig:mcnemar-sampling"></span>
+<img src="images/unit06_mcnemar_sampling_distribution.png" alt="自由度為1的卡方機率密度函數曲線" width="400" />
+<p class="caption">
+圖 6.1: 自由度為1的卡方機率密度函數曲線
+</p>
+</div>
+<p><strong>卡方分佈</strong>是一種無方向性的機率分佈，統計值的計數限定由小往大計算，不像前面學到的常態分佈，可由小往大計算，也可由大往小計算，這種特性限制McNemar氏檢定只能設定虛無假設是b等於c，對比對立假設是b不等於c的假設檢定。許多統計教材稱此設定為雙側檢定或雙尾檢定(two-tail test)，如此命名是源於多數推論統計方法是根據如同常態分佈的對稱型機率分佈，稍後的相依樣本t檢定，我們將了解如何根據研究問題的性質，決定假設檢定的方向性設定。</p>
+<p>jamovi提供的McNemar氏檢定模組，能以上述統計值公式，計算卡方分數與p值，讓使用者判斷兩項數字之間的差異是否達到必須接受的水準。在<a href="">jamovi示範檔案</a>裡，我們使用這個模組提供的<span class="math inline">\(\chi^2\)</span>與<span class="math inline">\(\chi^2 \ continuity\ correction\)</span>兩種計算模式，計算假設檢定的統計數與p值。後者輸出的卡方分數較前者小，但較為可信。這個案例的調查者，需在報告中如此呈現結論：</p>
+<blockquote>
+<p>分析100位試閱民眾觀看廣告前後的認同意見調查，其中70位前後認同一致，5位觀看前不認同但觀看後認同，25位觀看前認同但觀看後不認同。以0.05做為顯著性水準，McNamer氏檢定顯示觀看廣告導致民眾不認同的傾向，明顯高於導致民眾認同的傾向：<span class="math inline">\(\chi^2 (1) = 12.03, p &lt; .001\)</span>。</p>
+</blockquote>
+</div>
+<div id="paired-categorical-chisquare" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> McNemar氏檢定的抽樣分佈</h3>
+<p>讀者可參考<a href="https://osf.io/68usk/">卡方機率分佈示範檔案</a>，了解自由度如何決定卡方機率分佈的形態，以及事件累積機率的計算。示範案例的顯著性水準是自由度為1的卡方機率分佈部分累積機率，如圖<a href="paired.html#fig:mcnemar-cv">6.2</a>所示，紅色區域覆蓋的卡方分數，換算的p值都小於0.05。之後的單元中，我們會認識什麼情況的案例，會運用自由度大於1的卡方分佈。</p>
+<div class="figure"><span id="fig:mcnemar-cv"></span>
+<img src="images/unit06_mcnemar_sampling_cv.png" alt="自由度為1的卡方機率密度函數曲線及顯著水準累積機率面 " width="400" />
+<p class="caption">
+圖 6.2: 自由度為1的卡方機率密度函數曲線及顯著水準累積機率面
+</p>
+</div>
+<p>為了了解McNemar檢定的統計值為何符合自由度是1的卡方分佈，我們<a href="">jamovi示範檔案</a>的報表最後一部分設計一道模擬程序示範解說。這道模擬程序首先根據範例條件，設定製造上萬次實驗結果的兩個參數：前後改變看法的人數(Target_N)，以及改變方向的比例(Switch_P)，分別依範例的設定設為30與0.5(代表改變方向的比例相等)。運用這兩個參數就能製造上萬筆與範例研究一樣的實驗結果，以及依檢定公式計算的統計數。上萬筆統計數的次數累積，形成如圖<a href="paired.html#fig:mcnemar-simulation">6.3</a>的柱狀圖。</p>
+<div class="figure"><span id="fig:mcnemar-simulation"></span>
+<img src="Basic-Statistics_files/figure-html/mcnemar-simulation-1.png" alt="McNemar抽樣分佈機率函數(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)" width="672" />
+<p class="caption">
+圖 6.3: McNemar抽樣分佈機率函數(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)
+</p>
+</div>
+<p>圖<a href="paired.html#fig:mcnemar-simulation">6.3</a>也呈現自由度為1與自由度為2的卡方分佈，由圖的分佈可見，實驗結果的抽樣分佈似乎較符合自由度為1的卡方分佈。為何判定抽樣分佈比較接近那一道卡方分佈，我們可以計算每個統計數的機率值，與其他兩道曲線機率值的差異總和，總和越大代表這道抽樣分佈與該機率分佈的差異越大。由於密度值差異必定有正有負，合適的方法是將每個密度值差異平方，再計算總和。這種計算的成果在統計學叫做<strong>差異平方和(Sum of Squared)</strong><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>，雖然與計算變異數分子的方法類似，要注意後者是所有數值減同一個平均數。</p>
+<p>計算結果顯示圖中的抽樣分佈與自由度為1的卡方分佈之差異平方和是0.03，小於抽樣分佈與自由度為1的卡方分佈之差異平方和0.06<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>。抽樣分佈與理論機率函數之間的差異平方和越小，表示運用該理論機率函數估計的機率越接近真實資料的發生機率。</p>
+</div>
+</div>
+<div id="paired-continuous" class="section level2">
+<h2><span class="header-section-number">6.2</span> 連續變項的相依樣本推論統計</h2>
+<p>心理科學常見的資料型態之一，是以連續尺度測量的相依樣本資料，常見於人類基本心理歷程實驗，以及教學和臨床處遇。除了一種處置的前後測量，受測者在一段時間之內經歷不同處置的表現，也可以採用這種推論統計方法分析，這種測試設計就稱為重覆量數(repated measurement)。</p>
+<div id="paired-continuous-case" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> 案例介紹</h3>
+<p>這裡使用來自 <span class="citation">Moore, McCabe, &amp; Craig (<a href="#ref-mooreIntroductionPracticeStatistics2012">2012</a>)</span> 的示範資料，介紹相依樣本t檢定的使用條件與結果判讀方法。據普度大學兩位學者，紀錄十五名失智症(dementia)患者在一段長期觀察，出現破壞物品行為的次數。研究者認為有月亮的時候，患者出現破壞行為的次數比其他時候多，所以將紀錄分為有月亮與其他日期，計算每位患者出現破壞行為的平均次數。</p>
+<p>每位患者的資料可見<a href="">JASP示範檔案</a>與<a href="">jamovi示範檔案</a>。這個案例研究的是有月亮時出現破壞行為的平均次數，有沒有顯著高於其他時候的平均次數。所以抽樣分佈是所有患者兩個時候的次數差異之平均數，簡記為<span class="math inline">\(\bar{D}\)</span>。如果研究者按步就班收集資料，<span class="math inline">\(\bar{D}\)</span>的抽樣分佈必定是常態分佈，而來源的母群體的機率函數有多種可能，通常推測期望值等於當下資料的平均數，</p>
+</div>
+<div id="paired-continuous-distribution" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> 樣本平均數的抽樣分佈與t分佈</h3>
+<p>心理科學面對的多數問題有母群體函數不明，只確定有期望值的特色。處理這些問題而使用的抽樣分佈，都有符合常態分佈的特性。但是最符合樣本統計數的機率函數並非常態分佈，而是t分佈。</p>
+<p>19世紀末，數學家已經發現t分佈這種機率分佈，直到1908年，William Gosset發表論文指出t分佈符合重覆量數的平均數，形成的抽樣分配。t分佈是連續隨機變數，第一眼看起來像常態分佈，但是<strong>t分佈的機率密度函數</strong>只有一個參數<em>k</em>，也就是自由度(degree of freedom)。</p>
+<!---
+我們再透過圖()比較t份佈與常態分佈。圖中藍色線代表t分佈機率密度函數的整體(上)與t值小於-2的部分(下)，黑色線代表平均數是1與標準差是0的常態分佈。調整最上面的**自由度**，會改變t分佈的函數曲線。你會發現自由度到29時，**兩個分佈的機率密度函數**幾乎重疊，這是有些統計教科書建議平均數樣本數目至少要30的理由。然而放大到通常被視為最大*p*值的一部分，還是有明顯的差異，**自由度要增加到50以上，差異的空間才會緊縮到沒有明顯變化的程度。**資料越符合常態分佈有明顯的好處，就是我們不必擔心統計軟體算出來的*p*值，與實際的累積機率函數有明顯差異。
+--->
+<p>我們以失智症患者出現破壞行為的次數，透過模擬程序，探討為何要使用t分佈檢定這筆資料的分析結果？以及自由度多少的t分佈才能提供符合樣本的條件？首先設定有月亮與其他日期出現破壞行為次數的母群體機率函數，以兩段時間紀錄的平均值與樣本標準差，我們設定每位患者破壞行為次數是<strong>均勻分佈</strong>的隨機變數，分佈涵括的所有次數值發生的機率都相等，最小的發生次數是平均值減1.67倍樣本標準差，最大的發生次數是平均值加1.67倍樣本標準差。如圖<a href="paired.html#fig:paired-continuous-populations">6.4</a>所示。</p>
+<div class="figure"><span id="fig:paired-continuous-populations"></span>
+<img src="Basic-Statistics_files/figure-html/paired-continuous-populations-1.png" alt="相依樣本t檢定母群體機率函數" width="50%" /><img src="Basic-Statistics_files/figure-html/paired-continuous-populations-2.png" alt="相依樣本t檢定母群體機率函數" width="50%" />
+<p class="caption">
+圖 6.4: 相依樣本t檢定母群體機率函數
+</p>
+</div>
+<p>如果案例的條件，分別從兩道機率函數隨機取得15個數值，依取出順序相減，獲得15筆差異分數D，平均值即為<span class="math inline">\(\bar{D}\)</span>。依此方式模擬出10000筆<span class="math inline">\(\bar{D}\)</span>，就是這個案例的抽樣分佈：樣本差異分數平均數的機率分佈，如圖<a href="paired.html#fig:paired-continuous-sampling">6.5</a>所示，其平均數正是兩個母群體期望值的差異。請讀者記住這個抽樣分佈的變異數，稍後會發現相當接近真實資料的<strong>標準誤(standard error)</strong>。</p>
+<div class="figure"><span id="fig:paired-continuous-sampling"></span>
+<img src="images/unit06_sampling-means.png" alt="樣本差異分數平均數的抽樣分佈" width="400" />
+<p class="caption">
+圖 6.5: 樣本差異分數平均數的抽樣分佈
+</p>
+</div>
+<p>將10000筆模擬的差異分數平均數，繪製成分位圖(見圖<a href="#fig:paired-continous-sampling-qq"><strong>??</strong></a>)，可知這個抽樣分佈符合常態分佈。</p>
+<div class="figure"><span id="fig:paired-continuous-sampling-qq"></span>
+<img src="images/unit06_sampling_means-qq.png" alt="樣本差異分數平均數的抽樣分佈分位圖" width="400" />
+<p class="caption">
+圖 6.6: 樣本差異分數平均數的抽樣分佈分位圖
+</p>
+</div>
+<p>至此出現一個問題：樣本差異分數平均數的抽樣分佈符合常態分佈，為什麼我們要使用t分佈，而不是使用常態分佈進行假設檢定？要回答的個問題，我們可以將每一筆模擬的差異分數平均數標準化，也就是每個差異分數減去抽樣分佈的平均數，再除以其標準差，所有標準化的差異分數平均數就會形成以0為中心點的對稱分佈，如圖<a href="paired.html#fig:paired-continuous-sampling-dist">6.7</a>的黑色曲線，與標準常態分佈(紅色曲線)，以及自由度是14的t分佈(藍色曲線)放在一起比較。</p>
+<div class="figure"><span id="fig:paired-continuous-sampling-dist"></span>
+<img src="images/unit06_sampling-stat-t-normal.png" alt="樣本差異分數平均數標準化分數 vs. 標準化常態分佈 vs. t分佈" width="400" />
+<p class="caption">
+圖 6.7: 樣本差異分數平均數標準化分數 vs. 標準化常態分佈 vs. t分佈
+</p>
+</div>
+<p>這三道曲線的重疊部分相當多，所以我們無法直接從視覺化成品看出差異分數平均數的抽樣分佈到底接近那一個分佈。因為我們有繪製圖<a href="paired.html#fig:paired-continuous-sampling-dist">6.7</a>的抽樣分佈、標準化常態分佈、以及t分佈等三種曲線的密度值(Density)，只要計算兩群密度值之間的<strong>差異平方和(Sum of Squared)</strong>，就能知道抽樣分佈最接近那一個機率函數。</p>
+<p>計算結果可參考<a href="">jamovi示範檔案</a>報表最後兩行，讀者會發現無論重覆執行幾次，標準化的樣本差異分數平均數之密度值與t分佈密度值的差異平方和，都是小於與標準常態分佈密度值的差異平方和。這項模擬結果證實為何我們應該使用t分佈進行相依樣本的推論統計，也說明樣本差異分數平均數的機率分佈函數參數，為何存在於t統計值公式：</p>
+<p><span class="math display">\[t\ statistic= \frac{\bar{D} - \mu_{\bar{D}}}{\frac{s_{\bar{D}}}{\sqrt n}}\]</span></p>
+<p>抽樣分佈的標準差，也就是樣本標準誤，也存在於信賴區間的公式：</p>
+<p><span class="math display">\[CI = \bar{D} \pm t_{critical} \times \frac{s_{\bar{D}}}{\sqrt{n}} \]</span></p>
+<p>還剩下一個問題是為何是自由度為14的t分佈最符合抽樣分佈，而不是自由度為15的t分佈？這個問題可以由這個案例的母群體形成方式得到解答。進行分析之前，沒有人知道<span class="math inline">\(\mu_{\bar{D}}\)</span>是多少，樣本的數值是最有可能的推測，每個樣本有15筆資料，以其中一個數值當做母數的估計值，是最合理的做法。所以相依樣本的自由度是n - 1，n是資料的樣本數，1表示要估計的母數個數。</p>
+</div>
+<div id="paired-continuous-t" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> 相依樣本t檢定</h3>
+<p>現在我們可以說明如何設定<a href="">JASP示範檔案</a>與<a href="">jamovi示範檔案</a>的相依t檢定程序，以及解讀和呈現分析結果。以下透過這則案例，示範使用雙尾檢定與單尾檢定的時機，與報告的呈現方式。</p>
+<ul>
+<li>雙尾檢定</li>
+</ul>
+<p>我們想知道兩段時間出現破壞行為次數，到底有沒有差異？無論這個差異是多或是少，這時就可以使用雙尾檢定。雙尾檢定的對立假設是<span class="math inline">\(\mu_{\bar{D}} \neq 0\)</span>，也就是兩段時間的平均次數不相等，<code>JASP</code>與<code>jamovi</code>的相依樣本t檢定模組(Paired Samples T-Test)設定視窗中，<strong>Hypothesis</strong>這一塊都是選擇 $ Measure 1 Measure 2 $ ，模組才會執行雙尾檢定。如果雙尾檢定的判斷水準是p值要小於.05，肯定對立假設的t統計值有正也有負，如圖<a href="paired.html#fig:paired-two-tails-t">6.8</a>，對應曲線之下無著色區域的t值。</p>
+<div class="figure"><span id="fig:paired-two-tails-t"></span>
+<img src="images/unit06_paired-t-two-tails.png" alt="相依樣本t檢定之雙尾檢定：肯定對立假設的t統計數範圍" width="500" />
+<p class="caption">
+圖 6.8: 相依樣本t檢定之雙尾檢定：肯定對立假設的t統計數範圍
+</p>
+</div>
+<p>示範檔案的報表預設呈現t統計值、自由度、p值、還有差異分數平均值，以及差異分數的標準誤。請讀者注意此標準誤數值，相當接近圖<a href="paired.html#fig:paired-continuous-sampling">6.5</a>的抽樣分佈變異數的開根號。</p>
+<p>勾選<code>Confidence interval</code>並設定估計百分比95%，報表會增加95%信賴區間的結果。這個信賴區間不包含0，與假設檢定的結果一致。增加勾選<code>Effect Size</code>，報表會增加這筆資料的效果量(d)。效果量的意義在這個單元的最後部分介紹。</p>
+<p>根據美國心理學會報告格式指南，一筆推論統計的報告要搭配文字說明，呈現報表內的數值。報告這則案例雙尾檢定結果，寫作示範如下：</p>
+<blockquote>
+<p>15位病患在有月亮時出現破壞行為的平均次數，比其他時間的平均次數多2.43次(有月亮：M = 3.02, SD = 1.50；沒月亮：M = 0.59, SD = 0.46， 95% CI [1.624 3.241])，達到預期的統計顯著水準，<em>t</em>(14) = 6.45, <em>p</em> &lt; .001, <em>d</em> = 1.67。</p>
+</blockquote>
+<ul>
+<li>單尾檢定</li>
+</ul>
+<p>現在換個角度探討這個案例：我們想知道有月亮時出現破壞行為次數，有沒有明顯比其他時候多？或者沒有月亮時出現破壞行為次數，有沒有明顯比有月亮時少？這兩個問題對應的對立假設，就變成 <span class="math inline">\(\mu_{\bar{D}} &gt; 0\)</span> 與 <span class="math inline">\(\mu_{\bar{D}} &lt; 0\)</span> 。在<code>JASP</code>與<code>jamovi</code>的設定視窗，分別選擇 <span class="math inline">\(Measure 1 &gt; Measure 2\)</span> 以及 <span class="math inline">\(Measure 1 &lt; Measure 2\)</span>，就能執行相對的單尾檢定。</p>
+<p>如果判斷水準是p值要小於.05，肯定對立假設：有月亮時出現破壞行為次數，比其他時候多的t統計值必為正數，如圖<a href="paired.html#fig:paired-one-tail-t">6.9</a>，右圖曲線之下有著色區域的t值；肯定對立假設：無月亮時出現破壞行為次數，比有月亮時少的t統計值必為負數，如圖<a href="paired.html#fig:paired-one-tail-t">6.9</a>，左圖曲線之下有著色區域的t值。</p>
+<div class="figure"><span id="fig:paired-one-tail-t"></span>
+<img src="images/unit06_paired-t-one-tail.png" alt="相依樣本t檢定之單尾檢定：肯定對立假設的t統計數範圍" width="1000" />
+<p class="caption">
+圖 6.9: 相依樣本t檢定之單尾檢定：肯定對立假設的t統計數範圍
+</p>
+</div>
+<p>勾選<code>Confidence interval</code>以及<code>Effect Size</code>，，除了t統計值、自由度、p值、還有差異分數平均值，以及差異分數的標準誤，報表會增加這筆資料的信賴區間與效果量。請留意單尾檢定的信賴區間只會呈現其中一邊的數值，另一邊為正無限大或負無限大。如果分析結果是否定這個案例的對立假設，信賴區間必定包括0。效果量因差異分數的計算方式，會為正數或負數，但是其絕對值必定相等。</p>
+</div>
+</div>
+<div id="paired-power" class="section level2">
+<h2><span class="header-section-number">6.3</span> 效果量、樣本數與考驗力</h2>
+<p>最後以本單元相依樣本t檢定的案例，討論效果量、樣本數與考驗力的關係。<a href="">JASP示範檔案</a>與<a href="">jamovi示範檔案</a>的報表呈現的效果量，都是Cohen’s d，計算公式是：</p>
+<p><span class="math display">\[d = \frac{\bar{D} - \mu_{\bar{D}}}{s_{\bar{D}}}\]</span></p>
+<p>我們可以發現這個公式與t統計數的公式的差異只有分母的樣本標準差，這說明效果量是特指每一次測量結果的標準化數值。即使使用相同的實驗程序，數量相同的樣本，每一次測量的變異數都不會一樣，每次結果以此公式轉換為效果量，才有比較的意義<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>。</p>
+<p>考驗力是型二錯誤率的補集，顯示以當前的判斷水準，能發現顯著結果的機率。和型一錯誤率一樣，要累積多次實驗，我們才能知道某種測量的顯著效應。理想的顯著分析結果，需要事前有足夠資訊，確保研究結果能有起碼的機會被重現。心理科學研究的統計考驗力，一般建議至少要達到0.8或80%。</p>
+<p>樣本數大小直接影響考驗力高低，多少樣本才能維持建議的考驗力，則受到效果量的調節。以本單元相依樣本的案例來說，維持雙尾檢定的顯著結果判斷水準不變，再次實驗要得到相同效果量並維持於80%考驗力，需要收集至少6位病患的紀錄。圖<a href="paired.html#fig:paired-power">6.10</a>是使用<code>jamovi</code>的jpower套件，設定以上述的分析條件，畫出樣本數與效果量在80%考驗力的對應曲線。這條曲線顯示，效果量越小的話，需要越多樣本，才能保障達到該效果量的結果，有達到足夠的考驗力。</p>
+<div class="figure"><span id="fig:paired-power"></span>
+<img src="images/unit06_paired_power_N.png" alt="達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。" width="400" />
+<p class="caption">
+圖 6.10: 達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。
+</p>
+</div>
+<p>心理科學很少有只需要個位數樣本，就有顯著結果且考驗力至少80%的研究。過去有許多研究者只追求結果顯著與否，忽略考驗力未達建議標準，樣本還未收集到能保障建議考驗力的數量，卻因為已發現顯著結果，就停止實驗並發表。最近十年許多原本被認為具有啟發性的研究結果，再次檢視後發現都是低考驗力的顯著結果，其他研究者難以重現如同原始研究的顯著結果()。因此有學者建議，學習統計的目標應該以能確保研究結果的可再現性為重點，而不是製造能吸引注意的顯著發現()。</p>
+</div>
+<div id="paired-summary" class="section level2">
+<h2><span class="header-section-number">6.4</span> 總結</h2>
+<ul>
+<li>TBA</li>
+</ul>
+</div>
+<div id="paired-practice" class="section level2">
+<h2><span class="header-section-number">6.5</span> 習題</h2>
+<ul>
+<li>TBA</li>
+</ul>
+
+</div>
+</div>
+<h3>參考文獻</h3>
+<div id="refs" class="references">
+<div id="ref-navarroLearningStatisticsJamovi2018">
+<p>Navarro, D. J., &amp; Foxcroft, D. R. (2018). <em>Learning statistics with jamovi: A tutorial for psychology students and other beginners</em>. Danielle J. Navarro and David R. Foxcroft. doi:<a href="https://doi.org/10.24384/hgc3-7p15">10.24384/hgc3-7p15</a></p>
+</div>
+<div id="ref-mcnemarNoteSamplingError1947">
+<p>McNemar, Q. (1947). Note on the sampling error of the difference between correlated proportions or percentages. <em>Psychometrika</em>, <em>12</em>(2), 153–157.</p>
+</div>
+<div id="ref-mooreIntroductionPracticeStatistics2012">
+<p>Moore, D. S., McCabe, G. P., &amp; Craig, B. A. (2012). <em>Introduction to the practice of statistics, sixth edition</em> (7th ed.). New York: W. H. Freeman and Company.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>參考網址：<a href="https://statkat.com/stattest.php?t=39" class="uri">https://statkat.com/stattest.php?t=39</a><a href="paired.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>統計學以差異平方和決定那一種機率函數最符合資料的方法，稱為<strong>最小平方法</strong>。本書介紹的推論統計方法，都是以最小平方法的數學公式推導與資料模擬為基礎。<a href="paired.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>在自由度為1的卡方分佈，卡方量數之機率不可計數。此數未納入差異平方和的計算。<a href="paired.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>效果量是整合性分析(meta analysis)的基本分析單元，比較相同程序但不同來源的實驗結果，能讓研究者了解進行一次實驗發現顯著效果的可能性。<a href="paired.html#fnref9" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="onesample.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="independent.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

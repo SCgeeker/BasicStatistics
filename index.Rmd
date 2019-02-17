@@ -14,6 +14,8 @@ github-repo: SCgeeker/BasicStatistics
 
 # 前言 {-}
 
+- 第一版前言(2018.2.1)
+
 開始寫這本書有很多緣由，就從遠中近三個時間點的感想來說吧。遠因從我還是大學生小毛頭時開始，那時真正體悟學習統計的要訣，是去聽了幾位老師的授課，自行整理筆記得到收穫。當時讀過的幾本中英文教科書，最後成為案頭書的只有Roger Kirk的[Experimental Design](https://us.sagepub.com/en-us/nam/experimental-design/book233742)。到今天要我推薦初學者值得參考的中文書，我完全無法舉出理想的教材，除非學生有興趣透過學習資料科學入門，才有值得推薦的中文線上教材。
 
 中程因素是2016年翻譯了Daniel Lakens的線上課程[提昇你的統計推論功力(Improving your statistical inferences)](https://www.coursera.org/learn/statistical-inferences)，我體會可以從培養學習者的思考實際問題能力，激發學習統計方法的動機，並且掌握正確的資訊。Daniel 使用的教材是近幾年引發心理學再現危機的指標研究，都有公開資料讓人取用。曉得這些研究背後故事，有助如何正確使用統計方法。
@@ -26,8 +28,8 @@ github-repo: SCgeeker/BasicStatistics
 
 所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。
 
-這本書初版使用[趙鵬博士](http://www.pzhao.org/zh/)改良的R套件[bookdownplus](https://github.com/pzhaonet/bookdownplus)編寫，目前使用[謝益輝博士](https://yihui.name/)開發的[bookdown](https://bookdown.org/yihui/bookdown/)編寫及更新。歡迎到[個人部落格](http://scchen.com/zh/post/basic-statistics/)或[Github](https://github.com/SCgeeker/BasicStatistics/issues)留言，給予本書批評與建議。如果學習者有興趣，歡迎自行取用本書的[源始碼](https://github.com/SCgeeker/BasicStatistics)，希望能成為你人生的第一套R學習範例。以下是完成第一版的R環境資訊：
+- 第二版前言(2019.1.3)
 
-```{r}
-sessionInfo()
-```
+完成第一版之後的一年之間，更新版的JASP與jamovi除了增加資料處理與統計方法模組，還有整合各種開放學習資源。我曾於[個人網誌](http://scchen.com/zh/post/jasp-jamovi/)整理可運用的資源，2018年最後一次的更新，JSAP與jamovi的資料收藏(Data Library)都大幅擴充，教學有更多範例可以使用。這段期間jamovi套件[`Statkat`](https://www.jamovi.org/library.html)發佈，提供使用者即時統計方法諮詢。循此我得和套件開發者Rivka. M. de Vries先行建置的網站[https://statkat.com/]，內容與架構符合我心目中的統計教學應具備的樣子。jamovi首席開發者Jonathon Love釋出的`Rj`，讓使用者能在jamovi裡操作基本的R程式碼，這個套件能更完整呈現與演練機率的計算與模擬。這些更新讓這一版電子書使用更明確的範例，解說統計方法的機率原理，以及運用間斷–連續變項的對比，介紹適用相對狀況的初級推論統計方法。
+這一版與前一版保持每個範例與習題都有JASP與jamovi兩種版本。感謝jamovi可執行R程式碼，前一版以嵌入式互動網頁解說機率原理的部分，儘可能以本人自編的jamovi範例檔取代，讓學習者能運用在個人練習與實務。
+
