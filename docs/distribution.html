@@ -196,12 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span></li>
-<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
-<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.7" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="chapter" data-level="A.11" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part5"><i class="fa fa-check"></i><b>A.11</b> 使用條件式轉換與過濾資料</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -232,7 +232,7 @@
 <h2><span class="header-section-number">4.1</span> 執行模擬腳本</h2>
 <p>首先說明jamovi模組<code>Rj</code>的使用重點。<code>Rj</code>讓使用者在jamovi執行基本的R程式碼，瀏覽執行結果。本書運用<code>Rj</code>的場合是需要運用模擬程序說明或示範某項概念，不會說明程式碼的撰寫方法。在本書提供的範例程式碼中，有註解提示讀者如何自行修改一行程式碼裡的數值，以測試不同條件的模擬結果。</p>
 <p>圖<a href="distribution.html#fig:jamove-rj">4.1</a>的畫面是一道四則運算的執行示範。畫面左方是R程式碼編輯視窗，右方是執行結果輸出視窗，也是可另做存檔動作的報表。示範畫面有兩行程式碼，分別是四則運算<code>1 - 1</code>與<code>1 + 1</code>。編輯視窗中的程式碼確定編輯完成，要看執行結果只要滑鼠點擊編輯視窗右上角的綠色箭頭。</p>
-<p>讀者應該注意到輸出視窗只有一個運算結果，因為第一行程式碼的最前方有註解符號<code>#</code>，只要程式碼任何一行開頭有註解符號，該行程式碼就不會被執行。這個符號的進一步功能是在要執的程式碼上一行，或者在行末置入註解，提示使用者執行該行程式碼的目的與作用。本書所有使用<code>Rj</code>執行的程式碼，都有這樣的註解提示。</p>
+<p>讀者應該注意到輸出視窗只有一個運算結果，因為第一行程式碼的最前方有註解符號<code>#</code>，只要程式碼任何一行開頭有註解符號，該行程式碼就不會被執行。這個符號的進一步功能是在要執行的程式碼上一行，或者在行末置入註解，提示使用者執行該行程式碼的目的與作用。本書所有使用<code>Rj</code>執行的程式碼，都有這樣的註解提示。</p>
 <div class="figure"><span id="fig:jamove-rj"></span>
 <img src="images/unit04_jamovi_Rj.PNG" alt="jamovi Rj的執行畫面" width="1282" />
 <p class="caption">
@@ -259,13 +259,13 @@
 <ul>
 <li><strong>母群體</strong>
 <ul>
-<li>教育大辭書<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>：「母群體是根據某些原則來加以認定的所有觀察量數之總數（集合）。」</li>
-<li>資訊與通信術語辭典<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>：「按研究目的所有對象之全體。」</li>
+<li>教育大辭書<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>：「母群體是根據某些原則來加以認定的所有觀察量數之總數（集合）。」</li>
+<li>資訊與通信術語辭典<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>：「按研究目的所有對象之全體。」</li>
 </ul></li>
 <li><strong>樣本</strong>
 <ul>
-<li>教育大辭書<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>：「樣本是指由母群體觀察量數中抽樣而得的部分集合體。」</li>
-<li>資訊與通信術語辭典<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>：「通常為了解一群個體或物質的特性，無法就所有的個體或物質一一檢查，而從其中隨機挑選出來一定數目稱之為樣本。」</li>
+<li>教育大辭書<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>：「樣本是指由母群體觀察量數中抽樣而得的部分集合體。」</li>
+<li>資訊與通信術語辭典<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>：「通常為了解一群個體或物質的特性，無法就所有的個體或物質一一檢查，而從其中隨機挑選出來一定數目稱之為樣本。」</li>
 </ul></li>
 </ul>
 <p>兩套辭典的說法都是根據研究的目標來解釋什麼是母群體，什麼是樣本。這些說法必須建立在讀者已經了解研究方向與觀察對象的性質，才能有真正的理解。對於初學者來說，會有疑惑是不是應該先學習研究方法或有初步的研究經驗，才能學習這些統計觀念。</p>
@@ -382,11 +382,11 @@
 </div>
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p>在自由度為1的卡方分佈，卡方量數之機率不可計數。此數未納入差異平方和的計算。<a href="distribution.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1670463/" class="uri">http://terms.naer.edu.tw/detail/1670463/</a><a href="distribution.html#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1313804/" class="uri">http://terms.naer.edu.tw/detail/1313804/</a><a href="distribution.html#fnref4" class="footnote-back">↩</a></p></li>
-<li id="fn5"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1285800/" class="uri">http://terms.naer.edu.tw/detail/1285800/</a><a href="distribution.html#fnref5" class="footnote-back">↩</a></p></li>
+<ol start="1">
+<li id="fn1"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1304019/" class="uri">http://terms.naer.edu.tw/detail/1304019/</a><a href="distribution.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1670463/" class="uri">http://terms.naer.edu.tw/detail/1670463/</a><a href="distribution.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1313804/" class="uri">http://terms.naer.edu.tw/detail/1313804/</a><a href="distribution.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1285800/" class="uri">http://terms.naer.edu.tw/detail/1285800/</a><a href="distribution.html#fnref4" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
