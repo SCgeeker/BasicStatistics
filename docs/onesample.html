@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="05-onesample.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -229,7 +230,7 @@
 <p>透過第<a href="intro.html#intro">1</a>單元登場的Emily Rosa專題研究，我們以這個例子學習假設檢定的基本觀念，並運用二項檢定及單一樣本t檢定分析Emily Rosa的資料。學習t檢定分析的運程，我們將認識另一種連續型隨機變數：t分數，以及其機率函數：t分佈。還有學習信賴區間的觀念與使用方法。</p>
 <div id="onesample-preregistration" class="section level2">
 <h2><span class="header-section-number">5.1</span> 預先註冊</h2>
-<p>解說如何使用統計方法之前，請讀者先認識<strong>預先註冊(preregistration)</strong><span class="citation">(Lindsay, Simons, &amp; Lilienfeld, <a href="#ref-lindsayResearchPreregistration1012016">2016</a>)</span>。預先註冊是一種將科學思考轉化為可徵信報告的流程，就統計實務來說，只有兩個步驟。步驟一：執行分析之前先留下計畫，說明用什麼統計方法分析手上的資料，判斷分析結果的標準是什麼；步驟二：按照計畫程序分析資料，呈現按計畫程序得到的分析結果。</p>
+<p>解說如何使用統計方法之前，請讀者先認識<strong>預先註冊(preregistration)</strong><span class="citation">(Lindsay, Simons, and Lilienfeld <a href="#ref-lindsayResearchPreregistration1012016">2016</a>)</span>。預先註冊是一種將科學思考轉化為可徵信報告的流程，就統計實務來說，只有兩個步驟。步驟一：執行分析之前先留下計畫，說明用什麼統計方法分析手上的資料，判斷分析結果的標準是什麼；步驟二：按照計畫程序分析資料，呈現按計畫程序得到的分析結果。</p>
 <p>使用任何新的統計方法時，可以透過預先註冊檢視自已有沒有學到正確的使用方法。要留下分析計畫，你必須掌握使用這種統計方法分析手上資料的合理性，以及了解各種分析結果的意義。做法看似很簡單，但是經驗越豐富的研究者，在養成過程中如果沒有建立清楚的觀念，遇到不如預期的資料，經常會陷入天人交戰的局面。只要是按步就班收集資料，無論分析結果是否符合預期，呈現出來都有助科學知識的更新。雖然預先註冊還沒有完全被全世界心理科學家接受，甚至正確認識，正在開始學習統計的你，了解預先註冊的觀念，可以培養判斷分析結論的。</p>
 </div>
 <div id="onesample-test" class="section level2">
@@ -237,7 +238,7 @@
 <p>我們在單元<a href="distribution.html#distribution-approaches">4.6</a>得知次數主義的要旨，是根據得到某種分析結果的假設為前提(<span class="math inline">\(\theta\)</span>)，評估觀察得到當下資料(D)的條件機率(<span class="math inline">\(P(\frac{D}{\theta})\)</span>)。這個條件機率能以對應的機率函數計算與模擬，關鍵在於許多問題一開始無法明確預測會得到什麼結果，只能確定最不可能被現在的觀察資料證實的假設，得到當前結果的條件機率(<span class="math inline">\(P(\frac{D}{\theta})\)</span>)必定<strong>不會超過研究者能接受的水準</strong>。這種假設被稱為虛無假設(Null Hypothesis，許多統計教材簡記為<span class="math inline">\(H_0\)</span>)，以虛無假設的機率分佈計算得到當前結果的條件機率，就是p值。這是虛無假設顯著性檢定的基本思考方式，也是本書介紹的所有統計方法的運作流程。</p>
 <div id="onesample-hypothesis" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> 虛無假設與對立假設</h3>
-<p>我們在單元@ref(#probability-permutation)討論投擲一枚正反面出現機率相等的硬幣，做一系列試驗得到的所有結果之可能機率，可用適當的機率函數計算。這個試驗案例改編自第一個本寫進教科書的假設檢定案例<span class="citation">(Fisher, <a href="#ref-fisherDesignExperiments1966">1966</a>)</span>，教科書的作者Ronald Fisher是假設檢定方法的奠基者之一。在Fisher的著作中，他提到曾在一次英式下午茶場合，遇到一位女士宣稱有能力分辨喝下的奶茶是先倒茶再加牛奶，還是先倒牛奶再加茶。當場他設計一個實驗，安排四杯奶茶先倒茶再加牛奶，以及四杯奶茶先倒牛奶再加茶，配成四組請這位女士一一試喝，每一組會先喝到那一種由調製者隨機決定。這個設計如同有四枚硬幣，先不讓對方看投擲的結果，請對方猜正面與反面朝上各有多少枚。</p>
+<p>我們在單元@ref(#probability-permutation)討論投擲一枚正反面出現機率相等的硬幣，做一系列試驗得到的所有結果之可能機率，可用適當的機率函數計算。這個試驗案例改編自第一個本寫進教科書的假設檢定案例<span class="citation">(Fisher <a href="#ref-fisherDesignExperiments1966">1966</a>)</span>，教科書的作者Ronald Fisher是假設檢定方法的奠基者之一。在Fisher的著作中，他提到曾在一次英式下午茶場合，遇到一位女士宣稱有能力分辨喝下的奶茶是先倒茶再加牛奶，還是先倒牛奶再加茶。當場他設計一個實驗，安排四杯奶茶先倒茶再加牛奶，以及四杯奶茶先倒牛奶再加茶，配成四組請這位女士一一試喝，每一組會先喝到那一種由調製者隨機決定。這個設計如同有四枚硬幣，先不讓對方看投擲的結果，請對方猜正面與反面朝上各有多少枚。</p>
 <p>Fisher如此設計的想法，是因為在場沒有人真的知道那位女士的分辨能力。如果這位女士的能力可以量化，我們可以假設她正確分辨一對奶茶調製方法的機率是<span class="math inline">\(\theta_1\)</span>，根據二項分佈機率函數，她正確分辨所有奶茶如何調製的比率就是<span class="math inline">\(P(\theta_1)\)</span>。但是既然沒有人知道她的真本事，就算測試結果是百分之百，也無法說服眾人<span class="math inline">\(\theta_1\)</span>就是1。當時的Fisher有一個假設：如果這位女士是靠猜測的，每一組分辨成功的機率是50%，簡記為<span class="math inline">\(\theta_0\)</span>。運用單元<a href="probability.html#probability-binomial">3.3.1</a>學習到二項分佈計算方法，可以算出要正確猜對至少三對的機率是0.24，全部猜對的機率則是0.01。也就是說，這位女士全靠猜測的話，四組奶茶的測試全部正確的機率不到5%。</p>
 <p>Fisher的奶茶試驗所設定的<span class="math inline">\(\theta_0\)</span>，就是現代推論統計進行分析之前，要設定的虛無假設<span class="math inline">\(H_0\)</span>；當時想測試但是沒人知道的分辨能力就是對立假設(alternative hypothesis, <span class="math inline">\(H_1\)</span>)。<strong>對於試驗結果的判斷，Fisher的判斷原則來自計算的機率函數，但是現代推論統計的判斷原則來自模擬的機率函數。</strong>後者是與Roland Fisher同時代的兩位統計學者，Jerzy Neyman與Egon Pearson的貢獻，也是現代推論統計方法需要根據p值判斷分析結果的原因。</p>
 <p>要了解如果運用模擬的機率函數進行虛無假設統計檢定，我們設定Fisher的奶茶試驗擴張到20組奶茶，如果這位女士每次測試的答對率有95%，就能模擬虛無假設與對立假設的機率分佈，也就是一次答對率各為0.5與0.95，試驗次數都是20次的二項機率分佈。</p>
@@ -253,23 +254,23 @@
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
-<td align="right">7319</td>
+<td align="right">7304</td>
 </tr>
 <tr class="even">
 <td align="left">2e-04</td>
-<td align="right">1945</td>
+<td align="right">1922</td>
 </tr>
 <tr class="odd">
 <td align="left">8e-04</td>
-<td align="right">576</td>
+<td align="right">615</td>
 </tr>
 <tr class="even">
 <td align="left">0.0051</td>
-<td align="right">129</td>
+<td align="right">119</td>
 </tr>
 <tr class="odd">
 <td align="left">0.0208</td>
-<td align="right">27</td>
+<td align="right">37</td>
 </tr>
 <tr class="even">
 <td align="left">0.0612</td>
@@ -277,7 +278,7 @@
 </tr>
 <tr class="odd">
 <td align="left">0.1372</td>
-<td align="right">2</td>
+<td align="right">1</td>
 </tr>
 </tbody>
 </table>
@@ -327,7 +328,7 @@
 </div>
 <div id="onesample-binomial" class="section level2">
 <h2><span class="header-section-number">5.3</span> 單一比率二項檢定</h2>
-<p>Emily Rosa在論文中提到，當年先從學校作業發想，找了15位自願參與的治療師進行第一次實驗。之後有記者注意，為了進行採訪，找了包括曾參與第一次實驗部分人士與其他治療師等13位自願者，進行了第二次實驗<span class="citation">(Rosa et al., <a href="#ref-RosaCloseLookTherapeutic1998">1998</a>)</span>。因此，本單元以第一次實驗結果示範單一比率二項檢定。</p>
+<p>Emily Rosa在論文中提到，當年先從學校作業發想，找了15位自願參與的治療師進行第一次實驗。之後有記者注意，為了進行採訪，找了包括曾參與第一次實驗部分人士與其他治療師等13位自願者，進行了第二次實驗<span class="citation">(Rosa et al. <a href="#ref-RosaCloseLookTherapeutic1998">1998</a>)</span>。因此，本單元以第一次實驗結果示範單一比率二項檢定。</p>
 <p>二項檢定只要資料是0到1之內的比率值，配合資料的樣本數就能進行顯著性檢定，判斷資料能不能否定虛無假設。所以Roland Fisher的奶茶測試，可以用這種方法分析。設計與假設和奶茶測試如出一轍的TT測試，當然可以分析結果。</p>
 <p>Emily Rosa假設如果治療師真的有本事，答對率應該明顯高於50%，或者十次試驗有超過五次答對。符合假設的<strong>母群體機率函數的隨機變數</strong>只有兩個數值：1(正確)與0(錯誤)。兩個數值代表的事件機率分別為0.5，因此母群體機率函數的圖示如同圖<a href="onesample.html#fig:binomial-population">5.1</a>。</p>
 <div class="figure"><span id="fig:binomial-population"></span>
@@ -421,7 +422,7 @@ alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
 </table>
 <p>抽樣分佈的每一個數值代入z統計數公式，形成的機率函數曲線相當符合標準化常態分佈。如圖<a href="onesample.html#fig:normal-test-statistics">5.8</a>中代表標準化常態分佈的藍色曲線，與所有樣本z分數的黑色曲線完全貼合(見圖<a href="onesample.html#fig:normal-test-statistics">5.8</a>左半)。</p>
 <div class="figure"><span id="fig:normal-test-statistics"></span>
-<img src="Basic-Statistics_files/figure-html/normal-test-statistics-1.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" /><img src="Basic-Statistics_files/figure-html/normal-test-statistics-2.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" />
+<img src="05-onesample_files/figure-html/normal-test-statistics-1.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" /><img src="05-onesample_files/figure-html/normal-test-statistics-2.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" />
 <p class="caption">
 圖 5.8: 單一平均數z檢定樣本統計數與標準常態分佈
 </p>
@@ -457,7 +458,7 @@ alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
 </tbody>
 </table>
 <p>根據Emily的實驗結果，可知95%CI [3.87, 5.47]，也就是說平均數5是在這次實驗結果估計的信賴區間之內。但是信賴區間與假設檢定一樣，都是長期累積的可能結果。<span class="math inline">\(\alpha\)</span>在假設檢定代表<strong>最大的錯誤肯定機率</strong>；在信賴區間代表<strong>所有可能樣本的區間範圍，有多高比例包括假設的期望值</strong>。這個比例是<span class="math inline">\(1 - \alpha\)</span>，因此信賴區間的正式寫法記為%CI。<a href="https://osf.io/zauw9/">示範檔案</a>的<code>Rj</code>報表最後一行，是總計1萬筆模擬數值的信賴區間，有包括5的總數目。這個數字會隨重新執行不斷變動，但是數字會在9400到9600左右，也就是大約有95%的模擬數值信賴區間，包含代表治療師們只是靠運氣做實驗的平均正確次數。</p>
-<p>我們從以上示範發現，相較於假設檢定的p值帶來否定假設的訊息，信賴區間給予使用者肯定假設的概念，有學者鼓吹心理學研究者應該使用信賴區間，而非p值呈現結果<span class="citation">(Cumming &amp; Finch, <a href="#ref-CummingInferenceEyeConfidence2005">2005</a>)</span>。本書不特別評論那種方法較佳，讀者應再思考一個問題：兩種方法都是建立在本質是條件機率<span class="math inline">\(P(\frac{D}{\theta})\)</span>的抽樣分佈，加上多數情況是根據期望能否定的虛無假設。如果我們想探討真實的<span class="math inline">\(\theta\)</span>是否與假設相符，累積大量資料之後，假設檢定與信賴區間能給我們多少有意義的資訊？</p>
+<p>我們從以上示範發現，相較於假設檢定的p值帶來否定假設的訊息，信賴區間給予使用者肯定假設的概念，有學者鼓吹心理學研究者應該使用信賴區間，而非p值呈現結果<span class="citation">(Cumming and Finch <a href="#ref-CummingInferenceEyeConfidence2005">2005</a>)</span>。本書不特別評論那種方法較佳，讀者應再思考一個問題：兩種方法都是建立在本質是條件機率<span class="math inline">\(P(\frac{D}{\theta})\)</span>的抽樣分佈，加上多數情況是根據期望能否定的虛無假設。如果我們想探討真實的<span class="math inline">\(\theta\)</span>是否與假設相符，累積大量資料之後，假設檢定與信賴區間能給我們多少有意義的資訊？</p>
 </div>
 </div>
 <div id="onesample-summary" class="section level2">
@@ -478,16 +479,16 @@ alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-lindsayResearchPreregistration1012016">
-<p>Lindsay, S., Simons, D., &amp; Lilienfeld, S. (2016). Research Preregistration 101. <em>Observer</em>, <em>29</em>(10), 14–16.</p>
+<p>Lindsay, Stephen, Daniel Simons, and Scott Lilienfeld. 2016. “Research Preregistration 101.” <em>Observer</em> 29 (10): 14–16.</p>
 </div>
 <div id="ref-fisherDesignExperiments1966">
-<p>Fisher, R. A. (1966). <em>The Design of Experiments</em> (8th edition). New York: Hafner Publishing Company.</p>
+<p>Fisher, Ronald A. 1966. <em>The Design of Experiments</em>. 8th edition. New York: Hafner Publishing Company.</p>
 </div>
 <div id="ref-RosaCloseLookTherapeutic1998">
-<p>Rosa, L., Rosa, E., Sarner, L., &amp; Barrett, S. (1998). A Close Look at Therapeutic Touch. <em>JAMA</em>, <em>279</em>(13), 1005. doi:<a href="https://doi.org/10.1001/jama.279.13.1005">10.1001/jama.279.13.1005</a></p>
+<p>Rosa, Linda, Emily Rosa, Larry Sarner, and Stephen Barrett. 1998. “A Close Look at Therapeutic Touch.” <em>JAMA</em> 279 (13): 1005. <a href="https://doi.org/10.1001/jama.279.13.1005">https://doi.org/10.1001/jama.279.13.1005</a>.</p>
 </div>
 <div id="ref-CummingInferenceEyeConfidence2005">
-<p>Cumming, G., &amp; Finch, S. (2005). Inference by Eye: Confidence Intervals and How to Read Pictures of Data. <em>American Psychologist</em>, <em>60</em>(2), 170–180. doi:<a href="https://doi.org/10.1037/0003-066X.60.2.170">10.1037/0003-066X.60.2.170</a></p>
+<p>Cumming, Geoff, and Sue Finch. 2005. “Inference by Eye: Confidence Intervals and How to Read Pictures of Data.” <em>American Psychologist</em> 60 (2): 170–80. <a href="https://doi.org/10.1037/0003-066X.60.2.170">https://doi.org/10.1037/0003-066X.60.2.170</a>.</p>
 </div>
 </div>
             </section>

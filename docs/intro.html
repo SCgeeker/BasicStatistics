@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="01-intro.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -242,9 +243,9 @@
 圖 1.2: 左：Emily Rosa 11歲時的留影，取自維基百科。右：Emily Rosa施測現場素描，取自Rosa et al. (1998) Figure 1
 </p>
 </div>
-<p>在父母的幫助下，1996年Emily邀請到15位實際從事治療性撫慰的人士參與測試，一年後因為電視台的專訪，又找了曾參與先前研究在內的7位等共13位人士，進行第二次研究。Emily與父母以及一位醫師一起將兩次研究結果寫成論文發表<span class="citation">(Rosa, Rosa, Sarner, &amp; Barrett, <a href="#ref-RosaCloseLookTherapeutic1998">1998</a>)</span>。論文中的長條圖呈現28人次的正確次數，圖<a href="intro.html#fig:Rosa1998Fig2">1.3</a>是原始統計圖的重製版本：</p>
+<p>在父母的幫助下，1996年Emily邀請到15位實際從事治療性撫慰的人士參與測試，一年後因為電視台的專訪，又找了曾參與先前研究在內的7位等共13位人士，進行第二次研究。Emily與父母以及一位醫師一起將兩次研究結果寫成論文發表<span class="citation">(Rosa et al. <a href="#ref-RosaCloseLookTherapeutic1998">1998</a>)</span>。論文中的長條圖呈現28人次的正確次數，圖<a href="intro.html#fig:Rosa1998Fig2">1.3</a>是原始統計圖的重製版本：</p>
 <div class="figure" style="text-align: center"><span id="fig:Rosa1998Fig2"></span>
-<img src="Basic-Statistics_files/figure-html/Rosa1998Fig2-1.png" alt="Emily Rosa的研究結果" width="60%" />
+<img src="01-intro_files/figure-html/Rosa1998Fig2-1.png" alt="Emily Rosa的研究結果" width="60%" />
 <p class="caption">
 圖 1.3: Emily Rosa的研究結果
 </p>
@@ -282,13 +283,13 @@
 <tbody>
 <tr class="odd">
 <td>無獨變項</td>
-<td align="center">二項檢定( 單元<a href="#one-sample-binomial"><strong>??</strong></a> )</td>
-<td align="center">單一平均數z檢定( 單元<a href="#one-sample-z"><strong>??</strong></a> )</td>
+<td align="center">二項檢定( 單元<a href="onesample.html#onesample-binomial">5.3</a> )</td>
+<td align="center">單一平均數z檢定( 單元<a href="onesample.html#onesample-z">5.4</a> )</td>
 </tr>
 <tr class="even">
 <td>獨變項為相依樣本</td>
-<td align="center">McNemar氏檢定( 單元<a href="#paired-McNemar"><strong>??</strong></a> )</td>
-<td align="center">相依樣本t檢定(單元<a href="#paired-t"><strong>??</strong></a>)</td>
+<td align="center">McNemar氏檢定( 單元<a href="paired.html#paired-categorical">6.1</a> )</td>
+<td align="center">相依樣本t檢定(單元<a href="paired.html#paired-continuous">6.2</a>)</td>
 </tr>
 <tr class="odd">
 <td>獨變項為獨立樣本</td>
@@ -335,7 +336,7 @@
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-RosaCloseLookTherapeutic1998">
-<p>Rosa, L., Rosa, E., Sarner, L., &amp; Barrett, S. (1998). A Close Look at Therapeutic Touch. <em>JAMA</em>, <em>279</em>(13), 1005. doi:<a href="https://doi.org/10.1001/jama.279.13.1005">10.1001/jama.279.13.1005</a></p>
+<p>Rosa, Linda, Emily Rosa, Larry Sarner, and Stephen Barrett. 1998. “A Close Look at Therapeutic Touch.” <em>JAMA</em> 279 (13): 1005. <a href="https://doi.org/10.1001/jama.279.13.1005">https://doi.org/10.1001/jama.279.13.1005</a>.</p>
 </div>
 </div>
             </section>

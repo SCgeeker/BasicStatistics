@@ -1,4 +1,8 @@
 book_filename: "Basic-Statistics"
+new_session: yes
+output_dir: "docs"
+delete_merged_file: true
+clean: []
 language:
   label:
     fig: '圖 '
@@ -7,6 +11,4 @@ language:
   ui:
     edit: "編輯"
     chapter_name: ["第", "單元"]
-output_dir: "docs"
-delete_merged_file: true
 #before_chapter_script: "before-chapter.R"

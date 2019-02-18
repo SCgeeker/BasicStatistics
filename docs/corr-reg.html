@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="08-corrreg.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -229,8 +230,8 @@
 <p>進入大數據時代，資料科學家想做的事情和Francis Galton差不了多少，都是計算一系列變項的相關性，挑出其中最可能預測變項A的變項B，評估兩者迴歸關係的預測能力。在雙變項的世界，變項之間的共同變異(covariance，以下簡稱共變)，是表達變項相關的最佳指標。</p>
 <div id="section-8.1" class="section level2">
 <h2><span class="header-section-number">8.1</span> 案例介紹</h2>
-<p>相關係數的示範案例採用五大性格特質的真實資料。五大性格由情緒不穩定性(Neuroticism)、外向性(Extraversion)、經驗開放性(Openness)、親和性(Agreeableness)、盡責性(Conscientiousness)等五種主題的測驗題目組成。示範資料來自 <span class="citation">Dolan, Oort, Stoel, &amp; Wicherts (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 收集500位大學新生的施測資料，<code>JASP</code>與<code>jamovi</code>都有收錄這筆公開資料。除了示範如何利用兩種軟體製作符合寫作格式的相關係數表格，<code>jamovi</code>示範檔也提供相關係數抽樣分佈的模擬程序。</p>
-<p>簡單迴歸的示範資料來自 <span class="citation">Navarro &amp; Foxcroft (<a href="#ref-navarroLearningStatisticsJamovi2018">2018</a>)</span> 提供的案例。這項案例紀錄一位新手爸爸在小孩出生後一百天裡，小嬰兒的睡眠時間，爸爸的睡眠時間，以及爸爸用0到100分自評的情緒低落程度。本單元將用<code>JASP</code>與<code>jamovi</code>示範，如何算出以爸爸的睡眠時間預測情緒低落程度的簡單迴歸，以及探討迴歸係數的抽樣分佈。</p>
+<p>相關係數的示範案例採用五大性格特質的真實資料。五大性格由情緒不穩定性(Neuroticism)、外向性(Extraversion)、經驗開放性(Openness)、親和性(Agreeableness)、盡責性(Conscientiousness)等五種主題的測驗題目組成。示範資料來自 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 收集500位大學新生的施測資料，<code>JASP</code>與<code>jamovi</code>都有收錄這筆公開資料。除了示範如何利用兩種軟體製作符合寫作格式的相關係數表格，<code>jamovi</code>示範檔也提供相關係數抽樣分佈的模擬程序。</p>
+<p>簡單迴歸的示範資料來自 <span class="citation">Navarro and Foxcroft (<a href="#ref-navarroLearningStatisticsJamovi2018">2018</a>)</span> 提供的案例。這項案例紀錄一位新手爸爸在小孩出生後一百天裡，小嬰兒的睡眠時間，爸爸的睡眠時間，以及爸爸用0到100分自評的情緒低落程度。本單元將用<code>JASP</code>與<code>jamovi</code>示範，如何算出以爸爸的睡眠時間預測情緒低落程度的簡單迴歸，以及探討迴歸係數的抽樣分佈。</p>
 </div>
 <div id="corr-reg-person" class="section level2">
 <h2><span class="header-section-number">8.2</span> 皮爾森相關</h2>
@@ -249,17 +250,17 @@
 <h3><span class="header-section-number">8.2.1</span> 相關係數的抽樣分佈</h3>
 <p><code>JASP</code>與<code>jamovi</code>提供的相關係數範例資料，都有上百筆的觀察值。原因是樣本數不足一百的隨機樣本所累積的抽樣分佈，不會是像常態分佈一樣的對稱分佈，如此一來就會造成型一錯誤率與考驗力的估計偏差。這樣的狀況需要使用<strong>費雪轉換</strong>，才能將抽樣分佈轉換為常態分佈。下面的費雪轉換公式，可轉換所有來自同一母群體的所有樣本相關係數。轉換後的樣本相關係數平均數會略高於原始平均數，<strong>標準誤</strong>必接近<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>。</p>
 <p><span class="math display">\[F(r) = \frac{1}{2} ln \frac{1+r}{1-r}\]</span></p>
-<p><img src="Basic-Statistics_files/figure-html/big5-smalln-1.png" width="672" /></p>
+<p><img src="08-corrreg_files/figure-html/big5-smalln-1.png" width="672" /></p>
 <p>以 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 的五大人格特質資料 為例，如果盡責性與情緒不穩定性相關係數的母群體是<span class="math inline">\(\rho = -0.368\)</span>，只收集12位學生的資料，模擬10000筆樣本相關係數形成的抽樣分佈如同圖<a href="#fig:big5-smalln"><strong>??</strong></a>呈現負偏態的黑色曲線，與分佈中心是-0.368的常態分佈(綠色曲線)有明顯的差異。10000樣本相關係數經過費雪轉換，形成的抽樣分佈(藍色曲線)與平均數是-0.4及標準誤是0.33的常態分佈(紅色曲線)完全契合，此標準誤相當接近以公式<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>計算的0.33。</p>
-<p><img src="Basic-Statistics_files/figure-html/big5-largen-1.png" width="672" /></p>
+<p><img src="08-corrreg_files/figure-html/big5-largen-1.png" width="672" /></p>
 <p>將樣本數增加至如範例資料一樣的500人，樣本相關係數的抽樣分佈就會契合對稱的機率分佈，如圖<a href="#fig:big5-largen"><strong>??</strong></a>代表抽樣分佈的黑色曲線，完全符合抽樣分佈平均數-0.37與標準誤0.04的常態分佈(綠色曲線)。費雪轉轉換後的抽樣分佈(藍色曲線)雖然也符合常態分佈(紅色曲線)，但是估計的期望值-0.39明顯不同於母群體。由此例可知，運用相關係數分析資料的研究，收集的樣本數要達到上百筆。</p>
-<p><img src="Basic-Statistics_files/figure-html/big5-hypo-1.png" width="672" /></p>
+<p><img src="08-corrreg_files/figure-html/big5-hypo-1.png" width="672" /></p>
 <p>在相關係數的假設檢定，這道抽樣分佈就是對立假設，相對於平均數 為0的虛無假設。如果這筆樣本不是來自相關係數為0的母群體，只有相當低的機率出自相關係數為0的抽樣分佈。圖(fig:big5-hypo)呈現對立假設與虛無假設的視覺化。</p>
 </div>
 <div id="corr-reg-strength" class="section level3">
 <h3><span class="header-section-number">8.2.2</span> 相關係數的強度</h3>
 <p>圖(fig:big5-hypo)也體現相關係數是一種效果量，所以一次研究得到的相關係數要多高才算理想，必須考慮收集的樣本數。有些統計教材表列所謂的強中弱相關係數，這樣的區分並未考慮樣本數。在此以檢定水準為.05的雙側t檢定為例，圖(fig:corr-crit)列出自由度1到100，與可否定虛無假設的最小相關係數。讀者可運用<a href="">jaomvi示範檔案</a>，自行修改樣本數與檢定水準的p值，察看符合需要的理想樣本數與相關係數。</p>
-<p><img src="Basic-Statistics_files/figure-html/corr-crit-1.png" width="672" /></p>
+<p><img src="08-corrreg_files/figure-html/corr-crit-1.png" width="672" /></p>
 </div>
 </div>
 <div id="corr-reg-simple" class="section level2">
@@ -278,8 +279,8 @@
 </div>
 <div id="corr-reg-coff-sampling" class="section level3">
 <h3><span class="header-section-number">8.3.2</span> 迴歸係數的抽樣分佈</h3>
-<p><img src="Basic-Statistics_files/figure-html/reg-sample-1.png" width="672" /></p>
-<p>我們已知迴歸係數也是一種隨機變數，所以我們可以稍微改裝相關係數抽樣分佈的模擬程序，探索迴歸係數的抽樣分佈。在<a href="">jamovi示範檔案</a>的模擬程序程式碼首四行，除了樣本數與相關係數，還有自變項與依變項的樣本標準誤。這段模擬程序以新手爸爸的分析結果設定這四個數值，得到圖<a href="#fig:reg-sample"><strong>??</strong></a>符合常態分佈的抽樣分佈。這道抽樣分佈的平均數是-0.91，標準誤是0.43，極為接近圖<a href="corr-reg.html#fig:JASP-reg">8.2</a>的<em>Coefficients</em>報表報告的標準化迴歸係數，以及自變項的標準誤。讀者可以嘗試改變兩個變項的標準誤，形成的抽樣分佈雖然標準誤會有變化，平均數依然接近標準化迴歸係數。</p>
+<p><img src="08-corrreg_files/figure-html/reg-sample-1.png" width="672" /></p>
+<p>我們已知迴歸係數也是一種隨機變數，所以我們可以稍微改裝相關係數抽樣分佈的模擬程序，探索迴歸係數的抽樣分佈。在<a href="">jamovi示範檔案</a>的模擬程序程式碼首四行，除了樣本數與相關係數，還有自變項與依變項的樣本標準誤。這段模擬程序以新手爸爸的分析結果設定這四個數值，得到圖<a href="#fig:reg-sample"><strong>??</strong></a>符合常態分佈的抽樣分佈。這道抽樣分佈的平均數是-0.9，標準誤是0.43，極為接近圖<a href="corr-reg.html#fig:JASP-reg">8.2</a>的<em>Coefficients</em>報表報告的標準化迴歸係數，以及自變項的標準誤。讀者可以嘗試改變兩個變項的標準誤，形成的抽樣分佈雖然標準誤會有變化，平均數依然接近標準化迴歸係數。</p>
 </div>
 <div id="corr-reg-least" class="section level3">
 <h3><span class="header-section-number">8.3.3</span> 最小平方法</h3>
@@ -315,10 +316,10 @@
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-DolanTestingMeasurementInvariance2009">
-<p>Dolan, C. V., Oort, F. J., Stoel, R. D., &amp; Wicherts, J. M. (2009). Testing Measurement Invariance in the Target Rotated Multigroup Exploratory Factor Model. <em>Structural Equation Modeling: A Multidisciplinary Journal</em>, <em>16</em>(2), 295–314. doi:<a href="https://doi.org/10.1080/10705510902751416">10.1080/10705510902751416</a></p>
+<p>Dolan, Conor V., Frans J. Oort, Reinoud D. Stoel, and Jelte M. Wicherts. 2009. “Testing Measurement Invariance in the Target Rotated Multigroup Exploratory Factor Model.” <em>Structural Equation Modeling: A Multidisciplinary Journal</em> 16 (2): 295–314. <a href="https://doi.org/10.1080/10705510902751416">https://doi.org/10.1080/10705510902751416</a>.</p>
 </div>
 <div id="ref-navarroLearningStatisticsJamovi2018">
-<p>Navarro, D. J., &amp; Foxcroft, D. R. (2018). <em>Learning statistics with jamovi: A tutorial for psychology students and other beginners</em>. Danielle J. Navarro and David R. Foxcroft. doi:<a href="https://doi.org/10.24384/hgc3-7p15">10.24384/hgc3-7p15</a></p>
+<p>Navarro, Danielle J, and David R Foxcroft. 2018. <em>Learning Statistics with Jamovi: A Tutorial for Psychology Students and Other Beginners</em>. Danielle J. Navarro and David R. Foxcroft. <a href="https://doi.org/10.24384/hgc3-7p15">https://doi.org/10.24384/hgc3-7p15</a>.</p>
 </div>
 </div>
             </section>

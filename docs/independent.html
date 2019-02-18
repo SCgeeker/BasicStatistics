@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="07-independent.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -292,12 +293,12 @@
 <p><span class="math display">\[\chi^2 = \sum_i \sum_j \frac{(r_{ij}-n_{ij}p_{ij})^2}{n_{ij}p_{ij}}\]</span></p>
 <p>同單元<a href="paired.html#paired-categorical-chisquare">6.1.3</a>，我們可以製造上萬筆實驗結果的統計數，繪製如圖<a href="independent.html#fig:chi-independent-simulation">7.3</a>的機率函數圖。</p>
 <div class="figure"><span id="fig:chi-independent-simulation"></span>
-<img src="Basic-Statistics_files/figure-html/chi-independent-simulation-1.png" alt="獨立性檢定抽樣分佈(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)" width="672" />
+<img src="07-independent_files/figure-html/chi-independent-simulation-1.png" alt="獨立性檢定抽樣分佈(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)" width="672" />
 <p class="caption">
 圖 7.3: 獨立性檢定抽樣分佈(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)
 </p>
 </div>
-<p>計算差異平方和，會發現抽樣分佈與自由度為1的卡方分佈之差異(0.022)，小於抽樣分佈與自由度為2的卡方分佈之差異(0.051)。我們可以將上述公式改寫為以下形式，其中O代表各細格實際次數，E代表各細格期望次數：</p>
+<p>計算差異平方和，會發現抽樣分佈與自由度為1的卡方分佈之差異(0.022)，小於抽樣分佈與自由度為2的卡方分佈之差異(0.05)。我們可以將上述公式改寫為以下形式，其中O代表各細格實際次數，E代表各細格期望次數：</p>
 <p><span class="math display">\[\chi^2 = \sum_i \sum_j \frac{(O_{ij}-E_{ij})^2}{E_{ij}}\]</span></p>
 </div>
 </div>
@@ -329,28 +330,28 @@
 <p>比照單元<a href="paired.html#paired-continuous-distribution">6.2.2</a>，我們設計獨立樣本平均數t檢定的模擬程序，解說為何假設檢定的統計值與計算信賴區間，應該採用t分數而非z分數。模擬程序原始碼可參考<a href="">jamovi示範檔案</a>。</p>
 <p>首先設定母群體機率函數，除了兩組參與者評分的平均數(<code>counter_mean</code>與<code>clock_mean</code>)與樣本標準差(<code>counter_sd</code>與<code>clock_sd</code>)，再加上兩組人數(<code>counter_n</code>與<code>clock_n</code>)。以這些參數設定每位參與者的評分平均數是<strong>均勻分佈</strong>的隨機變數，分佈涵括的所有數值的發生機率都相等。逆時針組的最小的發生次數是平均數減1.75倍樣本標準差，最大的發生次數是平均數加1.75倍樣本標準差。順時針組的最小的發生次數是平均數減1.85倍樣本標準差，最大的發生次數是平均數加1.85倍樣本標準差。如圖<a href="independent.html#fig:independent-continuous-populations">7.5</a>所示。</p>
 <div class="figure"><span id="fig:independent-continuous-populations"></span>
-<img src="Basic-Statistics_files/figure-html/independent-continuous-populations-1.png" alt="獨立樣本t檢定母群體機率函數" width="50%" /><img src="Basic-Statistics_files/figure-html/independent-continuous-populations-2.png" alt="獨立樣本t檢定母群體機率函數" width="50%" />
+<img src="07-independent_files/figure-html/independent-continuous-populations-1.png" alt="獨立樣本t檢定母群體機率函數" width="50%" /><img src="07-independent_files/figure-html/independent-continuous-populations-2.png" alt="獨立樣本t檢定母群體機率函數" width="50%" />
 <p class="caption">
 圖 7.5: 獨立樣本t檢定母群體機率函數
 </p>
 </div>
 <p>兩種母群體機率函數分別製造10000筆模擬平均數，依序相減形成<span class="math inline">\(\bar{y_1}-\bar{y_2}\)</span>的抽樣分佈，如圖<a href="independent.html#fig:independent-continuous-sampling">7.6</a>所示，此抽樣分佈的平均數與變異數接近真實資料的統計值，該變異數亦接近於兩群抽樣分佈的<strong>合併變異數(pooled variance)</strong>所換算的估計標準誤。</p>
 <div class="figure"><span id="fig:independent-continuous-sampling"></span>
-<img src="Basic-Statistics_files/figure-html/independent-continuous-sampling-1.png" alt="兩組樣本平均數差異值的抽樣分佈" width="672" />
+<img src="07-independent_files/figure-html/independent-continuous-sampling-1.png" alt="兩組樣本平均數差異值的抽樣分佈" width="672" />
 <p class="caption">
 圖 7.6: 兩組樣本平均數差異值的抽樣分佈
 </p>
 </div>
 <p>分位圖(圖<a href="independent.html#fig:independent-continuous-sampling-qq">7.7</a>)亦顯示此抽樣分佈與常態分佈一致。</p>
 <div class="figure"><span id="fig:independent-continuous-sampling-qq"></span>
-<img src="Basic-Statistics_files/figure-html/independent-continuous-sampling-qq-1.png" alt="兩組樣本平均數差異值的抽樣分佈分位圖" width="672" />
+<img src="07-independent_files/figure-html/independent-continuous-sampling-qq-1.png" alt="兩組樣本平均數差異值的抽樣分佈分位圖" width="672" />
 <p class="caption">
 圖 7.7: 兩組樣本平均數差異值的抽樣分佈分位圖
 </p>
 </div>
 <p>將構成抽樣分佈的所有<span class="math inline">\(\bar{y_1}-\bar{y_2}\)</span>轉換為標準分數，就能形成如圖<a href="independent.html#fig:independent-continuous-sampling-dist">7.8</a>的黑色曲線，此曲線與自由度是100的t分佈(藍色曲線)，以及常態分佈(紅色曲線)高度重疊。</p>
 <div class="figure"><span id="fig:independent-continuous-sampling-dist"></span>
-<img src="Basic-Statistics_files/figure-html/independent-continuous-sampling-dist-1.png" alt="兩組樣本平均數差異值的標準化分數 vs. 常態分佈 vs. t分佈" width="672" />
+<img src="07-independent_files/figure-html/independent-continuous-sampling-dist-1.png" alt="兩組樣本平均數差異值的標準化分數 vs. 常態分佈 vs. t分佈" width="672" />
 <p class="caption">
 圖 7.8: 兩組樣本平均數差異值的標準化分數 vs. 常態分佈 vs. t分佈
 </p>
@@ -412,10 +413,10 @@
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-RogersRemindersAssociation2016">
-<p>Rogers, T., &amp; Milkman, K. L. (2016). Reminders Through Association. <em>Psychological Science</em>, <em>27</em>(7), 973–986. doi:<a href="https://doi.org/10.1177/0956797616643071">10.1177/0956797616643071</a></p>
+<p>Rogers, Todd, and Katherine L. Milkman. 2016. “Reminders Through Association.” <em>Psychological Science</em> 27 (7): 973–86. <a href="https://doi.org/10.1177/0956797616643071">https://doi.org/10.1177/0956797616643071</a>.</p>
 </div>
 <div id="ref-TopolinskiTurningHandsTime2012">
-<p>Topolinski, S., &amp; Sparenberg, P. (2012). Turning the Hands of Time: Clockwise Movements Increase Preference for Novelty. <em>Social Psychological and Personality Science</em>, <em>3</em>(3), 308–314. doi:<a href="https://doi.org/10.1177/1948550611419266">10.1177/1948550611419266</a></p>
+<p>Topolinski, Sascha, and Peggy Sparenberg. 2012. “Turning the Hands of Time: Clockwise Movements Increase Preference for Novelty.” <em>Social Psychological and Personality Science</em> 3 (3): 308–14. <a href="https://doi.org/10.1177/1948550611419266">https://doi.org/10.1177/1948550611419266</a>.</p>
 </div>
 </div>
             </section>

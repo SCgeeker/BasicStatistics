@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="03-probability.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -340,7 +341,7 @@
 <h2><span class="header-section-number">3.2</span> 條件機率的計算</h2>
 <div id="probability-mh" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> 蒙提霍爾問題</h3>
-<p>我們透過一件統計學公案，認識條件機率的觀念與計算方法。二十世紀下半葉，美國統計學界提出著名公案：蒙提霍爾問題<span class="citation">(Steve, <a href="#ref-Steveproblemprobabilityletter1975">1975</a>)</span>。蒙提霍爾是二十世紀六十年代著名的美國猜謎節目主持人，這個節目有個知名橋段：主持人向觀眾展示三道門，其中一道門之後是豪華轎車，另外兩道門之後是山羊。每集節目邀請來賓選出正確的門，選到車子現場直接開回家。不過這個橋段有個製造緊張氣氛的安排：來賓先指出其中一道門，接著主持人打開另外兩道門的其中一道，這道門之後一定是山羊。最後就是橋段的高潮，主持人給來賓一次機會，選擇一開始指出的門？還是選擇沒被打開的另一道門？</p>
+<p>我們透過一件統計學公案，認識條件機率的觀念與計算方法。二十世紀下半葉，美國統計學界提出著名公案：蒙提霍爾問題<span class="citation">(Steve <a href="#ref-Steveproblemprobabilityletter1975">1975</a>)</span>。蒙提霍爾是二十世紀六十年代著名的美國猜謎節目主持人，這個節目有個知名橋段：主持人向觀眾展示三道門，其中一道門之後是豪華轎車，另外兩道門之後是山羊。每集節目邀請來賓選出正確的門，選到車子現場直接開回家。不過這個橋段有個製造緊張氣氛的安排：來賓先指出其中一道門，接著主持人打開另外兩道門的其中一道，這道門之後一定是山羊。最後就是橋段的高潮，主持人給來賓一次機會，選擇一開始指出的門？還是選擇沒被打開的另一道門？</p>
 <p>統計學者與數學家最關心的是這個節目的來賓：「選擇另一道門是車子的機率有沒有高於一開始選擇的門？」這種情況就是比較兩種選擇的<strong>條件機率</strong>：已知其中一道門之後是山羊(<span class="math inline">\(B\)</span>)，選擇一開始指的門是車子(<span class="math inline">\(A\)</span>)之機率；對比選擇另一道門是車子(<span class="math inline">\(\bar{A}\)</span>)之機率。為了方便計算，一般寫成<span class="math inline">\(P(A|B)\)</span>與<span class="math inline">\(P(\bar{A}|B)\)</span>。同樣的道理，<span class="math inline">\(P(\bar{A}|B)\)</span>代表已知其中一道門之後是山羊(<span class="math inline">\(B\)</span>)，另一道門是車子(<span class="math inline">\(\bar{A}\)</span>)之機率。雖然<span class="math inline">\(P(A|B)\)</span>與<span class="math inline">\(P(\bar{A}|B)\)</span>的總和是1，但是<span class="math inline">\(B\)</span>也是一種機率事件，因為到底那道門之後是山羊，每一集節目都不會一樣。下表列出所有車子與山羊的狀況：</p>
 <table>
 <thead>
@@ -541,7 +542,7 @@
 <p><span class="math display">\[ p(x) = \frac{C^{6}_x \times C^{49-6}_{6-x}}{C^{49}_6} \ \ \ \ \ \ x = \{ 3,4,5,6 \} \]</span></p>
 <p>公式中的x是<strong>隨機變數</strong>：x涵括的數字是根據大樂透規則，每期可得獎金的獎號數目，每一注會有多少號碼符合，則由機遇決定。統計學家也稱呼機率分佈是<strong>隨機變數可能結果的模型</strong>，能以圖像顯示，如圖 <a href="probability.html#fig:lotty-model">3.1</a>：</p>
 <div class="figure"><span id="fig:lotty-model"></span>
-<img src="Basic-Statistics_files/figure-html/lotty-model-1.png" alt="台灣大樂透中獎之機率分佈(不計特別號)" width="672" />
+<img src="03-probability_files/figure-html/lotty-model-1.png" alt="台灣大樂透中獎之機率分佈(不計特別號)" width="672" />
 <p class="caption">
 圖 3.1: 台灣大樂透中獎之機率分佈(不計特別號)
 </p>
@@ -624,7 +625,7 @@ $$ P(x) = \frac{ (C^{6}_{x} \times C^{49-6}_{6-x} \times C^{43}_0  - C^6_2 \time
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-Steveproblemprobabilityletter1975">
-<p>Steve, S. (1975). A problem in probability (letter to the editor). <em>American Statistician</em>, <em>29</em>(1), 67.</p>
+<p>Steve, Selvin. 1975. “A Problem in Probability (Letter to the Editor).” <em>American Statistician</em> 29 (1): 67.</p>
 </div>
 </div>
 <div class="footnotes">

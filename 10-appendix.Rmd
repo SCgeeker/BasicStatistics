@@ -1,6 +1,11 @@
+\cleardoublepage 
 # (APPENDIX) 附錄 {-} 
 
-## JASP與jamovi開發簡史與介面介紹 {#app_part1}
+# JASP與jamovi使用技巧
+
+附錄分享個人JASP與jaomvi的設定與操作技巧，讀者可根據自已的使用習慣與經驗調整。
+
+## JASP與jamovi開發簡史與介面介紹 {#app-part1}
 
 [JASP](https://jasp-stats.org/)是由荷蘭阿姆斯特丹大學Eric-Jan Wagenmakers教授領導的團隊於2015年啟動開發專案，核心是R套件路[BayesFactor](http://bayesfactorpcl.r-forge.r-project.org/)，所以JASP從一開始就是開源軟體[@JASP2018]。因為核心成員是貝氏統計的專家，JASP不僅能做傳統的統計，也能計算貝式因子，並且操作方式與SPSS一樣。就算你還不明白什麼是貝氏因子，還是能用JASP學習傳統統計方法。
 
@@ -37,15 +42,16 @@ knitr::include_graphics("images/jamovi-menu.jpg")
 knitr::include_graphics("images/jamovi-opened.jpg")
 ```
 
-
-## jamovi模組安裝  {#app_part2}
+## jamovi模組安裝  {#app-part2}
 
 jamovi使用者可以增加自已或他人開發的模組。只要點選操作介面右上界標記`Modules`的大十字圖案，就可以開啟模組安裝與更新選單。本書介紹的模擬程序，都是透過jamovi模組`Rj`執行。有安排模擬程序的示範檔案，相關單元及程式碼內註解，都有說明重要參數設定，讀者只要改變參數數值，就可以觀察模擬結果的變化。
 
 本書建議讀者安裝的模組有`Rj`(編寫與執行R程式碼)、`jpower`(考驗力分析與解說)、`distrACTION`(機率分佈圖解)、`R data sets`(R官方示範資料集)、`Statkat`(統計方法建議諮詢)、`learning statistics with jamovi`(同名教科書示範資料集)。
 
-## 數值顯示設定 {#app_part3}
+## 數值顯示設定 {#app-part3}
 
 
-## 匯出資料與輸出報表 {#app_part4}
+## 匯出資料與輸出報表 {#app-part4}
 
+
+## 使用條件式轉換與過濾資料 {#app-part5}

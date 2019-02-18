@@ -1,0 +1,35 @@
+--- 
+title: "心理科學基礎統計"
+author: "陳紹慶 Sau-Chin Chen"
+date: "2019-02-18"
+kint: "bookdown::render_book"
+site: bookdown::bookdown_site
+bibliography: [Stat.bib]
+#csl: apa-old-doi-prefix.csl
+biblio-style: apalike
+link-citations: yes
+description: "以開放科學為理念，為初學者編寫的統計教科書。"
+github-repo: SCgeeker/BasicStatistics
+---
+
+# 前言 {-}
+
+- 第一版前言(2018.2.1)
+
+開始寫這本書有很多緣由，就從遠中近三個時間點的感想來說吧。遠因從我還是大學生小毛頭時開始，那時真正體悟學習統計的要訣，是去聽了幾位老師的授課，自行整理筆記得到收穫。當時讀過的幾本中英文教科書，最後成為案頭書的只有Roger Kirk的[Experimental Design](https://us.sagepub.com/en-us/nam/experimental-design/book233742)。到今天要我推薦初學者值得參考的中文書，我完全無法舉出理想的教材，除非學生有興趣透過學習資料科學入門，才有值得推薦的中文線上教材。
+
+中程因素是2016年翻譯了Daniel Lakens的線上課程[提昇你的統計推論功力(Improving your statistical inferences)](https://www.coursera.org/learn/statistical-inferences)，我體會可以從培養學習者的思考實際問題能力，激發學習統計方法的動機，並且掌握正確的資訊。Daniel 使用的教材是近幾年引發心理學再現危機的指標研究，都有公開資料讓人取用。曉得這些研究背後故事，有助如何正確使用統計方法。
+
+但是對於統計的初學者，甚至是心理學的初學者，這些故事還無法引起這些學習者的共鳴。如何激起初級學習者的學習興趣，並指引他們走上正確的學習道路，就是寫這本書的近因。這個任務有幾個要挑戰的目標：首先是使用能引發初學者興趣的案例，每一個世代的入門學習者特有特殊的共同記憶，形成不同的大眾興趣。這也帶來第二個挑戰，如何保持編寫教材的中心思想，又能時俱進引用有吸引力的案例？引導初學者認識開放科學理念與操作方法，是累積高品質研究的基礎。所以我編輯這套入門統計教材，希望協助初學者找到適合自已的學習門徑，能在幾個月之後有能力學習[提昇你的統計推論功力](https://www.coursera.org/learn/statistical-inferences)等進階課程。
+
+所幸已經出現許多公開資源，讓我有面對這些挑戰的機會。編輯這本電子書R套件的[bookdwon](https://bookdown.org/yihui/bookdown/)，能整合各種有助學習的互動式材料於多種平台。新世代資料科學家提供的自由整合資源，降低學習者掌握統計觀念的門檻。特別感激年輕的史丹福大學研究生[Daniel Kunin](http://daniel-kunin.com/)，與朋友一起花時間開發，又無私分享的[seeing theory](https://students.brown.edu/seeing-theory/index.html)，讓這本書能嘗試傳統教科書做不到的互動學習。開源又潛力無窮的統計軟體[JASP](https://jasp-stats.org/)與[jamovi](https://www.jamovi.org/)，學習者容易上手，又是資料分析工作的實用工具。兩套開源軟體與科學研究開放平台[Open Science Framework](https://osf.io/)密切整合，能彈性管理延伸學習材料。這本書的示範檔案，以及各單元習題，都發佈於[心理科學基礎統計OSF專案](https://osf.io/kdtjq/)，任何人有需要，不必註冊，可直接取用專案中的學習材料。
+
+本書取用的示範與習題案例，都是可檢索論文全文與原始資料的研究，初始版本的案例主要來自Carlson與Winquist合著的教科書"An Introduction to Statistics: an Active Learning Approach"[@Carlsonintroductionstatisticsactive2018]，以及收集推特與臉書社團[Psychological Methods Discussion Group](https://www.facebook.com/groups/853552931365745/)，可以啟發初學者的案例。習題也是使用有公開資料的研究。編寫這本書時候，我正在研發一套習題模板，方便管理與擴充各單元的資源。我更希望有意充實這套教材的朋友與同學們，可以提供您認為值得學習的材料。
+
+所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。
+
+- 第二版前言(2019.1.3)
+
+完成第一版之後的一年之間，更新版的JASP與jamovi除了增加資料處理與統計方法模組，還有整合各種開放學習資源。我曾於[個人網誌](http://scchen.com/zh/post/jasp-jamovi/)整理可運用的資源，2018年最後一次的更新，JSAP與jamovi的資料收藏(Data Library)都大幅擴充，教學有更多範例可以使用。這段期間jamovi套件[`Statkat`](https://www.jamovi.org/library.html)發佈，提供使用者即時統計方法諮詢。循此我得和套件開發者Rivka. M. de Vries先行建置的網站[https://statkat.com/]，內容與架構符合我心目中的統計教學應具備的樣子。jamovi首席開發者Jonathon Love釋出的`Rj`，讓使用者能在jamovi裡操作基本的R程式碼，這個套件能更完整呈現與演練機率的計算與模擬。這些更新讓這一版電子書使用更明確的範例，解說統計方法的機率原理，以及運用間斷–連續變項的對比，介紹適用相對狀況的初級推論統計方法。
+這一版與前一版保持每個範例與習題都有JASP與jamovi兩種版本。感謝jamovi可執行R程式碼，前一版以嵌入式互動網頁解說機率原理的部分，儘可能以本人自編的jamovi範例檔取代，讓學習者能運用在個人練習與實務。
+

@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-17">
+<meta name="date" content="2019-02-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,11 +196,12 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="index.html"><a href="#app_part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app_part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -226,7 +227,7 @@
 <div id="header">
 <h1 class="title">心理科學基礎統計</h1>
 <p class="author"><em>陳紹慶 Sau-Chin Chen</em></p>
-<p class="date"><em>2019-02-17</em></p>
+<p class="date"><em>2019-02-18</em></p>
 </div>
 <div id="e5898de8a880" class="section level1 unnumbered">
 <h1>前言</h1>
@@ -237,7 +238,7 @@
 <p>中程因素是2016年翻譯了Daniel Lakens的線上課程<a href="https://www.coursera.org/learn/statistical-inferences">提昇你的統計推論功力(Improving your statistical inferences)</a>，我體會可以從培養學習者的思考實際問題能力，激發學習統計方法的動機，並且掌握正確的資訊。Daniel 使用的教材是近幾年引發心理學再現危機的指標研究，都有公開資料讓人取用。曉得這些研究背後故事，有助如何正確使用統計方法。</p>
 <p>但是對於統計的初學者，甚至是心理學的初學者，這些故事還無法引起這些學習者的共鳴。如何激起初級學習者的學習興趣，並指引他們走上正確的學習道路，就是寫這本書的近因。這個任務有幾個要挑戰的目標：首先是使用能引發初學者興趣的案例，每一個世代的入門學習者特有特殊的共同記憶，形成不同的大眾興趣。這也帶來第二個挑戰，如何保持編寫教材的中心思想，又能時俱進引用有吸引力的案例？引導初學者認識開放科學理念與操作方法，是累積高品質研究的基礎。所以我編輯這套入門統計教材，希望協助初學者找到適合自已的學習門徑，能在幾個月之後有能力學習<a href="https://www.coursera.org/learn/statistical-inferences">提昇你的統計推論功力</a>等進階課程。</p>
 <p>所幸已經出現許多公開資源，讓我有面對這些挑戰的機會。編輯這本電子書R套件的<a href="https://bookdown.org/yihui/bookdown/">bookdwon</a>，能整合各種有助學習的互動式材料於多種平台。新世代資料科學家提供的自由整合資源，降低學習者掌握統計觀念的門檻。特別感激年輕的史丹福大學研究生<a href="http://daniel-kunin.com/">Daniel Kunin</a>，與朋友一起花時間開發，又無私分享的<a href="https://students.brown.edu/seeing-theory/index.html">seeing theory</a>，讓這本書能嘗試傳統教科書做不到的互動學習。開源又潛力無窮的統計軟體<a href="https://jasp-stats.org/">JASP</a>與<a href="https://www.jamovi.org/">jamovi</a>，學習者容易上手，又是資料分析工作的實用工具。兩套開源軟體與科學研究開放平台<a href="https://osf.io/">Open Science Framework</a>密切整合，能彈性管理延伸學習材料。這本書的示範檔案，以及各單元習題，都發佈於<a href="https://osf.io/kdtjq/">心理科學基礎統計OSF專案</a>，任何人有需要，不必註冊，可直接取用專案中的學習材料。</p>
-<p>本書取用的示範與習題案例，都是可檢索論文全文與原始資料的研究，初始版本的案例主要來自Carlson與Winquist合著的教科書“An Introduction to Statistics: an Active Learning Approach”<span class="citation">(Carlson &amp; Winquist, <a href="#ref-Carlsonintroductionstatisticsactive2018">2018</a>)</span>，以及收集推特與臉書社團<a href="https://www.facebook.com/groups/853552931365745/">Psychological Methods Discussion Group</a>，可以啟發初學者的案例。習題也是使用有公開資料的研究。編寫這本書時候，我正在研發一套習題模板，方便管理與擴充各單元的資源。我更希望有意充實這套教材的朋友與同學們，可以提供您認為值得學習的材料。</p>
+<p>本書取用的示範與習題案例，都是可檢索論文全文與原始資料的研究，初始版本的案例主要來自Carlson與Winquist合著的教科書“An Introduction to Statistics: an Active Learning Approach”<span class="citation">(Carlson and Winquist <a href="#ref-Carlsonintroductionstatisticsactive2018">2018</a>)</span>，以及收集推特與臉書社團<a href="https://www.facebook.com/groups/853552931365745/">Psychological Methods Discussion Group</a>，可以啟發初學者的案例。習題也是使用有公開資料的研究。編寫這本書時候，我正在研發一套習題模板，方便管理與擴充各單元的資源。我更希望有意充實這套教材的朋友與同學們，可以提供您認為值得學習的材料。</p>
 <p>所有材料都不斷持續更新中，希望體現我想傳達給統計學習者與使用者我的學習觀：你今天學到的方法，是為了解決明天出現的新問題，而且會用另一種不同的面貌出現。</p>
 <ul>
 <li>第二版前言(2019.1.3)</li>
@@ -249,7 +250,7 @@
 <h3>參考文獻</h3>
 <div id="refs" class="references">
 <div id="ref-Carlsonintroductionstatisticsactive2018">
-<p>Carlson, K. A., &amp; Winquist, J. R. (2018). <em>An introduction to statistics: An active learning approach</em> (Second edition). Los Angeles: SAGE.</p>
+<p>Carlson, Kieth A., and Jennifer R. Winquist. 2018. <em>An Introduction to Statistics: An Active Learning Approach</em>. Second edition. Los Angeles: SAGE.</p>
 </div>
 </div>
             </section>
