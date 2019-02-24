@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="oneway-anova.html">
-<link rel="next" href="e58f83e88083e69687e78dbb.html">
+<link rel="next" href="data-manipulating.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -201,8 +201,17 @@
 <li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
 <li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
 <li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
-<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 使用條件式轉換與過濾資料</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="10-tips.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="10-tips.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -230,64 +239,93 @@
 <p>附錄分享個人JASP與jaomvi的設定與操作技巧，讀者可根據自已的使用習慣與經驗調整。</p>
 <div id="app-part1" class="section level2">
 <h2><span class="header-section-number">A.1</span> JASP與jamovi開發簡史與介面介紹</h2>
-<p><a href="https://jasp-stats.org/">JASP</a>是由荷蘭阿姆斯特丹大學Eric-Jan Wagenmakers教授領導的團隊於2015年啟動開發專案，核心是R套件路<a href="http://bayesfactorpcl.r-forge.r-project.org/">BayesFactor</a>，所以JASP從一開始就是開源軟體<span class="citation">(JASP Team <a href="#ref-JASP2018">2018</a>)</span>。因為核心成員是貝氏統計的專家，JASP不僅能做傳統的統計，也能計算貝式因子，並且操作方式與SPSS一樣。就算你還不明白什麼是貝氏因子，還是能用JASP學習傳統統計方法。</p>
+<p><a href="https://jasp-stats.org/">JASP</a>是由荷蘭阿姆斯特丹大學Eric-Jan Wagenmakers教授領導的團隊於2015年啟動開發專案，核心是R套件路<a href="http://bayesfactorpcl.r-forge.r-project.org/">BayesFactor</a>，所以JASP從一開始就是開源軟體。因為核心成員是貝氏統計的專家，JASP不僅能做傳統的統計，也能計算貝式因子，並且操作方式與SPSS一樣。就算你還不明白什麼是貝氏因子，還是能用JASP學習傳統統計方法。</p>
 <p>JASP能開啟的檔案格式有已格式化的文字檔(.csv, .txt)、SPSS資料檔(.sav)、以及Libera Office試算表(.ods)。從<a href="https://jasp-stats.org/">官方網站</a>下載對應作業系統的安裝程式，安裝成功後打開JASP，切換到<code>File</code>界面(見圖 <a href="jaspjamovi.html#fig:JASP-FILE">A.1</a> )，點選<strong>Computer</strong>，從存放在個人電腦中的資料夾位置，開啟gss2010.sav。從畫面上你可以看到，你可以透過網路開啟存放在<a href="https://osf.io/">OSF</a>的檔案。0.9版起，<strong>Example</strong>裡有相當豐富的範例檔案讓使用者學習。</p>
 <div class="figure" style="text-align: center"><span id="fig:JASP-FILE"></span>
-<img src="images/jasp-file.jpg" alt="JASP檔案選單" width="70%" />
+<img src="images/jasp_file.jpg" alt="JASP檔案選單" width="70%" />
 <p class="caption">
 圖 A.1: JASP檔案選單
 </p>
 </div>
 <p>成功載入資料內容後，JASP自動跳到<em>Common</em>界面，如圖 <a href="jaspjamovi.html#fig:JASPCOMMON">A.2</a> 。這筆資料有五個欄位，每個欄位名稱之前有一些特別的符號，稍後我們會知道這些符號提示欄位裡的資料，JASP是以什麼樣的<strong>尺度</strong>處理。</p>
 <div class="figure" style="text-align: center"><span id="fig:JASPCOMMON"></span>
-<img src="images/jasp-common.jpg" alt="JASP資料界面" width="70%" />
+<img src="images/jasp_common.jpg" alt="JASP資料界面" width="70%" />
 <p class="caption">
 圖 A.2: JASP資料界面
 </p>
 </div>
 <p><a href="https://www.jamovi.org/">jamovi</a>是由澳洲的軟體工程師<a href="https://jona.thon.love/">Jonathon Love</a>領銜開發的開源統計軟體。Jonathon曾參與開發最早發表的<a href="https://jona.thon.love/">JASP</a>，返回故鄉自立門戶後，與朋友合作開發jamovi。開發理念是讓不擅長寫程式碼的人士，能以接近試算表軟體的介面，使用各種強大的統計功能。</p>
-<p>從<a href="https://www.jamovi.org/">jamovi官方網站</a>下載對應作業系統的安裝程式並安裝成功之後，會發現介面和JASP有些不一樣，像圖 <a href="jaspjamovi.html#fig:jamovi-blank">A.3</a> 。</p>
+<p>從<a href="https://www.jamovi.org/">jamovi官方網站</a>下載對應作業系統的安裝程式並安裝成功之後，會發現介面和JASP有些不一樣，如圖 <a href="jaspjamovi.html#fig:jamovi-blank">A.3</a>。</p>
 <div class="figure" style="text-align: center"><span id="fig:jamovi-blank"></span>
-<img src="images/jamovi-blank.jpg" alt="jamovi起始畫面" width="80%" />
+<img src="images/jamovi_blank.jpg" alt="jamovi起始畫面" width="70%" />
 <p class="caption">
 圖 A.3: jamovi起始畫面
 </p>
 </div>
-<p>你需要點擊界面左上角三條橫線的圖示( 見圖 <a href="jaspjamovi.html#fig:jamovi-blank">A.3</a> 紅色圓圈處)，才能打開如圖 <a href="jaspjamovi.html#fig:jamovi-menu">A.4</a> 的檔案選單，選擇開啟存在本機的檔案。</p>
+<p>使用者需要點擊圖 <a href="jaspjamovi.html#fig:jamovi-blank">A.3</a> 紅色圓圈處的三條橫線，才能打開如圖 <a href="jaspjamovi.html#fig:jamovi-menu">A.4</a> 的檔案選單，選擇開啟存在本機的檔案。</p>
 <div class="figure" style="text-align: center"><span id="fig:jamovi-menu"></span>
-<img src="images/jamovi-menu.jpg" alt="jamovi檔案管理選單" width="80%" />
+<img src="images/jamovi_menu.jpg" alt="jamovi檔案管理選單" width="70%" />
 <p class="caption">
 圖 A.4: jamovi檔案管理選單
-</p>
-</div>
-<p>最新版的jamovi只能開啟已格式化的純文字檔案(.csv, .txt)，以及已建立的jamovi存檔(.omv)與JASP存檔(.jasp)。所以如果你要處理的資料本來是SPSS存檔，目前只能先匯入JASP存檔後，再以jamovi開啟。以剛剛匯入JASP的gss2010.sav示範，使用jamovi開啟的樣子如圖 <a href="jaspjamovi.html#fig:jamovi-opened">A.5</a> 。</p>
-<div class="figure" style="text-align: center"><span id="fig:jamovi-opened"></span>
-<img src="images/jamovi-opened.jpg" alt="jamovi資料界面" width="80%" />
-<p class="caption">
-圖 A.5: jamovi資料界面
 </p>
 </div>
 </div>
 <div id="app-part2" class="section level2">
 <h2><span class="header-section-number">A.2</span> jamovi模組安裝</h2>
-<p>jamovi使用者可以增加自已或他人開發的模組。只要點選操作介面右上界標記<code>Modules</code>的大十字圖案，就可以開啟模組安裝與更新選單。本書介紹的模擬程序，都是透過jamovi模組<code>Rj</code>執行。有安排模擬程序的示範檔案，相關單元及程式碼內註解，都有說明重要參數設定，讀者只要改變參數數值，就可以觀察模擬結果的變化。</p>
-<p>本書建議讀者安裝的模組有<code>Rj</code>(編寫與執行R程式碼)、<code>jpower</code>(考驗力分析與解說)、<code>distrACTION</code>(機率分佈圖解)、<code>R data sets</code>(R官方示範資料集)、<code>Statkat</code>(統計方法建議諮詢)、<code>learning statistics with jamovi</code>(同名教科書示範資料集)。</p>
+<p>jamovi使用者可以增加自已或他人開發的模組。只要點選操作介面右上界標記<code>Modules</code>的大十字圖案，就可以開啟模組管理選單(見圖 <a href="jaspjamovi.html#fig:jamovi-modules">A.5</a> )，安裝與更新需要使用的模組。如果使用jamovi的電腦不方便連線管理，使用者可以從<a href="https://www.jamovi.org/library.html">官方模組網頁</a>，下載模組的檔案包，從本機安裝。</p>
+<div class="figure" style="text-align: center"><span id="fig:jamovi-modules"></span>
+<img src="images/jamovi_modules.png" alt="jamovi模組管理選單" width="80%" />
+<p class="caption">
+圖 A.5: jamovi模組管理選單
+</p>
+</div>
+<p>本書建議讀者安裝的模組有<code>Rj</code>(編寫與執行R程式碼)、<code>jpower</code>(考驗力分析與解說)、<code>distrACTION</code>(機率分佈圖解)、<code>R data sets</code>(R官方示範資料集)、<code>Statkat</code>(統計方法建議諮詢)、<code>learning statistics with jamovi</code>(同名教科書示範資料集)。本書介紹的模擬程序，都是透過jamovi模組<code>Rj</code>執行。有安排模擬程序的示範檔案，相關單元及程式碼內註解，都有說明重要參數設定，讀者只要改變參數數值，就可以觀察模擬結果的變化。</p>
 </div>
 <div id="app-part3" class="section level2">
 <h2><span class="header-section-number">A.3</span> 數值顯示設定</h2>
+<p>報表顯示的數值都會有小數點之後的數字，推論統計必定產生的p值是最典型有小數點的數值。很多時候匯入的資料會有遺漏值，且因為資料編輯方法的關係，遺漏值會以各式各樣的代碼出現在資料裡。JASP與jamovi都有設定選項，讓使用者因應狀況，調整軟體處理這些數值的方式。</p>
+<p>圖 <a href="jaspjamovi.html#fig:JASP-pref-ana">A.6</a> 與圖 <a href="jaspjamovi.html#fig:JASP-pref-missing">A.7</a> 顯示開啟JASP設定選項的方法，以及調整小數點位數，還有設定遺漏值代碼的方法。JASP提供兩種小數點位數調整選項：<code>Display exact p-values</code>打勾之後，報表中的p值都會以精確的數值顯示；不打勾則顯示<em>&lt; .05</em>, <em>&lt; .001</em>等符合報告規範的數字。<code>Fix the numbers of decimals</code>之後的數值，決定除了p值之外，報表的每個數值可呈現之小數點後位數。遺漏值除了程式預設的四種代碼，使用者可根據實際需要，自行設定代碼符號，加入列表後，JASP自動判讀該代碼為遺漏值。</p>
+<div class="figure" style="text-align: center"><span id="fig:JASP-pref-ana"></span>
+<img src="images/JASP_pref_ana.png" alt="JASP設定選單–小數點位數設定" width="80%" />
+<p class="caption">
+圖 A.6: JASP設定選單–小數點位數設定
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:JASP-pref-missing"></span>
+<img src="images/JASP_pref_missing.png" alt="JASP設定選單–遺漏值設定" width="80%" />
+<p class="caption">
+圖 A.7: JASP設定選單–遺漏值設定
+</p>
+</div>
+<p>jamovi的設定選單相對簡潔，圖<a href="jaspjamovi.html#fig:jamovi-preference">A.8</a>是設定選單開啟的畫面。<strong>Results</strong>一欄的<code>Number format</code>與<code>p-value format</code>的功能與JASP的Analysis選單一樣，決定報表中的數值與p值顯示的小數點位數。<strong>Import</strong>一欄可設定遺漏值預設代碼，看似不如JASP多樣化，jamovi其實以其他功能取代之。</p>
+<div class="figure" style="text-align: center"><span id="fig:jamovi-preference"></span>
+<img src="images/jamovi_preference.PNG" alt="jamovi設定選單" width="80%" />
+<p class="caption">
+圖 A.8: jamovi設定選單
+</p>
+</div>
 </div>
 <div id="app-part4" class="section level2">
-<h2><span class="header-section-number">A.4</span> 匯出資料與輸出報表</h2>
+<h2><span class="header-section-number">A.4</span> 匯入與匯出資料</h2>
+<p>JASP與jamovi都可以匯入 <a href="https://en.wikipedia.org/wiki/Comma-separated_values">逗號分隔值</a> (Comma-Separated Values, CSV)的純文字表格資料。兩種程式都預設資料第一列是欄位標題，如同援引自<a href="https://www.ablebits.com/office-addins-blog/2014/05/01/convert-csv-excel/">Svetlana Cheusheva的部落格</a>的範例(見圖 <a href="jaspjamovi.html#fig:csv-preview">A.9</a> )，CSV資料可匯入任何像Excel一樣的試算表軟體。許多試算表軟體會自動處理匯入的CSV資料，將符合欄位設定的資料轉換為預設格式，JASP和jamovi會以內建演算規則，將每個欄位轉換為類別變項或連續變項。<strong>使用者須注意，內建演算規則轉換的變項，不一定符合使用者的計畫設定，進行分析之前必須再次確認。</strong></p>
+<div class="figure" style="text-align: center"><span id="fig:csv-preview"></span>
+<img src="images/csv_excel.png" alt="上圖：使用純文字編輯器直接開啟csv檔；下圖：使用Excel自動匯入功能開啟csv檔" width="80%" />
+<p class="caption">
+圖 A.9: 上圖：使用純文字編輯器直接開啟csv檔；下圖：使用Excel自動匯入功能開啟csv檔
+</p>
+</div>
+<p>許多商用的統計軟體也能匯入CSV表格資料，完成分析的存檔則都是各家的獨門格式，知名的SPSS、SAS皆是如此。JASP與jamovi都能匯入SPSS的存檔，jamovi還可以匯入SAS與STATA。為了促進可重製分析，在此建議可將運用JASP或jamovi匯入商用統計軟體的存檔，再將資料以CSV格式匯出。</p>
 </div>
 <div id="app-part5" class="section level2">
-<h2><span class="header-section-number">A.5</span> 使用條件式轉換與過濾資料</h2>
+<h2><span class="header-section-number">A.5</span> 輸出報表</h2>
+<p>使用者想散佈JASP或jamovi完成的分析報表，除了直接傳送檔案，也可以上傳Open Science Framework(osf.io)。上傳OSF的JASP與jamovi存檔，可直接在網站瀏覽報表內容。有關上傳與管理檔案的方法，可參考本書作者的<a href="http://scchen.com/zh/post/open-science-framework.zh/">格落格貼文</a>。圖 <a href="jaspjamovi.html#fig:JASP-osf">A.10</a> 是本書JASP範例存檔在OSF網頁的樣子。</p>
+<div class="figure" style="text-align: center"><span id="fig:JASP-osf"></span>
+<img src="images/JASP_osf.PNG" alt="在OSF網站瀏覽JASP分析報表，圖中是Emily Rosa的範例。" width="80%" />
+<p class="caption">
+圖 A.10: 在OSF網站瀏覽JASP分析報表，圖中是Emily Rosa的範例。
+</p>
+</div>
 
-</div>
-</div>
-<h3>參考文獻</h3>
-<div id="refs" class="references">
-<div id="ref-JASP2018">
-<p>JASP Team. 2018. “JASP (Version 0.8.5)[Computer Software].”</p>
 </div>
 </div>
             </section>
@@ -296,7 +334,7 @@
         </div>
       </div>
 <a href="oneway-anova.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="e58f83e88083e69687e78dbb.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-manipulating.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -346,6 +384,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -201,7 +201,17 @@
 <li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
 <li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
 <li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="01-intro.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="01-intro.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -257,10 +267,10 @@
 </div>
 <div id="intro_stat" class="section level2">
 <h2><span class="header-section-number">1.2</span> 統計思考養成途徑</h2>
-<p>Emily Rosa的報告裡是以數值呈現的機率資訊，判斷治療師有本事的可能性，有沒有高過治療師沒有本事的可能性。她所收集的資料，能以全部治療師的正確反應次數估計可能性，也可以每位治療師的正確率估計可能性。本書從這個案例，介紹每位統計初學者首先學習的單一樣本樣本推論統計(第<a href="#one-sample"><strong>??</strong></a>單元)。</p>
+<p>Emily Rosa的報告裡是以數值呈現的機率資訊，判斷治療師有本事的可能性，有沒有高過治療師沒有本事的可能性。她所收集的資料，能以全部治療師的正確反應次數估計可能性，也可以每位治療師的正確率估計可能性。本書運用這個案例，介紹每位統計初學者首先學習的單一樣本樣本推論統計(第<a href="onesample.html#onesample">5</a>單元)。</p>
 <p>學習第一套推論統計之前，我們要先認識描述資料的方法，也就是描述統計。描述統計的功用是劃清要進行推論的資訊，符合想確證的假設。好的描述統計能展現分析者對問題的理解，以及從資料獲得的判斷。在第<a href="describe.html#describe">2</a>單元，我們將學習類別變數與連續變數的資料尺度以及統計量數，還有表現各種變項組合的統計圖表。</p>
 <p>接著在第<a href="probability.html#probability">3</a>單元，我們要重新學習機率事件的計算，以及機率分佈的概念，再次深入了解何謂條件機率，以及運用貝氏定理計算事後機率。到了第<a href="distribution.html#distribution">4</a>單元，我們要運用程式模擬認識機率分配，探討為何在隨機化條件下收集的資料，才是能代表母群的樣本。這兩個單元都會運用相同的案例，介紹機率的計算與模擬。</p>
-<p>充分認識機率的計算與模擬，我們就能運用這些觀念與方法，理解推論統計的運作邏輯。第<a href="#one-sample"><strong>??</strong></a>單元以TT治療師的測試分析，學習假設檢定的正確運用方法，我們將了解如何考量無窮次的型一與型二錯誤率，謹慎推論一次的顯著性檢定結果；還有初步認識母數推論統計與無母數推論統計的差異。</p>
+<p>充分認識機率的計算與模擬，我們就能運用這些觀念與方法，理解推論統計的運作邏輯。第<a href="onesample.html#onesample">5</a>單元以TT治療師的測試分析，學習假設檢定的正確運用方法，我們將了解如何考量無窮次的型一與型二錯誤率，謹慎推論一次的顯著性檢定結果；還有初步認識母數推論統計與無母數推論統計的差異。</p>
 <p>第<a href="paired.html#paired">6</a>單元將前進到相依樣本的推論統計，在此將認識第一種效果量：標準化平均數差異，以及如何搭配樣本數及考驗力等資訊，判斷推論結果的可靠性。第<a href="independent.html#independent">7</a>單元以獨立樣本的推論統計範例，讓初學者認識實驗設計如何影響分析結果。</p>
 <p>第<a href="corr-reg.html#corr-reg">8</a>單元將認識第二種效果量：相關係數，以及最簡單的一元一次線性迴歸式。這個單元的範例與第<a href="paired.html#paired">6</a>單元與第<a href="independent.html#independent">7</a>單元有所關聯，以此引導初學者了解兩種推論方法與變異數分析的關聯性。進入第<a href="oneway-anova.html#oneway-anova">9</a>單元，就能運用線性迴歸了解正確使用變異數分析的關鍵，以及解讀及呈現分析結果的方式。</p>
 </div>
@@ -333,7 +343,7 @@
 
 </div>
 </div>
-<h3>參考文獻</h3>
+<h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-RosaCloseLookTherapeutic1998">
 <p>Rosa, Linda, Emily Rosa, Larry Sarner, and Stephen Barrett. 1998. “A Close Look at Therapeutic Touch.” <em>JAMA</em> 279 (13): 1005. <a href="https://doi.org/10.1001/jama.279.13.1005">https://doi.org/10.1001/jama.279.13.1005</a>.</p>

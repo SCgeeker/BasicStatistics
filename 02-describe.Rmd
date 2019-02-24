@@ -1,10 +1,12 @@
 # 描述統計 {#describe}
 
-我們使用2010年芝加哥大學國家民意研究中心([NORC](http://www.norc.org/Pages/default.aspx))公開的部分資料SPSS存檔(以下簡種gss2010；存檔下載網址在[這個網頁](https://studysites.sagepub.com/carlson/study/resources.htm)，或者直接[點此下載](https://studysites.sagepub.com/carlson/study/materials/datasets/17437_gss.zip))，做為這個單元的示範案例。JASP與jamovi都可以匯入SPSS存檔，圖\@ref(fig:jasp-gss2010)是開啟這份存檔之後的畫面。
+我們使用2010年芝加哥大學國家民意研究中心([NORC](http://www.norc.org/Pages/default.aspx))公開的部分資料SPSS存檔(以下簡種gss2010；存檔下載網址在[這個網頁](https://studysites.sagepub.com/carlson/study/resources.htm)，或者直接[點此下載](https://studysites.sagepub.com/carlson/study/materials/datasets/17437_gss.zip))，做為這個單元的示範案例。JASP與jamovi都可以匯入SPSS存檔，圖\@ref(fig:jasp-gss2010)是開啟這份存檔之後的畫面[^1]。
 
 ```{r jasp-gss2010, out.width='80%', fig.cap="以JASP開啟GSS 2010存檔資料。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/gss2010_data.PNG")
 ```
+
+[^1]: JASP示範檔案下載網址 ~ https://osf.io/r2fqt/
 
 讀者可以看到這份gss2010檔案有五個欄位，每個欄位名稱前面有個圖示，這個圖示標記**尺度**，決定處理一筆資料的方法。gss2010有名稱的資料欄位，統計實務稱為**變項**。決定好變項的尺度，我們才能知道要對這筆資料做什麼分析，才能取得我們想知道的資訊。
 
@@ -44,11 +46,13 @@ knitr::include_graphics("images/gss2010demo1.jpg")
 
 因為前面示範的gss2010沒有精確的名義尺度資料，我們從研究中心網站下載[原始gss2010的SPSS存檔](http://gss.norc.org/Documents/spss/2010_spss.zip)，取其中的性別(sex)變項，配合這段示範演練。這個變項資料只有兩種數值：1與2，分別代表男性與女性。從圖\@ref(fig:nominate-demo)的JASP操作與輸出畫面，你可以注意到變項圖示是![](images/icon/jasp-variable-nominal.png){width=3%}，表示以數字代表性別，因此**報表裡的眾數是2**，表示2010年調查的受訪者超過一半是女性。
 
-JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象。
+JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象[^2]。
 
 ```{r nominate-demo, out.width='75%', fig.cap="使用JASP計算名義尺度變項的眾數與繪製長條圖。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/nominate-demo.jpg")
 ```
+
+[^2]: 完整檔案的JASP示範 ~ https://osf.io/gtsrw/
 
 因為**眾數(Mode)**指示資料之中累積次數最多的數值，所以連續尺度的資料也可以使用眾數分析，但是並非最佳呈現**集中趨勢**統計量數。
 
@@ -66,7 +70,7 @@ knitr::include_graphics("images/median-demo.jpg")
 
 ### 連續尺度的集中與變異趨勢：平均數、變異數與標準差 {#describe-mean}
 
-我們用gss2010的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖\@ref(fig:interval-demo)示範除了輸出統計量數應勾選的選項，還有展示**直方圖(histogram)**，只要勾選`distribution plot`。如果讀者夠細心的話，會發現前面示範性別(sex)(圖\@ref(fig:nominate-demo))也是勾選`distribution plot`，怎麼繪製出來的是**長條圖**？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。**所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作**。**直方圖**與**長條圖**都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在下一個單位，我們會更詳細地認識其中的原理。
+我們用gss2010的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖\@ref(fig:interval-demo)示範除了輸出統計量數應勾選的選項，只要勾選`distribution plot`，就會繪製**直方圖(histogram)**。如果讀者夠細心的話，會發現前面示範性別(sex)(圖\@ref(fig:nominate-demo))也是勾選`distribution plot`，怎麼繪製出來的是**長條圖**？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。**所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作**。**直方圖**與**長條圖**都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在第\@ref(probability)單元，我們會更詳細地認識其中的原理。
 
 ```{r interval-demo, out.width='75%', fig.cap="使用JASP計算連續尺度變項的平均數、變異數、標準差與繪製直方圖。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/interval-demo.jpg")
@@ -74,8 +78,6 @@ knitr::include_graphics("images/interval-demo.jpg")
 
 **長條圖**裡有一條曲線，曲線之下的面積與長條的面積總合相等，這條曲線是根據JASP計算的**機率密度函數(probability density function)**所繪，統計實務都用機率密度函數表現連續尺度資料的**偏態**與**峰度**，圖\@ref(fig:interval-demo)的機率密度函數呈現**正偏態**：越高的數值密度低，所以平均數是三種集中趨勢量數的最大值。而中位數是三種量數的中間值，也是這筆資料沒有偏態時，位於中心的集中量數。
 
-<!---
-大部分時候的統計實務要報告平均數( $\bar{X}$ )與標準差(*s*)，原因是如果機率分配是對稱的，我們可以肯定平均數前後差距k個標準差之內的數值發生機率總和(k必須大於1)，不超過1/k^2^。這種規律稱為[柴比雪夫不等式](https://zh.wikipedia.org/zh-tw/%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F)，--->
 只要在報告中呈現平均數與標準差，有經驗的讀者能理解一筆資料的分配情況。當一筆資料用來推測有沒有不等於某個數值的效應，或者比較多筆資料的差異，平均數與標準差是相當實用的資訊。然而，很多時候我們手上的資料不會是對稱的，最簡單的判斷方法是看平均數、中位數、眾數是不是同一個數值。如果有三種量數有差異，最好要判斷**偏態的狀況**。在第\@ref(distribution)單元，我們會學到如何呈現機率密度函數的圖形，以及解讀方法，聰明地運用這些圖形，可以確保推測的正確性。
 
 變異數是標準差的平方(*s^2^*)，在分析單一變項資料的實務通常不會報告。然而統計學還沒完全離開數學獨立發展的時代，首先發現的是變異數，接著才是標準差，這在**相關與迴歸**的單元我們會再談到。最後我們看一個藏在JASP的操作裡的證據，在分析人生第一胎年齡的資料操作，只要勾選`Display correlation plot`，你會看到JASP輸出和圖\@ref(fig:interval-demo)一樣的**直方圖**。
@@ -83,9 +85,9 @@ knitr::include_graphics("images/interval-demo.jpg")
 許多處理連續尺度資料的實務裡，我們會將一筆資料的原始數值轉換為**標準分數z**。方法很簡單：**資料裡的每個數值減去平均數，再除以標準差**。使用標準分數z有許多好處：首先如果你使用一種尺度，測得好幾筆資料，每筆資料有各自的平均數與標準差，轉換為標準分數就能看出各筆資料之間的差異。推論統計也需要先將原始數值轉換為標準分數，才能運用符合資料特性的機率函數，估計每一筆資料被觀測到的可能性。在推論統計的單元，我們會發現許多推論統計方法要計算的統計數，與標準分數的計算公式非常相似。
 
 ## 統計圖表使用指南 {#describe-plots}
-
+<!---
 table of statistical plots
-
+--->
 如何使用合適的統計圖表，表現資料之中的資訊，是計算統計量數之外，另一項描述統計重要功課。選擇適合的統計圖表，原則與選擇合適的推論統計方法一致。我將讀者在各單元範例遇見或製作的統計圖表，與章節連結整理於下表：
 
 |  | 依變項為類別變項 |  依變項為連續變項 |
@@ -106,4 +108,6 @@ table of statistical plots
 
 ## 習題 {#describe-practice}
 
-開發中。
+1. 使用jamovi匯入gss2010資料，製作這個單元的JASP示範圖表。
+
+2. TBA

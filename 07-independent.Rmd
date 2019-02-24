@@ -45,7 +45,7 @@ knitr::include_graphics("images/independence-result.jpg")
 
 ### 獨立性檢定的抽樣分佈 {#independent-chisquare-sampling}
 
-我們在[jamovi示範檔案]()設計抽樣分佈的模擬程序，了解為何獨立性檢定的統計數最符合自由度為1的卡方分佈。獨立性檢定的抽樣分佈來自兩群受試者，各自有參與人數(Nocue_N,Havecue_N)，與做出其中一種反應的比例(Miss,Respond)。為了便於說明，這個程序設定兩群人數都是150人，各組會做出其中一種反應的比例如圖\@ref(fig:independence-result)的細格期望百分比。如此每一輪模擬製造的隨機數字，代表每一群做出各種回答的人數。這些隨機數字輸入以下公式，就能得到樣本的統計數。公式中i與j分別代表受試者群與反應種類，$n_{ij}$與$p_{ij}$分別對應初始設定的各群人數，以及做出某種回答的比例，$r_{ij}$是模擬程序製造的模擬數字。
+我們在[jamovi示範檔案](https://osf.io/v4upr/)設計抽樣分佈的模擬程序，了解為何獨立性檢定的統計數最符合自由度為1的卡方分佈。獨立性檢定的抽樣分佈來自兩群受試者，各自有參與人數(Nocue_N,Havecue_N)，與做出其中一種反應的比例(Miss,Respond)。為了便於說明，這個程序設定兩群人數都是150人，各組會做出其中一種反應的比例如圖\@ref(fig:independence-result)的細格期望百分比。如此每一輪模擬製造的隨機數字，代表每一群做出各種回答的人數。這些隨機數字輸入以下公式，就能得到樣本的統計數。公式中i與j分別代表受試者群與反應種類，$n_{ij}$與$p_{ij}$分別對應初始設定的各群人數，以及做出某種回答的比例，$r_{ij}$是模擬程序製造的模擬數字。
 
 $$\chi^2 = \sum_i \sum_j \frac{(r_{ij}-n_{ij}p_{ij})^2}{n_{ij}p_{ij}}$$
 
@@ -102,7 +102,7 @@ $$\chi^2 = \sum_i \sum_j \frac{(O_{ij}-E_{ij})^2}{E_{ij}}$$
 
 ### 案例介紹 {#independent-t-case}
 
-這裡採用JASP開發團隊執行長Wagenmakers與同事們[-@WagenmakersBayesianinferencepsychology2017]嘗試再現德國社會心理學者Topolinski與Sparenberg[-@TopolinskiTurningHandsTime2012]的體現認知實驗，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」。參與者以五點量表表達自己對題目主題的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖\@ref(fig:roll-setting)，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。
+這裡採用JASP開發團隊執行長Wagenmakers與同事們[-@wagenmakersTurningHandsTime2015]嘗試再現德國社會心理學者Topolinski與Sparenberg[-@TopolinskiTurningHandsTime2012]的體現認知實驗，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」。參與者以五點量表表達自己對題目主題的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖\@ref(fig:roll-setting)，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。
 
 ```{r roll-setting, out.width='60%', fig.cap="Wagenmakers等人(2017)再現Topolinski與Sparenberg(2012)體現認知實驗的現場設置。", fig.align='center', echo=FALSE}
 knitr::include_graphics("images/Wagenmakers-exp-setting.jpeg")
@@ -123,7 +123,7 @@ Wagenmakers決定執行研究之前，只有Topolinski與Sparenberg發表的結�
 
 ### 獨立樣本平均數的抽樣分佈 {#independent-sample}
 
-比照單元\@ref(paired-continuous-distribution)，我們設計獨立樣本平均數t檢定的模擬程序，解說為何假設檢定的統計值與計算信賴區間，應該採用t分數而非z分數。模擬程序原始碼可參考[jamovi示範檔案]()。
+比照單元\@ref(paired-continuous-distribution)，我們設計獨立樣本平均數t檢定的模擬程序，解說為何假設檢定的統計值與計算信賴區間，應該採用t分數而非z分數。模擬程序原始碼可參考[jamovi示範檔案](https://osf.io/spn64/)。
 
 首先設定母群體機率函數，除了兩組參與者評分的平均數(`counter_mean`與`clock_mean`)與樣本標準差(`counter_sd`與`clock_sd`)，再加上兩組人數(`counter_n`與`clock_n`)。以這些參數設定每位參與者的評分平均數是**均勻分佈**的隨機變數，分佈涵括的所有數值的發生機率都相等。逆時針組的最小的發生次數是平均數減1.75倍樣本標準差，最大的發生次數是平均數加1.75倍樣本標準差。順時針組的最小的發生次數是平均數減1.85倍樣本標準差，最大的發生次數是平均數加1.85倍樣本標準差。如圖\@ref(fig:independent-continuous-populations)所示。
 
@@ -234,14 +234,14 @@ knitr::include_graphics("images/JASP-independent-t-result.jpg")
 
 ## 研究設計與統計考驗力 {#independent-design}
 
-Wagenmakers等人的再現研究雖然沒有發現顯著結果，但是給我們一個機會探討效果量較小的研究，要如何改進，才能確保能發現顯著差異，又有起碼80%的考驗力。再度開啟考驗力分析的[jamovi示範檔案]()，第二份jPower報表`Independent Samples T-Test`顯示如果效果量只有0.149的兩組獨立樣本研究，要得p值通過.05判斷水準，且有80%考驗力的顯著結果，`Kitchen Roll`的兩群參與者人數需要各有至少709人，總共1418人。以圖\@ref(fig:indpendent-power)的曲線推測，除非這項實驗可測得的效果量能增加，或者降低其望達到的考驗力水準，才能減少參與者的人數。但是降低考驗力水準是本書建議讀者不該採取的策略，即使能得到通過.05判斷水準的p值，實驗結果也不容易再次重現。
+Wagenmakers等人的再現研究雖然沒有發現顯著結果，但是給我們一個機會探討效果量較小的研究，要如何改進，才能確保能發現顯著差異，又有起碼80%的考驗力。再度開啟考驗力分析的[jamovi示範檔案](https://osf.io/fb534/)，第二份jPower報表`Independent Samples T-Test`顯示如果效果量只有0.149的兩組獨立樣本研究，要得p值通過.05判斷水準，且有80%考驗力的顯著結果，`Kitchen Roll`的兩群參與者人數需要各有至少709人，總共1418人。以圖\@ref(fig:indpendent-power)的曲線推測，除非這項實驗可測得的效果量能增加，或者降低其望達到的考驗力水準，才能減少參與者的人數。但是降低考驗力水準是本書建議讀者不該採取的策略，即使能得到通過.05判斷水準的p值，實驗結果也不容易再次重現。
 
 
 ```{r independent-power, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE,fig.cap="達到指定考驗力之獨立樣本t檢定效果量，所需要的樣本數分析。"}
 knitr::include_graphics("image/unit07_independent_power.png")
 ```
 
-如果`Kitchen Roll`可以改成重覆量數設計，收集相依樣本的資料。結果依然測得效果量是0.149，同樣採用雙尾檢定與.05判斷水準進行相依樣本t檢定，`jPower`的估計顯示需要356人，就能確保顯著結果有80%的考驗力，如圖\@ref(fig:paired2-power)所示。比較兩種設計的考驗力分析，可知為何較難再現的心理科學研究，多數出現於常用獨立組設計的研究領域()。
+如果`Kitchen Roll`可以改成重覆量數設計，收集相依樣本的資料。結果依然測得效果量是0.149，同樣採用雙尾檢定與.05判斷水準進行相依樣本t檢定，`jPower`的估計顯示需要356人，就能確保顯著結果有80%的考驗力，如圖\@ref(fig:paired2-power)所示。讀者可透過作業問題的引導，比較兩種設計的考驗力分析，了解為何較難再現的心理科學研究，多數是獨立組設計的研究領域。
 
 ```{r paired2-power, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE,fig.cap="達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。"}
 knitr::include_graphics("image/unit07_paired_power.png")

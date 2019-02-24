@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -201,7 +201,17 @@
 <li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
 <li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
 <li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="05-onesample.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="05-onesample.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -254,31 +264,23 @@
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
-<td align="right">7304</td>
+<td align="right">7348</td>
 </tr>
 <tr class="even">
 <td align="left">2e-04</td>
-<td align="right">1922</td>
+<td align="right">1843</td>
 </tr>
 <tr class="odd">
 <td align="left">8e-04</td>
-<td align="right">615</td>
+<td align="right">635</td>
 </tr>
 <tr class="even">
 <td align="left">0.0051</td>
-<td align="right">119</td>
+<td align="right">150</td>
 </tr>
 <tr class="odd">
 <td align="left">0.0208</td>
-<td align="right">37</td>
-</tr>
-<tr class="even">
-<td align="left">0.0612</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">0.1372</td>
-<td align="right">1</td>
+<td align="right">24</td>
 </tr>
 </tbody>
 </table>
@@ -303,12 +305,12 @@
 <tr class="odd">
 <td>Reject Ho</td>
 <td align="center">0.05</td>
-<td align="center">0.31</td>
+<td align="center">0.41</td>
 </tr>
 <tr class="even">
 <td>Accept H0</td>
 <td align="center">0.95</td>
-<td align="center">0.69</td>
+<td align="center">0.59</td>
 </tr>
 </tbody>
 </table>
@@ -476,7 +478,7 @@ alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
 
 </div>
 </div>
-<h3>參考文獻</h3>
+<h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-lindsayResearchPreregistration1012016">
 <p>Lindsay, Stephen, Daniel Simons, and Scott Lilienfeld. 2016. “Research Preregistration 101.” <em>Observer</em> 29 (10): 14–16.</p>

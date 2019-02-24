@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,12 +196,21 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span></li>
-<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
-<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.7" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part4"><i class="fa fa-check"></i><b>A.10</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.11" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part5"><i class="fa fa-check"></i><b>A.11</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="07-independent.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="section-11.html"><a href="section-11.html"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-11.html"><a href="section-11.html#report-JASP"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-11.html"><a href="section-11.html#report-jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -289,7 +298,7 @@
 </div>
 <div id="independent-chisquare-sampling" class="section level3">
 <h3><span class="header-section-number">7.1.3</span> 獨立性檢定的抽樣分佈</h3>
-<p>我們在<a href="">jamovi示範檔案</a>設計抽樣分佈的模擬程序，了解為何獨立性檢定的統計數最符合自由度為1的卡方分佈。獨立性檢定的抽樣分佈來自兩群受試者，各自有參與人數(Nocue_N,Havecue_N)，與做出其中一種反應的比例(Miss,Respond)。為了便於說明，這個程序設定兩群人數都是150人，各組會做出其中一種反應的比例如圖<a href="independent.html#fig:independence-result">7.2</a>的細格期望百分比。如此每一輪模擬製造的隨機數字，代表每一群做出各種回答的人數。這些隨機數字輸入以下公式，就能得到樣本的統計數。公式中i與j分別代表受試者群與反應種類，<span class="math inline">\(n_{ij}\)</span>與<span class="math inline">\(p_{ij}\)</span>分別對應初始設定的各群人數，以及做出某種回答的比例，<span class="math inline">\(r_{ij}\)</span>是模擬程序製造的模擬數字。</p>
+<p>我們在<a href="https://osf.io/v4upr/">jamovi示範檔案</a>設計抽樣分佈的模擬程序，了解為何獨立性檢定的統計數最符合自由度為1的卡方分佈。獨立性檢定的抽樣分佈來自兩群受試者，各自有參與人數(Nocue_N,Havecue_N)，與做出其中一種反應的比例(Miss,Respond)。為了便於說明，這個程序設定兩群人數都是150人，各組會做出其中一種反應的比例如圖<a href="independent.html#fig:independence-result">7.2</a>的細格期望百分比。如此每一輪模擬製造的隨機數字，代表每一群做出各種回答的人數。這些隨機數字輸入以下公式，就能得到樣本的統計數。公式中i與j分別代表受試者群與反應種類，<span class="math inline">\(n_{ij}\)</span>與<span class="math inline">\(p_{ij}\)</span>分別對應初始設定的各群人數，以及做出某種回答的比例，<span class="math inline">\(r_{ij}\)</span>是模擬程序製造的模擬數字。</p>
 <p><span class="math display">\[\chi^2 = \sum_i \sum_j \frac{(r_{ij}-n_{ij}p_{ij})^2}{n_{ij}p_{ij}}\]</span></p>
 <p>同單元<a href="paired.html#paired-categorical-chisquare">6.1.3</a>，我們可以製造上萬筆實驗結果的統計數，繪製如圖<a href="independent.html#fig:chi-independent-simulation">7.3</a>的機率函數圖。</p>
 <div class="figure"><span id="fig:chi-independent-simulation"></span>
@@ -307,7 +316,7 @@
 <p>獨立樣本t檢定是行為科學研究最常見的分析方法，也是本書第一個要模擬兩個抽樣分佈進行解說的方法。因為兩個樣本分別來自不同的樣本分佈，一般統計教材使用獨立樣本t檢定介紹效果量與考驗力，但是少有教材運用模擬程序解析其中的關係。我們將延續單元<a href="paired.html#paired-power">6.3</a>的課題，探討樣本數、效果量與考驗力的關係。</p>
 <div id="independent-t-case" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> 案例介紹</h3>
-<p>這裡採用JASP開發團隊執行長Wagenmakers與同事們<span class="citation">(<span class="citeproc-not-found" data-reference-id="WagenmakersBayesianinferencepsychology2017"><strong>???</strong></span>)</span>嘗試再現德國社會心理學者Topolinski與Sparenberg<span class="citation">(<a href="#ref-TopolinskiTurningHandsTime2012">2012</a>)</span>的體現認知實驗，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」。參與者以五點量表表達自己對題目主題的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖<a href="independent.html#fig:roll-setting">7.4</a>，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。</p>
+<p>這裡採用JASP開發團隊執行長Wagenmakers與同事們<span class="citation">(<a href="#ref-wagenmakersTurningHandsTime2015">2015</a>)</span>嘗試再現德國社會心理學者Topolinski與Sparenberg<span class="citation">(<a href="#ref-TopolinskiTurningHandsTime2012">2012</a>)</span>的體現認知實驗，公開資料做為獨立樣本t檢定的示範。Topolinski與Sparenberg的實驗是請參與者來實驗室進行12題開放態度量表，題目內容像是「我經常嘗試新奇的外國食物」。參與者以五點量表表達自己對題目主題的開放程度（-2:非常不同意；2:非常同意）。實驗室環境安排如圖<a href="independent.html#fig:roll-setting">7.4</a>，102位參與者答題時要依指示捲動面前的衛生紙捲，其中48位以順時針方向轉動(clockwise)，另外54位以逆時針方向轉動(counter-clockwise)。</p>
 <div class="figure" style="text-align: center"><span id="fig:roll-setting"></span>
 <img src="images/Wagenmakers-exp-setting.jpeg" alt="Wagenmakers等人(2017)再現Topolinski與Sparenberg(2012)體現認知實驗的現場設置。" width="60%" />
 <p class="caption">
@@ -327,7 +336,7 @@
 </div>
 <div id="independent-sample" class="section level3">
 <h3><span class="header-section-number">7.2.2</span> 獨立樣本平均數的抽樣分佈</h3>
-<p>比照單元<a href="paired.html#paired-continuous-distribution">6.2.2</a>，我們設計獨立樣本平均數t檢定的模擬程序，解說為何假設檢定的統計值與計算信賴區間，應該採用t分數而非z分數。模擬程序原始碼可參考<a href="">jamovi示範檔案</a>。</p>
+<p>比照單元<a href="paired.html#paired-continuous-distribution">6.2.2</a>，我們設計獨立樣本平均數t檢定的模擬程序，解說為何假設檢定的統計值與計算信賴區間，應該採用t分數而非z分數。模擬程序原始碼可參考<a href="https://osf.io/spn64/">jamovi示範檔案</a>。</p>
 <p>首先設定母群體機率函數，除了兩組參與者評分的平均數(<code>counter_mean</code>與<code>clock_mean</code>)與樣本標準差(<code>counter_sd</code>與<code>clock_sd</code>)，再加上兩組人數(<code>counter_n</code>與<code>clock_n</code>)。以這些參數設定每位參與者的評分平均數是<strong>均勻分佈</strong>的隨機變數，分佈涵括的所有數值的發生機率都相等。逆時針組的最小的發生次數是平均數減1.75倍樣本標準差，最大的發生次數是平均數加1.75倍樣本標準差。順時針組的最小的發生次數是平均數減1.85倍樣本標準差，最大的發生次數是平均數加1.85倍樣本標準差。如圖<a href="independent.html#fig:independent-continuous-populations">7.5</a>所示。</p>
 <div class="figure"><span id="fig:independent-continuous-populations"></span>
 <img src="07-independent_files/figure-html/independent-continuous-populations-1.png" alt="獨立樣本t檢定母群體機率函數" width="50%" /><img src="07-independent_files/figure-html/independent-continuous-populations-2.png" alt="獨立樣本t檢定母群體機率函數" width="50%" />
@@ -381,14 +390,14 @@
 </div>
 <div id="independent-design" class="section level2">
 <h2><span class="header-section-number">7.3</span> 研究設計與統計考驗力</h2>
-<p>Wagenmakers等人的再現研究雖然沒有發現顯著結果，但是給我們一個機會探討效果量較小的研究，要如何改進，才能確保能發現顯著差異，又有起碼80%的考驗力。再度開啟考驗力分析的<a href="">jamovi示範檔案</a>，第二份jPower報表<code>Independent Samples T-Test</code>顯示如果效果量只有0.149的兩組獨立樣本研究，要得p值通過.05判斷水準，且有80%考驗力的顯著結果，<code>Kitchen Roll</code>的兩群參與者人數需要各有至少709人，總共1418人。以圖<a href="#fig:indpendent-power"><strong>??</strong></a>的曲線推測，除非這項實驗可測得的效果量能增加，或者降低其望達到的考驗力水準，才能減少參與者的人數。但是降低考驗力水準是本書建議讀者不該採取的策略，即使能得到通過.05判斷水準的p值，實驗結果也不容易再次重現。</p>
+<p>Wagenmakers等人的再現研究雖然沒有發現顯著結果，但是給我們一個機會探討效果量較小的研究，要如何改進，才能確保能發現顯著差異，又有起碼80%的考驗力。再度開啟考驗力分析的<a href="https://osf.io/fb534/">jamovi示範檔案</a>，第二份jPower報表<code>Independent Samples T-Test</code>顯示如果效果量只有0.149的兩組獨立樣本研究，要得p值通過.05判斷水準，且有80%考驗力的顯著結果，<code>Kitchen Roll</code>的兩群參與者人數需要各有至少709人，總共1418人。以圖<a href="#fig:indpendent-power"><strong>??</strong></a>的曲線推測，除非這項實驗可測得的效果量能增加，或者降低其望達到的考驗力水準，才能減少參與者的人數。但是降低考驗力水準是本書建議讀者不該採取的策略，即使能得到通過.05判斷水準的p值，實驗結果也不容易再次重現。</p>
 <div class="figure"><span id="fig:independent-power"></span>
 <img src="image/unit07_independent_power.png" alt="達到指定考驗力之獨立樣本t檢定效果量，所需要的樣本數分析。"  />
 <p class="caption">
 圖 7.11: 達到指定考驗力之獨立樣本t檢定效果量，所需要的樣本數分析。
 </p>
 </div>
-<p>如果<code>Kitchen Roll</code>可以改成重覆量數設計，收集相依樣本的資料。結果依然測得效果量是0.149，同樣採用雙尾檢定與.05判斷水準進行相依樣本t檢定，<code>jPower</code>的估計顯示需要356人，就能確保顯著結果有80%的考驗力，如圖<a href="independent.html#fig:paired2-power">7.12</a>所示。比較兩種設計的考驗力分析，可知為何較難再現的心理科學研究，多數出現於常用獨立組設計的研究領域()。</p>
+<p>如果<code>Kitchen Roll</code>可以改成重覆量數設計，收集相依樣本的資料。結果依然測得效果量是0.149，同樣採用雙尾檢定與.05判斷水準進行相依樣本t檢定，<code>jPower</code>的估計顯示需要356人，就能確保顯著結果有80%的考驗力，如圖<a href="independent.html#fig:paired2-power">7.12</a>所示。讀者可透過作業問題的引導，比較兩種設計的考驗力分析，了解為何較難再現的心理科學研究，多數是獨立組設計的研究領域。</p>
 <div class="figure"><span id="fig:paired2-power"></span>
 <img src="image/unit07_paired_power.png" alt="達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。"  />
 <p class="caption">
@@ -410,10 +419,13 @@
 
 </div>
 </div>
-<h3>參考文獻</h3>
+<h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-RogersRemindersAssociation2016">
 <p>Rogers, Todd, and Katherine L. Milkman. 2016. “Reminders Through Association.” <em>Psychological Science</em> 27 (7): 973–86. <a href="https://doi.org/10.1177/0956797616643071">https://doi.org/10.1177/0956797616643071</a>.</p>
+</div>
+<div id="ref-wagenmakersTurningHandsTime2015">
+<p>Wagenmakers, Eric-Jan, Titia F. Beek, Mark Rotteveel, Alex Gierholz, Dora Matzke, Helen Steingroever, Alexander Ly, et al. 2015. “Turning the Hands of Time Again: A Purely Confirmatory Replication Study and a Bayesian Analysis.” <em>Frontiers in Psychology</em> 6 (April). <a href="https://doi.org/10.3389/fpsyg.2015.00494">https://doi.org/10.3389/fpsyg.2015.00494</a>.</p>
 </div>
 <div id="ref-TopolinskiTurningHandsTime2012">
 <p>Topolinski, Sascha, and Peggy Sparenberg. 2012. “Turning the Hands of Time: Clockwise Movements Increase Preference for Novelty.” <em>Social Psychological and Personality Science</em> 3 (3): 308–14. <a href="https://doi.org/10.1177/1948550611419266">https://doi.org/10.1177/1948550611419266</a>.</p>

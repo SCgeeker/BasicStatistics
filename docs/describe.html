@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -201,7 +201,17 @@
 <li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
 <li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
 <li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯出資料與輸出報表</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="02-describe.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="02-describe.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -226,7 +236,7 @@
             <section class="normal" id="section-">
 <div id="describe" class="section level1">
 <h1><span class="header-section-number">第2單元</span> 描述統計</h1>
-<p>我們使用2010年芝加哥大學國家民意研究中心(<a href="http://www.norc.org/Pages/default.aspx">NORC</a>)公開的部分資料SPSS存檔(以下簡種gss2010；存檔下載網址在<a href="https://studysites.sagepub.com/carlson/study/resources.htm">這個網頁</a>，或者直接<a href="https://studysites.sagepub.com/carlson/study/materials/datasets/17437_gss.zip">點此下載</a>)，做為這個單元的示範案例。JASP與jamovi都可以匯入SPSS存檔，圖<a href="describe.html#fig:jasp-gss2010">2.1</a>是開啟這份存檔之後的畫面。</p>
+<p>我們使用2010年芝加哥大學國家民意研究中心(<a href="http://www.norc.org/Pages/default.aspx">NORC</a>)公開的部分資料SPSS存檔(以下簡種gss2010；存檔下載網址在<a href="https://studysites.sagepub.com/carlson/study/resources.htm">這個網頁</a>，或者直接<a href="https://studysites.sagepub.com/carlson/study/materials/datasets/17437_gss.zip">點此下載</a>)，做為這個單元的示範案例。JASP與jamovi都可以匯入SPSS存檔，圖<a href="describe.html#fig:jasp-gss2010">2.1</a>是開啟這份存檔之後的畫面<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。</p>
 <div class="figure" style="text-align: center"><span id="fig:jasp-gss2010"></span>
 <img src="images/gss2010_data.PNG" alt="以JASP開啟GSS 2010存檔資料。" width="80%" />
 <p class="caption">
@@ -263,7 +273,7 @@
 <div id="describe-mode" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> 名義尺度的集中趨勢：眾數</h3>
 <p>因為前面示範的gss2010沒有精確的名義尺度資料，我們從研究中心網站下載<a href="http://gss.norc.org/Documents/spss/2010_spss.zip">原始gss2010的SPSS存檔</a>，取其中的性別(sex)變項，配合這段示範演練。這個變項資料只有兩種數值：1與2，分別代表男性與女性。從圖<a href="describe.html#fig:nominate-demo">2.3</a>的JASP操作與輸出畫面，你可以注意到變項圖示是<img src="images/icon/jasp-variable-nominal.png" style="width:3.0%" />，表示以數字代表性別，因此<strong>報表裡的眾數是2</strong>，表示2010年調查的受訪者超過一半是女性。</p>
-<p>JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象。</p>
+<p>JASP與jamovi都提供編輯數值標籤(Lable)的，所以我們能另外命名MALE與FEMALE，在長條圖標示每一個長條代表的對象<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
 <div class="figure" style="text-align: center"><span id="fig:nominate-demo"></span>
 <img src="images/nominate-demo.jpg" alt="使用JASP計算名義尺度變項的眾數與繪製長條圖。" width="75%" />
 <p class="caption">
@@ -286,7 +296,7 @@
 </div>
 <div id="describe-mean" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> 連續尺度的集中與變異趨勢：平均數、變異數與標準差</h3>
-<p>我們用gss2010的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖<a href="describe.html#fig:interval-demo">2.5</a>示範除了輸出統計量數應勾選的選項，還有展示<strong>直方圖(histogram)</strong>，只要勾選<code>distribution plot</code>。如果讀者夠細心的話，會發現前面示範性別(sex)(圖<a href="describe.html#fig:nominate-demo">2.3</a>)也是勾選<code>distribution plot</code>，怎麼繪製出來的是<strong>長條圖</strong>？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。<strong>所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作</strong>。<strong>直方圖</strong>與<strong>長條圖</strong>都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在下一個單位，我們會更詳細地認識其中的原理。</p>
+<p>我們用gss2010的連續尺度資料：人生第一胎年齡(AgeFirstBorn)示範平均數(Mean)、變異數(Variance)與標準差(Std. Deviation)等統計量數。圖<a href="describe.html#fig:interval-demo">2.5</a>示範除了輸出統計量數應勾選的選項，只要勾選<code>distribution plot</code>，就會繪製<strong>直方圖(histogram)</strong>。如果讀者夠細心的話，會發現前面示範性別(sex)(圖<a href="describe.html#fig:nominate-demo">2.3</a>)也是勾選<code>distribution plot</code>，怎麼繪製出來的是<strong>長條圖</strong>？這兩個示範的差異顯示JASP與jamovi能根據變項尺度，繪製合理的統計圖。<strong>所以分析資料之前，確認每個變項的尺度，是負責分析的人要先做好的工作</strong>。<strong>直方圖</strong>與<strong>長條圖</strong>都是表現資料內每項數值的對應機率，JASP畫出的直方圖與長條圖都是固定的總面積，再根據資料的累積次數比例切分。只是間斷尺度的累積是不連續的，連續尺度的累積是可連續的。在第<a href="probability.html#probability">3</a>單元，我們會更詳細地認識其中的原理。</p>
 <div class="figure" style="text-align: center"><span id="fig:interval-demo"></span>
 <img src="images/interval-demo.jpg" alt="使用JASP計算連續尺度變項的平均數、變異數、標準差與繪製直方圖。" width="75%" />
 <p class="caption">
@@ -294,8 +304,6 @@
 </p>
 </div>
 <p><strong>長條圖</strong>裡有一條曲線，曲線之下的面積與長條的面積總合相等，這條曲線是根據JASP計算的<strong>機率密度函數(probability density function)</strong>所繪，統計實務都用機率密度函數表現連續尺度資料的<strong>偏態</strong>與<strong>峰度</strong>，圖<a href="describe.html#fig:interval-demo">2.5</a>的機率密度函數呈現<strong>正偏態</strong>：越高的數值密度低，所以平均數是三種集中趨勢量數的最大值。而中位數是三種量數的中間值，也是這筆資料沒有偏態時，位於中心的集中量數。</p>
-<!---
-大部分時候的統計實務要報告平均數( $\bar{X}$ )與標準差(*s*)，原因是如果機率分配是對稱的，我們可以肯定平均數前後差距k個標準差之內的數值發生機率總和(k必須大於1)，不超過1/k^2^。這種規律稱為[柴比雪夫不等式](https://zh.wikipedia.org/zh-tw/%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F)，--->
 <p>只要在報告中呈現平均數與標準差，有經驗的讀者能理解一筆資料的分配情況。當一筆資料用來推測有沒有不等於某個數值的效應，或者比較多筆資料的差異，平均數與標準差是相當實用的資訊。然而，很多時候我們手上的資料不會是對稱的，最簡單的判斷方法是看平均數、中位數、眾數是不是同一個數值。如果有三種量數有差異，最好要判斷<strong>偏態的狀況</strong>。在第<a href="distribution.html#distribution">4</a>單元，我們會學到如何呈現機率密度函數的圖形，以及解讀方法，聰明地運用這些圖形，可以確保推測的正確性。</p>
 <p>變異數是標準差的平方(<em>s<sup>2</sup></em>)，在分析單一變項資料的實務通常不會報告。然而統計學還沒完全離開數學獨立發展的時代，首先發現的是變異數，接著才是標準差，這在<strong>相關與迴歸</strong>的單元我們會再談到。最後我們看一個藏在JASP的操作裡的證據，在分析人生第一胎年齡的資料操作，只要勾選<code>Display correlation plot</code>，你會看到JASP輸出和圖<a href="describe.html#fig:interval-demo">2.5</a>一樣的<strong>直方圖</strong>。</p>
 <p>許多處理連續尺度資料的實務裡，我們會將一筆資料的原始數值轉換為<strong>標準分數z</strong>。方法很簡單：<strong>資料裡的每個數值減去平均數，再除以標準差</strong>。使用標準分數z有許多好處：首先如果你使用一種尺度，測得好幾筆資料，每筆資料有各自的平均數與標準差，轉換為標準分數就能看出各筆資料之間的差異。推論統計也需要先將原始數值轉換為標準分數，才能運用符合資料特性的機率函數，估計每一筆資料被觀測到的可能性。在推論統計的單元，我們會發現許多推論統計方法要計算的統計數，與標準分數的計算公式非常相似。</p>
@@ -303,7 +311,9 @@
 </div>
 <div id="describe-plots" class="section level2">
 <h2><span class="header-section-number">2.4</span> 統計圖表使用指南</h2>
-<p>table of statistical plots</p>
+<!---
+table of statistical plots
+--->
 <p>如何使用合適的統計圖表，表現資料之中的資訊，是計算統計量數之外，另一項描述統計重要功課。選擇適合的統計圖表，原則與選擇合適的推論統計方法一致。我將讀者在各單元範例遇見或製作的統計圖表，與章節連結整理於下表：</p>
 <table>
 <colgroup>
@@ -363,15 +373,25 @@
 </div>
 <div id="describe-practice" class="section level2">
 <h2><span class="header-section-number">2.6</span> 習題</h2>
-<p>開發中。</p>
+<ol style="list-style-type: decimal">
+<li><p>使用jamovi匯入gss2010資料，製作這個單元的JASP示範圖表。</p></li>
+<li><p>TBA</p></li>
+</ol>
 
 </div>
 </div>
-<h3>參考文獻</h3>
+<h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-StevensTheoryScalesMeasurement1946">
 <p>Stevens, S. S. 1946. “On the Theory of Scales of Measurement.” <em>Science</em> 103 (2684): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>JASP示範檔案下載網址 ~ <a href="https://osf.io/r2fqt/" class="uri">https://osf.io/r2fqt/</a><a href="describe.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>完整檔案的JASP示範 ~ <a href="https://osf.io/gtsrw/" class="uri">https://osf.io/gtsrw/</a><a href="describe.html#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 

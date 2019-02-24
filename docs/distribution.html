@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-18">
+<meta name="date" content="2019-02-24">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,12 +196,22 @@
 <li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
 <li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part4"><i class="fa fa-check"></i><b>A.10</b> 匯出資料與輸出報表</a></li>
-<li class="chapter" data-level="A.11" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part5"><i class="fa fa-check"></i><b>A.11</b> 使用條件式轉換與過濾資料</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
+<li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
+<li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="04-distributions.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="04-distributions.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -259,13 +269,13 @@
 <ul>
 <li><strong>母群體</strong>
 <ul>
-<li>教育大辭書<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>：「母群體是根據某些原則來加以認定的所有觀察量數之總數（集合）。」</li>
-<li>資訊與通信術語辭典<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>：「按研究目的所有對象之全體。」</li>
+<li>教育大辭書<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>：「母群體是根據某些原則來加以認定的所有觀察量數之總數（集合）。」</li>
+<li>資訊與通信術語辭典<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>：「按研究目的所有對象之全體。」</li>
 </ul></li>
 <li><strong>樣本</strong>
 <ul>
-<li>教育大辭書<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>：「樣本是指由母群體觀察量數中抽樣而得的部分集合體。」</li>
-<li>資訊與通信術語辭典<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>：「通常為了解一群個體或物質的特性，無法就所有的個體或物質一一檢查，而從其中隨機挑選出來一定數目稱之為樣本。」</li>
+<li>教育大辭書<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>：「樣本是指由母群體觀察量數中抽樣而得的部分集合體。」</li>
+<li>資訊與通信術語辭典<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>：「通常為了解一群個體或物質的特性，無法就所有的個體或物質一一檢查，而從其中隨機挑選出來一定數目稱之為樣本。」</li>
 </ul></li>
 </ul>
 <p>兩套辭典的說法都是根據研究的目標來解釋什麼是母群體，什麼是樣本。這些說法必須建立在讀者已經了解研究方向與觀察對象的性質，才能有真正的理解。對於初學者來說，會有疑惑是不是應該先學習研究方法或有初步的研究經驗，才能學習這些統計觀念。</p>
@@ -371,7 +381,7 @@
 
 </div>
 </div>
-<h3>參考文獻</h3>
+<h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-benjamin_redefine_2017-1">
 <p>Benjamin, Daniel J., James O. Berger, Magnus Johannesson, Brian A. Nosek, E.-J. Wagenmakers, Richard Berk, Kenneth A. Bollen, et al. 2017. “Redefine Statistical Significance.” <em>Nature Human Behaviour</em>, September, 1. <a href="https://doi.org/10.1038/s41562-017-0189-z">https://doi.org/10.1038/s41562-017-0189-z</a>.</p>
@@ -382,11 +392,11 @@
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1304019/" class="uri">http://terms.naer.edu.tw/detail/1304019/</a><a href="distribution.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1670463/" class="uri">http://terms.naer.edu.tw/detail/1670463/</a><a href="distribution.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1313804/" class="uri">http://terms.naer.edu.tw/detail/1313804/</a><a href="distribution.html#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1285800/" class="uri">http://terms.naer.edu.tw/detail/1285800/</a><a href="distribution.html#fnref4" class="footnote-back">↩</a></p></li>
+<ol start="4">
+<li id="fn4"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1304019/" class="uri">http://terms.naer.edu.tw/detail/1304019/</a><a href="distribution.html#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1670463/" class="uri">http://terms.naer.edu.tw/detail/1670463/</a><a href="distribution.html#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1313804/" class="uri">http://terms.naer.edu.tw/detail/1313804/</a><a href="distribution.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>引用網址 <a href="http://terms.naer.edu.tw/detail/1285800/" class="uri">http://terms.naer.edu.tw/detail/1285800/</a><a href="distribution.html#fnref7" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
