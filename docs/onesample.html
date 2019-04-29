@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-24">
+<meta name="date" content="2019-04-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,8 @@
 
 
 
+\usepackage{booktabs}
+\raggedbottom
 
 
 
@@ -125,12 +127,15 @@
 <li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
-<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-testing"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.3" data-path="onesample.html"><a href="onesample.html#onesmaple-binom-alpha"><i class="fa fa-check"></i><b>5.3.3</b> 估計型一錯誤率</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
-<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-t"><i class="fa fa-check"></i><b>5.4</b> 單一平均數t檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.1</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.2</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
+<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.3</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.4</b> 檢定程序示範</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
 <li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
@@ -181,37 +186,44 @@
 <li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
-<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
-<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.1</b> 獨立樣本變異數分析</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.1"><i class="fa fa-check"></i><b>9.1.1</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 示範檔案簡介</a></li>
+<li class="chapter" data-level="9.1.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.3"><i class="fa fa-check"></i><b>9.1.3</b> 示範檔案操作與報表解讀</a></li>
+<li class="chapter" data-level="9.1.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-residual"><i class="fa fa-check"></i><b>9.1.4</b> 殘差變異的抽樣分佈模擬</a></li>
+<li class="chapter" data-level="9.1.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-compatibility"><i class="fa fa-check"></i><b>9.1.5</b> 變異數分析適用性檢定</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
-<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-effect"><i class="fa fa-check"></i><b>9.2</b> 變異數分析的效果量</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-report"><i class="fa fa-check"></i><b>9.2.1</b> 分析後報告</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
-<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
-<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.3</b> 多組平均數的分析風險</a></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-summary"><i class="fa fa-check"></i><b>9.4</b> 總結</a></li>
+<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-practice"><i class="fa fa-check"></i><b>9.5</b> 習題</a></li>
+<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 系出同源的推論統計方法</a></li>
+<li class="chapter" data-level="9.7" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.7</b> 相依樣本變異數分析</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="oneway-anova.html"><a href="oneway-anova.html#-1"><i class="fa fa-check"></i><b>9.7.1</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.7.2" data-path="oneway-anova.html"><a href="oneway-anova.html#-1"><i class="fa fa-check"></i><b>9.7.2</b> 示範檔案簡介</a></li>
+<li class="chapter" data-level="9.7.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.7.3"><i class="fa fa-check"></i><b>9.7.3</b> 示範檔案操作說明</a></li>
+<li class="chapter" data-level="9.7.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.7.4"><i class="fa fa-check"></i><b>9.7.4</b> 示範檔案報表解讀</a></li>
+<li class="chapter" data-level="9.7.5" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.7.5"><i class="fa fa-check"></i><b>9.7.5</b> 分析後報告</a></li>
 </ul></li>
-<li class="appendix"><span><b>附錄</b></span></li>
-<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
-<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
-<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span><ul>
+<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part1"><i class="fa fa-check"></i><b>A.8</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part2"><i class="fa fa-check"></i><b>A.9</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part3"><i class="fa fa-check"></i><b>A.10</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.11" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part4"><i class="fa fa-check"></i><b>A.11</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.12" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part5"><i class="fa fa-check"></i><b>A.12</b> 輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
 <li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
 <li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
 </ul></li>
-<li class="chapter" data-level="C" data-path="05-onesample.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
-<li class="chapter" data-level="C.1" data-path="05-onesample.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
-<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
-<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
+<li class="chapter" data-level="C" data-path="writing-report.html"><a href="writing-report.html"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="05-onesample.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 統計資訊呈現建議</a></li>
+<li class="chapter" data-level="C.2" data-path="writing-report.html"><a href="writing-report.html#report-text"><i class="fa fa-check"></i><b>C.2</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.3" data-path="writing-report.html"><a href="writing-report.html#report-JASP"><i class="fa fa-check"></i><b>C.3</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.4" data-path="writing-report.html"><a href="writing-report.html#report-jamovi"><i class="fa fa-check"></i><b>C.4</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -248,9 +260,9 @@
 <p>我們在單元<a href="distribution.html#distribution-approaches">4.6</a>得知次數主義的要旨，是根據得到某種分析結果的假設為前提(<span class="math inline">\(\theta\)</span>)，評估觀察得到當下資料(D)的條件機率(<span class="math inline">\(P(\frac{D}{\theta})\)</span>)。這個條件機率能以對應的機率函數計算與模擬，關鍵在於許多問題一開始無法明確預測會得到什麼結果，只能確定最不可能被現在的觀察資料證實的假設，得到當前結果的條件機率(<span class="math inline">\(P(\frac{D}{\theta})\)</span>)必定<strong>不會超過研究者能接受的水準</strong>。這種假設被稱為虛無假設(Null Hypothesis，許多統計教材簡記為<span class="math inline">\(H_0\)</span>)，以虛無假設的機率分佈計算得到當前結果的條件機率，就是p值。這是虛無假設顯著性檢定的基本思考方式，也是本書介紹的所有統計方法的運作流程。</p>
 <div id="onesample-hypothesis" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> 虛無假設與對立假設</h3>
-<p>我們在單元@ref(#probability-permutation)討論投擲一枚正反面出現機率相等的硬幣，做一系列試驗得到的所有結果之可能機率，可用適當的機率函數計算。這個試驗案例改編自第一個本寫進教科書的假設檢定案例<span class="citation">(Fisher <a href="#ref-fisherDesignExperiments1966">1966</a>)</span>，教科書的作者Ronald Fisher是假設檢定方法的奠基者之一。在Fisher的著作中，他提到曾在一次英式下午茶場合，遇到一位女士宣稱有能力分辨喝下的奶茶是先倒茶再加牛奶，還是先倒牛奶再加茶。當場他設計一個實驗，安排四杯奶茶先倒茶再加牛奶，以及四杯奶茶先倒牛奶再加茶，配成四組請這位女士一一試喝，每一組會先喝到那一種由調製者隨機決定。這個設計如同有四枚硬幣，先不讓對方看投擲的結果，請對方猜正面與反面朝上各有多少枚。</p>
-<p>Fisher如此設計的想法，是因為在場沒有人真的知道那位女士的分辨能力。如果這位女士的能力可以量化，我們可以假設她正確分辨一對奶茶調製方法的機率是<span class="math inline">\(\theta_1\)</span>，根據二項分佈機率函數，她正確分辨所有奶茶如何調製的比率就是<span class="math inline">\(P(\theta_1)\)</span>。但是既然沒有人知道她的真本事，就算測試結果是百分之百，也無法說服眾人<span class="math inline">\(\theta_1\)</span>就是1。當時的Fisher有一個假設：如果這位女士是靠猜測的，每一組分辨成功的機率是50%，簡記為<span class="math inline">\(\theta_0\)</span>。運用單元<a href="probability.html#probability-binomial">3.3.1</a>學習到二項分佈計算方法，可以算出要正確猜對至少三對的機率是0.24，全部猜對的機率則是0.01。也就是說，這位女士全靠猜測的話，四組奶茶的測試全部正確的機率不到5%。</p>
-<p>Fisher的奶茶試驗所設定的<span class="math inline">\(\theta_0\)</span>，就是現代推論統計進行分析之前，要設定的虛無假設<span class="math inline">\(H_0\)</span>；當時想測試但是沒人知道的分辨能力就是對立假設(alternative hypothesis, <span class="math inline">\(H_1\)</span>)。<strong>對於試驗結果的判斷，Fisher的判斷原則來自計算的機率函數，但是現代推論統計的判斷原則來自模擬的機率函數。</strong>後者是與Roland Fisher同時代的兩位統計學者，Jerzy Neyman與Egon Pearson的貢獻，也是現代推論統計方法需要根據p值判斷分析結果的原因。</p>
+<p>我們在單元<a href="probability.html#probability-permutation">3.1.2</a>討論投擲一枚正反面出現機率相等的硬幣，做一系列試驗得到的所有結果之可能機率，可用適當的機率函數計算。這個試驗案例改編自第一個本寫進教科書的假設檢定案例<span class="citation">(Fisher <a href="#ref-fisherDesignExperiments1966">1966</a>)</span>，教科書的作者Ronald Fisher是假設檢定方法的奠基者之一。在Fisher的著作中，他提到曾在一次英式下午茶場合，遇到一位女士宣稱有能力分辨喝下的奶茶是先倒茶再加牛奶，還是先倒牛奶再加茶。當場他設計一個實驗，安排四杯奶茶先倒茶再加牛奶，以及四杯奶茶先倒牛奶再加茶，配成四組請這位女士一一試喝，每一組會先喝到那一種由調製者隨機決定。這個設計如同有四枚硬幣，先不讓對方看投擲的結果，請對方猜正面與反面朝上各有多少枚。</p>
+<p>Fisher如此設計的想法，是因為在場沒有人真的知道那位女士的分辨能力。如果這位女士不是靠任意猜測的，我們可以假設她正確分辨一對奶茶調製方法的機率是<span class="math inline">\(\theta_1\)</span>，根據二項分佈機率函數，她正確分辨所有奶茶如何調製的比率就是<span class="math inline">\(P(\theta_1)\)</span>。但是既然沒有人知道她的真本事，就算測試結果是百分之百，也無法說服眾人<span class="math inline">\(\theta_1\)</span>不是50%。當時的Fisher設定另一種假設：如果這位女士是靠猜測的，每一組分辨成功的機率是50%，簡記為<span class="math inline">\(\theta_0\)</span>。運用單元<a href="probability.html#probability-binomial">3.3.1</a>學習到二項分佈計算方法，可以算出要正確猜對至少三對的機率是0.24，全部猜對的機率則是0.01。也就是說，這位女士全靠猜測的話，四組奶茶的測試全部正確的機率不到5%。</p>
+<p>Fisher的奶茶試驗所設定的<span class="math inline">\(\theta_0\)</span>，就是現代進行推論統計分析之前，要設定的虛無假設<span class="math inline">\(H_0\)</span>；茶會當下想測試但是沒人知道的分辨能力就是對立假設(alternative hypothesis, <span class="math inline">\(H_1\)</span>)。<strong>對於試驗結果的判斷，Fisher的判斷原則來自計算的機率函數，而現代推論統計的判斷原則來自模擬的機率函數。</strong>後者是與Roland Fisher同時代的兩位統計學者，Jerzy Neyman與Egon Pearson的貢獻，也是現代推論統計方法需要根據p值判斷分析結果的原因。</p>
 <p>要了解如果運用模擬的機率函數進行虛無假設統計檢定，我們設定Fisher的奶茶試驗擴張到20組奶茶，如果這位女士每次測試的答對率有95%，就能模擬虛無假設與對立假設的機率分佈，也就是一次答對率各為0.5與0.95，試驗次數都是20次的二項機率分佈。</p>
 <p>以答對率0.95的二項機率分佈製造這位女士可能的答對次數，放到答對率0.5的二項機率分佈，就能算出如果她是靠猜測的，發現這項結果的條件機率，也就是p值。我們知道次數主義的宗旨是長期實驗結果的累積，模擬10000次結果，就能製造10000筆p值。</p>
 <table>
@@ -264,36 +276,48 @@
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
-<td align="right">7348</td>
+<td align="right">7355</td>
 </tr>
 <tr class="even">
 <td align="left">2e-04</td>
-<td align="right">1843</td>
+<td align="right">1895</td>
 </tr>
 <tr class="odd">
 <td align="left">8e-04</td>
-<td align="right">635</td>
+<td align="right">583</td>
 </tr>
 <tr class="even">
 <td align="left">0.0051</td>
-<td align="right">150</td>
+<td align="right">137</td>
 </tr>
 <tr class="odd">
 <td align="left">0.0208</td>
-<td align="right">24</td>
+<td align="right">26</td>
+</tr>
+<tr class="even">
+<td align="left">0.0612</td>
+<td align="right">4</td>
 </tr>
 </tbody>
 </table>
-<p>由表<a href="onesample.html#tab:sim-tea-p-values">5.1</a>可知，10000次實驗裡，大於.05的結果有4筆，大於.01的結果總計16筆。許多運用虛無假設顯著性檢定的分析，採用.05或.01為檢定水準的理由來自類似的模擬程序。研究者要採用那一種檢定水準，最佳的策略是了解要測試的虛無假設與對立假設性質。看過計算的與模擬的機率函數，我們可以歸納兩者性質如下：</p>
+<p>由表<a href="onesample.html#tab:sim-tea-p-values">5.1</a>可知，10000次實驗裡，大於.05的結果有4筆，大於.01的結果總計30筆。許多運用虛無假設顯著性檢定的分析，採用.05或.01為檢定水準的理由來自類似的模擬程序。研究者要採用那一種檢定水準，最佳的策略是了解要測試的虛無假設與對立假設性質。理解計算的與模擬的機率分佈，我們可以歸納兩者性質如下：</p>
 <ul>
-<li><strong>虛無假設(<span class="math inline">\(H_0\)</span>)</strong>：發現當下實驗結果的機率<strong>相對較低</strong>的機率分佈。</li>
-<li><strong>對立假設(<span class="math inline">\(H_1\)</span>)</strong>：發現當下實驗結果的機率<strong>相對較高</strong>的機率分佈。</li>
+<li><strong>虛無假設(<span class="math inline">\(H_0\)</span>)</strong>：發現當下實驗結果的機率<strong>相對較低</strong>的實驗結果抽樣分佈。</li>
+<li><strong>對立假設(<span class="math inline">\(H_1\)</span>)</strong>：發現當下實驗結果的機率<strong>相對較高</strong>的實驗結果抽樣分佈。</li>
 </ul>
+<p>運用隨機程序製造符合虛無假設與對立假設的實驗結果抽樣分佈，我們能從圖<a href="onesample.html#fig:tealady-sampling">5.1</a>看到兩者差異。</p>
+<div class="figure"><span id="fig:tealady-sampling"></span>
+<img src="images/unit05_tealady_sampling.png" alt="下午茶實驗測試20組的虛無假設(黑色線條)與對立假設(藍色線條)模擬抽樣分佈" width="400" />
+<p class="caption">
+圖 5.1: 下午茶實驗測試20組的虛無假設(黑色線條)與對立假設(藍色線條)模擬抽樣分佈
+</p>
+</div>
 </div>
 <div id="onesample-errors" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> 型一與型二錯誤率</h3>
-<p>有了檢定水準，做出的結論立刻產生兩個問題：(1)<strong>錯誤肯定(False Positive)</strong>～p值小於檢定水準，判定資料不支持虛無假設，實際上結論錯誤。(2)<strong>錯誤否定(False Negative)</strong>～p值大於檢定水準，判定資料支持虛無假設，實際上結論錯誤。放到模擬的虛無假設與對率假設機率函數，對應檢定水準的量數，換算的累積機率是做出<strong>錯誤肯定</strong>與<strong>錯誤否定</strong>結論的犯錯率，一般也稱為型一錯誤率與型二錯誤率。以前面一次測試20組奶茶的例子來說，我們設定答對18組是檢定水準，運用<a href="https://osf.io/3h94k/">示範檔案</a>的模擬程序，就可以得到如表<a href="#tab:sim-alpha"><strong>??</strong></a>的型一錯誤率(H0 is true, Reject H0)與型二錯誤率(H0 is false, Accept H0)。</p>
+<p>為了判斷當下的實驗結果是不是屬於虛無假設的抽樣分佈，必定發生兩種判斷失誤：(1)<strong>錯誤肯定(False Positive)</strong>～判定資料不支持虛無假設，實際上結論錯誤。(2)<strong>錯誤否定(False Negative)</strong>～判定資料支持虛無假設，實際上結論錯誤。運用虛無假設與對立假設的模擬正確率數值，總計大於正確率0.95的虛無假設數值個數，以及小於正確率0.95的對立假設數值個數，就是10000次實驗的結論為<strong>錯誤肯定</strong>與<strong>錯誤否定</strong>的失誤次數。換算為百分比，就是一般所稱的型一錯誤率與型二錯誤率。以一次測試20組奶茶的例子來說，我們設定答對18組是檢定水準，運用<a href="https://osf.io/3h94k/">示範檔案</a>的模擬程序，就可以得到如表<a href="onesample.html#tab:sim-alpha">5.2</a>的型一錯誤率(H0 is true, Reject H0)與型二錯誤率(H0 is false, Accept H0)。</p>
 <table>
+<caption><span id="tab:sim-alpha">表 5.2: </span>從模擬數值計算型一錯誤率與型二錯誤率</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -304,143 +328,121 @@
 <tbody>
 <tr class="odd">
 <td>Reject Ho</td>
-<td align="center">0.05</td>
-<td align="center">0.41</td>
+<td align="center">0.06</td>
+<td align="center">0.64</td>
 </tr>
 <tr class="even">
 <td>Accept H0</td>
-<td align="center">0.95</td>
-<td align="center">0.59</td>
+<td align="center">0.94</td>
+<td align="center">0.36</td>
 </tr>
 </tbody>
 </table>
-<p>介紹到此，讀者應該發現本書與其他統計教材的不同之處。我們先認識什麼是p值，接著才討論什麼是型一(<span class="math inline">\(\alpha\)</span>)與型二(<span class="math inline">\(\beta\)</span>)錯誤率，而且特意淡化檢定水準的說明。這是為了讓讀者，特別是實務經驗還不豐富的新手務必了解，p值與型一錯誤率是兩回事。即使以上例子的型一錯誤率剛好等於.05，與常見的檢定水準相同，但是檢定水準是由研究者自己設定，型一錯誤率是根據檢定水準判斷實際得到的p值，否定虛無假設卻不正確的最大機率。<a href="https://osf.io/3h94k/">示範檔案</a>的模擬程序就能看出計算p值與估計犯錯機率的機制，是完全不同的。</p>
-<p>相對於型一錯誤率，型二錯誤率指根據檢定水準判斷實際得到的p值，否定對立假設卻不正確的最大機率。能經得起長期考驗的研究結果，型一與型二錯誤率應該越小越好。設定檢定水準體現研究者對型一錯誤率的期許，型二錯誤率與研究者肯定對立假設的正確率互為補集，在統計學裡後者被稱為<strong>考驗力(Power)</strong>，也就是表<a href="#tab:sim-alpha"><strong>??</strong></a>的0.31。除了透過儘可能最小的檢定水準得到顯著結果，經得起考驗的研究結果也要有儘可能最大的考驗力。我們在第<a href="paired.html#paired">6</a>單元，將進一步認識什麼是考驗力，以及如何確保研究結果有起碼的考驗力。</p>
+<p>介紹到此，讀者應該發現本書與其他統計教材的不同之處。我們先認識什麼是p值，接著才討論什麼是型一(<span class="math inline">\(\alpha\)</span>)與型二(<span class="math inline">\(\beta\)</span>)錯誤率，而且特意淡化檢定水準的說明。這是為了讓讀者，特別是實務經驗還不豐富的新手了解，<strong>p值與型一錯誤率是兩回事</strong>。即使以上例子的型一錯誤率剛好等於.05，與常見的檢定水準相同，但是檢定水準其實是由研究者自己設定，型一錯誤率是估計根據真實結果與檢定水準的比較，否定虛無假設卻結論錯誤的最大機率。仔細檢視<a href="https://osf.io/3h94k/">示範檔案</a>的模擬程式碼，就能知道計算p值與估計犯錯機率的機制，是完全不同的。</p>
+<p>相對於型一錯誤率，型二錯誤率指根據檢定水準判斷實際得到的p值，否定對立假設卻不正確的最大機率。能經得起長期考驗的研究結果，型一與型二錯誤率應該越小越好。設定檢定水準體現研究者對型一錯誤率的期許，型二錯誤率與研究者肯定對立假設的正確率互為補集，在統計學裡後者被稱為<strong>考驗力(Power)</strong>，也就是表<a href="onesample.html#tab:sim-alpha">5.2</a>的0.64。除了透過儘可能最小的檢定水準得到顯著結果，經得起考驗的研究結果也要有儘可能最大的考驗力。我們在第<a href="paired.html#paired">6</a>單元，將進一步認識什麼是考驗力，以及如何確保研究結果有起碼的考驗力。</p>
 </div>
 <div id="onesample-parametric" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> 母數與無母數檢定</h3>
-<p>單元<a href="distribution.html#distribution-normal">4.5</a>提過有母數與無母數的機率分佈的區別，是函數的參數有沒有<strong>平均數</strong>與<strong>標準差/變異數</strong>。<strong>平均數</strong>在機率論又名<strong>期望值(Expected value)</strong>，因為展現隨機試驗所有結果的函數，代表每種結果的隨機變數(x)，與各自發生機率(p)的乘積總和，也就是平均數。機率論裡簡記為<span class="math inline">\(E(x)\)</span>，其中的x正是隨機變數。例如Roland Fisher版本的奶茶試驗，受測者純粹靠猜測的期望值是<span class="math inline">\(0\times\frac{1}{70} + 1\times\frac{16}{70}+2\times\frac{36}{70} + 3\times\frac{16}{70}+4\times\frac{1}{70} = 2\)</span>。也就是受測者靠著純粹猜測，最可能得到的試驗結果。</p>
+<p>單元<a href="distribution.html#distribution-normal">4.5</a>提過有母數與無母數的機率分佈的區別，兩者關鍵差異是母群體的機率函數參數有沒有<strong>平均數</strong>與<strong>標準差/變異數</strong>。<strong>平均數</strong>在機率論又名<strong>期望值(Expected value)</strong>，因為展現隨機試驗所有結果的函數，代表每種結果的隨機變數(x)，與各自發生機率(p)的乘積總和，也就是平均數。機率論裡簡記為<span class="math inline">\(E(x)\)</span>，其中的x正是隨機變數。例如Roland Fisher版本的奶茶試驗，受測者純粹靠猜測的期望值是<span class="math inline">\(0\times\frac{1}{70} + 1\times\frac{16}{70}+2\times\frac{36}{70} + 3\times\frac{16}{70}+4\times\frac{1}{70} = 2\)</span>。也就是受測者靠著純粹猜測，最可能得到的試驗結果。</p>
 <p>在第<a href="describe.html#describe">2</a>單元學習統計量數時，己知平均數是集中量數，與之相關的變異量數是變異數與標準差。既然標準差是變異數的開根號，我們只要了解變異數是每個隨機變數與期望值之差異平方的期望值，如以下公式：</p>
 <p><span class="math display">\[Var(x) = E[(x - E(x))^2]\]</span></p>
 <p>這個公式可以展開為兩種期望值：第一種是隨機變數平方的期望值<span class="math inline">\(E(x^2)\)</span>，第二種是隨機變數期望值的平方<span class="math inline">\(E(x)^2\)</span>，所以這個公式可以寫成：</p>
 <p><span class="math display">\[Var(x) = E(x^2) - E(x)^2\]</span></p>
 <p>我們在單元<a href="distribution.html#distribution-sample">4.3</a>知道所有統計方法的操作都是根據<strong>樣本的機率函數</strong>，或者說<strong>抽樣分佈</strong>。由於平均數與變異數都是母群體機率函數的參數，<strong>樣本的機率函數</strong>的參數也有這兩者。因此實際資料的平均數與變異數可以視為<strong>抽樣分佈</strong>的參數估計值，而且有的統計方法就算不清楚母群體的參數是多少，也能使用樣本的平均數與變異數替代。</p>
-<p>除了上述的參數估計，母數統計與無母數統計還有一些不同之處，在之後的單元再做介紹。如果兩種方法都可以分析手上的資料，何者較好並沒有絕對的標準。以下用Emily Rosa的專題研究資料，示範無母數統計–二項檢定與母數統計–單一平均數z檢定的分析程序。</p>
+<p>除了上述的參數估計，母數統計與無母數統計還有一些不同之處，在之後的單元再做介紹。如果兩種方法都可以分析手上的資料，何者較好並沒有絕對的標準，只有何者最適何分析面前的問題。以下用Emily Rosa的專題研究資料，示範無母數統計–二項檢定與母數統計–單一平均數t檢定的分析程序。</p>
 </div>
 </div>
 <div id="onesample-binomial" class="section level2">
 <h2><span class="header-section-number">5.3</span> 單一比率二項檢定</h2>
 <p>Emily Rosa在論文中提到，當年先從學校作業發想，找了15位自願參與的治療師進行第一次實驗。之後有記者注意，為了進行採訪，找了包括曾參與第一次實驗部分人士與其他治療師等13位自願者，進行了第二次實驗<span class="citation">(Rosa et al. <a href="#ref-RosaCloseLookTherapeutic1998">1998</a>)</span>。因此，本單元以第一次實驗結果示範單一比率二項檢定。</p>
 <p>二項檢定只要資料是0到1之內的比率值，配合資料的樣本數就能進行顯著性檢定，判斷資料能不能否定虛無假設。所以Roland Fisher的奶茶測試，可以用這種方法分析。設計與假設和奶茶測試如出一轍的TT測試，當然可以分析結果。</p>
-<p>Emily Rosa假設如果治療師真的有本事，答對率應該明顯高於50%，或者十次試驗有超過五次答對。符合假設的<strong>母群體機率函數的隨機變數</strong>只有兩個數值：1(正確)與0(錯誤)。兩個數值代表的事件機率分別為0.5，因此母群體機率函數的圖示如同圖<a href="onesample.html#fig:binomial-population">5.1</a>。</p>
+<p>Emily Rosa假設如果治療師真的有本事，答對率應該明顯高於50%，或者十次試驗有超過五次答對。符合假設的<strong>母群體機率函數的隨機變數</strong>只有兩個數值：1(正確)與0(錯誤)。兩個數值代表的事件機率分別為0.5，因此母群體機率函數的圖示如同圖<a href="onesample.html#fig:binomial-population">5.2</a>。</p>
 <div class="figure"><span id="fig:binomial-population"></span>
 <img src="images/unit05_binomial_population.PNG" alt="單一比率二項檢定之母群體機率函數" width="400" />
 <p class="caption">
-圖 5.1: 單一比率二項檢定之母群體機率函數
+圖 5.2: 單一比率二項檢定之母群體機率函數
 </p>
 </div>
-<p>Emily Rosa第一次實驗收集了15人共150次回答正確或錯誤的紀錄，使用這個原則進行一萬次模擬，就能得到圖<a href="onesample.html#fig:binomial-sampling">5.2</a>的<strong>樣本機率函數</strong>。</p>
+<p>Emily Rosa第一次實驗收集了15人共150次回答正確或錯誤的紀錄，使用這個原則進行一萬次模擬，就能得到圖<a href="onesample.html#fig:binomial-sampling">5.3</a>的<strong>樣本機率函數</strong>。</p>
 <div class="figure"><span id="fig:binomial-sampling"></span>
 <img src="images/unit05_binomial_sampling.PNG" alt="單一比率二項檢定之樣本機率函數" width="400" />
 <p class="caption">
-圖 5.2: 單一比率二項檢定之樣本機率函數
+圖 5.3: 單一比率二項檢定之樣本機率函數
 </p>
 </div>
 <div id="onesample-central" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> 中央極限定理(#onesample-central)</h3>
+<h3><span class="header-section-number">5.3.1</span> 中央極限定理</h3>
 <p>這個例子體現母群體的機率函數，不必然等於樣本機率函數。只要產生樣本的隨機方法符合母群體機率函數，樣本機率函數就會接近常態分佈。這種現象在機率論稱為<strong>中央極限定理</strong>，最早由十八世紀的法國數學家亞伯拉罕·棣美弗與十九世紀的皮耶-西蒙·拉普拉斯證明。中央極限定理是今日我們能運用樣本極率函數，或者抽樣分佈，以手中資料進行推論統計的基礎。</p>
-<p>我們不必深入了解如何推導中央極限定理，必須知道的是如何判斷模擬的抽樣分佈確實是常態分佈。最直接的方法是判讀分位圖(Q-Q plot)：圖<a href="onesample.html#fig:binomial-sampling-qq">5.3</a>是構成圖<a href="onesample.html#fig:binomial-sampling">5.2</a>的隨機數值，所繪製的分位圖。分位圖的橫軸(Theoretical Quantilies)是隨機數值的標準化分數，也就是z值；縱軸(Sample Quantiles)是隨機數值裡，對應每個z值的累積百分比的分位數。分位圖包括兩種數值的散佈圖，以及通過兩類數值皆為0的迴歸直線。符合中央極限定理的抽樣分佈，繪製出的散佈圖資料點，必定完全貼合迴歸直線。統計語言R有內建分位圖繪圖函式。讀者可自行檢視<a href="https://osf.io/ygfsv/">jamovi模擬程序示範檔案</a>，<code>Rj</code>套件操作視窗裡的<code>qqplot</code>與<code>qqnorm</code>函式。</p>
+<p>我們不必深入了解如何推導中央極限定理，只是必須知道如何判斷模擬的抽樣分佈確實是常態分佈。最直接的方法是判讀分位圖(Q-Q plot)：圖<a href="onesample.html#fig:binomial-sampling-qq">5.4</a>是構成圖<a href="onesample.html#fig:binomial-sampling">5.3</a>的隨機數值，所繪製的分位圖。分位圖的橫軸(Theoretical Quantilies)是隨機數值的標準化分數，也就是z值；縱軸(Sample Quantiles)是隨機數值裡，對應每個z值的累積百分比的分位數。分位圖包括兩種數值的散佈圖，以及通過兩類數值皆為0的迴歸直線。符合中央極限定理的抽樣分佈，繪製出的散佈圖資料點，必定完全貼合迴歸直線。統計語言R有內建分位圖繪圖函式。讀者可自行檢視<a href="https://osf.io/ygfsv/">jamovi模擬程序示範檔案</a>，<code>Rj</code>套件操作視窗裡的<code>qqplot</code>與<code>qqnorm</code>函式。</p>
 <div class="figure"><span id="fig:binomial-sampling-qq"></span>
 <img src="images/unit05_binomial_sample_qq.png" alt="單一比率二項檢定之樣本機率函數分位圖" width="400" />
 <p class="caption">
-圖 5.3: 單一比率二項檢定之樣本機率函數分位圖
+圖 5.4: 單一比率二項檢定之樣本機率函數分位圖
 </p>
 </div>
 <p>由此例開始，本書介紹的推論統計方法，只要所根據的抽樣分佈符合常態分佈，都會使用分位圖檢驗抽樣分佈。我們在第<a href="paired.html#paired">6</a>單元，進一步會學到即使完全不知母群體機率函數的模樣，但是只要肯定存在母數(期望值)，樣本機率函數是接近當下樣本平均數與變異數的常態分佈。</p>
 </div>
-<div id="onesample-binomial-case" class="section level3">
+<div id="onesample-binomial-testing" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> 檢定程序示範</h3>
-<p>此處以JASP示範如何使用二項檢定分析Emily Rosa的第一次實驗資料。JASP的Data Library有收錄這筆資料，讀者除了可自行開啟，也可下載本書的<a href="">JASP示範檔案</a>，觀摩如何使用<code>Frequencies</code> -&gt; <code>Binomial Test</code>模組設定操作。</p>
+<p>此處以JASP示範如何使用二項檢定分析Emily Rosa的第一次實驗資料。JASP的Data Library有收錄這筆資料，讀者除了可自行開啟，也可下載本書的<a href="https://osf.io/rax3g/">JASP示範檔案</a>，觀摩如何使用<code>Frequencies</code> -&gt; <code>Binomial Test</code>模組設定操作。</p>
 <p>因為Emily Rosa假設有本事的治療師，正確率應該明顯高於50%，因此設定虛無假設：proportion = 0.5，對立假設：proportion &gt; 0.5。所以設定視窗裡的<code>Test value</code>是0.5，Hypothesis勾選<code>&gt; Test value</code>。</p>
-<p><a href="https://osf.io/rax3g/">JASP示範檔案</a>之中的顯著性檢定結果回報兩個p值，各自代表正確與錯誤的回答比率都不能否定虛無假設。這些p值是抽樣分佈的累積次數相對比例，由於這次分析想確定治療師的正確率有沒有高於0.5，所以兩個p值都是由圖<a href="onesample.html#fig:binomial-sampling">5.2</a>的抽樣分佈Proportion最大值，累積到對應資料Proportion之相對面積。如圖<a href="onesample.html#fig:binomial-sampling-correct">5.4</a>是正確次數的二項檢定p值；而圖<a href="onesample.html#fig:binomial-sampling-incorrect">5.5</a>是錯誤次數的二項檢定p值。讀者可在<a href="https://osf.io/ygfsv/">jamovi模擬程序示範檔案</a>，探索以相同規模重做一次Emily Rosa的實驗，所有治療師要做對多少次，二項檢定才能肯定他們真有本事？</p>
+<p><a href="https://osf.io/rax3g/">JASP示範檔案</a>之中的顯著性檢定結果回報兩個p值，各自代表正確與錯誤的回答比率都不能否定虛無假設。這些p值的計算是根據假設每次答對率為0.5，累積150次嘗試的二項分佈。再以實際的正確次數或錯誤次數，計算該次數到總次數的相對累積機率，這項p值即代表這群治療師的答對率有沒有高於0.5，如圖<a href="onesample.html#fig:binomial-sampling-correct">5.5</a>是正確次數的二項檢定p值；而圖<a href="onesample.html#fig:binomial-sampling-incorrect">5.6</a>是錯誤次數的二項檢定p值。讀者可在<a href="https://osf.io/ygfsv/">jamovi模擬程序示範檔案</a>，探索以相同規模重做一次Emily Rosa的實驗，所有治療師要做對多少次，單一比率二項檢定才能肯定他們真有本事？
+<!---
+所以兩個p值都是由圖\@ref(fig:binomial-sampling)的抽樣分佈Proportion最大值，累積到對應資料Proportion之相對面積。
+---></p>
 <div class="figure"><span id="fig:binomial-sampling-correct"></span>
-<img src="images/unit05_binomial_sample_correct.png" alt="單一比率二項檢定之正確次數p值視覺化" width="400" />
+<img src="images/unit05_binomial_sample_correct.png" alt="單一比率二項檢定之正確次數p值視覺化" width="500" />
 <p class="caption">
-圖 5.4: 單一比率二項檢定之正確次數p值視覺化
+圖 5.5: 單一比率二項檢定之正確次數p值視覺化
 </p>
 </div>
 <div class="figure"><span id="fig:binomial-sampling-incorrect"></span>
-<img src="images/unit05_binomial_sample_incorrect.png" alt="單一比率二項檢定之錯誤次數p值視覺化" width="400" />
+<img src="images/unit05_binomial_sample_incorrect.png" alt="單一比率二項檢定之錯誤次數p值視覺化" width="500" />
 <p class="caption">
-圖 5.5: 單一比率二項檢定之錯誤次數p值視覺化
+圖 5.6: 單一比率二項檢定之錯誤次數p值視覺化
 </p>
 </div>
 </div>
+<div id="onesmaple-binom-alpha" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> 估計型一錯誤率</h3>
+<p>在圖<a href="onesample.html#fig:binomial-sampling-correct">5.5</a>與圖<a href="onesample.html#fig:binomial-sampling-incorrect">5.6</a>，我們標示符合該抽樣分佈平均值與標準差的常態分佈的藍色曲線。即使模擬的常態分佈幾乎貼合理論的常態分佈，讀者必須區分兩者是不同的機率函數。透過常態分佈的機率函數，我們可以取大於平均Proportion1.64個標準差的總計正確次數，是能不接受當下實驗結果屬於虛無假設抽樣分佈一部分的臨界值。這裡展示估計型一錯誤率的方法是計算所有模擬的Proportion數值總數，總計大於這個臨界值的比例。重覆執行<a href="https://osf.io/ygfsv/">jamovi模擬程序示範檔案</a>數次，讀者會發現型一錯誤率估計值在4%到6%之間變化，平均來說將趨近5%。</p>
 </div>
-<div id="onesample-z" class="section level2">
-<h2><span class="header-section-number">5.4</span> 單一平均數z檢定</h2>
-<p>除了所有治療師的答對率，Emily Rosa也可以用每位治療師的平均正確次數做分析。她與父母等人發表的論文是使用個人的正確次數，分析治療師們到底有沒有真本事。z檢定示範也是採用個人正確次數，但是原始論文並不是用z檢定分析結果。</p>
-<p>在單元<a href="#one-sample-hypothesis"><strong>??</strong></a>Roland Fisher的奶茶試驗解說中，我們得知Emily Rosa的實驗參考Fisher的設計，因此治療師們如果是靠運氣面對Emily的測試，每個人能做出正確次數的機率，符合試驗次數n=10，一次試驗正確率p=0.5的二項機率分佈。這個分佈可視為符合條件的母群體，其平均數是5，變異數是2.5，如圖<a href="onesample.html#fig:normal-test-population">5.6</a>。</p>
-<div class="figure"><span id="fig:normal-test-population"></span>
-<img src="images/unit05_normal_population.PNG" alt="單一平均數z檢定之母群體機率函數" width="400" />
+</div>
+<div id="onesample-t" class="section level2">
+<h2><span class="header-section-number">5.4</span> 單一平均數t檢定</h2>
+<p>除了所有治療師的答對率，Emily Rosa也可以用每位治療師的平均正確次數做分析。她與父母等人發表的論文是使用個人的正確次數，分析治療師們到底有沒有真本事。以下示範原始論文使用的單一平均數t檢定分析結果。</p>
+<p>稍早在單元 <a href="onesample.html#onesample-test">5.2</a> Roland Fisher的下午茶試驗解說中，我們得知Emily Rosa的實驗參考Fisher的設計，因此治療師們如果是靠運氣面對Emily的測試，每個人能做出正確次數的機率，符合一次試驗正確率p=0.5的二項機率分佈。每位治療師進行十次測試，依靠運氣的正確次數期望值就是<span class="math inline">\(10 \times 0.5 = 5\)</span>。只要符合此期望值，不論治療師進行幾次測試，或招募多少位治療師，都能製造虛無假設的平均正確次數抽樣分佈。</p>
+<p>如果Emily認為有本事的治療師應該有80%以上的答對率，我們就可以設定對立假設正確次數期望值是<span class="math inline">\(10 \times 0.8 = 8\)</span>。招募的治療師確實有此本事的話，Emily不論做多少次實驗，平均正確次數的抽樣分佈之期望值將接近8次。</p>
+<!---
+這個分佈可視為符合條件的母群體，其平均數是5，變異數是2.5，如圖\@ref(fig:normal-test-population)。
+
+<div class="figure">
+<img src="images/unit05_normal_population.PNG" alt="單一平均數t檢定之母群體機率函數" width="400" />
+<p class="caption">(\#fig:normal-test-population)單一平均數t檢定之母群體機率函數</p>
+</div>
+--->
+<p>我們運用虛無假設及對立假計的設定，製造一萬次模擬實驗結果，每次有十五筆平均正確次數，累積出如圖<a href="onesample.html#fig:one-test-sampling">5.7</a>的兩套抽樣分佈直方圖。所有模擬實驗的平均數相當接近預設的期望值，但是變異數並不相同。以兩套抽樣分佈的期望值與變異數繪製常態分佈，可發現兩套抽樣分佈都相當接近常態分佈，顯示每位治療師測試結果的平均值，累積而成的抽樣分佈遵守中央極限定理，趨近常態分佈。</p>
+<div class="figure"><span id="fig:one-test-sampling"></span>
+<img src="images/unit05_one_sampling.PNG" alt="單一平均數t檢定平均值抽樣分佈：虛無假設(藍色)、對立假設(紅色)、t分佈判斷標準(黑色垂直線)、常態分佈判斷標準(灰色垂直線)" width="400" />
 <p class="caption">
-圖 5.6: 單一平均數z檢定之母群體機率函數
+圖 5.7: 單一平均數t檢定平均值抽樣分佈：虛無假設(藍色)、對立假設(紅色)、t分佈判斷標準(黑色垂直線)、常態分佈判斷標準(灰色垂直線)
 </p>
 </div>
-<p>以上述設定的二項機率分佈製造一萬次實驗結果，每次結果有十五筆正確次數，每次實驗結果的平均數就會累積成如圖<a href="onesample.html#fig:normal-test-sampling">5.7</a>的抽樣分佈，也就是虛無假設的機率分佈。讀者會發現抽樣分佈的變異數，正好等於母群體變異數的<span class="math inline">\(frac{1}{15}\)</span>倍。這個案例體現使用z檢定的前提：是我們<strong>確定母群體變異數，且肯定抽樣分佈符合常態分佈</strong>的狀況。</p>
-<div class="figure"><span id="fig:normal-test-sampling"></span>
-<img src="images/unit05_normal_sampling.PNG" alt="單一平均數z檢定樣本機率函數" width="400" />
-<p class="caption">
-圖 5.7: 單一平均數z檢定樣本機率函數
-</p>
+<div id="onsample-error" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> 錯誤率估計比較：常態分佈 vs. t分佈</h3>
+<p>然而我們為何要使用t分佈–而非常態分佈–判斷統計值屬於虛無假設的條件機率？從型一錯誤率估計結果，能得到一些可供解釋的資訊。圖<a href="onesample.html#fig:one-test-sampling">5.7</a>呈現t分佈與常態分佈預估的判斷標準，運用<a href="https://osf.io/4tpdb/">jamovi示範檔案</a>的模擬程序，可以算出型一與型二錯誤率的估計值：常態分佈標準估計型一錯誤率約0.051，估計型二錯誤率約0.0019；t分佈標準估計型一錯誤率約0.0275，估計型二錯誤率約0.008。</p>
+<p>如果採納一般約定的0.05顯著水準，常態分佈的標準看起來剛剛好，t檢定似乎過嚴。但是這個原則來自約定促成，並沒有考慮真正的機率計算。我們還必須參考一個條件：這是雙尾還是單尾檢定？</p>
 </div>
-<div id="onesample-z-case" class="section level3">
-<h3><span class="header-section-number">5.4.1</span> 檢定程序示範</h3>
-<p>JASP與jamovi都尚未提供完整的z檢定模組，本書提供的<a href="https://osf.io/zauw9/">jamovi示範檔案</a>整合<code>描述統計</code>與<code>Rj</code>模組，讓讀者可在任何適用單一平均數z檢定的資料，可用此程序進行分析。<a href="https://osf.io/zauw9/">示範檔案</a>的R程式碼編輯視窗前五行(如下)，是使用者依要分析的資料輸入設定。首兩行之後的數字來自<code>描述統計</code>統計結果的輸出；接著第三行與第四行是母群體的平均數與標準差，要填入數字或計算式，是根據使用者對於要測試的假設之認識；第五行是對立假設的設定，是不等於某平均數，還是大於或小於某平均數；最後第六行的<code>alpha</code>是p值否定虛無假設的檢定水準。</p>
-<pre><code>N &lt;- 15                        ## 描述統計樣本數
-Y_bar &lt;- 4.667                 ## 描述統計平均數
-mu &lt;- 10*0.5                   ## 母群體平均數 = 嘗試次數 x 嘗試成功率 
-sd &lt;- sqrt(10*0.5*(1-0.5))     ## 母群體標準差 
-h_option &lt;- 2                  ## 1: not equal to mu; 2: larger than mu; 3: smaller than mu
-alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
-<p>以上設定的前四行是z統計數公式的要件，這個公式的數學表示與R程式碼表示表列如下：</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">數學</th>
-<th align="center">R</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\(z = \frac{\bar{Y} - \mu_{\bar{Y}}}{\frac{\sigma}{\sqrt{N}}}\)</span></td>
-<td align="center">z_test &lt;- (Y_bar - mu)/(sd/sqrt(N))</td>
-</tr>
-</tbody>
-</table>
-<p>抽樣分佈的每一個數值代入z統計數公式，形成的機率函數曲線相當符合標準化常態分佈。如圖<a href="onesample.html#fig:normal-test-statistics">5.8</a>中代表標準化常態分佈的藍色曲線，與所有樣本z分數的黑色曲線完全貼合(見圖<a href="onesample.html#fig:normal-test-statistics">5.8</a>左半)。</p>
-<div class="figure"><span id="fig:normal-test-statistics"></span>
-<img src="05-onesample_files/figure-html/normal-test-statistics-1.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" /><img src="05-onesample_files/figure-html/normal-test-statistics-2.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" />
-<p class="caption">
-圖 5.8: 單一平均數z檢定樣本統計數與標準常態分佈
-</p>
-</div>
-<p><a href="https://osf.io/zauw9/">示範檔案</a>輸出Emily Rosa的第一次實驗結果z分數是-0.82，對應標準常態分佈的累積機率，p值是0.79(見圖<a href="onesample.html#fig:normal-test-statistics">5.8</a>右半)。分析結果和單一比率二項檢定相同，單一平均數z檢定也無法否定虛無假設。</p>
-<p>將圖<a href="onesample.html#fig:normal-test-sampling">5.7</a>的數值繪製分位圖，如圖<a href="onesample.html#fig:normal-test-sampling-qq">5.9</a>，顯示此抽樣分佈確實符合常態分佈，符合使用z檢定的前提。</p>
-<div class="figure"><span id="fig:normal-test-sampling-qq"></span>
-<img src="images/unit05_normal_sampling-qq.png" alt="單一平均數z檢定抽樣分佈分位圖" width="400" />
-<p class="caption">
-圖 5.9: 單一平均數z檢定抽樣分佈分位圖
-</p>
-</div>
+<div id="onesample-tail" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> p值與型一錯誤率計算起點：雙尾 vs. 單尾</h3>
+<p>連續隨機變數具備等距性質，因此機率函數可計算大於某量數的累積機率，或者小於某量數的累積機率，還可以總和大於較大量數與小於較小量數的累積機率。這些特性讓我們能根據問題性質，決定採雙尾的判斷標準，還是單尾的判斷標準。</p>
+<p>採用雙尾的判斷標準，根據資料計算得到的統計值應視為<strong>絕對值</strong>，如Emily的實驗結果可能是-1.046，也可能是1.046。p值是分別由負無限大累積到-1.046，以及由1.046累積到正無限大的機率總和。運用jamovi的<code>distACTION</code>，可知jamovi與JASP的t檢定模組，為何算出的p值都是0.313。</p>
+<p>採用單尾的判斷標準，必須事先設定得到的統計值小於或大於虛無假設期望值。確認累積機率的計算起點，才能從機率分佈得到符合問題狀況的p值。以-1.046來說，單尾t檢定的p值是0.157。</p>
+<p>採用雙尾或單尾判斷標準當然也影響型一錯誤率的估計。已知示範檔案的預設判斷標準是雙尾，總計產生自虛無假設的模擬數據，只與大於這虛無假設期望值的標準比較，所以估計錯誤率越接近0.025者，越符合虛無假設的平均數抽樣分佈。</p>
 </div>
 <div id="onesample-interval" class="section level3">
-<h3><span class="header-section-number">5.4.2</span> 信賴區間</h3>
-<p>抽樣分佈的每一個模擬數值，代表Emily的實驗重做上萬次，所有的可能結果。累積而成的機率函數，讓母數統計的使用者除了運用假設檢定，分析當前實驗結果，還可以計算<strong>信賴區間(confidence interval)</strong>，檢視現在的資料有多大的機率，包含符合假設的期望值。單一平均數z檢定的信賴區間數學表示與R程式碼表列如下：</p>
+<h3><span class="header-section-number">5.4.3</span> 信賴區間</h3>
+<p>除了運用假設檢定，母數統計的使用者還可以計算<strong>信賴區間(confidence interval)</strong>，分析當前實驗結果，檢視現在的資料相容虛無或對立假設期望值的機率，與真陰率(<span class="math inline">\(1-\alpha\)</span>)或真陽率(<span class="math inline">\(1-\beta\)</span>)一致的程度。單一平均數t檢定的信賴區間數學表示與R程式碼表列如下：</p>
 <table>
 <colgroup>
 <col width="50%" />
@@ -454,19 +456,64 @@ alpha &lt;- 0.05                   ## 設定p值檢定水準</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><span class="math display">\[\bar{y} \pm z_{\frac{\alpha}{2}} \times \frac{\sigma}{\sqrt{N}}\]</span></td>
-<td align="center">z_cv &lt;- qnorm(alpha/2,lower.tail = FALSE)<br>lci &lt;- Y_bar - z_cv* sd/sqrt(N)<br>uci &lt;- Y_bar + z_cv* sd/sqrt(N)</td>
+<td align="center"><span class="math display">\[\bar{y} \pm t_{\frac{\alpha}{2}} \times \frac{s}{\sqrt{n}}\]</span></td>
+<td align="center">t_cv &lt;- qt(alpha,df=DF)<br>lci &lt;- sim_TT0 - t_cv* sim_TT0_sd/sqrt(N)<br>uci &lt;- sim_TT0 + t_cv* sim_TT0_sd/sqrt(N)</td>
 </tr>
 </tbody>
 </table>
-<p>根據Emily的實驗結果，可知95%CI [3.87, 5.47]，也就是說平均數5是在這次實驗結果估計的信賴區間之內。但是信賴區間與假設檢定一樣，都是長期累積的可能結果。<span class="math inline">\(\alpha\)</span>在假設檢定代表<strong>最大的錯誤肯定機率</strong>；在信賴區間代表<strong>所有可能樣本的區間範圍，有多高比例包括假設的期望值</strong>。這個比例是<span class="math inline">\(1 - \alpha\)</span>，因此信賴區間的正式寫法記為%CI。<a href="https://osf.io/zauw9/">示範檔案</a>的<code>Rj</code>報表最後一行，是總計1萬筆模擬數值的信賴區間，有包括5的總數目。這個數字會隨重新執行不斷變動，但是數字會在9400到9600左右，也就是大約有95%的模擬數值信賴區間，包含代表治療師們只是靠運氣做實驗的平均正確次數。</p>
-<p>我們從以上示範發現，相較於假設檢定的p值帶來否定假設的訊息，信賴區間給予使用者肯定假設的概念，有學者鼓吹心理學研究者應該使用信賴區間，而非p值呈現結果<span class="citation">(Cumming and Finch <a href="#ref-CummingInferenceEyeConfidence2005">2005</a>)</span>。本書不特別評論那種方法較佳，讀者應再思考一個問題：兩種方法都是建立在本質是條件機率<span class="math inline">\(P(\frac{D}{\theta})\)</span>的抽樣分佈，加上多數情況是根據期望能否定的虛無假設。如果我們想探討真實的<span class="math inline">\(\theta\)</span>是否與假設相符，累積大量資料之後，假設檢定與信賴區間能給我們多少有意義的資訊？</p>
+<p>信賴區間與假設檢定一樣，都是長期累積的可能結果。所以Emily的實驗結果，獲得95%CI [-1.017, 0.350]，也就是說正確次數5有95%的機率與這次結果相容。<span class="math inline">\(\alpha\)</span>在假設檢定代表<strong>最大的錯誤肯定機率</strong>；在信賴區間代表<strong>所有可能樣本的區間範圍，有多高比例包括假設的期望值</strong>。這個比例是<span class="math inline">\(1 - \alpha\)</span>，因此信賴區間的正式寫法記為%CI。<a href="https://osf.io/zauw9/">示範檔案</a>的<code>Rj</code>報表最後一行，是總計1萬筆模擬數值的信賴區間，有包括5的總數目。這個數字會隨重新執行不斷變動，但是數字會在9400到9600左右，也就是大約有95%的模擬數值信賴區間，包含代表治療師們只是靠運氣做實驗的平均正確次數。</p>
+<p>從模擬程序的圖解可以發現，p值是從逼近的t機率函數取得累積機率。信賴區間與型一或型二錯誤率的估計，則是來自大量模擬數據的累積，也是最接近真實資料的估計方法。因此有學者提倡心理學研究者應該使用信賴區間，而非p值呈現結果<span class="citation">(Cumming and Finch <a href="#ref-CummingInferenceEyeConfidence2005">2005</a>)</span>。本書不特別評論那種方法較佳，讀者運用任何方法之前應該思考一個問題：兩種方法都是建立在本質是條件機率<span class="math inline">\(P(\frac{D}{\theta})\)</span>的抽樣分佈，加上多數情況是根據期望能否定的虛無假設。如果我們想探討真實的<span class="math inline">\(\theta\)</span>是否與假設相符，累積大量資料之後，假設檢定與信賴區間能給我們多少有意義的資訊？</p>
+</div>
+<div id="onesample-t-case" class="section level3">
+<h3><span class="header-section-number">5.4.4</span> 檢定程序示範</h3>
+<p>JASP與jamovi都有提供完整的t檢定模組，本書提供的<a href="https://osf.io/4tpdb/">jamovi示範檔案</a>與<a href="https://osf.io/qgbrz/">JASP示範檔案</a>都是以雙尾檢定示範。採取雙尾檢定的理由是Emily Rosa做這次實驗之前，並不明瞭治療師們的答對率有多高，只能假設如果真有本事，就不會亂猜；如果沒本事， 平均答對次數應該等於5。如果TT學會有公佈受訓過的治療師們做類似測試有一定的答對率，Emily使用單尾檢定才有意義。</p>
+<p>請者可以自行更改t檢定模組中的test value與單尾/雙尾檢定的設定，比較不同設定的分析結果與模擬數據的差異。和二項檢定相比，t檢定要考慮更周詳的分析條件：如參與者人數，每人的測試次數，平均數能做抽樣分佈期望值之估計等等。如果符合可運用的條件，t檢定提供的錯誤率估計更全面，卻也容易被使用者忽略或誤會。</p>
+<!---
+整合`描述統計`與`Rj`模組，讓讀者可在任何適用單一平均數z檢定的資料，可用此程序進行分析。[示範檔案](https://osf.io/zauw9/)的R程式碼編輯視窗前五行(如下)，是使用者依要分析的資料輸入設定。首兩行之後的數字來自`描述統計`統計結果的輸出；接著第三行與第四行是母群體的平均數與標準差，要填入數字或計算式，是根據使用者對於要測試的假設之認識；第五行是對立假設的設定，是不等於某平均數，還是大於或小於某平均數；最後第六行的`alpha`是p值否定虛無假設的檢定水準。
+
+```
+N <- 15                        ## 描述統計樣本數
+Y_bar <- 4.667                 ## 描述統計平均數
+mu <- 10*0.5                   ## 母群體平均數 = 嘗試次數 x 嘗試成功率 
+sd <- sqrt(10*0.5*(1-0.5))     ## 母群體標準差 
+h_option <- 2                  ## 1: not equal to mu; 2: larger than mu; 3: smaller than mu
+alpha <- 0.05                   ## 設定p值檢定水準
+```
+
+以上設定的前四行是z統計數公式的要件，這個公式的數學表示與R程式碼表示表列如下：
+
+|數學|R|
+|:---:|:---:|
+|$z = \frac{\bar{Y} - \mu_{\bar{Y}}}{\frac{\sigma}{\sqrt{N}}}$|z_test <- (Y_bar - mu)/(sd/sqrt(N))|
+
+抽樣分佈的每一個數值代入z統計數公式，形成的機率函數曲線相當符合標準化常態分佈。如圖\@ref(fig:normal-test-statistics)中代表標準化常態分佈的藍色曲線，與所有樣本z分數的黑色曲線完全貼合(見圖\@ref(fig:normal-test-statistics)左半)。
+
+
+<div class="figure">
+<img src="05-onesample_files/figure-html/normal-test-statistics-1.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" /><img src="05-onesample_files/figure-html/normal-test-statistics-2.png" alt="單一平均數z檢定樣本統計數與標準常態分佈" width="50%" />
+<p class="caption">(\#fig:normal-test-statistics)單一平均數z檢定樣本統計數與標準常態分佈</p>
+</div>
+
+
+[示範檔案](https://osf.io/zauw9/)輸出Emily Rosa的第一次實驗結果z分數是-0.82，對應標準常態分佈的累積機率，p值是0.79(見圖\@ref(fig:normal-test-statistics)右半)。分析結果和單一比率二項檢定相同，單一平均數z檢定也無法否定虛無假設。
+
+將圖\@ref(fig:normal-test-sampling)的數值繪製分位圖，如圖\@ref(fig:normal-test-sampling-qq)，顯示此抽樣分佈確實符合常態分佈，符合使用z檢定的前提。
+
+<div class="figure">
+<img src="images/unit05_normal_sampling-qq.png" alt="單一平均數z檢定抽樣分佈分位圖" width="400" />
+<p class="caption">(\#fig:normal-test-sampling-qq)單一平均數z檢定抽樣分佈分位圖</p>
+</div>
+--->
 </div>
 </div>
 <div id="onesample-summary" class="section level2">
 <h2><span class="header-section-number">5.5</span> 總結</h2>
 <ul>
-<li>TBA</li>
+<li><p>二項檢定與單一平均數t檢定的抽樣分佈都是來自一定範圍數值的隨機變數，分派數值之間的出現機率，能產生符合虛無假設或對立假設的抽樣分佈。</p></li>
+<li><p>母數統計與無母數統計的重要區別是所根據的抽樣分佈性質：母數統計的抽樣分佈之形成必定遵守中央極限定理。</p></li>
+<li><p>任何抽樣分佈必有一個逼近的機率函數，此機率函數是計算p值的來源。</p></li>
+<li><p>任何抽樣分佈能用適當的模擬程序產生，模擬的抽樣分佈是估計型一或型二錯誤率的唯一可靠來源。</p></li>
+<li><p>信賴區間來自模擬的抽樣分佈，任何一次實驗結果的信區間應視為所有可能結果裡，抽樣分佈期望值有多高機率相容於此區間內的任何數值。</p></li>
 </ul>
 </div>
 <div id="onesample-practice" class="section level2">

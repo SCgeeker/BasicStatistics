@@ -1,7 +1,7 @@
 --- 
 title: "心理科學基礎統計"
 author: "陳紹慶 Sau-Chin Chen"
-date: "2019-02-24"
+date: "2019-04-29"
 kint: "bookdown::render_book"
 site: bookdown::bookdown_site
 bibliography: [Stat.bib]

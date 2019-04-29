@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-24">
+<meta name="date" content="2019-04-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="jaspjamovi.html">
-<link rel="next" href="section-12.html">
+<link rel="next" href="writing-report.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,6 +48,8 @@
 
 
 
+\usepackage{booktabs}
+\raggedbottom
 
 
 
@@ -125,12 +127,15 @@
 <li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
-<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-testing"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.3" data-path="onesample.html"><a href="onesample.html#onesmaple-binom-alpha"><i class="fa fa-check"></i><b>5.3.3</b> 估計型一錯誤率</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
-<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-t"><i class="fa fa-check"></i><b>5.4</b> 單一平均數t檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.1</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.2</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
+<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.3</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.4</b> 檢定程序示範</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
 <li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
@@ -181,20 +186,17 @@
 <li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
-<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
-<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.1</b> 獨立樣本變異數分析</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.1"><i class="fa fa-check"></i><b>9.1.1</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 示範檔案簡介</a></li>
+<li class="chapter" data-level="9.1.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.3"><i class="fa fa-check"></i><b>9.1.3</b> 示範檔案操作與報表解讀</a></li>
+<li class="chapter" data-level="9.1.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-residual"><i class="fa fa-check"></i><b>9.1.4</b> 殘差變異的抽樣分佈模擬</a></li>
+<li class="chapter" data-level="9.1.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-compatibility"><i class="fa fa-check"></i><b>9.1.5</b> 變異數分析適用性檢定</a></li>
+<li class="chapter" data-level="9.1.6" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-report"><i class="fa fa-check"></i><b>9.1.6</b> 分析後報告</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
-<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
-</ul></li>
-<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
-<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
-<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.2</b> 多組平均數的分析風險</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-summary"><i class="fa fa-check"></i><b>9.3</b> 總結</a></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-practice"><i class="fa fa-check"></i><b>9.4</b> 習題</a></li>
 </ul></li>
 <li class="appendix"><span><b>附錄</b></span></li>
 <li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
@@ -208,10 +210,11 @@
 <li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
 <li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
 </ul></li>
-<li class="chapter" data-level="C" data-path="11-data-manipulating.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
-<li class="chapter" data-level="C.1" data-path="11-data-manipulating.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
-<li class="chapter" data-level="C.2" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
-<li class="chapter" data-level="C.3" data-path="section-12.html"><a href="section-12.html#jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
+<li class="chapter" data-level="C" data-path="writing-report.html"><a href="writing-report.html"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="11-data-manipulating.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 統計資訊呈現建議</a></li>
+<li class="chapter" data-level="C.2" data-path="writing-report.html"><a href="writing-report.html#report-text"><i class="fa fa-check"></i><b>C.2</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.3" data-path="writing-report.html"><a href="writing-report.html#report-JASP"><i class="fa fa-check"></i><b>C.3</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.4" data-path="writing-report.html"><a href="writing-report.html#report-jamovi"><i class="fa fa-check"></i><b>C.4</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -239,7 +242,7 @@
 <p>從JASP 0.9版與jamovi 0.9版開始，兩者都有轉換與過濾資料的功能。這些功能的使用方法與一般試算表軟體類似，不過JASP與jamovi各有特色的操作方式。這一節整理官方的說明與示範動畫，讓初次接觸的使用者認識如何使用。</p>
 <div id="app-part6" class="section level2">
 <h2><span class="header-section-number">B.1</span> 製造轉換資料的新變項</h2>
-<p>許多行為科學測驗分數需要經過轉換，才能進行分析。轉換後的分數都要存為新變項，以下整理JASP<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>與jamovi<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>的轉換方法。</p>
+<p>許多行為科學測驗分數需要經過轉換，才能進行分析。轉換後的分數都要存為新變項，以下整理JASP<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>與jamovi<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>的轉換方法。</p>
 <ul>
 <li><code>JASP</code></li>
 </ul>
@@ -307,7 +310,7 @@
 </div>
 <div id="app-part7" class="section level2">
 <h2><span class="header-section-number">B.2</span> 設定過濾資料的條件式</h2>
-<p>除了遺漏值，許多行為科學研究收集資料時，會設定填充題降低參與者猜中研究目的的機會；也有時候我們只要分析符合特定條件的資料。JASP<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>與jamovi<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>各自提供特色的過濾功能，因應 各種使用需要。</p>
+<p>除了遺漏值，許多行為科學研究收集資料時，會設定填充題降低參與者猜中研究目的的機會；也有時候我們只要分析符合特定條件的資料。JASP<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>與jamovi<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>各自提供特色的過濾功能，因應 各種使用需要。</p>
 <ul>
 <li><code>JASP</code></li>
 </ul>
@@ -349,11 +352,11 @@
 </div>
 <div class="footnotes">
 <hr />
-<ol start="12">
-<li id="fn12"><p>JASP計算功能官方示範解說網頁：<a href="https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/" class="uri">https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/</a><a href="data-manipulating.html#fnref12" class="footnote-back">↩</a></p></li>
-<li id="fn13"><p>jamovi計算功能官方示範解說網頁：<a href="https://blog.jamovi.org/2017/11/28/jamovi-formulas.html" class="uri">https://blog.jamovi.org/2017/11/28/jamovi-formulas.html</a>; 轉換功能官方示範解說網頁：<a href="https://blog.jamovi.org/2018/10/23/transforming-variables.html" class="uri">https://blog.jamovi.org/2018/10/23/transforming-variables.html</a><a href="data-manipulating.html#fnref13" class="footnote-back">↩</a></p></li>
-<li id="fn14"><p>JASP過濾功能官方示範解說網頁： <a href="https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/" class="uri">https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/</a><a href="data-manipulating.html#fnref14" class="footnote-back">↩</a></p></li>
-<li id="fn15"><p>jamovi過濾功能官方示範解說網頁： <a href="https://blog.jamovi.org/2018/04/25/jamovi-filters.html" class="uri">https://blog.jamovi.org/2018/04/25/jamovi-filters.html</a><a href="data-manipulating.html#fnref15" class="footnote-back">↩</a></p></li>
+<ol start="10">
+<li id="fn10"><p>JASP計算功能官方示範解說網頁：<a href="https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/" class="uri">https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/</a><a href="data-manipulating.html#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>jamovi計算功能官方示範解說網頁：<a href="https://blog.jamovi.org/2017/11/28/jamovi-formulas.html" class="uri">https://blog.jamovi.org/2017/11/28/jamovi-formulas.html</a>; 轉換功能官方示範解說網頁：<a href="https://blog.jamovi.org/2018/10/23/transforming-variables.html" class="uri">https://blog.jamovi.org/2018/10/23/transforming-variables.html</a><a href="data-manipulating.html#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p>JASP過濾功能官方示範解說網頁： <a href="https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/" class="uri">https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/</a><a href="data-manipulating.html#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>jamovi過濾功能官方示範解說網頁： <a href="https://blog.jamovi.org/2018/04/25/jamovi-filters.html" class="uri">https://blog.jamovi.org/2018/04/25/jamovi-filters.html</a><a href="data-manipulating.html#fnref13" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -362,7 +365,7 @@
         </div>
       </div>
 <a href="jaspjamovi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="section-12.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="writing-report.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

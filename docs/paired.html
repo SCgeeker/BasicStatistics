@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-02-24">
+<meta name="date" content="2019-04-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,8 @@
 
 
 
+\usepackage{booktabs}
+\raggedbottom
 
 
 
@@ -125,12 +127,15 @@
 <li class="chapter" data-level="5.2.3" data-path="onesample.html"><a href="onesample.html#onesample-parametric"><i class="fa fa-check"></i><b>5.2.3</b> 母數與無母數檢定</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="onesample.html"><a href="onesample.html#onesample-binomial"><i class="fa fa-check"></i><b>5.3</b> 單一比率二項檢定</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理(#onesample-central)</a></li>
-<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-case"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.1" data-path="onesample.html"><a href="onesample.html#onesample-central"><i class="fa fa-check"></i><b>5.3.1</b> 中央極限定理</a></li>
+<li class="chapter" data-level="5.3.2" data-path="onesample.html"><a href="onesample.html#onesample-binomial-testing"><i class="fa fa-check"></i><b>5.3.2</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.3.3" data-path="onesample.html"><a href="onesample.html#onesmaple-binom-alpha"><i class="fa fa-check"></i><b>5.3.3</b> 估計型一錯誤率</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-z"><i class="fa fa-check"></i><b>5.4</b> 單一平均數z檢定</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-z-case"><i class="fa fa-check"></i><b>5.4.1</b> 檢定程序示範</a></li>
-<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.2</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-t"><i class="fa fa-check"></i><b>5.4</b> 單一平均數t檢定</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.1</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.2</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
+<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.3</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.4</b> 檢定程序示範</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
 <li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
@@ -181,36 +186,35 @@
 <li class="chapter" data-level="8.5" data-path="corr-reg.html"><a href="corr-reg.html#corr-reg-practice"><i class="fa fa-check"></i><b>8.5</b> 習題</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="oneway-anova.html"><a href="oneway-anova.html"><i class="fa fa-check"></i><b>9</b> 單因子變異數分析</a><ul>
-<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.1</b> 比較多組平均數有何不同？</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#t"><i class="fa fa-check"></i><b>9.1.1</b> 為何t檢定會低估型一錯誤率</a></li>
-<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 效果量家族</a></li>
+<li class="chapter" data-level="9.1" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.1</b> 獨立樣本變異數分析</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.1"><i class="fa fa-check"></i><b>9.1.1</b> 分解變異數來源</a></li>
+<li class="chapter" data-level="9.1.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 示範檔案簡介</a></li>
+<li class="chapter" data-level="9.1.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.1.3"><i class="fa fa-check"></i><b>9.1.3</b> 示範檔案操作與報表解讀</a></li>
+<li class="chapter" data-level="9.1.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-residual"><i class="fa fa-check"></i><b>9.1.4</b> 殘差變異的抽樣分佈模擬</a></li>
+<li class="chapter" data-level="9.1.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-compatibility"><i class="fa fa-check"></i><b>9.1.5</b> 變異數分析適用性檢定</a></li>
+<li class="chapter" data-level="9.1.6" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-report"><i class="fa fa-check"></i><b>9.1.6</b> 分析後報告</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 分解變異數來源</a></li>
-<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-independent"><i class="fa fa-check"></i><b>9.3</b> 獨立樣本變異數分析示範</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 分析前的宣告</a></li>
-<li class="chapter" data-level="9.3.2" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.2"><i class="fa fa-check"></i><b>9.3.2</b> 示範檔案操作說明</a></li>
-<li class="chapter" data-level="9.3.3" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 示範檔案報表解讀</a></li>
-<li class="chapter" data-level="9.3.4" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.3.4"><i class="fa fa-check"></i><b>9.3.4</b> 分析後報告</a></li>
+<li class="chapter" data-level="9.2" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-multiple"><i class="fa fa-check"></i><b>9.2</b> 多組平均數的分析風險</a></li>
+<li class="chapter" data-level="9.3" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-summary"><i class="fa fa-check"></i><b>9.3</b> 總結</a></li>
+<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-practice"><i class="fa fa-check"></i><b>9.4</b> 習題</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-repeated"><i class="fa fa-check"></i><b>9.4</b> 相依樣本變異數分析</a></li>
-<li class="chapter" data-level="9.5" data-path="oneway-anova.html"><a href="oneway-anova.html#oneway-power"><i class="fa fa-check"></i><b>9.5</b> 變異數分析的考驗力</a></li>
-<li class="chapter" data-level="9.6" data-path="oneway-anova.html"><a href="oneway-anova.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 習題</a></li>
-</ul></li>
-<li class="appendix"><span><b>附錄</b></span><ul>
-<li class="chapter" data-level="A.7" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part1"><i class="fa fa-check"></i><b>A.7</b> JASP與jamovi開發簡史與介面介紹</a></li>
-<li class="chapter" data-level="A.8" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part2"><i class="fa fa-check"></i><b>A.8</b> jamovi模組安裝</a></li>
-<li class="chapter" data-level="A.9" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part3"><i class="fa fa-check"></i><b>A.9</b> 數值顯示設定</a></li>
-<li class="chapter" data-level="A.10" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part4"><i class="fa fa-check"></i><b>A.10</b> 匯入與匯出資料</a></li>
-<li class="chapter" data-level="A.11" data-path="oneway-anova.html"><a href="oneway-anova.html#app-part5"><i class="fa fa-check"></i><b>A.11</b> 輸出報表</a></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="jaspjamovi.html"><a href="jaspjamovi.html"><i class="fa fa-check"></i><b>A</b> JASP與jamovi使用技巧</a><ul>
+<li class="chapter" data-level="A.1" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part1"><i class="fa fa-check"></i><b>A.1</b> JASP與jamovi開發簡史與介面介紹</a></li>
+<li class="chapter" data-level="A.2" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part2"><i class="fa fa-check"></i><b>A.2</b> jamovi模組安裝</a></li>
+<li class="chapter" data-level="A.3" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part3"><i class="fa fa-check"></i><b>A.3</b> 數值顯示設定</a></li>
+<li class="chapter" data-level="A.4" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part4"><i class="fa fa-check"></i><b>A.4</b> 匯入與匯出資料</a></li>
+<li class="chapter" data-level="A.5" data-path="jaspjamovi.html"><a href="jaspjamovi.html#app-part5"><i class="fa fa-check"></i><b>A.5</b> 輸出報表</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="data-manipulating.html"><a href="data-manipulating.html"><i class="fa fa-check"></i><b>B</b> 資料轉換與過濾</a><ul>
 <li class="chapter" data-level="B.1" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part6"><i class="fa fa-check"></i><b>B.1</b> 製造轉換資料的新變項</a></li>
 <li class="chapter" data-level="B.2" data-path="data-manipulating.html"><a href="data-manipulating.html#app-part7"><i class="fa fa-check"></i><b>B.2</b> 設定過濾資料的條件式</a></li>
 </ul></li>
-<li class="chapter" data-level="C" data-path="06-paired.html"><a href="#section-C"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
-<li class="chapter" data-level="C.1" data-path="section-11.html"><a href="section-11.html"><i class="fa fa-check"></i><b>C.1</b> 段落內編輯統計資料</a></li>
-<li class="chapter" data-level="C.2" data-path="section-11.html"><a href="section-11.html#report-JASP"><i class="fa fa-check"></i><b>C.2</b> JASP報表編輯</a></li>
-<li class="chapter" data-level="C.3" data-path="section-11.html"><a href="section-11.html#report-jamovi"><i class="fa fa-check"></i><b>C.3</b> jamovi報表編輯</a></li>
+<li class="chapter" data-level="C" data-path="writing-report.html"><a href="writing-report.html"><i class="fa fa-check"></i><b>C</b> 報告寫作指南</a><ul>
+<li class="chapter" data-level="C.1" data-path="06-paired.html"><a href="#section-C.1"><i class="fa fa-check"></i><b>C.1</b> 統計資訊呈現建議</a></li>
+<li class="chapter" data-level="C.2" data-path="writing-report.html"><a href="writing-report.html#report-text"><i class="fa fa-check"></i><b>C.2</b> 段落內編輯統計資料</a></li>
+<li class="chapter" data-level="C.3" data-path="writing-report.html"><a href="writing-report.html#report-JASP"><i class="fa fa-check"></i><b>C.3</b> JASP報表編輯</a></li>
+<li class="chapter" data-level="C.4" data-path="writing-report.html"><a href="writing-report.html#report-jamovi"><i class="fa fa-check"></i><b>C.4</b> jamovi報表編輯</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e58f83e88083e69687e78dbb.html"><a href="e58f83e88083e69687e78dbb.html"><i class="fa fa-check"></i>參考文獻</a></li>
 <li class="divider"></li>
@@ -276,9 +280,9 @@
 </div>
 <div id="paired-categorical-McNemar" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> McNemar氏檢定</h3>
-<p>心理學家Quinn McNemar為了分析如同上述案例的調查結果，開發了以他的姓氏命名的檢定方法<span class="citation">(McNemar <a href="#ref-mcnemarNoteSamplingError1947">1947</a>)</span>。這種調查結果雖然從目標對象總計出四種數字，但是能直接回答研究問題的資料，是關鍵處置前後的變化的總計值，也就是上述表格標記b與c的細格。用以下公式計算兩種細格裡的數字，就運用合適的樣本機率分佈，換算為檢定兩個數字是否相等的p值。</p>
+<p>心理學家Quinn McNemar為了分析如同上述案例的調查結果，開發了以他的姓氏命名的檢定方法<span class="citation">(McNemar <a href="#ref-mcnemarNoteSamplingError1947">1947</a>)</span>。這種調查結果雖然從目標對象總計出四種數字，但是能直接回答研究問題的資料，是關鍵處置前後的變化的總計值，也就是上述表格標記b與c的細格。用以下公式計算兩種細格裡的數字，代入運用卡方機率分佈(<span class="math inline">\(\chi^2\)</span> distribution)，換算為檢定兩個數字是否相等的p值。</p>
 <p><span class="math display">\[ 統計值 = \frac{(b - c)^2}{b + c} \]</span></p>
-<p>類別變項的相依樣本抽樣分佈不但沒有期望值，樣本機率函數隨總數而異。根據statkat的指南<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>，如果b與c的總和不超過20，這個樣本機率函數符合二項分佈；如果b與c的總和超過20，這個樣本機率函數符合<strong>自由度為1</strong>的卡方機率分佈，如圖<a href="paired.html#fig:mcnemar-sampling">6.1</a>。</p>
+<p>類別變項的相依樣本抽樣分佈不但沒有期望值，樣本機率函數隨總數而異。根據statkat的指南<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>，如果b與c的總和不超過20，這個樣本機率函數符合二項分佈；如果b與c的總和超過20，這個樣本機率函數符合<strong>自由度為1</strong>的卡方機率分佈，如圖<a href="paired.html#fig:mcnemar-sampling">6.1</a>。</p>
 <div class="figure"><span id="fig:mcnemar-sampling"></span>
 <img src="images/unit06_mcnemar_sampling_distribution.png" alt="自由度為1的卡方機率密度函數曲線" width="400" />
 <p class="caption">
@@ -286,7 +290,7 @@
 </p>
 </div>
 <p><strong>卡方分佈</strong>是一種無方向性的機率分佈，統計值的計數限定由小往大計算，不像前面學到的常態分佈，可由小往大計算，也可由大往小計算，這種特性限制McNemar氏檢定只能設定虛無假設是b等於c，對比對立假設是b不等於c的假設檢定。許多統計教材稱此設定為雙側檢定或雙尾檢定(two-tail test)，如此命名是源於多數推論統計方法是根據如同常態分佈的對稱型機率分佈，稍後的相依樣本t檢定，我們將了解如何根據研究問題的性質，決定假設檢定的方向性設定。</p>
-<p>jamovi提供的McNemar氏檢定模組，能以上述統計值公式，計算卡方分數與p值，讓使用者判斷兩項數字之間的差異是否達到必須接受的水準。在<a href="">jamovi示範檔案</a>裡，我們使用這個模組提供的<span class="math inline">\(\chi^2\)</span>與<span class="math inline">\(\chi^2 \ continuity\ correction\)</span>兩種計算模式，計算假設檢定的統計數與p值。後者輸出的卡方分數較前者小，但較為可信。這個案例的調查者，需在報告中如此呈現結論：</p>
+<p>jamovi提供的McNemar氏檢定模組，能以上述統計值公式，計算卡方分數與p值，讓使用者判斷兩項數字之間的差異是否達到必須接受的水準。在<a href="https://osf.io/q6epv/">jamovi示範檔案</a>裡，我們使用這個模組提供的<span class="math inline">\(\chi^2\)</span>與<span class="math inline">\(\chi^2 \ continuity\ correction\)</span>兩種計算模式，計算假設檢定的統計數與p值。後者輸出的卡方分數較前者小，但較為可信。這個案例的調查者，需在報告中如此呈現結論：</p>
 <blockquote>
 <p>分析100位試閱民眾觀看廣告前後的認同意見調查，其中70位前後認同一致，5位觀看前不認同但觀看後認同，25位觀看前認同但觀看後不認同。以0.05做為顯著性水準，McNamer氏檢定顯示觀看廣告導致民眾不認同的傾向，明顯高於導致民眾認同的傾向：<span class="math inline">\(\chi^2 (1) = 12.03, p &lt; .001\)</span>。</p>
 </blockquote>
@@ -295,20 +299,34 @@
 <h3><span class="header-section-number">6.1.3</span> McNemar氏檢定的抽樣分佈</h3>
 <p>讀者可參考<a href="https://osf.io/68usk/">卡方機率分佈示範檔案</a>，了解自由度如何決定卡方機率分佈的形態，以及事件累積機率的計算。示範案例的顯著性水準是自由度為1的卡方機率分佈部分累積機率，如圖<a href="paired.html#fig:mcnemar-cv">6.2</a>所示，紅色區域覆蓋的卡方分數，換算的p值都小於0.05。之後的單元中，我們會認識什麼情況的案例，會運用自由度大於1的卡方分佈。</p>
 <div class="figure"><span id="fig:mcnemar-cv"></span>
-<img src="images/unit06_mcnemar_sampling_cv.png" alt="自由度為1的卡方機率密度函數曲線及顯著水準累積機率面 " width="400" />
+<img src="images/unit06_mcnemar_sampling_cv.png" alt="自由度為1的卡方機率密度函數曲線及顯著水準累積機率" width="400" />
 <p class="caption">
-圖 6.2: 自由度為1的卡方機率密度函數曲線及顯著水準累積機率面
+圖 6.2: 自由度為1的卡方機率密度函數曲線及顯著水準累積機率
 </p>
 </div>
-<p>為了了解McNemar檢定的統計值為何符合自由度是1的卡方分佈，我們<a href="">jamovi示範檔案</a>的報表最後一部分設計一道模擬程序示範解說。這道模擬程序首先根據範例條件，設定製造上萬次實驗結果的兩個參數：前後改變看法的人數(Target_N)，以及改變方向的比例(Switch_P)，分別依範例的設定設為30與0.5(代表改變方向的比例相等)。運用這兩個參數就能製造上萬筆與範例研究一樣的實驗結果，以及依檢定公式計算的統計數。上萬筆統計數的次數累積，形成如圖<a href="paired.html#fig:mcnemar-simulation">6.3</a>的柱狀圖。</p>
-<div class="figure"><span id="fig:mcnemar-simulation"></span>
+<p>同樣要運用抽樣分佈的模擬資料，我們才能得到最接近的型一與型二錯誤率估計值。比起單一樣本統計檢定的狀況，相依樣本的例子有明確的對立假設期望值，製造的抽樣分佈可估計型二錯誤率。以3.8414588為判斷標準，可知型一錯誤率在5%以下，型二錯誤率約2%左右。圖<a href="paired.html#fig:mcnemar-error">6.3</a>是運用<a href="https://osf.io/q6epv/">jamovi示範檔案</a>產生的模擬結果。</p>
+<div class="figure"><span id="fig:mcnemar-error"></span>
+<img src="images/unit06_mcnemar_type1_type2.png" alt="McNemar Test虛無與對立假設抽樣分佈模擬；黑色垂直線為型一與型二錯誤率判斷基準。" width="400" />
+<p class="caption">
+圖 6.3: McNemar Test虛無與對立假設抽樣分佈模擬；黑色垂直線為型一與型二錯誤率判斷基準。
+</p>
+</div>
+<!---
+為了了解McNemar檢定的統計值為何符合自由度是1的卡方分佈，我們[jamovi示範檔案](https://osf.io/q6epv/)的報表最後一部分設計一道模擬程序示範解說。這道模擬程序首先根據範例條件，設定製造上萬次實驗結果的兩個參數：前後改變看法的人數(Target_N)，以及改變方向的比例(Switch_P)，分別依範例的設定設為30與0.5(代表改變方向的比例相等)。運用這兩個參數就能製造上萬筆與範例研究一樣的實驗結果，以及依檢定公式計算的統計數。上萬筆統計數的次數累積，形成如圖\@ref(fig:mcnemar-simulation)的柱狀圖。
+
+<div class="figure">
 <img src="06-paired_files/figure-html/mcnemar-simulation-1.png" alt="McNemar抽樣分佈機率函數(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)" width="672" />
-<p class="caption">
-圖 6.3: McNemar抽樣分佈機率函數(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)
-</p>
+<p class="caption">(\#fig:mcnemar-simulation)McNemar抽樣分佈機率函數(黑色柱狀圖);自由度為1的卡方分佈(紅色線條);自由度為2的卡方分佈(藍色線條)</p>
 </div>
-<p>圖<a href="paired.html#fig:mcnemar-simulation">6.3</a>也呈現自由度為1與自由度為2的卡方分佈，由圖的分佈可見，實驗結果的抽樣分佈似乎較符合自由度為1的卡方分佈。為何判定抽樣分佈比較接近那一道卡方分佈，我們可以計算每個統計數的機率值，與其他兩道曲線機率值的差異總和，總和越大代表這道抽樣分佈與該機率分佈的差異越大。由於密度值差異必定有正有負，合適的方法是將每個密度值差異平方，再計算總和。這種計算的成果在統計學叫做<strong>差異平方和(Sum of Squared)</strong><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>，雖然與計算變異數分子的方法類似，要注意後者是所有數值減同一個平均數。</p>
-<p>計算結果顯示圖中的抽樣分佈與自由度為1的卡方分佈之差異平方和是0.03，小於抽樣分佈與自由度為1的卡方分佈之差異平方和0.06<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>。抽樣分佈與理論機率函數之間的差異平方和越小，表示運用該理論機率函數估計的機率越接近真實資料的發生機率。</p>
+
+圖\@ref(fig:mcnemar-simulation)也呈現自由度為1與自由度為2的卡方分佈，由圖的分佈可見，實驗結果的抽樣分佈似乎較符合自由度為1的卡方分佈。為何判定抽樣分佈比較接近那一道卡方分佈，我們可以計算每個統計數的機率值，與其他兩道曲線機率值的差異總和，總和越大代表這道抽樣分佈與該機率分佈的差異越大。由於密度值差異必定有正有負，合適的方法是將每個密度值差異平方，再計算總和。這種計算的成果在統計學叫做**差異平方和(Sum of Squared)**[^9]，雖然與計算變異數分子的方法類似，要注意後者是所有數值減同一個平均數。
+
+[^9]:統計學以差異平方和決定那一種機率函數最符合資料的方法，稱為**最小平方法**。本書介紹的推論統計方法，都是以最小平方法的數學公式推導與資料模擬為基礎。
+
+計算結果顯示圖中的抽樣分佈與自由度為1的卡方分佈之差異平方和是0.03，小於抽樣分佈與自由度為1的卡方分佈之差異平方和0.06[^10]。抽樣分佈與理論機率函數之間的差異平方和越小，表示運用該理論機率函數估計的機率越接近真實資料的發生機率。
+
+[^10]:在自由度為1的卡方分佈，卡方量數之機率不可計數。此數未納入差異平方和的計算。
+--->
 </div>
 </div>
 <div id="paired-continuous" class="section level2">
@@ -398,7 +416,7 @@
 <h2><span class="header-section-number">6.3</span> 效果量、樣本數與考驗力</h2>
 <p>最後以本單元相依樣本t檢定的案例，討論效果量、樣本數與考驗力的關係。<a href="https://osf.io/35nk8/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>的報表呈現的效果量，都是Cohen’s d，計算公式是：</p>
 <p><span class="math display">\[d = \frac{\bar{D} - \mu_{\bar{D}}}{s_{\bar{D}}}\]</span></p>
-<p>我們可以發現這個公式與t統計數的公式的差異只有分母的樣本標準差，這說明效果量是特指每一次測量結果的標準化數值。即使使用相同的實驗程序，數量相同的樣本，每一次測量的變異數都不會一樣，每次結果以此公式轉換為效果量，才有比較的意義<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>。</p>
+<p>我們可以發現這個公式與t統計數的公式的差異只有分母的樣本標準差，這說明效果量是特指每一次測量結果的標準化數值。即使使用相同的實驗程序，數量相同的樣本，每一次測量的變異數都不會一樣，每次結果以此公式轉換為效果量，才有比較的意義<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>。</p>
 <p>考驗力是型二錯誤率的補集，顯示以當前的判斷水準，能發現顯著結果的機率。和型一錯誤率一樣，要累積多次實驗，我們才能知道某種測量的顯著效應。理想的顯著分析結果，需要事前有足夠資訊，確保研究結果能有起碼的機會被重現。心理科學研究的統計考驗力，一般建議至少要達到0.8或80%。</p>
 <p>樣本數大小直接影響考驗力高低，多少樣本才能維持建議的考驗力，則受到效果量的調節。以本單元相依樣本的案例來說，維持雙尾檢定的顯著結果判斷水準不變，再次實驗要得到相同效果量並維持於80%考驗力，需要收集至少6位病患的紀錄。圖<a href="paired.html#fig:paired-power">6.10</a>是使用<code>jamovi</code>的jpower套件，設定以上述的分析條件，畫出樣本數與效果量在80%考驗力的對應曲線。這條曲線顯示，效果量越小的話，需要越多樣本，才能保障達到該效果量的結果，有達到足夠的考驗力。讀者可下載產製圖<a href="paired.html#fig:paired-power">6.10</a>的<a href="https://osf.io/fb534/">jamovi示範檔案</a>，檢視其他導到相依樣本t檢定考驗力變化的條件。</p>
 <div class="figure"><span id="fig:paired-power"></span>
@@ -446,11 +464,9 @@
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>參考網址：<a href="https://statkat.com/stattest.php?t=39" class="uri">https://statkat.com/stattest.php?t=39</a><a href="paired.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>統計學以差異平方和決定那一種機率函數最符合資料的方法，稱為<strong>最小平方法</strong>。本書介紹的推論統計方法，都是以最小平方法的數學公式推導與資料模擬為基礎。<a href="paired.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>在自由度為1的卡方分佈，卡方量數之機率不可計數。此數未納入差異平方和的計算。<a href="paired.html#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>效果量是整合性分析(meta analysis)的基本分析單元，比較相同程序但不同來源的實驗結果，能讓研究者了解進行一次實驗發現顯著效果的可能性。<a href="paired.html#fnref4" class="footnote-back">↩</a></p></li>
+<ol start="8">
+<li id="fn8"><p>參考網址：<a href="https://statkat.com/stattest.php?t=39" class="uri">https://statkat.com/stattest.php?t=39</a><a href="paired.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>效果量是整合性分析(meta analysis)的基本分析單元，比較相同程序但不同來源的實驗結果，能讓研究者了解進行一次實驗發現顯著效果的可能性。<a href="paired.html#fnref9" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

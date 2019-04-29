@@ -21,6 +21,7 @@
 
 - **間斷尺度(名義)**：如果一筆資料的內容都是文字，例如受訪者的性別，居住的城鎮名稱等，JASP與jamovi都會判斷為名義尺度(![](images/icon/jasp-variable-nominal-text.png){width=3%},![](images/icon/jamovi-variable-nominal-text.png){width=3%})。這類資料的數值只有名稱的區別，不能相加相減，也沒有排序的意義。有時我們丟進軟體的資料內容都是數字，但其實是做為名稱的編號，例如全班學生的學號、受訪者的郵遞區號、最經典的**擲硬幣試驗結果**。程式無法幫我們判斷這種資料，我們要手動改換尺度圖示為![](images/icon/jasp-variable-nominal-text.png){width=3%}與![](images/icon/jamovi-variable-nominal-text.png){width=3%}。稍後我們會學習計算眾數，是處理名義尺度的主要方法。
 
+> jamovi 0.9版增加資料型態(Data Type)選項，有`Text`(文字)、`Integer`(整數)、`Decimal`(帶小數點的實數)；以及資料尺度`ID`。`ID`必須是`Text`，`Continuous`必須是`Integer`或`Decimal`，`Nomial`與`Ordinal`的資料型態絕對不能是`Decimal`。
 
 ## 變項的種類  {#describe_workvariable}
 
@@ -97,7 +98,7 @@ table of statistical plots
 
 |  | 依變項為類別變項 |  依變項為連續變項 |
 |---|:---:|:---:|
-|無獨變項|圓餅圖(Pie Chart);長條圖(Bar Chart)( 單元\@ref(onesample) )|柱狀圖(Bar Plot);直方圖(Histograms);密度函數(Density Plot)( 單元\@ref(onesample) )|
+|無獨變項|圓餅圖(Pie Chart);長條圖(Bar Chart)( 單元\@ref(onesample) )|直方圖(Histograms);密度函數(Density Plot)( 單元\@ref(onesample) )|
 |獨變項為相依樣本|疊加式長條圖;附趨勢線柱狀圖 ( 單元\@ref(paired) )|次數分配表;附誤差區間折線圖(Line chart)(單元\@ref(paired))|
 |獨變項為獨立樣本|疊加式長條圖;附趨勢線柱狀圖 (單元\@ref(independent))|次數分配表;附誤差區間柱狀圖(Bar plot) (單元\@ref(independent))|
 |單一自變項為連續變數||散佈圖(scattor plot)(單元\@ref(corr-reg))|

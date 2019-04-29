@@ -137,6 +137,7 @@ $$ f(x, \mu, \delta) =  \frac{1}{\delta\sqrt(2\pi\sigma^2)} e^{-\frac{(x - \mu)^
 
 ## 總結 {#distribution-summary}
 
-- TBA
+- 母群體是符合研究目的之理論機率函數，提供製造抽樣分佈模擬數值的參數設定。
+- 
 
 ## 習題 {#distribution-practice}
