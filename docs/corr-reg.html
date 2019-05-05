@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-04-29">
+<meta name="date" content="2019-05-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -132,10 +132,11 @@
 <li class="chapter" data-level="5.3.3" data-path="onesample.html"><a href="onesample.html#onesmaple-binom-alpha"><i class="fa fa-check"></i><b>5.3.3</b> 估計型一錯誤率</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-t"><i class="fa fa-check"></i><b>5.4</b> 單一平均數t檢定</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.1</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
-<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.2</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
-<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.3</b> 信賴區間</a></li>
-<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.4</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-bootstrap"><i class="fa fa-check"></i><b>5.4.1</b> 抜靴法製造模擬樣本</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.2</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
+<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.3</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
+<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.4</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4.5" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.5</b> 檢定程序示範</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
 <li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
@@ -264,7 +265,7 @@
 <p><code>JASP</code>與<code>jamovi</code>提供的相關係數範例資料，都有上百筆的觀察值。原因是樣本數不足一百的隨機樣本所累積的抽樣分佈，不會是像常態分佈一樣的對稱分佈，如此一來就會造成型一錯誤率與考驗力的估計偏差。這樣的狀況需要使用<strong>費雪轉換</strong>，才能將抽樣分佈轉換為常態分佈。下面的費雪轉換公式，可轉換所有來自同一母群體的所有樣本相關係數。轉換後的樣本相關係數平均數會略高於原始平均數，<strong>標準誤</strong>必接近<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>。</p>
 <p><span class="math display">\[F(r) = \frac{1}{2} ln \frac{1+r}{1-r}\]</span></p>
 <p><img src="08-corrreg_files/figure-html/big5-smalln-1.png" width="672" /></p>
-<p>以 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 的五大人格特質資料 為例，如果盡責性與情緒不穩定性相關係數的母群體是<span class="math inline">\(\rho = -0.368\)</span>，只收集12位學生的資料，模擬10000筆樣本相關係數形成的抽樣分佈如同圖<a href="#fig:big5-smalln"><strong>??</strong></a>呈現負偏態的黑色曲線，與分佈中心是-0.368的常態分佈(綠色曲線)有明顯的差異。10000樣本相關係數經過費雪轉換，形成的抽樣分佈(藍色曲線)與平均數是-0.41及標準誤是0.33的常態分佈(紅色曲線)完全契合，此標準誤相當接近以公式<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>計算的0.33。</p>
+<p>以 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 的五大人格特質資料 為例，如果盡責性與情緒不穩定性相關係數的母群體是<span class="math inline">\(\rho = -0.368\)</span>，只收集12位學生的資料，模擬10000筆樣本相關係數形成的抽樣分佈如同圖<a href="#fig:big5-smalln"><strong>??</strong></a>呈現負偏態的黑色曲線，與分佈中心是-0.368的常態分佈(綠色曲線)有明顯的差異。10000樣本相關係數經過費雪轉換，形成的抽樣分佈(藍色曲線)與平均數是-0.41及標準誤是0.34的常態分佈(紅色曲線)完全契合，此標準誤相當接近以公式<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>計算的0.33。</p>
 <p><img src="08-corrreg_files/figure-html/big5-largen-1.png" width="672" /></p>
 <p>將樣本數增加至如範例資料一樣的500人，樣本相關係數的抽樣分佈就會契合對稱的機率分佈，如圖<a href="#fig:big5-largen"><strong>??</strong></a>代表抽樣分佈的黑色曲線，完全符合抽樣分佈平均數-0.37與標準誤0.04的常態分佈(綠色曲線)。費雪轉轉換後的抽樣分佈(藍色曲線)雖然也符合常態分佈(紅色曲線)，但是估計的期望值-0.39明顯不同於母群體。由此例可知，運用相關係數分析資料的研究，收集的樣本數要達到上百筆。</p>
 <p><img src="08-corrreg_files/figure-html/big5-hypo-1.png" width="672" /></p>

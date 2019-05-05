@@ -1,55 +1,46 @@
-## Sampling distribution of paired means
-Moon_mean <- 3.02
-Moon_sd <- 1.499*sqrt(14)/sqrt(15)
-Other_mean <- 0.59
-Other_sd <- 0.445*sqrt(14)/sqrt(15)
-n <- 15
-
-## Settings of uniform distributions(populations)
-Moon_min = Moon_mean - 1.68*Moon_sd
-Moon_max = Moon_mean + 1.68*Moon_sd
-Other_min = Other_mean - 1.68*Other_sd
-Other_max = Other_mean + 1.68*Other_sd
-## Draw populations
-plot(x = seq(Moon_min,Moon_max,1/10000), y = dunif(seq(Moon_min,Moon_max,1/10000),Moon_min,Moon_max),
-     main = "Population: Disruptive Behaviors in Moon\n Mean +/- 1.68*SD",
-     xlab = "Frequencies of disruptive behviors",
-     ylab = "Density")
-plot(x = seq(Other_min,Other_max,1/10000), y = dunif(seq(Other_min,Other_max,1/10000),Other_min,Other_max),
-     main = "Population: Disruptive Behaviors in Others\n Mean +/- 1.68*SD",
-     xlab = "Frequencies of disruptive behviors",
-     ylab = "Density")
-
-
-## Making of sampling means
-i = 10000
-D_sim_means <- NULL
-while (i > 0) {
-  D_sim_means <- c(D_sim_means, 
-                   mean(  runif(n,min = Moon_min, 
-                                max = Moon_max) ) - 
-                     mean( runif(n,min = Other_min, 
-                                 max = Other_max) ) 
-  )
-  i = i - 1
-}
-
+# Source data for bootstrap sampling
+EXP_C <- c(3.33,3.67,2.67,3.33,3.33,3.67,4.67,2.67,6,4.33,3.33,0.67,1.33,0.33,2)        # from Source data
+CON_C <- c(0.27,0.59,0.32,0.19,1.26,0.11,0.3,0.4,1.59,0.6,0.65,0.69,1.26,0.23,0.38)     # from Source data
+N <- length(CON_C) # Original sample size was 15
+DF <- N -1           # Degree of freedom
+alpha <- .975            # Criterion for two-tail
+## Making of sampling means by bootstrap
+i = 10000                #
+D_sim_means_H1 <- NULL   #
+D_sim_means_H0 <- NULL   #
+while (i > 0) {          #
+  D_sim_means_H1 <- c(D_sim_means_H1, mean(sample(EXP_C, N, replace = TRUE) - sample(CON_C, N, replace = TRUE)) )       #
+  D_sim_means_H0 <- c(D_sim_means_H0, mean(sample(CON_C, N, replace = TRUE) - sample(CON_C, N, replace = TRUE)) )       #
+  i = i - 1              #
+}                        #
 ## Draw sampling means
-Title = paste("Sampling Distribution of Paired Difference Means \n Mean = ",round(mean(D_sim_means),2),"; Variance =", round(mean((D_sim_means)^2) - (mean(D_sim_means))^2, 4)  )
-plot(density(D_sim_means), main=Title, xlab = "Means of Difference")
+Title = paste("Sampling Distribution of H1(Blue) and H0(Red) \n Vertical lines refer to criterions \n Total sample size = ", N)   #
+plot(density(D_sim_means_H0), main=Title, xlab = "Means of Difference",col="red",xlim=c(-1,6))                                          #
+lines(density(D_sim_means_H1), col="blue")                                                                                              # 
+abline(v=mean(D_sim_means_H0)+qt(alpha,DF),col="black")                                                                                 #
+abline(v=mean(D_sim_means_H0)+qnorm(alpha),col="grey")                                                                                  #
 
-qqnorm(D_sim_means,col="red",main="Normal Q-Q plot of Sampling Distribution")
-qqline(D_sim_means, col = "blue")
 
-plot( density( (D_sim_means - mean(D_sim_means))/sd(D_sim_means)), 
-      #main="Test Statistics of Sampling Means vs. \nStandard Normal Distribution",
-      xlab="Test Statistics")
+sim_stat <- (D_sim_means_H1 - mean(D_sim_means_H1))/sd(D_sim_means_H1)
+mean(sim_stat)
+sd(sim_stat)
+sim_stat_density <- density(sim_stat)
+plot(sim_stat_density)
+lines(x=sort(sim_stat), y=dnorm(sort(sim_stat),mean=mean(sim_stat),sd=sd(sim_stat)),col="green")
+lines(x=sort(sim_stat), y=dt(sort(sim_stat),df=DF),col="red")
 
-sim_stat <- density( (D_sim_means - mean(D_sim_means))/sd(D_sim_means))
-plot( sim_stat, 
-      main="Test Statistics of Sampling Means vs. \nt Distribution(df = 14) vs.\nStandard Normal Distribution",
-      xlab="Test Statistics")
-lines(x=seq(-4,4,1/length(sim_stat$x) ),y=dt(seq(-4,4,1/length(sim_stat$x)),14),col="blue")
-lines(x=seq(-4,4,1/length(sim_stat$x)),y=dnorm(seq(-4,4,1/length(sim_stat$x))),col="red")
+sum((sim_stat_density$y - dnorm(sim_stat_density$x,mean = mean(sim_stat), sd = sd(sim_stat)))^2, na.rm = TRUE)
+sum((sim_stat_density$y - dt(sim_stat_density$x, df = DF))^2, na.rm = TRUE)
 
-round( sum((sim_stat$y - dt(seq(-4,4,1/length(sim_stat$x)), 14) )^2) )
+mean(sim_stat > qnorm(.975))
+#mean(sim_stat > qt(.975,df=DF+1))
+mean(sim_stat > qt(alpha,df=DF))
+#mean(sim_stat > qt(.975,df=DF-1))
+
+
+## Estimate errors by normal distribution
+paste0("By normal distribution, Type 1 error is ", 100*mean(D_sim_means_H0 >mean(D_sim_means_H0)+qnorm(alpha)), "%")   #
+paste0("By normal distribution, Type 2 error is ", 100*mean(D_sim_means_H1 <mean(D_sim_means_H0)+qnorm(alpha)), "%")   #
+## Estimate errors by t distribution
+paste0("By t distribution, Type 1 error is ", 100*mean(D_sim_means_H0 >mean(D_sim_means_H0)+qt(alpha,DF)), "%")        #
+paste0("By t distribution, Type 2 error is ", 100*mean(D_sim_means_H1 <mean(D_sim_means_H0)+qt(alpha,DF)), "%")        #

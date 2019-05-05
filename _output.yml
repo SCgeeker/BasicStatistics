@@ -7,6 +7,9 @@
 bookdown::epub_book: default
 bookdown::gitbook:
   smart: false
+  includes: 
+    in_header: preamble.tex
+  keep_tex: yes
   css: style.css
   config:
     toc:

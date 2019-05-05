@@ -85,6 +85,7 @@ knitr::include_graphics("images/unit04_lotty_simulation.png")
 
 要能正確運用第\@ref(intro)單元提到的統計方法運用指南，除了要理解要處理的資料變項性質，也要了解當下的資料只是長久累積的一部分。大樂透中獎模擬範例也透過一個本書之後的每個單元裡，我們使用統計方法時要留意的問題：由當下的資料獲得的統計量，是不是真的符合母群體機率函數的計算結果？如果無法確定，設計模擬程序，根據執行結果判斷是否適當是最佳的操作方法。
 
+
 ## 二項分佈之模擬 {#distribution-binomial}
 
 許多有數學運算功能的程式語言，都有提供常用機率分佈的相關函數。單元\@ref(probability-binomial)展示的二項分佈機率密度函數長條圖，是以R的機率計算函式製作。R也有提供產生指定數量亂數的模擬函式，能用來模擬特定機率分佈。總計模擬函式製造的數值，會發現每個數值的相對次數逼近二項分佈的密度函數，如圖\@ref(fig:binomial-simulation)展示模擬10000個數值的機率密度長條圖，以及由二項分佈機率密度函數計算結果產生的長條圖。讀者可以自行修改[範例檔案](https://osf.io/t5rs3/)裡面的`sim_n`，觀察增加數值總量，導致模擬結果越接近機率分佈計算的現象。
@@ -110,7 +111,6 @@ knitr::include_graphics("images/unit03_normal_002.png")
 knitr::include_graphics("images/unit04_normal_001.png")
 ```
 
-
 ## 統計學兩大流派 {#distribution-approaches}
 描述統計(descriptive statistics)與推論統計(inference statistics)的功能：描述統計集合各種呈現資料中“可推論資訊”的技巧，以適當的測量尺度呈現資料的**集中**與**變異**。推論統計評估“可推論資訊”符合預測的可能性，或者值得再做探討的價值。
 
@@ -131,6 +131,7 @@ knitr::include_graphics("images/unit04_normal_001.png")
 
 ## 總結 {#distribution-summary}
 
-- TBA
+- 母群體是符合研究目的之理論機率函數，提供製造抽樣分佈模擬數值的參數設定。
+- 
 
 ## 習題 {#distribution-practice}

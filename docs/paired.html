@@ -25,7 +25,7 @@
 <meta name="author" content="陳紹慶 Sau-Chin Chen">
 
 
-<meta name="date" content="2019-04-29">
+<meta name="date" content="2019-05-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -132,10 +132,11 @@
 <li class="chapter" data-level="5.3.3" data-path="onesample.html"><a href="onesample.html#onesmaple-binom-alpha"><i class="fa fa-check"></i><b>5.3.3</b> 估計型一錯誤率</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="onesample.html"><a href="onesample.html#onesample-t"><i class="fa fa-check"></i><b>5.4</b> 單一平均數t檢定</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.1</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
-<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.2</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
-<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.3</b> 信賴區間</a></li>
-<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.4</b> 檢定程序示範</a></li>
+<li class="chapter" data-level="5.4.1" data-path="onesample.html"><a href="onesample.html#onesample-bootstrap"><i class="fa fa-check"></i><b>5.4.1</b> 抜靴法製造模擬樣本</a></li>
+<li class="chapter" data-level="5.4.2" data-path="onesample.html"><a href="onesample.html#onsample-error"><i class="fa fa-check"></i><b>5.4.2</b> 錯誤率估計比較：常態分佈 vs. t分佈</a></li>
+<li class="chapter" data-level="5.4.3" data-path="onesample.html"><a href="onesample.html#onesample-tail"><i class="fa fa-check"></i><b>5.4.3</b> p值與型一錯誤率計算起點：雙尾 vs. 單尾</a></li>
+<li class="chapter" data-level="5.4.4" data-path="onesample.html"><a href="onesample.html#onesample-interval"><i class="fa fa-check"></i><b>5.4.4</b> 信賴區間</a></li>
+<li class="chapter" data-level="5.4.5" data-path="onesample.html"><a href="onesample.html#onesample-t-case"><i class="fa fa-check"></i><b>5.4.5</b> 檢定程序示範</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="onesample.html"><a href="onesample.html#onesample-summary"><i class="fa fa-check"></i><b>5.5</b> 總結</a></li>
 <li class="chapter" data-level="5.6" data-path="onesample.html"><a href="onesample.html#onesample-practice"><i class="fa fa-check"></i><b>5.6</b> 習題</a></li>
@@ -311,6 +312,7 @@
 圖 6.3: McNemar Test虛無與對立假設抽樣分佈模擬；黑色垂直線為型一與型二錯誤率判斷基準。
 </p>
 </div>
+<p>圖<a href="paired.html#fig:mcnemar-error">6.3</a>顯示無母數分析的特色：抽樣分佈不必然遵守中央極限定理成形。圖中的虛無與對立假設都相差常態分佈甚遠，儘管可以估計型一與型二錯誤率，卻難以整理錯誤率的變化與樣本數或樣本變異數之間的關係。</p>
 <!---
 為了了解McNemar檢定的統計值為何符合自由度是1的卡方分佈，我們[jamovi示範檔案](https://osf.io/q6epv/)的報表最後一部分設計一道模擬程序示範解說。這道模擬程序首先根據範例條件，設定製造上萬次實驗結果的兩個參數：前後改變看法的人數(Target_N)，以及改變方向的比例(Switch_P)，分別依範例的設定設為30與0.5(代表改變方向的比例相等)。運用這兩個參數就能製造上萬筆與範例研究一樣的實驗結果，以及依檢定公式計算的統計數。上萬筆統計數的次數累積，形成如圖\@ref(fig:mcnemar-simulation)的柱狀圖。
 
@@ -331,69 +333,85 @@
 </div>
 <div id="paired-continuous" class="section level2">
 <h2><span class="header-section-number">6.2</span> 連續變項的相依樣本推論統計</h2>
-<p>心理科學常見的資料型態之一，是以連續尺度測量的相依樣本資料，常見於人類基本心理歷程實驗，以及教學和臨床處遇。除了一種處置的前後測量，受測者在一段時間之內經歷不同處置的表現，也可以採用這種推論統計方法分析，這種測試設計就稱為重覆量數(repated measurement)。</p>
+<p>心理科學常見的資料型態之一，是以連續尺度測量的相依樣本資料，常見於人類基本心理歷程實驗，以及教學和臨床處遇。除了一種處置的前後測量，受測者在一段時間之內經歷不同處置的表現，也可以採用這種推論統計方法分析，這種測試設計稱為重覆量數(repated measurement)。</p>
 <div id="paired-continuous-case" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> 案例介紹</h3>
-<p>這裡使用來自 <span class="citation">Moore, McCabe, and Craig (<a href="#ref-mooreIntroductionPracticeStatistics2012">2012</a>)</span> 的示範資料，介紹相依樣本t檢定的使用條件與結果判讀方法。據普度大學兩位學者，紀錄十五名失智症(dementia)患者在一段長期觀察，出現破壞物品行為的次數。研究者認為有月亮的時候，患者出現破壞行為的次數比其他時候多，所以將紀錄分為有月亮與其他日期，計算每位患者出現破壞行為的平均次數。</p>
-<p>每位患者的資料可見<a href="https://osf.io/rax3g/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>。這個案例研究的是有月亮時出現破壞行為的平均次數，有沒有顯著高於其他時候的平均次數。所以抽樣分佈是所有患者兩個時候的次數差異之平均數，簡記為<span class="math inline">\(\bar{D}\)</span>。如果研究者按步就班收集資料，<span class="math inline">\(\bar{D}\)</span>的抽樣分佈必定是常態分佈，而來源的母群體的機率函數有多種可能，通常推測期望值等於當下資料的平均數。</p>
+<p>這裡使用來自 <span class="citation">Moore, McCabe, and Craig (<a href="#ref-mooreIntroductionPracticeStatistics2012">2012</a>)</span> 的示範資料，介紹相依樣本t檢定的使用條件與結果判讀方法。據普度大學兩位學者，紀錄十五名失智症(dementia)患者在一段長期觀察，出現破壞物品行為的次數。研究者認為有月亮的時候，患者出現破壞行為的次數比其他時候多，所以分在一段有月亮與沒有月亮的日期之間，紀錄每位患者出現破壞行為的平均次數。</p>
+<p>每位患者的資料可見<a href="https://osf.io/rax3g/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>。這個案例研究有月亮時出現破壞行為的平均次數，有沒有顯著高於其他時候的平均次數。所以抽樣分佈是所有患者兩個時候的次數差異之平均數，簡記為<span class="math inline">\(\bar{D}\)</span>。如果研究者按步就班收集資料，<span class="math inline">\(\bar{D}\)</span>的抽樣分佈必定是常態分佈，而來源的母群體的機率函數有多種可能，通常推測期望值等於當下資料的平均數。</p>
 </div>
 <div id="paired-continuous-distribution" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> 樣本平均數的抽樣分佈與t分佈</h3>
-<p>心理科學面對的多數問題有母群體函數不明，只確定有期望值的特色。處理這些問題而使用的抽樣分佈，都有符合常態分佈的特性。但是最符合樣本統計數的機率函數並非常態分佈，而是t分佈。</p>
-<p>19世紀末，數學家已經發現t分佈這種機率分佈，直到1908年，William Gosset發表論文指出t分佈符合重覆量數的平均數，形成的抽樣分配。t分佈是連續隨機變數，第一眼看起來像常態分佈，但是<strong>t分佈的機率密度函數</strong>只有一個參數<em>k</em>，也就是自由度(degree of freedom)。</p>
+<p>19世紀末，數學家已經發現t分佈這種機率分佈，直到1908年，William Gosset發表論文指出t分佈符合重覆量數的平均數，形成的抽樣分配。t分佈是連續隨機變數，第一眼看起來像常態分佈，但是<strong>t分佈的機率密度函數</strong>只有一個參數<em>k</em>，也就是自由度(degree of freedom)</p>
+<p>如同多數心理科學問題母群體函數不明，只有樣本平均值的特色。製造相依樣本的平均值抽樣分佈，<strong>拔靴法</strong>(參考單元(onesample-bootstrap))同樣是最佳方案。我們以失智症患者出現破壞行為的紀錄，透過模擬程序，探討為何要使用t分佈檢定這筆資料的分析結果？以及相依樣本t檢定的自由度為何是n-1？使用拔靶法，從十五位個案紀錄製造10000筆隨機資料。每筆資料都有15對模擬數據，每對數據差異的平均值，累積為10000筆平均值抽樣分佈。</p>
+<p>操作<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>的模擬程序，製造虛無假設抽樣分佈，每一對模擬數據都是來自沒有月亮的紀錄；以及對立假設抽樣分佈，每一對模擬數據其中之一來自有月亮的紀錄，另一個來自沒有月亮的紀錄。</p>
+<p>圖<a href="paired.html#fig:paired-sample-means">6.4</a>是採取上設定的模擬結果。該圖顯示以t分佈的判斷水準(黑色垂直線)，估計的型二錯誤率小於以常態分佈設定的判斷水準(灰色垂直線)所估計的錯誤率。</p>
 <!---
 我們再透過圖()比較t份佈與常態分佈。圖中藍色線代表t分佈機率密度函數的整體(上)與t值小於-2的部分(下)，黑色線代表平均數是1與標準差是0的常態分佈。調整最上面的**自由度**，會改變t分佈的函數曲線。你會發現自由度到29時，**兩個分佈的機率密度函數**幾乎重疊，這是有些統計教科書建議平均數樣本數目至少要30的理由。然而放大到通常被視為最大*p*值的一部分，還是有明顯的差異，**自由度要增加到50以上，差異的空間才會緊縮到沒有明顯變化的程度。**資料越符合常態分佈有明顯的好處，就是我們不必擔心統計軟體算出來的*p*值，與實際的累積機率函數有明顯差異。
+
+首先設定有月亮與其他日期出現破壞行為次數的母群體機率函數，以兩段時間紀錄的平均值與樣本標準差，我們設定每位患者破壞行為次數是**均勻分佈**的隨機變數，分佈涵括的所有次數值發生的機率都相等，最小的發生次數是平均值減1.67倍樣本標準差，最大的發生次數是平均值加1.67倍樣本標準差。如圖\@ref(fig:paired-continuous-populations)所示。
 --->
-<p>我們以失智症患者出現破壞行為的次數，透過模擬程序，探討為何要使用t分佈檢定這筆資料的分析結果？以及自由度多少的t分佈才能提供符合樣本的條件？首先設定有月亮與其他日期出現破壞行為次數的母群體機率函數，以兩段時間紀錄的平均值與樣本標準差，我們設定每位患者破壞行為次數是<strong>均勻分佈</strong>的隨機變數，分佈涵括的所有次數值發生的機率都相等，最小的發生次數是平均值減1.67倍樣本標準差，最大的發生次數是平均值加1.67倍樣本標準差。如圖<a href="paired.html#fig:paired-continuous-populations">6.4</a>所示。</p>
-<div class="figure"><span id="fig:paired-continuous-populations"></span>
-<img src="06-paired_files/figure-html/paired-continuous-populations-1.png" alt="相依樣本t檢定母群體機率函數" width="50%" /><img src="06-paired_files/figure-html/paired-continuous-populations-2.png" alt="相依樣本t檢定母群體機率函數" width="50%" />
+<div class="figure"><span id="fig:paired-sample-means"></span>
+<img src="06-paired_files/figure-html/paired-sample-means-1.png" alt="樣本差異分數平均數的抽樣分佈" width="80%" />
 <p class="caption">
-圖 6.4: 相依樣本t檢定母群體機率函數
+圖 6.4: 樣本差異分數平均數的抽樣分佈
 </p>
 </div>
-<p>如果案例的條件，分別從兩道機率函數隨機取得15個數值，依取出順序相減，獲得15筆差異分數D，平均值即為<span class="math inline">\(\bar{D}\)</span>。依此方式模擬出10000筆<span class="math inline">\(\bar{D}\)</span>，就是這個案例的抽樣分佈：樣本差異分數平均數的機率分佈，如圖<a href="paired.html#fig:paired-continuous-sampling">6.5</a>所示，其平均數正是兩個母群體期望值的差異。請讀者記住這個抽樣分佈的變異數，稍後會發現相當接近真實資料的<strong>標準誤(standard error)</strong>。</p>
-<div class="figure"><span id="fig:paired-continuous-sampling"></span>
+<p>構成對立假設抽樣分佈的模擬平均值差異，是相依樣本統計檢定需要的差異分數(<span class="math inline">\(\bar{D}\)</span>)，一次結果的差異分數要輸入以下公式，才能運用最符合抽樣分佈的機率函數計算p值。</p>
+<p><span class="math display">\[\frac{\bar{D} - \mu_\bar{D}}{\frac{s_\bar{D}}{\sqrt{N}}}\]</span></p>
+<p>公式中的N等同樣本數，s是平均值差異的樣本標準差，<span class="math inline">\(\mu_\bar{D}\)</span>在相依樣本的例子等於無差異。將虛無假設的模擬數據運用公式轉換，可得到如圖<a href="paired.html#fig:paired-sample-stat">6.5</a>的機率分佈。比較t分佈設定的判斷水準(黑色垂直線)，與常態分佈設定的判斷水準(灰色垂直線)，可見以t分佈估計的型一錯誤率小於常態分佈的估計。對比兩者估計型二錯誤率的反差，代表判定研究結果支持存在有月亮出現破壞行為的論點，以t分佈結論而犯錯的機會將小於以常態分佈結論而犯錯的機會。</p>
+<div class="figure"><span id="fig:paired-sample-stat"></span>
+<img src="06-paired_files/figure-html/paired-sample-stat-1.png" alt="樣本差異分數平均數的統計數機率分佈" width="80%" />
+<p class="caption">
+圖 6.5: 樣本差異分數平均數的統計數機率分佈
+</p>
+</div>
+<!---
+如果案例的條件，分別從兩道機率函數隨機取得15個數值，依取出順序相減，獲得15筆差異分數D，平均值即為$\bar{D}$。依此方式模擬出10000筆$\bar{D}$，就是這個案例的抽樣分佈：樣本差異分數平均數的機率分佈，如圖\@ref(fig:paired-continuous-sampling)所示，其平均數正是兩個母群體期望值的差異。請讀者記住這個抽樣分佈的變異數，稍後會發現相當接近真實資料的**標準誤(standard error)**。
+
+<div class="figure">
 <img src="images/unit06_sampling-means.png" alt="樣本差異分數平均數的抽樣分佈" width="400" />
-<p class="caption">
-圖 6.5: 樣本差異分數平均數的抽樣分佈
-</p>
+<p class="caption">(\#fig:paired-continuous-sampling)樣本差異分數平均數的抽樣分佈</p>
 </div>
-<p>將10000筆模擬的差異分數平均數，繪製成分位圖(見圖<a href="#fig:paired-continous-sampling-qq"><strong>??</strong></a>)，可知這個抽樣分佈符合常態分佈。</p>
-<div class="figure"><span id="fig:paired-continuous-sampling-qq"></span>
+將10000筆模擬的差異分數平均數，繪製成分位圖(見圖\@ref(fig:paired-continous-sampling-qq))，可知這個抽樣分佈符合常態分佈。
+
+<div class="figure">
 <img src="images/unit06_sampling_means-qq.png" alt="樣本差異分數平均數的抽樣分佈分位圖" width="400" />
-<p class="caption">
-圖 6.6: 樣本差異分數平均數的抽樣分佈分位圖
-</p>
+<p class="caption">(\#fig:paired-continuous-sampling-qq)樣本差異分數平均數的抽樣分佈分位圖</p>
 </div>
-<p>至此出現一個問題：樣本差異分數平均數的抽樣分佈符合常態分佈，為什麼我們要使用t分佈，而不是使用常態分佈進行假設檢定？要回答的個問題，我們可以將每一筆模擬的差異分數平均數標準化，也就是每個差異分數減去抽樣分佈的平均數，再除以其標準差，所有標準化的差異分數平均數就會形成以0為中心點的對稱分佈，如圖<a href="paired.html#fig:paired-continuous-sampling-dist">6.7</a>的黑色曲線，與標準常態分佈(紅色曲線)，以及自由度是14的t分佈(藍色曲線)放在一起比較。</p>
-<div class="figure"><span id="fig:paired-continuous-sampling-dist"></span>
+
+至此出現一個問題：樣本差異分數平均數的抽樣分佈符合常態分佈，為什麼我們要使用t分佈，而不是使用常態分佈進行假設檢定？要回答的個問題，我們可以將每一筆模擬的差異分數平均數標準化，也就是每個差異分數減去抽樣分佈的平均數，再除以其標準差，所有標準化的差異分數平均數就會形成以0為中心點的對稱分佈，如圖\@ref(fig:paired-continuous-sampling-dist)的黑色曲線，與標準常態分佈(紅色曲線)，以及自由度是14的t分佈(藍色曲線)放在一起比較。
+
+<div class="figure">
 <img src="images/unit06_sampling-stat-t-normal.png" alt="樣本差異分數平均數標準化分數 vs. 標準化常態分佈 vs. t分佈" width="400" />
-<p class="caption">
-圖 6.7: 樣本差異分數平均數標準化分數 vs. 標準化常態分佈 vs. t分佈
-</p>
+<p class="caption">(\#fig:paired-continuous-sampling-dist)樣本差異分數平均數標準化分數 vs. 標準化常態分佈 vs. t分佈</p>
 </div>
-<p>這三道曲線的重疊部分相當多，所以我們無法直接從視覺化成品看出差異分數平均數的抽樣分佈到底接近那一個分佈。因為我們有繪製圖<a href="paired.html#fig:paired-continuous-sampling-dist">6.7</a>的抽樣分佈、標準化常態分佈、以及t分佈等三種曲線的密度值(Density)，只要計算兩群密度值之間的<strong>差異平方和(Sum of Squared)</strong>，就能知道抽樣分佈最接近那一個機率函數。</p>
-<p>計算結果可參考<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>報表最後兩行，讀者會發現無論重覆執行幾次，標準化的樣本差異分數平均數之密度值與t分佈密度值的差異平方和，都是小於與標準常態分佈密度值的差異平方和。這項模擬結果證實為何我們應該使用t分佈進行相依樣本的推論統計，也說明樣本差異分數平均數的機率分佈函數參數，為何存在於t統計值公式：</p>
-<p><span class="math display">\[t\ statistic= \frac{\bar{D} - \mu_{\bar{D}}}{\frac{s_{\bar{D}}}{\sqrt n}}\]</span></p>
-<p>抽樣分佈的標準差，也就是樣本標準誤，也存在於信賴區間的公式：</p>
+
+這三道曲線的重疊部分相當多，所以我們無法直接從視覺化成品看出差異分數平均數的抽樣分佈到底接近那一個分佈。因為我們有繪製圖\@ref(fig:paired-continuous-sampling-dist)的抽樣分佈、標準化常態分佈、以及t分佈等三種曲線的密度值(Density)，只要計算兩群密度值之間的**差異平方和(Sum of Squared)**，就能知道抽樣分佈最接近那一個機率函數。
+
+計算結果可參考[jamovi示範檔案](https://osf.io/pfmkz/)報表最後兩行，讀者會發現無論重覆執行幾次，標準化的樣本差異分數平均數之密度值與t分佈密度值的差異平方和，都是小於與標準常態分佈密度值的差異平方和。這項模擬結果證實為何我們應該使用t分佈進行相依樣本的推論統計，也說明樣本差異分數平均數的機率分佈函數參數，為何存在於t統計值公式：
+
+$$t\ statistic= \frac{\bar{D} - \mu_{\bar{D}}}{\frac{s_{\bar{D}}}{\sqrt n}}$$
+--->
+<p>抽樣分佈的標準差，也就是<strong>樣本標準誤</strong>，可用於計算信賴區間：</p>
 <p><span class="math display">\[CI = \bar{D} \pm t_{critical} \times \frac{s_{\bar{D}}}{\sqrt{n}} \]</span></p>
-<p>還剩下一個問題是為何是自由度為14的t分佈最符合抽樣分佈，而不是自由度為15的t分佈？這個問題可以由這個案例的母群體形成方式得到解答。進行分析之前，沒有人知道<span class="math inline">\(\mu_{\bar{D}}\)</span>是多少，樣本的數值是最有可能的推測，每個樣本有15筆資料，以其中一個數值當做母數的估計值，是最合理的做法。所以相依樣本的自由度是n - 1，n是資料的樣本數，1表示要估計的母數個數。</p>
+<p>由於示範案例的差異分數平均值，超過虛無假設的期望值約六個標準差，造成模擬的信賴區間沒有一項包容虛無假設的期望值。如果這次研究的資料可被再現，能肯定有月亮的日子這類患者有很高的機會出現破壞行為。</p>
+<p>最後的問題是為何是自由度為14的t分佈最符合抽樣分佈，而不是自由度為15的t分佈？這個問題可以從理解拔靴法的步驟解答：第一步設定初始樣本數值後，這群數值可總結一個平均值。未知母群體期望值時，以此平均值當做母群體的期望值，是最合理的假設。所以相依樣本的自由度是n - 1，n是資料的樣本數，1代表要估計的母群體期望值。</p>
 </div>
 <div id="paired-continuous-t" class="section level3">
 <h3><span class="header-section-number">6.2.3</span> 相依樣本t檢定</h3>
-<p>現在我們可以說明如何設定<a href="https://osf.io/35nk8/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>的相依t檢定程序，以及解讀和呈現分析結果。以下透過這則案例，示範使用雙尾檢定與單尾檢定的時機，與報告的呈現方式。</p>
+<p>JASP與jamovi的相依樣本t檢定操作界面，與單一樣本平均數t檢定幾乎一致，除了沒有Test Value選項。因為運用相依樣本分析的主要目的，是確認差異分數平均值是不是存在。以下透過15位病患紀錄，說明如何設定<a href="https://osf.io/35nk8/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>的相依t檢定程序，以及解讀和呈現分析結果。示範使用雙尾檢定與單尾檢定的時機，與報告的呈現方式。</p>
 <ul>
 <li>雙尾檢定</li>
 </ul>
-<p>我們想知道兩段時間出現破壞行為次數，到底有沒有差異？無論這個差異是多或是少，這時就可以使用雙尾檢定。雙尾檢定的對立假設是<span class="math inline">\(\mu_{\bar{D}} \neq 0\)</span>，也就是兩段時間的平均次數不相等，<code>JASP</code>與<code>jamovi</code>的相依樣本t檢定模組(Paired Samples T-Test)設定視窗中，<strong>Hypothesis</strong>這一塊都是選擇 $ Measure 1 Measure 2 $ ，模組才會執行雙尾檢定。如果雙尾檢定的判斷水準是p值要小於.05，肯定對立假設的t統計值有正也有負，如圖<a href="paired.html#fig:paired-two-tails-t">6.8</a>，對應曲線之下無著色區域的t值。</p>
+<p>我們想知道兩種時機病患出現破壞行為次數，到底有沒有差異？無論這個差異是多或是少，這時就可以使用雙尾檢定。雙尾檢定的對立假設是<span class="math inline">\(\mu_{\bar{D}} \neq 0\)</span>，也就是兩種時機的平均次數不相等，<code>JASP</code>與<code>jamovi</code>的相依樣本t檢定模組(Paired Samples T-Test)設定視窗中，<strong>Hypothesis</strong>這一塊都是選擇 $ Measure 1 Measure 2 $ ，模組才會執行雙尾檢定。如果雙尾檢定的判斷水準是p值要小於.05，肯定對立假設的t統計值有正也有負，如圖<a href="paired.html#fig:paired-two-tails-t">6.6</a>，對應曲線之下無著色區域的t值。</p>
 <div class="figure"><span id="fig:paired-two-tails-t"></span>
 <img src="images/unit06_paired-t-two-tails.png" alt="相依樣本t檢定之雙尾檢定：肯定對立假設的t統計數範圍" width="500" />
 <p class="caption">
-圖 6.8: 相依樣本t檢定之雙尾檢定：肯定對立假設的t統計數範圍
+圖 6.6: 相依樣本t檢定之雙尾檢定：肯定對立假設的t統計數範圍
 </p>
 </div>
-<p>示範檔案的報表預設呈現t統計值、自由度、p值、還有差異分數平均值，以及差異分數的標準誤。請讀者注意此標準誤數值，相當接近圖<a href="paired.html#fig:paired-continuous-sampling">6.5</a>的抽樣分佈變異數的開根號。</p>
-<p>勾選<code>Confidence interval</code>並設定估計百分比95%，報表會增加95%信賴區間的結果。這個信賴區間不包含0，與假設檢定的結果一致。增加勾選<code>Effect Size</code>，報表會增加這筆資料的效果量(d)。效果量的意義在這個單元的最後部分介紹。</p>
+<p>JASP與jamovi示範檔案的報表設定呈現t統計值(JASP:<code>t</code>;jamovi:<code>statistic</code>)、自由度(<code>df</code>)、p值(<code>p</code>)、還有差異分數平均值(<code>Mean Difference</code>)，以及差異分數的標準誤(<code>SE Difference</code>)。請讀者注意此標準誤數值，相當接近圖<a href="#fig:paired-continuous-sampling"><strong>??</strong></a>的抽樣分佈變異數的開根號。</p>
+<p>勾選<code>Confidence interval</code>並設定估計百分比95%，報表會增加95%信賴區間的結果(JASP:<code>95% CI for Mean Difference</code>;jamovi:<code>95% Confidence Interval</code>)。請注意這個信賴區間不包含0，與假設檢定的結果一致。增加勾選<code>Effect Size</code>，報表會增加這筆資料的效果量(<code>Cohen's d</code>)。效果量的意義在這個單元的最後部分介紹。</p>
 <p>根據美國心理學會報告格式指南，一筆推論統計的報告要搭配文字說明，呈現報表內的數值。報告這則案例雙尾檢定結果，寫作示範如下：</p>
 <blockquote>
 <p>15位病患在有月亮時出現破壞行為的平均次數，比其他時間的平均次數多2.43次(有月亮：M = 3.02, SD = 1.50；沒月亮：M = 0.59, SD = 0.46， 95% CI [1.624 3.241])，達到預期的統計顯著水準，<em>t</em>(14) = 6.45, <em>p</em> &lt; .001, <em>d</em> = 1.67。</p>
@@ -402,11 +420,11 @@
 <li>單尾檢定</li>
 </ul>
 <p>現在換個角度探討這個案例：我們想知道有月亮時出現破壞行為次數，有沒有明顯比其他時候多？或者沒有月亮時出現破壞行為次數，有沒有明顯比有月亮時少？這兩個問題對應的對立假設，就變成 <span class="math inline">\(\mu_{\bar{D}} &gt; 0\)</span> 與 <span class="math inline">\(\mu_{\bar{D}} &lt; 0\)</span> 。在<code>JASP</code>與<code>jamovi</code>的設定視窗，分別選擇 <span class="math inline">\(Measure 1 &gt; Measure 2\)</span> 以及 <span class="math inline">\(Measure 1 &lt; Measure 2\)</span>，就能執行相對的單尾檢定。</p>
-<p>如果判斷水準是p值要小於.05，肯定對立假設：有月亮時出現破壞行為次數，比其他時候多的t統計值必為正數，如圖<a href="paired.html#fig:paired-one-tail-t">6.9</a>，右圖曲線之下有著色區域的t值；肯定對立假設：無月亮時出現破壞行為次數，比有月亮時少的t統計值必為負數，如圖<a href="paired.html#fig:paired-one-tail-t">6.9</a>，左圖曲線之下有著色區域的t值。</p>
+<p>如果判斷水準是p值要小於.05，肯定對立假設：有月亮時出現破壞行為次數，比其他時候多的t統計值必為正數，如圖<a href="paired.html#fig:paired-one-tail-t">6.7</a>，右圖曲線之下有著色區域的t值；肯定對立假設：無月亮時出現破壞行為次數，比有月亮時少的t統計值必為負數，如圖<a href="paired.html#fig:paired-one-tail-t">6.7</a>，左圖曲線之下有著色區域的t值。</p>
 <div class="figure"><span id="fig:paired-one-tail-t"></span>
 <img src="images/unit06_paired-t-one-tail.png" alt="相依樣本t檢定之單尾檢定：肯定對立假設的t統計數範圍" width="1000" />
 <p class="caption">
-圖 6.9: 相依樣本t檢定之單尾檢定：肯定對立假設的t統計數範圍
+圖 6.7: 相依樣本t檢定之單尾檢定：肯定對立假設的t統計數範圍
 </p>
 </div>
 <p>勾選<code>Confidence interval</code>以及<code>Effect Size</code>，，除了t統計值、自由度、p值、還有差異分數平均值，以及差異分數的標準誤，報表會增加這筆資料的信賴區間與效果量。請留意單尾檢定的信賴區間只會呈現其中一邊的數值，另一邊為正無限大或負無限大。如果分析結果是否定這個案例的對立假設，信賴區間必定包括0。效果量因差異分數的計算方式，會為正數或負數，但是其絕對值必定相等。</p>
@@ -416,21 +434,24 @@
 <h2><span class="header-section-number">6.3</span> 效果量、樣本數與考驗力</h2>
 <p>最後以本單元相依樣本t檢定的案例，討論效果量、樣本數與考驗力的關係。<a href="https://osf.io/35nk8/">JASP示範檔案</a>與<a href="https://osf.io/pfmkz/">jamovi示範檔案</a>的報表呈現的效果量，都是Cohen’s d，計算公式是：</p>
 <p><span class="math display">\[d = \frac{\bar{D} - \mu_{\bar{D}}}{s_{\bar{D}}}\]</span></p>
-<p>我們可以發現這個公式與t統計數的公式的差異只有分母的樣本標準差，這說明效果量是特指每一次測量結果的標準化數值。即使使用相同的實驗程序，數量相同的樣本，每一次測量的變異數都不會一樣，每次結果以此公式轉換為效果量，才有比較的意義<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>。</p>
+<p>這個公式與t統計數的公式的差異只有分母的樣本標準差，這說明效果量是特指每一次測量結果的標準化數值。即使使用相同的實驗程序，數量相同的樣本，每一次測量的變異數都不會一樣，每次結果以此公式轉換為效果量，才有比較的意義<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>。</p>
 <p>考驗力是型二錯誤率的補集，顯示以當前的判斷水準，能發現顯著結果的機率。和型一錯誤率一樣，要累積多次實驗，我們才能知道某種測量的顯著效應。理想的顯著分析結果，需要事前有足夠資訊，確保研究結果能有起碼的機會被重現。心理科學研究的統計考驗力，一般建議至少要達到0.8或80%。</p>
-<p>樣本數大小直接影響考驗力高低，多少樣本才能維持建議的考驗力，則受到效果量的調節。以本單元相依樣本的案例來說，維持雙尾檢定的顯著結果判斷水準不變，再次實驗要得到相同效果量並維持於80%考驗力，需要收集至少6位病患的紀錄。圖<a href="paired.html#fig:paired-power">6.10</a>是使用<code>jamovi</code>的jpower套件，設定以上述的分析條件，畫出樣本數與效果量在80%考驗力的對應曲線。這條曲線顯示，效果量越小的話，需要越多樣本，才能保障達到該效果量的結果，有達到足夠的考驗力。讀者可下載產製圖<a href="paired.html#fig:paired-power">6.10</a>的<a href="https://osf.io/fb534/">jamovi示範檔案</a>，檢視其他導到相依樣本t檢定考驗力變化的條件。</p>
+<p>樣本數大小直接影響考驗力高低，多少樣本才能維持建議的考驗力，則受到效果量的調節。以本單元相依樣本的案例來說，維持雙尾檢定的顯著結果判斷水準不變，再次實驗要得到相同效果量並維持於80%考驗力，需要收集至少6位病患的紀錄。圖<a href="paired.html#fig:paired-power">6.8</a>是使用<code>jamovi</code>的jpower套件，設定以上述的分析條件，畫出樣本數與效果量在80%考驗力的對應曲線。這條曲線顯示，效果量越小的話，需要越多樣本，才能保障達到該效果量的結果，有達到足夠的考驗力。讀者可下載產製圖<a href="paired.html#fig:paired-power">6.8</a>的<a href="https://osf.io/fb534/">jamovi示範檔案</a>，檢視其他導到相依樣本t檢定考驗力變化的條件。</p>
 <div class="figure"><span id="fig:paired-power"></span>
 <img src="images/unit06_paired_power_N.png" alt="達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。" width="400" />
 <p class="caption">
-圖 6.10: 達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。
+圖 6.8: 達到指定考驗力之相依樣本t檢定效果量，所需要的樣本數分析。
 </p>
 </div>
-<p>心理科學很少有只需要個位數樣本，就有顯著結果且考驗力至少80%的研究。過去有許多研究者只追求結果顯著與否，忽略考驗力未達建議標準，樣本還未收集到能保障建議考驗力的數量，卻因為已發現顯著結果，就停止實驗並發表。最近十年許多原本被認為具有啟發性的研究結果，再次檢視後發現都是低考驗力的顯著結果，其他研究者難以重現如同原始研究的顯著結果<span class="citation">(例如 Camerer et al. <a href="#ref-camererEvaluatingReplicabilitySocial2018">2018</a>; Klein et al. <a href="#ref-kleinManyLabsInvestigating2018">2018</a>)</span>。因此有學者建議，學習統計的目標應該以能確保研究結果的可再現性為重點，而不是製造能吸引注意的顯著發現<span class="citation">(Peng <a href="#ref-pengReproducibilityCrisisScience2015">2015</a>)</span>。</p>
+<p>極少有心理科學的研究題目只需要個位數樣本，就有顯著結果且考驗力至少80%的研究。過去有許多研究者只追求結果顯著與否，忽略考驗力未達建議標準，樣本還未收集到能保障建議考驗力的數量，卻因為已發現顯著結果，就停止實驗並發表。最近十年許多原本被認為具有啟發性的研究結果，再次檢視後發現都是低考驗力的顯著結果，其他研究者難以重現如同原始研究的顯著結果<span class="citation">(例如 Camerer et al. <a href="#ref-camererEvaluatingReplicabilitySocial2018">2018</a>; Klein et al. <a href="#ref-kleinManyLabsInvestigating2018">2018</a>)</span>。因此有學者建議，學習統計的目標應該以能確保研究結果的可再現性為重點，而不是製造能吸引注意的顯著發現<span class="citation">(Peng <a href="#ref-pengReproducibilityCrisisScience2015">2015</a>)</span>。</p>
 </div>
 <div id="paired-summary" class="section level2">
 <h2><span class="header-section-number">6.4</span> 總結</h2>
 <ul>
-<li>TBA</li>
+<li>通常使用相依樣本分析的目的，是要確認重覆量數測得的差異分數是否存在。</li>
+<li>McNemar檢定顯現無母數統計的特色：隨機變數平均值的抽樣分佈不保證遵守中央極限定理，形成常態分佈。</li>
+<li>無法確定母群體機率函數時，使用t分佈進行母數統計推論，雖有較高的型二錯誤率，但有較保守的型一錯誤率。</li>
+<li>研究任務在於確認目標現象的差異分數，效果量是必須呈現的資訊，同時是評估研究設計應收集多少樣本的指標。</li>
 </ul>
 </div>
 <div id="paired-practice" class="section level2">
