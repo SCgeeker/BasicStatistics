@@ -182,7 +182,7 @@ $$s_p = \sqrt{\frac{(n_1 - 1) \times s_1^2 + (n_2 - 1) \times s_2^2}{n_1 + n_2 -
 <p class="caption">(\#fig:independent-groups-sample)順時針(紅色)與逆時針(藍色)的樣本平均值抽樣分佈。</p>
 </div>
 
-兩組的合併標準差為0.234，加權標準誤為0.046，接近圖\@ref(fig:independent-hypothesis-sampling)的對立與虛無假設抽樣分佈標準誤。
+兩組的合併標準差為0.484，加權標準誤為0.096，接近圖\@ref(fig:independent-hypothesis-sampling)的對立與虛無假設抽樣分佈標準誤。
 
 <div class="figure">
 <img src="07-independent_files/figure-html/independent-hypothesis-sampling-1.png" alt="平均值差異的5抽樣分佈：虛無假設(紅色)與對立假設(藍色)" width="672" />

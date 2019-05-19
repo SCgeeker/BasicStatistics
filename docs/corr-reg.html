@@ -267,7 +267,7 @@
 <p><code>JASP</code>與<code>jamovi</code>提供的相關係數範例資料，都有上百筆的觀察值。原因是樣本數不足一百的隨機樣本所累積的抽樣分佈，不會是像常態分佈一樣的對稱分佈，如此一來就會造成型一錯誤率與考驗力的估計偏差。這樣的狀況需要使用<strong>費雪轉換</strong>，才能將抽樣分佈轉換為常態分佈。下面的費雪轉換公式，可轉換所有來自同一母群體的所有樣本相關係數。轉換後的樣本相關係數平均數會略高於原始平均數，<strong>標準誤</strong>必接近<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>。</p>
 <p><span class="math display">\[F(r) = \frac{1}{2} ln \frac{1+r}{1-r}\]</span></p>
 <p><img src="08-corrreg_files/figure-html/big5-smalln-1.png" width="672" /></p>
-<p>以 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 的五大人格特質資料 為例，如果盡責性與情緒不穩定性相關係數的母群體是<span class="math inline">\(\rho = -0.368\)</span>，只收集12位學生的資料，模擬10000筆樣本相關係數形成的抽樣分佈如同圖<a href="#fig:big5-smalln"><strong>??</strong></a>呈現負偏態的黑色曲線，與分佈中心是-0.368的常態分佈(綠色曲線)有明顯的差異。10000樣本相關係數經過費雪轉換，形成的抽樣分佈(藍色曲線)與平均數是-0.41及標準誤是0.34的常態分佈(紅色曲線)完全契合，此標準誤相當接近以公式<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>計算的0.33。</p>
+<p>以 <span class="citation">Dolan et al. (<a href="#ref-DolanTestingMeasurementInvariance2009">2009</a>)</span> 的五大人格特質資料 為例，如果盡責性與情緒不穩定性相關係數的母群體是<span class="math inline">\(\rho = -0.368\)</span>，只收集12位學生的資料，模擬10000筆樣本相關係數形成的抽樣分佈如同圖<a href="#fig:big5-smalln"><strong>??</strong></a>呈現負偏態的黑色曲線，與分佈中心是-0.368的常態分佈(綠色曲線)有明顯的差異。10000樣本相關係數經過費雪轉換，形成的抽樣分佈(藍色曲線)與平均數是-0.4及標準誤是0.33的常態分佈(紅色曲線)完全契合，此標準誤相當接近以公式<span class="math inline">\(\frac{1}{\sqrt{n-3}}\)</span>計算的0.33。</p>
 <p><img src="08-corrreg_files/figure-html/big5-largen-1.png" width="672" /></p>
 <p>將樣本數增加至如範例資料一樣的500人，樣本相關係數的抽樣分佈就會契合對稱的機率分佈，如圖<a href="#fig:big5-largen"><strong>??</strong></a>代表抽樣分佈的黑色曲線，完全符合抽樣分佈平均數-0.37與標準誤0.04的常態分佈(綠色曲線)。費雪轉轉換後的抽樣分佈(藍色曲線)雖然也符合常態分佈(紅色曲線)，但是估計的期望值-0.39明顯不同於母群體。由此例可知，運用相關係數分析資料的研究，收集的樣本數要達到上百筆。</p>
 <p><img src="08-corrreg_files/figure-html/big5-hypo-1.png" width="672" /></p>
@@ -312,7 +312,7 @@
 <div id="corr-reg-coff-sampling" class="section level3">
 <h3><span class="header-section-number">8.3.2</span> 迴歸係數的抽樣分佈</h3>
 <p><img src="08-corrreg_files/figure-html/reg-sample-1.png" width="672" /></p>
-<p>我們已知迴歸係數也是一種隨機變數，所以只要改裝相關係數抽樣分佈的模擬程序，就能探索迴歸係數的抽樣分佈。在<a href="https://osf.io/g5ycu/">jamovi示範檔案</a>的模擬程序程式碼首四行的設定參數，除了樣本數與相關係數，還有設定自變項與依變項的樣本標準誤。這段模擬程序以新手爸爸的分析結果設定這四個數值，得到圖<a href="#fig:reg-sample"><strong>??</strong></a>符合常態分佈的抽樣分佈。這道抽樣分佈的平均數是-0.91，標準誤是0.43，極為接近圖<a href="corr-reg.html#fig:JASP-reg">8.4</a>的<em>Coefficients</em>報表報告的標準化迴歸係數，以及自變項的標準誤。讀者可以嘗試改變兩個變項的標準誤，形成的抽樣分佈雖然標準誤會有變化，平均數依然接近標準化迴歸係數。</p>
+<p>我們已知迴歸係數也是一種隨機變數，所以只要改裝相關係數抽樣分佈的模擬程序，就能探索迴歸係數的抽樣分佈。在<a href="https://osf.io/g5ycu/">jamovi示範檔案</a>的模擬程序程式碼首四行的設定參數，除了樣本數與相關係數，還有設定自變項與依變項的樣本標準誤。這段模擬程序以新手爸爸的分析結果設定這四個數值，得到圖<a href="#fig:reg-sample"><strong>??</strong></a>符合常態分佈的抽樣分佈。這道抽樣分佈的平均數是-0.9，標準誤是0.43，極為接近圖<a href="corr-reg.html#fig:JASP-reg">8.4</a>的<em>Coefficients</em>報表報告的標準化迴歸係數，以及自變項的標準誤。讀者可以嘗試改變兩個變項的標準誤，形成的抽樣分佈雖然標準誤會有變化，平均數依然接近標準化迴歸係數。</p>
 </div>
 <div id="corr-reg-least" class="section level3">
 <h3><span class="header-section-number">8.3.3</span> 最小平方法</h3>
