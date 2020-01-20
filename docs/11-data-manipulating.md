@@ -4,11 +4,11 @@
 
 ## 製造轉換資料的新變項 {#app-part6}
 
-許多行為科學測驗分數需要經過轉換，才能進行分析。轉換後的分數都要存為新變項，以下整理JASP[^12]與jamovi[^13]的轉換方法。
+許多行為科學測驗分數需要經過轉換，才能進行分析。轉換後的分數都要存為新變項，以下整理JASP[^13]與jamovi[^14]的轉換方法。
 
-[^12]: JASP計算功能官方示範解說網頁：https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/
+[^13]: JASP計算功能官方示範解說網頁：https://jasp-stats.org/2018/12/18/how-to-compute-columns-in-jasp/
 
-[^13]: jamovi計算功能官方示範解說網頁：https://blog.jamovi.org/2017/11/28/jamovi-formulas.html; 轉換功能官方示範解說網頁：https://blog.jamovi.org/2018/10/23/transforming-variables.html
+[^14]: jamovi計算功能官方示範解說網頁：https://blog.jamovi.org/2017/11/28/jamovi-formulas.html; 轉換功能官方示範解說網頁：https://blog.jamovi.org/2018/10/23/transforming-variables.html
 
 
 - `JASP`
@@ -33,7 +33,7 @@
 
 ![對數轉換示範](https://jasp-stats.org/wp-content/uploads/2018/12/comp_cols_log.gif)
 
-運用轉換功能也可以將原始分數轉換為標準化分數，如下圖示範。要注意JASP轉換功能不會直接處理遺漏值，需要將資料中的遺漏值轉換之後，標準分數才會是實數。
+計算功能可以取代資料內遺漏值，或產生隨機亂數，如下圖示範。要注意JASP計算功能不會直接處理遺漏值，需要從JASP設定標定遺漏值的記錄格式，轉換後的數值才會是實數。
 
 ![標準化分數轉換示範](https://jasp-stats.org/wp-content/uploads/2018/12/comp_col_4.gif)
 
@@ -67,10 +67,10 @@ jamovi的資料轉換功能有兩種：**計算(Compute)**能運用機率函式�
 
 ## 設定過濾資料的條件式 {#app-part7}
 
-除了遺漏值，許多行為科學研究收集資料時，會設定填充題降低參與者猜中研究目的的機會；也有時候我們只要分析符合特定條件的資料。JASP[^14]與jamovi[^15]各自提供特色的過濾功能，因應 各種使用需要。
+除了遺漏值，許多行為科學研究收集資料時，會設定填充題降低參與者猜中研究目的的機會；也有時候我們只要分析符合特定條件的資料。JASP[^15]與jamovi[^16]各自提供特色的過濾功能，因應 各種使用需要。
 
-[^14]: JASP過濾功能官方示範解說網頁： https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/
-[^15]: jamovi過濾功能官方示範解說網頁： https://blog.jamovi.org/2018/04/25/jamovi-filters.html
+[^15]: JASP過濾功能官方示範解說網頁： https://jasp-stats.org/2018/06/27/how-to-filter-your-data-in-jasp/
+[^16]: jamovi過濾功能官方示範解說網頁： https://blog.jamovi.org/2018/04/25/jamovi-filters.html
 
 - `JASP`
 

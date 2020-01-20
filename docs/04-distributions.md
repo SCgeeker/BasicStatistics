@@ -98,9 +98,9 @@ $$p(x) = \frac{C^{6}_x \times C^{49-6}_{6-x}}{C^{49}_6}  x = \{ 3,4,5,6 \}$$
 
 
 <div class="figure">
-<img src="images/unit03_binomial_001.png" alt="左：二項機率分佈函數(N = 10, p = 0.5)；右：模擬數值的機率密度函數" width="50%" />
+<img src="images/unit03_binomial_001.png" alt="左：二項機率分佈函數(N = 10, p = 0.5)；右：模擬數值的機率密度函數" width="50%" /><img src="images/unit04_binomial_001.png" alt="左：二項機率分佈函數(N = 10, p = 0.5)；右：模擬數值的機率密度函數" width="50%" />
 <p class="caption">(\#fig:binomial-simulation)左：二項機率分佈函數(N = 10, p = 0.5)；右：模擬數值的機率密度函數</p>
-</div><img src="images/unit04_binomial_001.png" alt="左：二項機率分佈函數(N = 10, p = 0.5)；右：模擬數值的機率密度函數" width="50%" />
+</div>
 
 ## 常態分佈之模擬  {#distribution-normal}
 
@@ -113,9 +113,9 @@ $$ f(x, \mu, \delta) =  \frac{1}{\delta\sqrt(2\pi\sigma^2)} e^{-\frac{(x - \mu)^
 與如同二項分佈的離散型隨機變數比較，後者雖然也可以計算平均數與標準差，機率分佈型態其實是由隨機變數及其他非期望值的參數所決定。R的常態分佈函式具有根據指定的期望值，製造隨機數值的功能，圖\@ref(fig:normal-simulation)呈現計算的標準化常態分佈函數，以及運用模擬程序製造10000筆隨機數值，繪製的機率密度曲線。讀者可使用[示範檔案](https://osf.io/jzpmy/)，自行更改模擬程序的數值數量，函式之內的期望值等，觀察模擬結果的變化。
 
 <div class="figure">
-<img src="images/unit03_normal_002.png" alt="左：標準化常態機率分佈函數；右：模擬數值的機率密度函數" width="50%" />
+<img src="images/unit03_normal_002.png" alt="左：標準化常態機率分佈函數；右：模擬數值的機率密度函數" width="50%" /><img src="images/unit04_normal_001.png" alt="左：標準化常態機率分佈函數；右：模擬數值的機率密度函數" width="50%" />
 <p class="caption">(\#fig:normal-simulation)左：標準化常態機率分佈函數；右：模擬數值的機率密度函數</p>
-</div><img src="images/unit04_normal_001.png" alt="左：標準化常態機率分佈函數；右：模擬數值的機率密度函數" width="50%" />
+</div>
 
 ## 統計學兩大流派 {#distribution-approaches}
 描述統計(descriptive statistics)與推論統計(inference statistics)的功能：描述統計集合各種呈現資料中“可推論資訊”的技巧，以適當的測量尺度呈現資料的**集中**與**變異**。推論統計評估“可推論資訊”符合預測的可能性，或者值得再做探討的價值。

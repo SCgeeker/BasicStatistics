@@ -1,5 +1,0 @@
-1. 獨立樣本比較的參考作業
-
-重製統計理解案情。從案情思考預先註冊與再現研究如何累積可靠知識。
-
-Lane, K. A., Urry, H. L., & Arnal, J. D. (2018, June 24). Replication in the Classroom - A Case Study. Retrieved from osf.io/xhbjw 

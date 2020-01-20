@@ -27,6 +27,7 @@ paste0("By chisq distribution, Type 1 error is ", round(100*mean(chi0 > qchisq(a
 ## Estimation of Type 2 Error
 paste0("By chisq distribution, Type 2 error is ", round(100*mean(chi1 < qchisq(alpha,DF,ncp=FALSE)),2),"%") #
 
+### End of jamovi demonstration
 
 sampling <- hist(chi, plot = FALSE)
 ## Plot of sampling distribution

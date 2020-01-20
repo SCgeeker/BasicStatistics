@@ -51,6 +51,13 @@ jamovi使用者可以增加自已或他人開發的模組。只要點選操作�
 
 本書建議讀者安裝的模組有`Rj`(編寫與執行R程式碼)、`jpower`(考驗力分析與解說)、`distrACTION`(機率分佈圖解)、`R data sets`(R官方示範資料集)、`Statkat`(統計方法建議諮詢)、`learning statistics with jamovi`(同名教科書示範資料集)。本書介紹的模擬程序，都是透過jamovi模組`Rj`執行。有安排模擬程序的示範檔案，相關單元及程式碼內註解，都有說明重要參數設定，讀者只要改變參數數值，就可以觀察模擬結果的變化。
 
+> 如果讀者有安裝R，jamovi的版本為1.2.0.0，只要在R安裝`jmvconnect`套件，就能在`Rj`使用R的套件，例如`ggplot2`，`dplyr`。
+
+<div class="figure" style="text-align: center">
+<img src="images/jamovi_Rj_setting.png" alt="設定Rj使用已安裝的R套件" width="80%" />
+<p class="caption">(\#fig:jamovi-Rj)設定Rj使用已安裝的R套件</p>
+</div>
+
 ## 數值顯示設定 {#app-part3}
 
 報表顯示的數值都會有小數點之後的數字，推論統計必定產生的p值是最典型有小數點的數值。很多時候匯入的資料會有遺漏值，且因為資料編輯方法的關係，遺漏值會以各式各樣的代碼出現在資料裡。JASP與jamovi都有設定選項，讓使用者因應狀況，調整軟體處理這些數值的方式。

@@ -2,9 +2,9 @@
 
 如果你的分組測試資料歸納為兩個平均值，通常會使用獨立樣本t檢定(單元\ref(independent) )分析兩個平均值的差異。如果歸納的分組測試資料有三個以上平均值，就需要運用變異數分析。這個單元介紹比較組間平均的獨立樣本變異數分析，採用的迴歸式建立抽樣分佈模擬程序，比較多組平均數兩兩比較的模擬結果，理解為何應該使用異數分析。運用迴歸式的理解途逕，我們可以回頭理解本書介紹的所有統計方法，都能透過線性模型理解各種方法的使用原理。
 
-## 獨立樣本變異數分析  ##  {#oneway-independent}
+## 獨立樣本變異數分析  {#oneway-independent}
 
-### 分解變異數來源
+### 分解變異數來源 {#oneway-SS}
 
 在單元\@ref(corr-reg)，我們已經學到運用隨機程序收集的兩個變項資料：Y與X，可以用迴歸式$Y = a + b \cdot X$表示。現在設定X是獨變項資料分組的加權值，迴歸式可計算以各組平均數估計依變項的測量結果。迴歸式的截距a是總平均值，迴歸係數b化為各組平均值與總平均值差異的向量，使得X的加權值輸入迴歸式，可得各組平均值。
 
@@ -44,12 +44,12 @@ $$ \sum_i \sum_j (Y_{ij} - \bar{Y})^2 = \sum_j(\bar{Y}_j - \bar{Y})^2  + \sum_i 
 
 $$ SS_{Total} = SS_{Variable} + SS_{Residual} $$
 
-### 示範檔案簡介
+### 示範檔案簡介 {#oneway-case}
 
 示範檔案出自Moore, McCabe, 與 Craig [-@mooreIntroductionPracticeStatistics2012] 合著的 Introduction to the practice of statistics。這份研究邀請134位參與者閱覽幾份臉書使用者的社交資訊，評估這些使用者的社交吸引力分數(最低1分；最高7分)。參與者事前並不知道拿到的資訊來自臉書交友人數約為100人、300人、500人、700人、900人的臉書使用者。研究者想知道參與者事前不知情時，評估的社交吸引力分數是否與評估對象的臉書交友人數成正比。這份示範檔案可由以下連結下載：[JASP示範檔案0.9.2]()<!---；[JASP示範檔案0.9.1]()--->；[jamovi示範檔案]()。
 
 
-### 示範檔案操作與報表解讀
+### 示範檔案操作與報表解讀 {#oneway-demo}
 
 首先建議讀者運用描述統計模組，整理五個分組的吸引力分數平均值與組間變異，並製作直方圖與小提琴圖，預覽五組之間的差異與研究者預期的差距。圖\@ref(fig:descriptive-jasp)與圖\@ref(fig:descriptive-jamovi)分別是JASP與jamovi的描述統計模組設定與報表畫面。
 
@@ -88,7 +88,7 @@ knitr::include_graphics("images/unit09_jamovi_anova_table.PNG")
 
 圖\@ref(fig:anova-table-jasp)與圖\@ref(fig:anova-table-jamovi)是JASP與jamovi的示範案例輸出報表，除了JASP有在報表左下方標記**第三型離均差平方和**(Type Ⅲ Sum of Squares)，兩種報表呈現的資訊沒有差異。在正式報告裡，變異數分析結果不會呈現所有的Sum of Squared與Mean Square，最多只會呈現殘差的Mean Square。因為只要根據自由度與F值，就可以用殘差的Mean Square還原所有Sum of Squared與Mean Square。稍後我們會看到報告寫作的示範，接著來看為何可以使用F檢定判斷變異數分析的結果。
 
-### 殘差變異的抽樣分佈模擬 ## {#oneway-residual}
+### 殘差變異的抽樣分佈模擬 {#oneway-residual}
 
 以分析臉書資料範例來說，變異數分析的虛無假設是各組之間的社交吸引力分數沒有差異，也就是只存在殘差。因此製造只有殘差的模擬抽樣分佈，就可以理解為何變異數分析的統計值是F，以及模擬統計值接近設定的型一錯誤率之程度。
 
@@ -102,7 +102,7 @@ knitr::include_graphics("images/unit09_onewayanova_residual_sampling.png")
 
 設定型一錯誤率是0.05，我們只要計算模擬統計值有多少比例大於對應該機率的F分數，即可得知從等於分析結果自由度的F 分佈得到的決斷值，經過數次模擬估計的型一錯誤率，多次都是在0.5之下。如果讀者願意花些時間，可嘗試這道模擬程序多次，比較不同F分佈的型一錯誤率估計結果。
 
-### 變異數分析適用性檢定 ## {#oneway-compatibility}
+### 變異數分析適用性檢定 {#oneway-compatibility}
 
 資料如果違反組間變異同質(Homogenerity)與樣本分佈常態(Normality)，變異數分析的結果將有偏誤。JASP與jamovi皆提供檢定選項，使用者可得知有無違反兩項條件。例如圖\@ref(fig:anova-jasp-assumption)與圖\@ref(fig:anova-jamovi-assumption)的示範。
 
@@ -125,13 +125,13 @@ knitr::include_graphics("images/unit09_jamovi_assumptioncheck.png")
 
 JASP與jamovi都有提供三種效果量選項，讓使用者依自已的選擇計算：$\eta^2$，$partial \eta^2$，$\omega^2$。基本原理都是計算組間離均差平方和，佔總離均差平方和的比例。老字號的統計軟體如SPSS，SAS過去只提供$\eta^2$與$\omega^2$，不過日本學者岡田謙介[@okada_is_2013]指出，這兩種效果量計算公式都有高估的問題。本書採納近年較多學者建議的$partial \eta^2$，計算組間差異的效果量[@lakens_calculating_2013]。
 --->
-### 分析後報告  ## {#oneway-report}
+### 分析後報告  {#oneway-report}
 
 在此以預設分析結果為例，示範在報告中呈現分析結果的規範格式。
 
 > 交友數100人臉書使用者公開資料，在各組評分得到最低分(M =  3.82, SD =  1.00)，以設定的型一錯誤率不超過.05來看，五組之間的差異是明顯的： $F(4,129) = 4.14, MSE = 1.20, p = .003, \eta_p^2 = 0.114$。 
 
-## 多組平均數的分析風險 ## {#oneway-multiple}
+## 多組平均數的分析風險 {#oneway-multiple}
 
 最後討論不使用變異數分析，採用已知的方法，如獨立樣本t檢定分析，會有什麼問題？要判斷各組之間有差異，可以進行所有的兩組比較，如果任何一項比較達到設定的顯著水準，就判斷五組之間存在顯著差異。如此一來型一錯誤率該如何設定？
 
